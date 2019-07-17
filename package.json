@@ -1,0 +1,51 @@
+{
+  "name": "venom",
+  "version": "0.1.0",
+  "description": "Venom is an UI KIT with MadeiraMadeira brand",
+  "main": "index.js",
+  "scripts": {
+    "build": "npm run build-clean && npm run build-sass && npm run build-autoprefix && npm run build-cleancss",
+    "build-autoprefix": "postcss --use autoprefixer --map false --output css/venom.css css/venom.css",
+    "build-cleancss": "cleancss -o css/venom.min.css css/venom.css",
+    "build-clean": "rimraf css",
+    "build-sass": "node-sass --output-style expanded --source-map true venom.sass css/venom.css",
+    "deploy": "npm run build",
+    "start": "npm run build-sass -- --watch",
+    "linter": "sass-lint -c .sass-lint.yml 'sass/**/*.sass' -v -q"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.5.1",
+    "clean-css-cli": "^4.3.0",
+    "node-sass": "^4.12.0",
+    "postcss-cli": "^6.1.2",
+    "rimraf": "^2.6.3",
+    "sass-lint": "^1.13.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/madeiramadeirabe/venom.git"
+  },
+  "keywords": [
+    "scss",
+    "css",
+    "html",
+    "ui",
+    "javascript"
+  ],
+  "author": "William Novak",
+  "contributors": [
+    {
+      "name": "Celso Fabri Junior",
+      "email": "celso.fabri@gmail.com",
+      "url": "https://github.com/celsofabri"
+    }
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/madeiramadeirabe/venom/issues"
+  },
+  "homepage": "https://github.com/madeiramadeirabe/venom#readme",
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}

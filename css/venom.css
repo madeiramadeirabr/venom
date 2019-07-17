@@ -1,0 +1,556 @@
+/*! venom v0.1.0 | MIT License | github.com/madeiramadeirabr/venom */
+/* normalize */
+@import url(normalize.css);
+/* variables */
+/* font-family */
+/* font-size */
+/* font-weight */
+/* text */
+/* size */
+/* gap */
+/* base */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url("../../fonts/open-sans/open-sans-v16-latin-300.eot");
+  src: local("Open Sans Light"), local("OpenSans-Light"), url("../../fonts/open-sans/open-sans-v16-latin-300.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans/open-sans-v16-latin-300.woff2") format("woff2"), url("../../fonts/open-sans/open-sans-v16-latin-300.woff") format("woff"), url("../../fonts/open-sans/open-sans-v16-latin-300.ttf") format("truetype"), url("../../fonts/open-sans/open-sans-v16-latin-300.svg#OpenSans") format("svg");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/open-sans/open-sans-v16-latin-regular.eot");
+  src: local("Open Sans Regular"), local("OpenSans-Regular"), url("../../fonts/open-sans/open-sans-v16-latin-regular.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans/open-sans-v16-latin-regular.woff2") format("woff2"), url("../../fonts/open-sans/open-sans-v16-latin-regular.woff") format("woff"), url("../../fonts/open-sans/open-sans-v16-latin-regular.ttf") format("truetype"), url("../../fonts/open-sans/open-sans-v16-latin-regular.svg#OpenSans") format("svg");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: italic;
+  font-weight: 400;
+  src: url("../../fonts/open-sans/open-sans-v16-latin-italic.eot");
+  src: local("Open Sans Italic"), local("OpenSans-Italic"), url("../../fonts/open-sans/open-sans-v16-latin-italic.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans/open-sans-v16-latin-italic.woff2") format("woff2"), url("../../fonts/open-sans/open-sans-v16-latin-italic.woff") format("woff"), url("../../fonts/open-sans/open-sans-v16-latin-italic.ttf") format("truetype"), url("../../fonts/open-sans/open-sans-v16-latin-italic.svg#OpenSans") format("svg");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url("../../fonts/open-sans/open-sans-v16-latin-600.eot");
+  src: local("Open Sans Bold"), local("OpenSans-SemiBold"), url("../../fonts/open-sans/open-sans-v16-latin-600.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans/open-sans-v16-latin-600.woff2") format("woff2"), url("../../fonts/open-sans/open-sans-v16-latin-600.woff") format("woff"), url("../../fonts/open-sans/open-sans-v16-latin-600.ttf") format("truetype"), url("../../fonts/open-sans/open-sans-v16-latin-600.svg#OpenSans") format("svg");
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/open-sans/open-sans-v16-latin-700.eot");
+  src: local("Open Sans Bold"), local("OpenSans-Bold"), url("../../fonts/open-sans/open-sans-v16-latin-700.eot?#iefix") format("embedded-opentype"), url("../../fonts/open-sans/open-sans-v16-latin-700.woff2") format("woff2"), url("../../fonts/open-sans/open-sans-v16-latin-700.woff") format("woff"), url("../../fonts/open-sans/open-sans-v16-latin-700.ttf") format("truetype"), url("../../fonts/open-sans/open-sans-v16-latin-700.svg#OpenSans") format("svg");
+}
+
+/* theme */
+html {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%;
+}
+
+body,
+button,
+input,
+select,
+textarea,
+span,
+small,
+strong,
+i {
+  color: currentColor;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+code,
+pre {
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+  font-family: monospace;
+}
+
+body {
+  color: #333333;
+  background-color: white;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+a strong {
+  color: #0854a0;
+}
+
+a strong:hover {
+  color: #0c316a;
+}
+
+a strong:active {
+  color: #165cc5;
+}
+
+a strong:visited {
+  color: #071c3c;
+}
+
+hr {
+  display: block;
+  border: none;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: baseline;
+}
+
+small {
+  font-size: 10px;
+  font-weight: inherit;
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+strong {
+  font-weight: 700;
+}
+
+fieldset {
+  border: none;
+}
+
+h1 {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+pre {
+  overflow-x: auto;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+pre code {
+  background-color: transparent;
+  color: currentColor;
+  padding: 0;
+}
+
+table td,
+table th {
+  vertical-align: top;
+}
+
+table td:not([align]),
+table th:not([align]) {
+  text-align: left;
+}
+
+/* utils */
+.cleafix::after {
+  display: table;
+  clear: both;
+  content: " ";
+}
+
+.no-margin {
+  margin: 0 !important;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
+
+.no-radius {
+  border-radius: 0 !important;
+}
+
+.no-border {
+  border: none !important;
+}
+
+.no-shadow {
+  box-shadow: none !important;
+}
+
+.relative {
+  position: relative !important;
+}
+
+.full-width {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+
+.max-full-width {
+  max-width: 100% !important;
+  box-sizing: border-box;
+}
+
+.full-height {
+  height: 100% !important;
+  box-sizing: border-box;
+}
+
+.max-full-height {
+  max-height: 100% !important;
+  box-sizing: border-box;
+}
+
+/* components */
+.grid--start {
+  justify-content: flex-start;
+  text-align: start;
+}
+
+.grid--center {
+  justify-content: center;
+  text-align: center;
+}
+
+.grid--end {
+  justify-content: flex-end;
+  text-align: end;
+}
+
+.grid--top {
+  align-items: flex-start;
+}
+
+.grid--center {
+  align-items: center;
+}
+
+.grid--bottom {
+  align-items: flex-end;
+}
+
+.grid--space-around {
+  justify-content: space-around;
+}
+
+.grid--space-between {
+  justify-content: space-between;
+}
+
+.grid--first {
+  order: -1;
+}
+
+.grid--last {
+  order: 1;
+}
+
+.grid .row {
+  display: flex;
+  flex-direction: row;
+}
+
+.grid .row--reverse {
+  flex-direction: row-reverse;
+}
+
+.grid .columns {
+  display: flex;
+  flex-direction: column;
+}
+
+.grid .columns--reverse {
+  flex-direction: column-reverse;
+}
+
+.grid .column {
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.grid .column--vertical {
+  flex-direction: column;
+}
+
+.grid .column--one {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.grid .column--offset-one {
+  margin-left: 100%;
+}
+
+.grid .column--two {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.grid .column--offset-two {
+  margin-left: 50%;
+}
+
+.grid .column--three {
+  flex-basis: 33.33333%;
+  max-width: 33.33333%;
+}
+
+.grid .column--offset-three {
+  margin-left: 33.33333%;
+}
+
+.grid .column--four {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+
+.grid .column--offset-four {
+  margin-left: 25%;
+}
+
+.grid .column--five {
+  flex-basis: 20%;
+  max-width: 20%;
+}
+
+.grid .column--offset-five {
+  margin-left: 20%;
+}
+
+.grid .column--six {
+  flex-basis: 16.66667%;
+  max-width: 16.66667%;
+}
+
+.grid .column--offset-six {
+  margin-left: 16.66667%;
+}
+
+.grid .column--seven {
+  flex-basis: 14.28571%;
+  max-width: 14.28571%;
+}
+
+.grid .column--offset-seven {
+  margin-left: 14.28571%;
+}
+
+.grid .column--eight {
+  flex-basis: 12.5%;
+  max-width: 12.5%;
+}
+
+.grid .column--offset-eight {
+  margin-left: 12.5%;
+}
+
+.grid .column--nine {
+  flex-basis: 11.11111%;
+  max-width: 11.11111%;
+}
+
+.grid .column--offset-nine {
+  margin-left: 11.11111%;
+}
+
+.grid .column--ten {
+  flex-basis: 10%;
+  max-width: 10%;
+}
+
+.grid .column--offset-ten {
+  margin-left: 10%;
+}
+
+.grid .column--eleven {
+  flex-basis: 9.09091%;
+  max-width: 9.09091%;
+}
+
+.grid .column--offset-eleven {
+  margin-left: 9.09091%;
+}
+
+.grid .column--twelve {
+  flex-basis: 8.33333%;
+  max-width: 8.33333%;
+}
+
+.grid .column--offset-twelve {
+  margin-left: 8.33333%;
+}
+
+.button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  align-self: center;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 22px;
+  border-radius: 4.4px;
+  border-width: 1px;
+  border-style: solid;
+  width: auto;
+  line-height: 1;
+}
+
+.button .button--blue {
+  color: #0854a0;
+  border-color: #0c316a;
+}
+
+.button .button--blue:hover {
+  background-color: #0c316a;
+}
+
+.button .button--blue:active {
+  background-color: #165cc5;
+}
+
+.button .button--blue:focus {
+  background-color: #071c3c;
+}
+
+.button .button--blue:disabled {
+  background-color: #2774e7;
+  opacity: 0.8;
+}
+
+.button .button--orange {
+  color: #f4831f;
+  border-color: #d6690a;
+}
+
+.button .button--orange:hover {
+  background-color: #d6690a;
+}
+
+.button .button--orange:active {
+  background-color: #f79e50;
+}
+
+.button .button--orange:focus {
+  background-color: #a65108;
+}
+
+.button .button--orange:disabled {
+  background-color: #f9b980;
+  opacity: 0.8;
+}
+
+.button .button--red {
+  color: #f41f1f;
+  border-color: #d60a0a;
+}
+
+.button .button--red:hover {
+  background-color: #d60a0a;
+}
+
+.button .button--red:active {
+  background-color: #f75050;
+}
+
+.button .button--red:focus {
+  background-color: #a60808;
+}
+
+.button .button--red:disabled {
+  background-color: #f98080;
+  opacity: 0.8;
+}
+
+.button .button--green {
+  color: #18dc71;
+  border-color: #13ae59;
+}
+
+.button .button--green:hover {
+  background-color: #13ae59;
+}
+
+.button .button--green:active {
+  background-color: #3eea8b;
+}
+
+.button .button--green:focus {
+  background-color: #0e8142;
+}
+
+.button .button--green:disabled {
+  background-color: #9af4c2;
+  opacity: 0.8;
+}
+
+.button .button--yellow {
+  color: #dcdc18;
+  border-color: #aeae13;
+}
+
+.button .button--yellow:hover {
+  background-color: #aeae13;
+}
+
+.button .button--yellow:active {
+  background-color: #eaea3e;
+}
+
+.button .button--yellow:focus {
+  background-color: #81810e;
+}
+
+.button .button--yellow:disabled {
+  background-color: #efef6c;
+  opacity: 0.8;
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+  .button {
+    border-width: 0.5px;
+  }
+}
+
+.button--large {
+  padding: 44px;
+}
+
+.button--small {
+  padding: 11px;
+}
+
+/*# sourceMappingURL=venom.css.map */

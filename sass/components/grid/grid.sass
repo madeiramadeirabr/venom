@@ -1,0 +1,25 @@
+.grid
+  .row
+    display: flex
+    flex-direction: row
+    &--reverse
+      flex-direction: row-reverse
+
+  .columns
+    display: flex
+    flex-direction: column
+    &--reverse
+      flex-direction: column-reverse
+
+  .column
+    flex-basis: 0
+    max-width: 100%
+    &--vertical
+      flex-direction: column
+
+    @each $name, $count in $numbers
+      &--#{$name}
+        flex-basis: 100% / $count
+        max-width: 100% / $count
+      &--offset-#{$name}
+        margin-left: 100% / $count
