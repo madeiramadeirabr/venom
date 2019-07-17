@@ -5,8 +5,8 @@ $body-overflow-y: scroll !default
 $background-color: $white !default
 
 html
-  -moz-osx-font-smoothing: grayscale
-  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale // sass-lint:disable-line no-vendor-prefixes
+  -webkit-font-smoothing: antialiased // sass-lint:disable-line no-vendor-prefixes
   min-width: $body-min-width
   overflow-x: $body-overflow-x
   overflow-y: $body-overflow-y
@@ -35,36 +35,40 @@ section
 
 code,
 pre
-  -moz-osx-font-smoothing: auto
-  -webkit-font-smoothing: auto
+  -moz-osx-font-smoothing: auto // sass-lint:disable-line no-vendor-prefixes
+  -webkit-font-smoothing: auto // sass-lint:disable-line no-vendor-prefixes
   font-family: $family-monospace
 
 body
-  color: $text
   background-color: $background-color
+  color: $text
 
 a
   cursor: pointer
   text-decoration: none
+
   strong
     color: $color-blue
+
     &:hover
       color: $color-blue-dark
+
     &:active
       color: $color-blue-light
+
     &:visited
       color: $color-blue-darkness
 
 hr
+  border-width: 0
   display: block
-  border: none
 
 img
   height: auto
   max-width: 100%
 
-input[type="checkbox"],
-input[type="radio"]
+input[type='checkbox'], // sass-lint:disable-line no-qualifying-elements force-attribute-nesting
+input[type='radio'] // sass-lint:disable-line no-qualifying-elements force-attribute-nesting
   vertical-align: baseline
 
 small
@@ -79,7 +83,7 @@ strong
   font-weight: $weight-bold
 
 fieldset
-  border: none
+  border-width: 0
 
 h1
   font-size: $size-extra-large
@@ -95,6 +99,7 @@ pre
   overflow-x: auto
   white-space: pre
   word-wrap: normal
+
   code
     background-color: transparent
     color: currentColor
@@ -104,5 +109,6 @@ table
   td,
   th
     vertical-align: top
+
     &:not([align])
       text-align: left

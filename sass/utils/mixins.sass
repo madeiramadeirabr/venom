@@ -1,16 +1,16 @@
 =clearfix
   &::after
-    display: table
     clear: both
     content: $content
+    display: table
 
 =flex-center($direction)
-  display: flex
-  flex-direction: $direction
-  justify-content: center
   align-content: center
   align-items: center
   align-self: center
+  display: flex
+  flex-direction: $direction
+  justify-content: center
 
 =for-size($range)
   $phone-upper-boundary: 600px
@@ -19,21 +19,21 @@
   $desktop-upper-boundary: 1800px
 
   @if $range == phone-only
-    @media (max-width: #{$phone-upper-boundary - 1}) 
+    @media (max-width: #{$phone-upper-boundary - 1})
       @content
   @else if $range == tablet-portrait-up
-    @media (min-width: $phone-upper-boundary) 
+    @media (min-width: $phone-upper-boundary)
       @content
   @else if $range == tablet-landscape-up
-    @media (min-width: $tablet-portrait-upper-boundary) 
+    @media (min-width: $tablet-portrait-upper-boundary)
       @content
   @else if $range == desktop-up
-    @media (min-width: $tablet-landscape-upper-boundary) 
+    @media (min-width: $tablet-landscape-upper-boundary)
       @content
   @else if $range == big-desktop-up
     @media (min-width: $desktop-upper-boundary)
       @content
 
 =for-retina
-  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx)
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) // sass-lint:disable-line no-vendor-prefixes space-around-operator
     @content

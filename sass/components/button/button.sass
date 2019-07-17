@@ -1,29 +1,34 @@
 .button
   +flex-center(row)
+  border-radius: $radius
+  border-style: solid
+  border-width: 1px
   font-size: $size-regular
   font-weight: $weight-regular
-  padding: $gap
-  border-radius: $radius
-  border-width: 1px
-  border-style: solid
-  width: auto
   line-height: 1
+  padding: $gap
+  width: auto
 
-  .button
+  &.button
     @each $color, $value in $color-regular-map
       &--#{$color}
-        color: $value
+        background-color: $color
         border-color: map-get($color-dark-map, $color)
+        color: $value
+
         &:hover
           background-color: map-get($color-dark-map, $color)
+
         &:active
           background-color: map-get($color-light-map, $color)
+
         &:focus
           background-color: map-get($color-darkness-map, $color)
+
         &:disabled
           background-color: map-get($color-lightness-map, $color)
-          opacity: 0.8
+          opacity: .8
 
-+for-retina 
-  .button
-    border-width: 0.5px
+  +for-retina
+    .button
+      border-width: .5px
