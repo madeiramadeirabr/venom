@@ -1,0 +1,51 @@
+form
+
+  label
+    color: $black
+    font-size: $size-regular
+    font-weight: $weight-regular
+    line-height: 1
+    width: 100%
+
+  input,
+  select,
+  textarea
+    background-color: $background-color
+    border-color: $border-color
+    border-radius: $radius
+    color: $black
+    font-size: $size-regular
+    font-weight: $weight-regular
+    line-height: 1
+    padding: $gap
+    width: 100%
+
+    &:active
+      border-color: $color-blue
+      outline: none
+
+    &:focus
+      border-color: $color-blue
+      outline: none
+
+    &:disabled
+      opacity: .8
+
+    .form-group
+      background-color: $white
+      border-color: $border-color-flat
+      border-radius: $border-radius
+      overflow: hidden
+      padding: $gap
+
+      input,
+      select
+        border-left-width: $zero
+        border-right-width: $zero
+        border-top-width: $zero
+
+        &:active
+          border-bottom-color: inherit
+
+        &:focus
+          border-bottom-color: inherit

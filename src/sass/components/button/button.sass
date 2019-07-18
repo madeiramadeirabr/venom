@@ -3,6 +3,7 @@
   border-radius: $radius
   border-style: solid
   border-width: $border-width
+  cursor: pointer
   font-size: $size-regular
   font-weight: $weight-regular
   line-height: 1
@@ -21,9 +22,11 @@
 
         &:active
           background-color: map-get($color-light-map, $color)
+          outline: none
 
         &:focus
-          background-color: map-get($color-darkness-map, $color)
+          background-color: map-get($color-dark-map, $color)
+          outline: none
 
         &:disabled
           background-color: map-get($color-lightness-map, $color)

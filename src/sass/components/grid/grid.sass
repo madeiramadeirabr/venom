@@ -14,8 +14,8 @@
       flex-direction: column-reverse
 
   &__column
+    display: flex
     flex: 1
-    flex-basis: 0
     max-width: 100%
 
     &--vertical
@@ -29,3 +29,16 @@
       &--offset-#{$name}
         margin-left: ($count / 12) * 100%
 
+
++for-size(phone-only)
+  .grid
+    &__column
+      &:not([class*='--fixed'])
+        max-width: 100%
+        width: 100%
+
++for-size(tablet-portrait-up)
+  .grid
+    &__column
+      max-width: 100%
+      width: 100%

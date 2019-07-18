@@ -8,3 +8,19 @@
       border-radius: $radius-small
       font-size: $size-small
       padding: $gap-small
+
+.button__group
+  border: solid $border-width $border-color
+  border-radius: $radius
+  display: flex
+  flex-direction: row
+  overflow: hidden
+  padding: $zero
+
+  .button
+    border-radius: $zero
+    border-width: $zero
+
++for-retina
+  .button__group
+    border-width: $border-width-retina
