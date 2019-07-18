@@ -1,0 +1,31 @@
+.grid
+  &__row
+    display: flex
+    flex-direction: row
+
+    &--reverse
+      flex-direction: row-reverse
+
+  &__columns
+    display: flex
+    flex-direction: column
+
+    &--reverse
+      flex-direction: column-reverse
+
+  &__column
+    flex: 1
+    flex-basis: 0
+    max-width: 100%
+
+    &--vertical
+      flex-direction: column
+
+    @each $name, $count in $numbers
+      &--#{$name}
+        flex-basis: ($count / 12) * 100%
+        max-width: ($count / 12) * 100%
+
+      &--offset-#{$name}
+        margin-left: ($count / 12) * 100%
+

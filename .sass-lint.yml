@@ -1,0 +1,7 @@
+
+rules:
+  class-name-format:
+    - 1
+    - 
+      allow-leading-underscore: true
+      convention: hyphenatedbem

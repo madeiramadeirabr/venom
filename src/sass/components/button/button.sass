@@ -1,0 +1,33 @@
+.button
+  +flex-center(row)
+  border-radius: $radius
+  border-style: solid
+  border-width: $border-width
+  font-size: $size-regular
+  font-weight: $weight-regular
+  line-height: 1
+  padding: $gap
+  width: auto
+
+  &.button
+    @each $color, $value in $color-regular-map
+      &--#{$color}
+        background-color: map-get($color-regular-map, $color)
+        border-color: map-get($color-dark-map, $color)
+        color: map-get($color-contrast-map, $color)
+
+        &:hover
+          background-color: map-get($color-dark-map, $color)
+
+        &:active
+          background-color: map-get($color-light-map, $color)
+
+        &:focus
+          background-color: map-get($color-darkness-map, $color)
+
+        &:disabled
+          background-color: map-get($color-lightness-map, $color)
+
+  +for-retina
+    .button
+      border-width: $border-width-retina

@@ -1,0 +1,27 @@
+.container
+  margin: 0 auto
+  
+
+  &--full-width
+    max-width: 100%
+    width: 100vw
+
++for-size(phone-only)
+  .container
+    max-width: 100%
+    width: 100vw
+
++for-size(tablet-portrait-up)
+  .container
+    max-width: 100%
+    width: 100vw
+
++for-size(tablet-landscape-up)
+  .container
+    max-width: 100%
+    width: 100vw
+
++for-size(desktop-up)
+  .container
+    max-width: $desktop
+    width: $desktop
