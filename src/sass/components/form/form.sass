@@ -1,18 +1,28 @@
-form
+.form
+  $self: &
 
-  label
+  &__label
+    align-items: center
     color: $black
+    display: flex
     font-size: $size-regular
     font-weight: $weight-regular
     line-height: 1
-    width: 100%
+    margin-bottom: $gap
 
-  input,
-  select,
-  textarea
+  &--horizontal
+    #{ $self }__label
+      margin-bottom: $zero
+      margin-right: $gap
+
+  &__divider
+    width: $gap
+
+  &__field
     background-color: $background-color
-    border-color: $border-color
+    border: solid $border-width $border-color-flat
     border-radius: $radius
+    box-sizing: border-box
     color: $black
     font-size: $size-regular
     font-weight: $weight-regular
@@ -20,32 +30,63 @@ form
     padding: $gap
     width: 100%
 
-    &:active
+    &:active,
+    &--active
       border-color: $color-blue
       outline: none
 
-    &:focus
+    &:focus,
+    &--focus
       border-color: $color-blue
       outline: none
 
-    &:disabled
+    &:disabled,
+    &--disabled
       opacity: .8
 
-    .form-group
-      background-color: $white
-      border-color: $border-color-flat
-      border-radius: $border-radius
-      overflow: hidden
-      padding: $gap
+  &__group
+    background-color: $white
+    border: solid $border-width $border-color-flat
+    border-radius: $radius
+    display: flex;
+    overflow: hidden
 
-      input,
-      select
-        border-left-width: $zero
-        border-right-width: $zero
-        border-top-width: $zero
+    #{ $self }__field
+      border-radius: $zero
+      border-width: $zero
 
-        &:active
-          border-bottom-color: inherit
+    &-row
+      border-bottom: solid $border-width $border-color-flat
 
-        &:focus
-          border-bottom-color: inherit
+      &:last-of-type
+        border-bottom-width: $zero
+
+    &-icon
+      align-items: center
+      color: $grey-light
+      display: flex
+      justify-content: center
+      text-align: center
+      width: $gap * 4
+
+  +for-retina
+    &__field
+      border-width: $border-width-retina
+
+  +for-size(mobile)
+    &--horizontal
+      #{ $self }__label
+        &:not([class*='--fixed'])
+          margin-bottom: $gap
+          margin-right: $zero
+
+  +for-size(tablet)
+    &--horizontal
+      #{ $self }__label
+        &:not([class*='--fixed'])
+          margin-bottom: $gap
+          margin-right: $zero
+
+    &__divider
+      &:not([class*='--fixed'])
+        display: none

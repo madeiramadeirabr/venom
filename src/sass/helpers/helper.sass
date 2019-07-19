@@ -44,3 +44,68 @@
 
   &--with-gap-large
     padding: $gap-large
+
+  &--margin
+    margin: $gap
+
+    &-left
+      margin-left: $gap
+
+      &-large
+        margin-left: $gap-large
+
+    &-right
+      margin-right: $gap
+
+      &-large
+        margin-right: $gap-large
+
+    &-top
+      margin-top: $gap
+
+      &-large
+        margin-top: $gap-large
+
+    &-bottom
+      margin-bottom: $gap
+
+      &-large
+        margin-bottom: $gap-large
+
+    &-large
+      margin: $gap-large
+
+    &-vertical
+      margin-bottom: $gap
+      margin-top: $gap
+
+      &-large
+        margin-bottom: $gap-large
+        margin-top: $gap-large
+
+    &-horizontal
+      margin-left: $gap
+      margin-right: $gap
+
+      &-large
+        margin-left: $gap-large
+        margin-right: $gap-large
+
+  &--color
+    @each $color, $value in $color-regular-map
+      &-#{$color}
+        color: $value
+
+
+  &--background
+    @each $color, $value in $color-regular-map
+      &-#{$color}
+        background-color: $value
+
+  +for-size(mobile)
+    &--hidden-mobile
+      display: none
+
+  +for-size(tablet)
+    &--hidden-tablet
+      display: none

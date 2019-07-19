@@ -4,6 +4,7 @@
     content: $content
     display: table
 
+
 =flex-center($direction)
   align-content: center
   align-items: center
@@ -12,27 +13,33 @@
   flex-direction: $direction
   justify-content: center
 
-=for-size($range)
-  $phone-upper-boundary: 600px
-  $tablet-portrait-upper-boundary: 900px
-  $tablet-landscape-upper-boundary: 1200px
-  $desktop-upper-boundary: 1800px
 
-  @if $range == phone-only
-    @media (max-width: #{$phone-upper-boundary - 1})
+=unselectable
+  -moz-user-select: none // sass-lint:disable-line no-vendor-prefixes
+  -ms-user-select: none // sass-lint:disable-line no-vendor-prefixes
+  -webkit-touch-callout: none // sass-lint:disable-line no-vendor-prefixes
+  -webkit-user-select: none // sass-lint:disable-line no-vendor-prefixes
+  user-select: none
+
+
+%unselectable
+  +unselectable
+
+
+=for-size($range)
+  @if $range == mobile
+    @media screen and (max-width: $tablet - 1px)
       @content
-  @else if $range == tablet-portrait-up
-    @media (min-width: $phone-upper-boundary)
+  @else if $range == tablet
+    @media screen and (min-width: $tablet) and (max-width: $desktop - 1px)
       @content
-  @else if $range == tablet-landscape-up
-    @media (min-width: $tablet-portrait-upper-boundary)
+  @else if $range == desktop
+    @media screen and (min-width: $desktop) and (max-width: $widescreen - 1px)
       @content
-  @else if $range == desktop-up
-    @media (min-width: $tablet-landscape-upper-boundary)
+  @else if $range == widescreen
+    @media screen and (min-width: $widescreen)
       @content
-  @else if $range == big-desktop-up
-    @media (min-width: $desktop-upper-boundary)
-      @content
+
 
 =for-retina
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) // sass-lint:disable-line no-vendor-prefixes space-around-operator

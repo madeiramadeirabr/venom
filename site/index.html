@@ -6,11 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
     <link rel="stylesheet" type="text/css" href="../css/venom.min.css">
-    
+
     <!--
-        Created by William Novak <william.novak@madeiramadeira.com.br> in 2019-07-18 10:00
-        Last update is 2019-07-18 10:33
+    ░▒▒██░ ░██░▒██████░▒██████░░██░▒███████░▒██████████▒░░▒██░  ██▒▒██▒░
+    ▒▒▒██░ ░██░▒██░░░░░▒██░░██░░██░▒██░░░██░▒██░ ██ ░██▒░░░██░  ██▒▒██▒░░
+    ░░▒██░ ░██░▒██░███░▒██░░██░░██░▒██░░░██░▒██░ ██ ░██▒░▒▒██░  ██▒▒██▒░░░░
+    ░▒▒▒█░ ░█▒░▒██░░░░░▒██░░██░░██░▒██░░░██░▒██░ ██ ░██▒░░▒██   ██▒▒██▒░░
+    ▒▒▒▒▒███▒▒░▒██████░▒██░░██████░▒███████░▒██░ ██ ░██▒░░░███████▒▒██▒░░
     -->
+
+    <!--[if lte IE 8]>
+    <script>document.createElement("header");document.createElement("section");</script>
+    <![endif]-->
 
   </head>
   <body>
@@ -34,6 +41,66 @@
                 1/4
             </div>
       </div>
+
+      <form class="form form--horizontal form--fixed">
+        <div class="grid__row">
+            <div class="grid__column helper--margin-bottom">
+              <div class="grid__columns">
+                <label class="form__label">teste</label>
+                <div class="grid__column">
+                  <input class="form__field" />
+                </div>
+              </div>
+          </div>
+          <div class="form__divider"></div>
+          <div class="grid__column helper--margin-bottom">
+              <div class="grid__columns">
+                  <label class="form__label">teste</label>
+                  <div class="grid__column">
+                    <input class="form__field" />
+                  </div>
+                </div>
+          </div>
+        </div>
+      </form>
+
+      <form class="form">
+          <div class="grid__columns">
+            <label class="form__label">teste</label>
+            <div class="grid__column">
+              <input class="form__field" />
+            </div>
+          </div>
+        </form>
+
+      <form class="form helper--margin">
+        <div class="form__group helper--margin-vertical">
+          <div class="grid__columns">
+            
+            <div class="form__group-row grid__row grid__row--fixed">
+              <div class="form__group-icon">u</div>
+              <div class="grid__column">
+                <input class="form__field" placeholder="user" />
+              </div>
+            </div>
+            
+            <div class="form__group-row grid__row grid__row--fixed">
+              <div class="form__group-icon">u</div>
+              <div class="grid__column">
+                <input class="form__field" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" />
+              </div>
+            </div>
+            
+          </div>
+        </div>
+        <div class="grid__row">
+          <div class="grid__column grid__column--fixed grid__column--four">
+              <button class="button helper--full-width button--blue">teste</button>
+          </div>
+        </div>
+        
+      </form>
+
       <div class="grid__row">
         <div class="button__group">
           <button class="button button--blue">teste</button>

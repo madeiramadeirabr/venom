@@ -2,6 +2,9 @@
   &__row
     display: flex
     flex-direction: row
+    flex-flow: row wrap;
+    max-width: 100%
+    width: 100%
 
     &--reverse
       flex-direction: row-reverse
@@ -9,6 +12,9 @@
   &__columns
     display: flex
     flex-direction: column
+    flex-flow: column nowrap;
+    max-width: 100%
+    width: 100%
 
     &--reverse
       flex-direction: column-reverse
@@ -23,22 +29,32 @@
 
     @each $name, $count in $numbers
       &--#{$name}
-        flex-basis: ($count / 12) * 100%
+        flex-grow: $count
         max-width: ($count / 12) * 100%
+        order: $count
 
       &--offset-#{$name}
         margin-left: ($count / 12) * 100%
 
+  +for-size(mobile)
+    &__row
+      &:not([class*='--fixed'])
+        flex-direction: column
 
-+for-size(phone-only)
-  .grid
+      &--reverse
+        &:not([class*='--fixed'])
+          flex-direction: column-reverse
+
     &__column
       &:not([class*='--fixed'])
+        flex-grow: auto
         max-width: 100%
-        width: 100%
 
-+for-size(tablet-portrait-up)
-  .grid
-    &__column
-      max-width: 100%
-      width: 100%
++for-size(tablet)
+  &__row
+    &:not([class*='--fixed'])
+      flex-direction: column
+
+    &--reverse
+      &:not([class*='--fixed'])
+        flex-direction: column-reverse
