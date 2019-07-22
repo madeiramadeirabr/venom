@@ -681,6 +681,22 @@ table th:not([align]) {
   color: #dcdc18;
 }
 
+.helper--color-facebook {
+  color: #3c5a9a;
+}
+
+.helper--color-google {
+  color: #de4e3b;
+}
+
+.helper--color-instagram {
+  color: #e43f5d;
+}
+
+.helper--color-whatsapp {
+  color: #25d466;
+}
+
 .helper--background-blue {
   background-color: #0854a0;
 }
@@ -699,6 +715,22 @@ table th:not([align]) {
 
 .helper--background-yellow {
   background-color: #dcdc18;
+}
+
+.helper--background-facebook {
+  background-color: #3c5a9a;
+}
+
+.helper--background-google {
+  background-color: #de4e3b;
+}
+
+.helper--background-instagram {
+  background-color: #e43f5d;
+}
+
+.helper--background-whatsapp {
+  background-color: #25d466;
 }
 
 @media screen and (max-width: 767px) {
@@ -1182,6 +1214,102 @@ table th:not([align]) {
 
 .button.button--yellow:disabled {
   background-color: #efef6c;
+}
+
+.button.button--facebook {
+  background-color: #3c5a9a;
+  border-color: #2e4476;
+  color: white;
+}
+
+.button.button--facebook:hover {
+  background-color: #2e4476;
+}
+
+.button.button--facebook:active {
+  background-color: #4f71ba;
+  outline: none;
+}
+
+.button.button--facebook:focus {
+  background-color: #2e4476;
+  outline: none;
+}
+
+.button.button--facebook:disabled {
+  background-color: #738ec9;
+}
+
+.button.button--google {
+  background-color: #de4e3b;
+  border-color: #c43421;
+  color: white;
+}
+
+.button.button--google:hover {
+  background-color: #c43421;
+}
+
+.button.button--google:active {
+  background-color: #e57566;
+  outline: none;
+}
+
+.button.button--google:focus {
+  background-color: #c43421;
+  outline: none;
+}
+
+.button.button--google:disabled {
+  background-color: #ed9d92;
+}
+
+.button.button--instagram {
+  background-color: #e43f5d;
+  border-color: #d21e3f;
+  color: white;
+}
+
+.button.button--instagram:hover {
+  background-color: #d21e3f;
+}
+
+.button.button--instagram:active {
+  background-color: #ea6c83;
+  outline: none;
+}
+
+.button.button--instagram:focus {
+  background-color: #d21e3f;
+  outline: none;
+}
+
+.button.button--instagram:disabled {
+  background-color: #f098a8;
+}
+
+.button.button--whatsapp {
+  background-color: #25d466;
+  border-color: #1ea951;
+  color: white;
+}
+
+.button.button--whatsapp:hover {
+  background-color: #1ea951;
+}
+
+.button.button--whatsapp:active {
+  background-color: #4de083;
+  outline: none;
+}
+
+.button.button--whatsapp:focus {
+  background-color: #1ea951;
+  outline: none;
+}
+
+.button.button--whatsapp:disabled {
+  background-color: #79e7a1;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
