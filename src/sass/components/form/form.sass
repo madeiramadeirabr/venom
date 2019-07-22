@@ -1,92 +1,142 @@
 .form
   $self: &
+  $field: '#{ $self }__field'
+  $label: '#{ $self }__label'
 
-  &__label
+  &#{ $self}--horizontal
+    #{ $label }
+      margin-bottom: $zero
+      margin-right: $gap
+
+  &#{ $self}
+    &__divider
+      width: $gap
+
+  &#{ $label }
     align-items: center
-    color: $black
+    color: $color-black
     display: flex
     font-size: $size-regular
     font-weight: $weight-regular
     line-height: 1
     margin-bottom: $gap
+    transition: color $transition $easing
 
-  &--horizontal
-    #{ $self }__label
-      margin-bottom: $zero
-      margin-right: $gap
-
-  &__divider
-    width: $gap
-
-  &__field
+  &#{ $field }
     background-color: $background-color
     border: solid $border-width $border-color-flat
     border-radius: $radius
     box-sizing: border-box
-    color: $black
+    color: $color-black
     font-size: $size-regular
     font-weight: $weight-regular
     line-height: 1
     padding: $gap
     width: 100%
 
-    &:active,
-    &--active
-      border-color: $color-blue
-      outline: none
+    &#{$field}
+      &--large
+        padding: $gap-large
 
-    &:focus,
-    &--focus
-      border-color: $color-blue
-      outline: none
+        &:focus // sass-lint:disable-line nesting-depth
+          padding: $gap-large
 
-    &:disabled,
-    &--disabled
+      &--active
+        border-color: $color-blue
+
+      &--focus
+        border-color: $color-blue
+
+      &--disabled
+        opacity: .8
+
+    &:active
+      border-color: $color-blue
+
+    &:focus
+      border-color: $color-grey
+      border-width: $border-width * 2
+      padding: $gap - ( $border-width * 2)
+
+    &:disabled
       opacity: .8
 
-  &__group
-    background-color: $white
-    border: solid $border-width $border-color-flat
-    border-radius: $radius
-    display: flex;
-    overflow: hidden
-
-    #{ $self }__field
-      border-radius: $zero
-      border-width: $zero
-
-    &-row
-      border-bottom: solid $border-width $border-color-flat
-
-      &:last-of-type
-        border-bottom-width: $zero
-
-    &-icon
-      align-items: center
-      color: $grey-light
-      display: flex
-      justify-content: center
-      text-align: center
-      width: $gap * 4
-
-  +for-retina
-    &__field
-      border-width: $border-width-retina
-
-  +for-size(mobile)
-    &--horizontal
+  &#{ $self}
+    &--with-danger-focus
       #{ $self }__label
-        &:not([class*='--fixed'])
-          margin-bottom: $gap
-          margin-right: $zero
+        color: $color-red-dark
+        font-weight: $weight-semibold
 
-  +for-size(tablet)
-    &--horizontal
+      #{ $self }__field
+        border-color: $color-red-dark
+        color: $color-red-dark
+
+    &--with-warning-focus
       #{ $self }__label
-        &:not([class*='--fixed'])
-          margin-bottom: $gap
-          margin-right: $zero
+        color: $color-yellow-dark
+        font-weight: $weight-semibold
 
-    &__divider
-      &:not([class*='--fixed'])
-        display: none
+      #{ $self }__field
+        border-color: $color-yellow-dark
+        color: $color-yellow-dark
+
+    &__group
+      background-color: $color-white
+      border: solid $border-width $border-color-flat
+      border-radius: $radius
+      display: flex;
+      overflow: hidden
+
+      #{ $self }__field
+        border-radius: $zero
+        border-width: $zero
+
+        &:focus
+          border-width: $zero
+          padding: $gap
+
+        &#{ $field }--large
+          padding: $gap-large
+
+          &:focus // sass-lint:disable-line nesting-depth
+            padding: $gap-large
+
+      &-row
+        border-bottom: solid $border-width $border-color-flat
+
+        &:last-of-type
+          border-bottom-width: $zero
+
+      &-icon
+        align-items: center
+        color: $color-grey-light
+        display: flex
+        justify-content: center
+        text-align: center
+        width: $gap * 4
+
+    +for-retina
+      &__field
+        border-width: $border-width-retina
+
+        &:focus
+          border-width: $border-width-retina * 3
+          padding: $gap - ( $border-width-retina * 3 )
+
+    +for-size(mobile)
+      &--horizontal
+        #{ $self }__label
+          &:not([class*='--fixed'])
+            margin-bottom: $gap
+            margin-right: $zero
+
+    +for-size(tablet)
+      &--horizontal
+        #{ $self }__label
+          &:not([class*='--fixed'])
+            margin-bottom: $gap
+            margin-right: $zero
+
+      &__divider
+        &:not([class*='--fixed'])
+          display: none

@@ -12,7 +12,7 @@
   transition: background-color $transition $easing
   width: auto
 
-  &.button
+  &#{ $self }
     @each $color, $value in $color-regular-map
       &--#{$color}
         background-color: map-get($color-regular-map, $color)

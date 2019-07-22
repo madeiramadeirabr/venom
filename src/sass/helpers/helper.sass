@@ -37,13 +37,21 @@
     max-height: 100%
 
   &--with-gap-small
+    box-sizing: border-box
     padding: $gap-small
 
   &--with-gap
+    box-sizing: border-box
     padding: $gap
 
   &--with-gap-large
+    box-sizing: border-box
     padding: $gap-large
+
+  &--with-border
+    border: solid $border-width $border-color-flat
+    border-radius: $radius
+    box-sizing: border-box
 
   &--margin
     margin: $gap
@@ -92,6 +100,15 @@
         margin-right: $gap-large
 
   &--color
+    &-white
+      color: $color-white
+
+    &-grey
+      color: $color-grey
+
+    &-black
+      color: $color-black
+
     @each $color, $value in $color-regular-map
       &-#{$color}
         color: $value
@@ -109,3 +126,7 @@
   +for-size(tablet)
     &--hidden-tablet
       display: none
+
+  +for-retina
+    &--with-border
+      border-width: $border-width-retina

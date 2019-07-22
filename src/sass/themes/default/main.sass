@@ -2,7 +2,7 @@ $body-min-width: 300px !default
 $body-rendering: optimizeLegibility !default
 $body-overflow-x: hidden !default
 $body-overflow-y: scroll !default
-$background-color: $white !default
+$background-color: $color-white !default
 
 html
   -moz-osx-font-smoothing: grayscale // sass-lint:disable-line no-vendor-prefixes
@@ -72,6 +72,12 @@ img
 input[type='checkbox'], // sass-lint:disable-line no-qualifying-elements force-attribute-nesting
 input[type='radio'] // sass-lint:disable-line no-qualifying-elements force-attribute-nesting
   vertical-align: baseline
+
+button,
+textarea,
+select,
+input
+  outline: none
 
 small
   font-size: $size-small

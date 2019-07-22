@@ -32,7 +32,7 @@ _Eg.: `$color-purple-light` is a wrong variable, because `purple` is not listed 
 
 **Another colors**
 
-> Do you find this variables in `sass/themes/default/colors.sass` file.
+> Do you find this variables in `sass/colors.sass` file.
 
 | Variable | Value |
 | -------- | ----- |
