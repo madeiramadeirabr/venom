@@ -3,15 +3,6 @@
   $field: '#{ $self }__field'
   $label: '#{ $self }__label'
 
-  &#{ $self}--horizontal
-    #{ $label }
-      margin-bottom: $zero
-      margin-right: $gap
-
-  &#{ $self}
-    &__divider
-      width: $gap
-
   &#{ $label }
     align-items: center
     color: $color-black
@@ -20,6 +11,7 @@
     font-weight: $weight-regular
     line-height: 1
     margin-bottom: $gap
+    margin-top: $gap
     transition: color $transition $easing
 
   &#{ $field }
@@ -61,7 +53,16 @@
     &:disabled
       opacity: .8
 
-  &#{ $self}
+  &#{ $self }
+    &--horizontal
+      #{ $label }
+        margin-bottom: $zero
+        margin-right: $gap
+        margin-top: $zero
+
+    &__divider
+      width: $gap
+
     &--with-danger-focus
       #{ $self }__label
         color: $color-red-dark

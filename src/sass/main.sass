@@ -48,9 +48,10 @@ body
 a
   cursor: pointer
   text-decoration: none
+  color: $color-blue
 
   strong
-    color: $color-blue
+    color: currentColor
 
     &:hover
       color: $color-blue-dark
@@ -96,12 +97,21 @@ fieldset
 h1
   font-size: $size-extra-large
   font-weight: $weight-bold
-  line-height: 1.1;
+  line-height: 1.1
+  margin: $zero
+  padding: $zero
 
 h2
   font-size: $size-large
   font-weight: $weight-semibold
-  line-height: 1.1;
+  line-height: 1.1
+  margin: $zero
+  padding: $zero
+
+p
+  line-height: 1.1
+  margin: $zero
+  padding: $zero
 
 pre
   overflow-x: auto

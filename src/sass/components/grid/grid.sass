@@ -50,11 +50,11 @@
         flex-grow: auto
         max-width: 100%
 
-+for-size(tablet)
-  &__row
-    &:not([class*='--fixed'])
-      flex-direction: column
-
-    &--reverse
+  +for-size(tablet)
+    &__row
       &:not([class*='--fixed'])
-        flex-direction: column-reverse
+        flex-direction: column
+
+      &--reverse
+        &:not([class*='--fixed'])
+          flex-direction: column-reverse

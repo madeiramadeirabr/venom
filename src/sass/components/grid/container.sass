@@ -1,6 +1,10 @@
 .container
   margin: 0 auto
 
+  &--mobile
+    max-width: $mobile
+    width: $mobile
+
   &--full-width
     max-width: 100%
     width: 100vw
@@ -25,7 +29,15 @@
     max-width: $desktop
     width: $desktop
 
+    &--mobile
+      max-width: $mobile
+      width: $mobile
+
 +for-size(widescreen)
   .container
     max-width: $widescreen
     width: $widescreen
+
+    &--mobile
+      max-width: $mobile
+      width: $mobile

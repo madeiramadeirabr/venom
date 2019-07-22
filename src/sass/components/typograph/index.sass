@@ -1,35 +1,39 @@
-.title
-  +clearfix
-  color: $color-black
-  font-size: $size-extra-large
-  font-weight: $weight-bold
-  line-height: 1.1
+.typograph
+  $self: &
 
-  &--with-margin-bottom
-    margin-bottom: $gap
+  &#{ $self}
+    &__title
+      +clearfix
+      color: currentColor
+      font-size: $size-extra-large
+      font-weight: $weight-bold
+      line-height: 1.1
 
-  &--base-line
-    line-height: 1
+    &__subtitle
+      +clearfix
+      color: currentColor
+      font-size: $size-regular
+      font-weight: $weight-semibold
+      line-height: 1.1
 
-.subtitle
-  +clearfix
-  color: $color-grey-dark
-  font-size: $size-regular
-  font-weight: $weight-semibold
-  line-height: 1.1
+    &__paragraph
+      +clearfix
+      color: currentColor
+      font-size: $size-regular
+      font-weight: $weight-regular
+      line-height: 1.1
 
-  &--with-margin-bottom
-    margin-bottom: $gap
+    &--base-line
+      line-height: 1
 
-  &--base-line
-    line-height: 1
+    &--left
+      text-align: left
 
-.paragraph
-  +clearfix
-  color: $color-grey-dark
-  font-size: $size-regular
-  font-weight: $weight-regular
-  line-height: 1.1
+    &--center
+      text-align: center
 
-  &--base-line
-    line-height: 1
+    &--right
+      text-align: center
+
+    &--upper
+      text-transform: uppercase
