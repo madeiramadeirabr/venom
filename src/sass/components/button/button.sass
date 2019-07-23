@@ -6,7 +6,7 @@
   border-width: $border-width
   cursor: pointer
   font-size: $size-regular
-  font-weight: $weight-regular
+  font-weight: $weight-semibold
   line-height: 1
   padding: $gap
   text-transform: uppercase
@@ -16,7 +16,7 @@
     @each $color, $value in $color-regular-map
       &--#{$color}
         background-color: map-get($color-regular-map, $color)
-        border-color: map-get($color-dark-map, $color)
+        border-color: map-get($color-regular-map, $color)
         color: map-get($color-contrast-map, $color)
 
         &:hover
@@ -30,9 +30,8 @@
           background-color: map-get($color-dark-map, $color)
           outline: none
 
-        &:disabled
+        &:disabled,
+        &#{ $self }--disabled
           background-color: map-get($color-lightness-map, $color)
-
-  +for-retina
-    #{ $self }
-      border-width: $border-width-retina
+          border-color: map-get($color-light-map, $color)
+          cursor: default

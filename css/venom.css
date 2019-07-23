@@ -881,6 +881,7 @@ table th:not([align]) {
   -webkit-box-flex: 1;
           flex: 1;
   max-width: 100%;
+  position: relative;
 }
 
 .grid__column--vertical {
@@ -1138,17 +1139,17 @@ table th:not([align]) {
   border-width: 1px;
   cursor: pointer;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 1;
   padding: 12px;
   text-transform: uppercase;
-  -webkit-transition: background-color 86ms ease-out;
-  transition: background-color 86ms ease-out;
+  -webkit-transition: background-color 86ms ease-in;
+  transition: background-color 86ms ease-in;
 }
 
 .button.button--blue {
   background-color: #0854a0;
-  border-color: #0c316a;
+  border-color: #0854a0;
   color: white;
 }
 
@@ -1166,13 +1167,15 @@ table th:not([align]) {
   outline: none;
 }
 
-.button.button--blue:disabled {
+.button.button--blue:disabled, .button.button--blue.button--disabled {
   background-color: #2774e7;
+  border-color: #165cc5;
+  cursor: default;
 }
 
 .button.button--orange {
   background-color: #f4831f;
-  border-color: #d6690a;
+  border-color: #f4831f;
   color: white;
 }
 
@@ -1190,13 +1193,15 @@ table th:not([align]) {
   outline: none;
 }
 
-.button.button--orange:disabled {
+.button.button--orange:disabled, .button.button--orange.button--disabled {
   background-color: #f9b980;
+  border-color: #f79e50;
+  cursor: default;
 }
 
 .button.button--red {
   background-color: #f41f1f;
-  border-color: #d60a0a;
+  border-color: #f41f1f;
   color: white;
 }
 
@@ -1214,13 +1219,15 @@ table th:not([align]) {
   outline: none;
 }
 
-.button.button--red:disabled {
+.button.button--red:disabled, .button.button--red.button--disabled {
   background-color: #f98080;
+  border-color: #f75050;
+  cursor: default;
 }
 
 .button.button--green {
   background-color: #18dc71;
-  border-color: #13ae59;
+  border-color: #18dc71;
   color: white;
 }
 
@@ -1238,13 +1245,15 @@ table th:not([align]) {
   outline: none;
 }
 
-.button.button--green:disabled {
+.button.button--green:disabled, .button.button--green.button--disabled {
   background-color: #9af4c2;
+  border-color: #3eea8b;
+  cursor: default;
 }
 
 .button.button--yellow {
   background-color: #dcdc18;
-  border-color: #aeae13;
+  border-color: #dcdc18;
   color: #0d0d0d;
 }
 
@@ -1262,13 +1271,15 @@ table th:not([align]) {
   outline: none;
 }
 
-.button.button--yellow:disabled {
+.button.button--yellow:disabled, .button.button--yellow.button--disabled {
   background-color: #efef6c;
+  border-color: #eaea3e;
+  cursor: default;
 }
 
 .button.button--grey {
   background-color: gray;
-  border-color: #4d4d4d;
+  border-color: gray;
   color: #e6e6e6;
 }
 
@@ -1286,13 +1297,15 @@ table th:not([align]) {
   outline: none;
 }
 
-.button.button--grey:disabled {
+.button.button--grey:disabled, .button.button--grey.button--disabled {
   background-color: #e6e6e6;
+  border-color: #b3b3b3;
+  cursor: default;
 }
 
 .button.button--shade {
   background-color: #262626;
-  border-color: #1a1a1a;
+  border-color: #262626;
   color: #e6e6e6;
 }
 
@@ -1310,13 +1323,15 @@ table th:not([align]) {
   outline: none;
 }
 
-.button.button--shade:disabled {
+.button.button--shade:disabled, .button.button--shade.button--disabled {
   background-color: #404040;
+  border-color: #333333;
+  cursor: default;
 }
 
 .button.button--facebook {
   background-color: #3c5a9a;
-  border-color: #2e4476;
+  border-color: #3c5a9a;
   color: white;
 }
 
@@ -1334,13 +1349,15 @@ table th:not([align]) {
   outline: none;
 }
 
-.button.button--facebook:disabled {
+.button.button--facebook:disabled, .button.button--facebook.button--disabled {
   background-color: #738ec9;
+  border-color: #4f71ba;
+  cursor: default;
 }
 
 .button.button--google {
   background-color: #de4e3b;
-  border-color: #c43421;
+  border-color: #de4e3b;
   color: white;
 }
 
@@ -1358,13 +1375,15 @@ table th:not([align]) {
   outline: none;
 }
 
-.button.button--google:disabled {
+.button.button--google:disabled, .button.button--google.button--disabled {
   background-color: #ed9d92;
+  border-color: #e57566;
+  cursor: default;
 }
 
 .button.button--instagram {
   background-color: #e43f5d;
-  border-color: #d21e3f;
+  border-color: #e43f5d;
   color: white;
 }
 
@@ -1382,13 +1401,15 @@ table th:not([align]) {
   outline: none;
 }
 
-.button.button--instagram:disabled {
+.button.button--instagram:disabled, .button.button--instagram.button--disabled {
   background-color: #f098a8;
+  border-color: #ea6c83;
+  cursor: default;
 }
 
 .button.button--whatsapp {
   background-color: #25d466;
-  border-color: #1ea951;
+  border-color: #25d466;
   color: white;
 }
 
@@ -1406,14 +1427,10 @@ table th:not([align]) {
   outline: none;
 }
 
-.button.button--whatsapp:disabled {
+.button.button--whatsapp:disabled, .button.button--whatsapp.button--disabled {
   background-color: #79e7a1;
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .button .button {
-    border-width: 0.5px;
-  }
+  border-color: #4de083;
+  cursor: default;
 }
 
 .button.button--large {
@@ -1450,6 +1467,25 @@ table th:not([align]) {
   }
 }
 
+.form.form__indicator {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  right: 12px;
+  top: calc(calc(100% / 2) - calc(18px / 2));
+}
+
+.form.form__indicator--positive::after {
+  color: #18dc71;
+  content: '\2713';
+}
+
+.form.form__indicator--negative::after {
+  color: #f41f1f;
+  content: '\2717';
+}
+
 .form.form__label {
   -webkit-box-align: center;
           align-items: center;
@@ -1461,8 +1497,8 @@ table th:not([align]) {
   line-height: 1;
   margin-bottom: 12px;
   margin-top: 12px;
-  -webkit-transition: color 86ms ease-out;
-  transition: color 86ms ease-out;
+  -webkit-transition: color 86ms ease-in;
+  transition: color 86ms ease-in;
 }
 
 .form.form__field {
@@ -1475,6 +1511,8 @@ table th:not([align]) {
   font-weight: 400;
   line-height: 1;
   padding: 12px;
+  -webkit-transition: border-width 172ms ease-in, padding 172ms ease-in;
+  transition: border-width 172ms ease-in, padding 172ms ease-in;
   width: 100%;
 }
 
@@ -1505,7 +1543,7 @@ table th:not([align]) {
 .form.form__field:focus {
   border-color: gray;
   border-width: 2px;
-  padding: 10px;
+  padding: 11px;
 }
 
 .form.form__field:disabled {

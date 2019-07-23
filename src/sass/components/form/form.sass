@@ -2,6 +2,25 @@
   $self: &
   $field: '#{ $self }__field'
   $label: '#{ $self }__label'
+  $indicator: '#{ $self }__indicator'
+
+  &#{ $indicator }
+    font-size: $size-large
+    font-weight: $weight-bold
+    line-height: 1
+    position: absolute
+    right: $gap
+    top: calc(calc(100% / 2) - calc(#{ $size-large } / 2))
+
+    &--positive
+      &::after // sass-lint:disable-line nesting-depth
+        color: $color-green
+        content: '\2713'
+
+    &--negative
+      &::after // sass-lint:disable-line nesting-depth
+        color: $color-red
+        content: '\2717'
 
   &#{ $label }
     align-items: center
@@ -24,6 +43,7 @@
     font-weight: $weight-regular
     line-height: 1
     padding: $gap
+    transition: border-width $transition-medium $easing, padding $transition-medium $easing
     width: 100%
 
     &#{$field}
@@ -48,7 +68,7 @@
     &:focus
       border-color: $color-grey
       border-width: $border-width * 2
-      padding: $gap - ( $border-width * 2)
+      padding: $gap - ( $border-width)
 
     &:disabled
       opacity: .8

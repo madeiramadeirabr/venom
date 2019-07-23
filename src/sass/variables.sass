@@ -1,5 +1,12 @@
 @import 'colors'
 
+// normalize
+$body-min-width: 300px !default
+$body-rendering: optimizeLegibility !default
+$body-overflow-x: hidden !default
+$body-overflow-y: scroll !default
+$background-color: $color-white !default
+
 // font-family
 $family-sans-serif: BlinkMacSystemFont, -apple-system, 'Open Sans', sans-serif !default
 $family-monospace: monospace !default
@@ -22,12 +29,12 @@ $render-mode: optimizeLegibility !default
 $text: $color-grey-darkness !default
 
 // size
-$zero: 0
+$zero: 0 !default
 $gap-base: 12px !default
-$border-width: 1px
-$border-width-retina: .5px
-$border-color: rgba(0, 0, 0, .75)
-$border-color-flat: $color-grey-light
+$border-width: 1px !default
+$border-width-retina: .5px !default
+$border-color: rgba(0, 0, 0, .75) !default
+$border-color-flat: $color-grey-light !default
 
 // gap
 $gap: $gap-base !default;
@@ -40,7 +47,7 @@ $desktop: 1024px !default
 $widescreen: 1256px + ($gap * 2) !default
 
 // miscellaneous
-$easing: ease-out !default
+$easing: ease-in !default
 $radius-small: ($gap-base / 6) !default
 $radius: ($gap-base / 4) !default
 $radius-large: ($gap-base / 2) !default
