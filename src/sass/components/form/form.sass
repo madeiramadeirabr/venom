@@ -61,6 +61,7 @@
 
       &--disabled
         opacity: .8
+        pointer-events: none
 
     &:active
       border-color: $color-blue
@@ -72,6 +73,7 @@
 
     &:disabled
       opacity: .8
+      pointer-events: none
 
   &#{ $self }
     &--horizontal
@@ -135,6 +137,9 @@
         justify-content: center
         text-align: center
         width: $gap * 4
+
+        svg
+          fill: $color-grey-light
 
     +for-retina
       &__field

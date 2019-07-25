@@ -1091,12 +1091,9 @@ table th:not([align]) {
     max-width: 100%;
     width: 100vw;
   }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1023px) {
-  .container {
-    max-width: 100%;
-    width: 100vw;
+  .container--mobile {
+    max-width: 370px;
+    width: 370px;
   }
 }
 
@@ -1171,6 +1168,7 @@ table th:not([align]) {
   background-color: #2774e7;
   border-color: #165cc5;
   cursor: default;
+  pointer-events: none;
 }
 
 .button.button--orange {
@@ -1197,6 +1195,7 @@ table th:not([align]) {
   background-color: #f9b980;
   border-color: #f79e50;
   cursor: default;
+  pointer-events: none;
 }
 
 .button.button--red {
@@ -1223,6 +1222,7 @@ table th:not([align]) {
   background-color: #f98080;
   border-color: #f75050;
   cursor: default;
+  pointer-events: none;
 }
 
 .button.button--green {
@@ -1249,6 +1249,7 @@ table th:not([align]) {
   background-color: #9af4c2;
   border-color: #3eea8b;
   cursor: default;
+  pointer-events: none;
 }
 
 .button.button--yellow {
@@ -1275,6 +1276,7 @@ table th:not([align]) {
   background-color: #efef6c;
   border-color: #eaea3e;
   cursor: default;
+  pointer-events: none;
 }
 
 .button.button--grey {
@@ -1301,6 +1303,7 @@ table th:not([align]) {
   background-color: #e6e6e6;
   border-color: #b3b3b3;
   cursor: default;
+  pointer-events: none;
 }
 
 .button.button--shade {
@@ -1327,6 +1330,7 @@ table th:not([align]) {
   background-color: #404040;
   border-color: #333333;
   cursor: default;
+  pointer-events: none;
 }
 
 .button.button--facebook {
@@ -1353,6 +1357,7 @@ table th:not([align]) {
   background-color: #738ec9;
   border-color: #4f71ba;
   cursor: default;
+  pointer-events: none;
 }
 
 .button.button--google {
@@ -1379,6 +1384,7 @@ table th:not([align]) {
   background-color: #ed9d92;
   border-color: #e57566;
   cursor: default;
+  pointer-events: none;
 }
 
 .button.button--instagram {
@@ -1405,6 +1411,7 @@ table th:not([align]) {
   background-color: #f098a8;
   border-color: #ea6c83;
   cursor: default;
+  pointer-events: none;
 }
 
 .button.button--whatsapp {
@@ -1431,6 +1438,7 @@ table th:not([align]) {
   background-color: #79e7a1;
   border-color: #4de083;
   cursor: default;
+  pointer-events: none;
 }
 
 .button.button--large {
@@ -1534,6 +1542,7 @@ table th:not([align]) {
 
 .form.form__field.form__field--disabled {
   opacity: .8;
+  pointer-events: none;
 }
 
 .form.form__field:active {
@@ -1548,6 +1557,7 @@ table th:not([align]) {
 
 .form.form__field:disabled {
   opacity: .8;
+  pointer-events: none;
 }
 
 .form.form--horizontal .form__label {
@@ -1625,6 +1635,10 @@ table th:not([align]) {
           justify-content: center;
   text-align: center;
   width: 48px;
+}
+
+.form.form__group-icon svg {
+  fill: #b3b3b3;
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
