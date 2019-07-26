@@ -535,6 +535,14 @@ table th:not([align]) {
   display: table;
 }
 
+.helper--hidden {
+  display: none !important;
+}
+
+.helper--with-pointer {
+  cursor: pointer;
+}
+
 .helper--no-margin {
   margin: 0;
 }
@@ -1725,5 +1733,219 @@ table th:not([align]) {
 
 .typograph.typograph--upper {
   text-transform: uppercase;
+}
+
+.alert.alert__content {
+  color: #333333;
+  -webkit-box-flex: 1;
+          flex: 1;
+  font-weight: 400;
+  line-height: 1.1;
+  -webkit-transition: color 86ms ease-in;
+  transition: color 86ms ease-in;
+}
+
+.alert.alert__close {
+  cursor: pointer;
+  width: 14px;
+}
+
+.alert.alert__close::after {
+  content: '\2717';
+}
+
+.alert.alert__container {
+  background-color: #b3b3b3;
+  border-radius: 3px;
+  box-sizing: border-box;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  padding: 12px;
+  -webkit-transition: background-color 86ms ease-in;
+  transition: background-color 86ms ease-in;
+  width: 100%;
+}
+
+.alert.alert__container:hover {
+  background-color: #b3b3b3;
+}
+
+.alert.alert__container--blue {
+  background-color: #165cc5;
+}
+
+.alert.alert__container--blue__content {
+  color: #071c3c;
+}
+
+.alert.alert__container--blue:hover {
+  background-color: #2774e7;
+}
+
+.alert.alert__container--blue .alert__close::after {
+  color: #071c3c;
+}
+
+.alert.alert__container--orange {
+  background-color: #f79e50;
+}
+
+.alert.alert__container--orange__content {
+  color: #a65108;
+}
+
+.alert.alert__container--orange:hover {
+  background-color: #f9b980;
+}
+
+.alert.alert__container--orange .alert__close::after {
+  color: #a65108;
+}
+
+.alert.alert__container--red {
+  background-color: #f75050;
+}
+
+.alert.alert__container--red__content {
+  color: #a60808;
+}
+
+.alert.alert__container--red:hover {
+  background-color: #f98080;
+}
+
+.alert.alert__container--red .alert__close::after {
+  color: #a60808;
+}
+
+.alert.alert__container--green {
+  background-color: #3eea8b;
+}
+
+.alert.alert__container--green__content {
+  color: #0e8142;
+}
+
+.alert.alert__container--green:hover {
+  background-color: #9af4c2;
+}
+
+.alert.alert__container--green .alert__close::after {
+  color: #0e8142;
+}
+
+.alert.alert__container--yellow {
+  background-color: #eaea3e;
+}
+
+.alert.alert__container--yellow__content {
+  color: #81810e;
+}
+
+.alert.alert__container--yellow:hover {
+  background-color: #efef6c;
+}
+
+.alert.alert__container--yellow .alert__close::after {
+  color: #81810e;
+}
+
+.alert.alert__container--grey {
+  background-color: #b3b3b3;
+}
+
+.alert.alert__container--grey__content {
+  color: #333333;
+}
+
+.alert.alert__container--grey:hover {
+  background-color: #e6e6e6;
+}
+
+.alert.alert__container--grey .alert__close::after {
+  color: #333333;
+}
+
+.alert.alert__container--shade {
+  background-color: #333333;
+}
+
+.alert.alert__container--shade__content {
+  color: #0d0d0d;
+}
+
+.alert.alert__container--shade:hover {
+  background-color: #404040;
+}
+
+.alert.alert__container--shade .alert__close::after {
+  color: #0d0d0d;
+}
+
+.alert.alert__container--facebook {
+  background-color: #4f71ba;
+}
+
+.alert.alert__container--facebook__content {
+  color: #1f2f51;
+}
+
+.alert.alert__container--facebook:hover {
+  background-color: #738ec9;
+}
+
+.alert.alert__container--facebook .alert__close::after {
+  color: #1f2f51;
+}
+
+.alert.alert__container--google {
+  background-color: #e57566;
+}
+
+.alert.alert__container--google__content {
+  color: #99291a;
+}
+
+.alert.alert__container--google:hover {
+  background-color: #ed9d92;
+}
+
+.alert.alert__container--google .alert__close::after {
+  color: #99291a;
+}
+
+.alert.alert__container--instagram {
+  background-color: #ea6c83;
+}
+
+.alert.alert__container--instagram__content {
+  color: #a51832;
+}
+
+.alert.alert__container--instagram:hover {
+  background-color: #f098a8;
+}
+
+.alert.alert__container--instagram .alert__close::after {
+  color: #a51832;
+}
+
+.alert.alert__container--whatsapp {
+  background-color: #4de083;
+}
+
+.alert.alert__container--whatsapp__content {
+  color: #167e3c;
+}
+
+.alert.alert__container--whatsapp:hover {
+  background-color: #79e7a1;
+}
+
+.alert.alert__container--whatsapp .alert__close::after {
+  color: #167e3c;
 }
 /*# sourceMappingURL=venom.css.map */

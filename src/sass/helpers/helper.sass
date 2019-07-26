@@ -2,6 +2,12 @@
   &--cleafix
     +clearfix
 
+  &--hidden
+    display: none !important // sass-lint:disable-line no-important
+
+  &--with-pointer
+    cursor: pointer
+
   &--no-margin
     margin: $zero
 
@@ -57,7 +63,7 @@
     height: 100vh
 
   &--with-radius
-    border-radius: $radius  
+    border-radius: $radius
 
   &--margin
     margin: $gap
