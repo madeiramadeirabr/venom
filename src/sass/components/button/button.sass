@@ -8,11 +8,51 @@
   font-size: $size-regular
   font-weight: $weight-semibold
   line-height: 1
+  outline: none
   padding: $gap
   text-transform: uppercase
-  transition: background-color $transition $easing
+  transition: background-color $transition $easing, border-color $transition $easing
 
   &#{ $self }
+    &--default
+      background-color: $color-white
+      border-color: $color-white
+      color: $text
+
+      &:hover // sass-lint:disable-line nesting-depth
+        background-color: $color-grey-lightness
+        color: $color-blue-dark
+
+      &:active // sass-lint:disable-line nesting-depth
+        background-color: $color-grey-lightness
+
+      &--disabled, // sass-lint:disable-line nesting-depth
+      &:focus
+        background-color: $color-grey-lightness
+        color: $color-grey-light
+
+    &--link
+      background-color: $color-white
+      border-color: $color-white
+      color: $color-blue
+      text-decoration: underline
+
+      &:hover // sass-lint:disable-line nesting-depth
+        background-color: $color-grey-lightness
+        color: $color-blue-dark
+
+      &:active // sass-lint:disable-line nesting-depth
+        background-color: $color-grey-lightness
+
+      &--disabled, // sass-lint:disable-line nesting-depth
+      &:focus
+        background-color: $color-grey-lightness
+        color: $color-grey-light
+
+    &--outline
+      background-color: $color-white
+      color: currentColor
+
     @each $color, $value in $color-regular-map
       &--#{$color}
         background-color: map-get($color-regular-map, $color)
@@ -24,11 +64,9 @@
 
         &:active
           background-color: map-get($color-light-map, $color)
-          outline: none
 
         &:focus
           background-color: map-get($color-dark-map, $color)
-          outline: none
 
         &:disabled,
         &#{ $self }--disabled
@@ -36,3 +74,35 @@
           border-color: map-get($color-light-map, $color)
           cursor: default
           pointer-events: none
+
+        &#{ $self }--outline
+          background-color: $color-white
+          border-color: map-get($color-regular-map, $color)
+          color: map-get($color-regular-map, $color)
+
+    @each $color, $value in $color-social-regular-map
+      &--#{$color}
+        background-color: map-get($color-social-regular-map, $color)
+        border-color: map-get($color-social-regular-map, $color)
+        color: map-get($color-social-contrast-map, $color)
+
+        &:hover
+          background-color: map-get($color-social-dark-map, $color)
+
+        &:active
+          background-color: map-get($color-social-light-map, $color)
+
+        &:focus
+          background-color: map-get($color-social-dark-map, $color)
+
+        &:disabled,
+        &#{ $self }--disabled
+          background-color: map-get($color-social-lightness-map, $color)
+          border-color: map-get($color-social-light-map, $color)
+          cursor: default
+          pointer-events: none
+
+        &#{ $self }--outline
+          background-color: $color-white
+          border-color: map-get($color-social-regular-map, $color)
+          color: map-get($color-social-regular-map, $color)

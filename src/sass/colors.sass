@@ -2,12 +2,12 @@ $color-black:                       hsl(0, 0%, 5%) !default
 $color-white:                       hsl(0, 0%, 100%) !default
 $background-color:                  $color-white !default
 
-$color-shade-darkness:               hsl(0, 0%,  5%) !default
-$color-shade-dark:                   hsl(0, 0%, 10%) !default
-$color-shade:                        hsl(0, 0%, 15%) !default
-$color-shade-light:                  hsl(0, 0%, 20%) !default
-$color-shade-lightness:              hsl(0, 0%, 25%) !default
-$color-shade-contrast:               $color-white !default
+$color-shade-darkness:              hsl(0, 0%,  5%) !default
+$color-shade-dark:                  hsl(0, 0%, 10%) !default
+$color-shade:                       hsl(0, 0%, 15%) !default
+$color-shade-light:                 hsl(0, 0%, 20%) !default
+$color-shade-lightness:             hsl(0, 0%, 25%) !default
+$color-shade-contrast:              $color-white !default
 
 $color-grey-darkness:               hsl(0, 0%, 20%) !default
 $color-grey-dark:                   hsl(0, 0%, 30%) !default
@@ -79,11 +79,16 @@ $color-social-whatsapp-light:       hsl(142, 70%, 59%) !default
 $color-social-whatsapp-lightness:   hsl(142, 70%, 69%) !default
 $color-social-whatsapp-contrast:    $color-white !default
 
+$color-darkness-map:            ('blue': $color-blue-darkness,  'orange': $color-orange-darkness,   'red': $color-red-darkness,     'green': $color-green-darkness,     'yellow': $color-yellow-darkness,   'grey': $color-grey-darkness,   'shade': $color-shade-darkness)
+$color-dark-map:                ('blue': $color-blue-dark,      'orange': $color-orange-dark,       'red': $color-red-dark,         'green': $color-green-dark,         'yellow': $color-yellow-dark,       'grey': $color-grey-dark,       'shade': $color-shade-dark)
+$color-regular-map:             ('blue': $color-blue,           'orange': $color-orange,            'red': $color-red,              'green': $color-green,              'yellow': $color-yellow,            'grey': $color-grey,            'shade': $color-shade)
+$color-light-map:               ('blue': $color-blue-light,     'orange': $color-orange-light,      'red': $color-red-light,        'green': $color-green-light,        'yellow': $color-yellow-light,      'grey': $color-grey-light,      'shade': $color-shade-light)
+$color-lightness-map:           ('blue': $color-blue-lightness, 'orange': $color-orange-lightness,  'red': $color-red-lightness,    'green': $color-green-lightness,    'yellow': $color-yellow-lightness,  'grey': $color-grey-lightness,  'shade': $color-shade-lightness)
+$color-contrast-map:            ('blue': $color-blue-contrast,  'orange': $color-orange-contrast,   'red': $color-red-contrast,     'green': $color-green-contrast,     'yellow': $color-yellow-contrast,   'grey': $color-grey-contrast,   'shade': $color-shade-contrast)
 
-
-$color-darkness-map:    ('blue': $color-blue-darkness,  'orange': $color-orange-darkness,   'red': $color-red-darkness,     'green': $color-green-darkness,     'yellow': $color-yellow-darkness,   'grey': $color-grey-darkness,   'shade': $color-shade-darkness,   'facebook': $color-social-facebook-darkness,    'google': $color-social-google-darkness,    'instagram': $color-social-instagram-darkness,  'whatsapp': $color-social-whatsapp-darkness)
-$color-dark-map:        ('blue': $color-blue-dark,      'orange': $color-orange-dark,       'red': $color-red-dark,         'green': $color-green-dark,         'yellow': $color-yellow-dark,       'grey': $color-grey-dark,       'shade': $color-shade-dark,       'facebook': $color-social-facebook-dark,        'google': $color-social-google-dark,        'instagram': $color-social-instagram-dark,      'whatsapp': $color-social-whatsapp-dark)
-$color-regular-map:     ('blue': $color-blue,           'orange': $color-orange,            'red': $color-red,              'green': $color-green,              'yellow': $color-yellow,            'grey': $color-grey,            'shade': $color-shade,            'facebook': $color-social-facebook,             'google': $color-social-google,             'instagram': $color-social-instagram,           'whatsapp': $color-social-whatsapp)
-$color-light-map:       ('blue': $color-blue-light,     'orange': $color-orange-light,      'red': $color-red-light,        'green': $color-green-light,        'yellow': $color-yellow-light,      'grey': $color-grey-light,      'shade': $color-shade-light,      'facebook': $color-social-facebook-light,       'google': $color-social-google-light,       'instagram': $color-social-instagram-light,     'whatsapp': $color-social-whatsapp-light)
-$color-lightness-map:   ('blue': $color-blue-lightness, 'orange': $color-orange-lightness,  'red': $color-red-lightness,    'green': $color-green-lightness,    'yellow': $color-yellow-lightness,  'grey': $color-grey-lightness,  'shade': $color-shade-lightness,  'facebook': $color-social-facebook-lightness,   'google': $color-social-google-lightness,   'instagram': $color-social-instagram-lightness, 'whatsapp': $color-social-whatsapp-lightness)
-$color-contrast-map:    ('blue': $color-blue-contrast,  'orange': $color-orange-contrast,   'red': $color-red-contrast,     'green': $color-green-contrast,     'yellow': $color-yellow-contrast,   'grey': $color-grey-contrast,   'shade': $color-shade-contrast,   'facebook': $color-social-facebook-contrast,    'google': $color-social-google-contrast,   'instagram': $color-social-instagram-contrast,  'whatsapp': $color-social-whatsapp-contrast)
+$color-social-darkness-map:     ('facebook': $color-social-facebook-darkness,    'google': $color-social-google-darkness,    'instagram': $color-social-instagram-darkness,  'whatsapp': $color-social-whatsapp-darkness)
+$color-social-dark-map:         ('facebook': $color-social-facebook-dark,        'google': $color-social-google-dark,        'instagram': $color-social-instagram-dark,      'whatsapp': $color-social-whatsapp-dark)
+$color-social-regular-map:      ('facebook': $color-social-facebook,             'google': $color-social-google,             'instagram': $color-social-instagram,           'whatsapp': $color-social-whatsapp)
+$color-social-light-map:        ('facebook': $color-social-facebook-light,       'google': $color-social-google-light,       'instagram': $color-social-instagram-light,     'whatsapp': $color-social-whatsapp-light)
+$color-social-lightness-map:    ('facebook': $color-social-facebook-lightness,   'google': $color-social-google-lightness,   'instagram': $color-social-instagram-lightness, 'whatsapp': $color-social-whatsapp-lightness)
+$color-social-contrast-map:     ('facebook': $color-social-facebook-contrast,    'google': $color-social-google-contrast,    'instagram': $color-social-instagram-contrast,  'whatsapp': $color-social-whatsapp-contrast)

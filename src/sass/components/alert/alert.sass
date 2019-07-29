@@ -5,7 +5,7 @@
     &__content
       color: $text
       flex: 1
-      font-size:
+      font-size: $size-regular
       font-weight: $weight-regular
       line-height: 1.1
       transition: color $transition $easing
@@ -18,24 +18,25 @@
         content: '\2717'
 
     &__container
+      align-items: center
       background-color: $color-grey-light
       border-radius: $radius
       box-sizing: border-box
       display: flex
       flex-direction: row
       padding: $gap
-      transition: background-color $transition $easing
+      transition: background-color $transition $easing, color $transition $easing, display $transition $easing
       width: 100%
 
       &:hover // sass-lint:disable-line nesting-depth
         background-color: $color-grey-light
 
-      @each $color, $value in $color-light-map
+      @each $color, $value in $color-regular-map
         &--#{$color}
-          background-color: map-get($color-light-map, $color)
+          background-color: $value
 
-          &__content
-            color: map-get($color-darkness-map, $color)
+          #{ $self }__content
+            color: map-get($color-contrast-map, $color)
 
           &:hover // sass-lint:disable-line nesting-depth
             background-color: map-get($color-lightness-map, $color)
