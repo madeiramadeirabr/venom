@@ -1794,7 +1794,7 @@ table th:not([align]) {
   text-transform: uppercase;
 }
 
-.alert.alert__content {
+.notification.notification__content {
   color: #333333;
   -webkit-box-flex: 1;
           flex: 1;
@@ -1805,16 +1805,16 @@ table th:not([align]) {
   transition: color 86ms ease-in;
 }
 
-.alert.alert__close {
+.notification.notification__close {
   cursor: pointer;
   width: 14px;
 }
 
-.alert.alert__close::after {
+.notification.notification__close::after {
   content: '\2717';
 }
 
-.alert.alert__container {
+.notification.notification__container {
   -webkit-box-align: center;
           align-items: center;
   background-color: #b3b3b3;
@@ -1831,119 +1831,119 @@ table th:not([align]) {
   width: 100%;
 }
 
-.alert.alert__container:hover {
+.notification.notification__container:hover {
   background-color: #b3b3b3;
 }
 
-.alert.alert__container--blue {
+.notification.notification__container--blue {
   background-color: #0854a0;
 }
 
-.alert.alert__container--blue .alert__content {
+.notification.notification__container--blue .notification__content {
   color: white;
 }
 
-.alert.alert__container--blue:hover {
+.notification.notification__container--blue:hover {
   background-color: #2774e7;
 }
 
-.alert.alert__container--blue .alert__close::after {
+.notification.notification__container--blue .notification__close::after {
   color: #071c3c;
 }
 
-.alert.alert__container--orange {
+.notification.notification__container--orange {
   background-color: #f4831f;
 }
 
-.alert.alert__container--orange .alert__content {
+.notification.notification__container--orange .notification__content {
   color: white;
 }
 
-.alert.alert__container--orange:hover {
+.notification.notification__container--orange:hover {
   background-color: #f9b980;
 }
 
-.alert.alert__container--orange .alert__close::after {
+.notification.notification__container--orange .notification__close::after {
   color: #a65108;
 }
 
-.alert.alert__container--red {
+.notification.notification__container--red {
   background-color: #a83c0b;
 }
 
-.alert.alert__container--red .alert__content {
+.notification.notification__container--red .notification__content {
   color: white;
 }
 
-.alert.alert__container--red:hover {
+.notification.notification__container--red:hover {
   background-color: #f16727;
 }
 
-.alert.alert__container--red .alert__close::after {
+.notification.notification__container--red .notification__close::after {
   color: #481a05;
 }
 
-.alert.alert__container--green {
+.notification.notification__container--green {
   background-color: #14fa7c;
 }
 
-.alert.alert__container--green .alert__content {
+.notification.notification__container--green .notification__content {
   color: white;
 }
 
-.alert.alert__container--green:hover {
+.notification.notification__container--green:hover {
   background-color: #78fcb4;
 }
 
-.alert.alert__container--green .alert__close::after {
+.notification.notification__container--green .notification__close::after {
   color: #03a54c;
 }
 
-.alert.alert__container--yellow {
+.notification.notification__container--yellow {
   background-color: #fab514;
 }
 
-.alert.alert__container--yellow .alert__content {
+.notification.notification__container--yellow .notification__content {
   color: #0d0d0d;
 }
 
-.alert.alert__container--yellow:hover {
+.notification.notification__container--yellow:hover {
   background-color: #fcd578;
 }
 
-.alert.alert__container--yellow .alert__close::after {
+.notification.notification__container--yellow .notification__close::after {
   color: #a57403;
 }
 
-.alert.alert__container--grey {
+.notification.notification__container--grey {
   background-color: gray;
 }
 
-.alert.alert__container--grey .alert__content {
+.notification.notification__container--grey .notification__content {
   color: #333333;
 }
 
-.alert.alert__container--grey:hover {
+.notification.notification__container--grey:hover {
   background-color: #e6e6e6;
 }
 
-.alert.alert__container--grey .alert__close::after {
+.notification.notification__container--grey .notification__close::after {
   color: #333333;
 }
 
-.alert.alert__container--shade {
+.notification.notification__container--shade {
   background-color: #262626;
 }
 
-.alert.alert__container--shade .alert__content {
+.notification.notification__container--shade .notification__content {
   color: white;
 }
 
-.alert.alert__container--shade:hover {
+.notification.notification__container--shade:hover {
   background-color: #404040;
 }
 
-.alert.alert__container--shade .alert__close::after {
+.notification.notification__container--shade .notification__close::after {
   color: #0d0d0d;
 }
 /*# sourceMappingURL=venom.css.map */
