@@ -3,6 +3,7 @@
   $field: '#{ $self }__field'
   $label: '#{ $self }__label'
   $indicator: '#{ $self }__indicator'
+  $icon: '#{ $self }__icon'
 
   &#{ $indicator }
     font-size: $size-large
@@ -21,6 +22,22 @@
       &::after // sass-lint:disable-line nesting-depth
         color: $color-red
         content: '\2717'
+
+  &#{ $icon }
+    align-items: center
+    color: $color-grey-light
+    display: flex
+    justify-content: center
+    text-align: center
+    width: $gap * 4
+
+    svg
+      fill: $color-grey-light
+
+  &#{ $field } + #{ $icon }
+    height: 100%
+    position: absolute
+    right: 0
 
   &#{ $label }
     align-items: center
@@ -129,17 +146,6 @@
 
         &:last-of-type
           border-bottom-width: $zero
-
-      &-icon
-        align-items: center
-        color: $color-grey-light
-        display: flex
-        justify-content: center
-        text-align: center
-        width: $gap * 4
-
-        svg
-          fill: $color-grey-light
 
     +for-retina
       &__field
