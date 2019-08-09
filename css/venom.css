@@ -1,39 +1,5 @@
 /*! venom v0.1.0 | MIT License | github.com/madeiramadeirabr/venom */
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 300;
-  src: url("fonts/open-sans/open-sans-v16-latin-300.eot"), local("Open Sans Light"), local("OpenSans-Light"), url("fonts/open-sans/open-sans-v16-latin-300.eot?#iefix") format("embedded-opentype"), url("fonts/open-sans/open-sans-v16-latin-300.woff2") format("woff2"), url("fonts/open-sans/open-sans-v16-latin-300.woff") format("woff"), url("fonts/open-sans/open-sans-v16-latin-300.ttf") format("truetype"), url("fonts/open-sans/open-sans-v16-latin-300.svg#OpenSans") format("svg");
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 400;
-  src: url("fonts/open-sans/open-sans-v16-latin-regular.eot"), local("Open Sans Regular"), local("OpenSans-Regular"), url("fonts/open-sans/open-sans-v16-latin-regular.eot?#iefix") format("embedded-opentype"), url("fonts/open-sans/open-sans-v16-latin-regular.woff2") format("woff2"), url("fonts/open-sans/open-sans-v16-latin-regular.woff") format("woff"), url("fonts/open-sans/open-sans-v16-latin-regular.ttf") format("truetype"), url("fonts/open-sans/open-sans-v16-latin-regular.svg#OpenSans") format("svg");
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 400;
-  src: url("fonts/open-sans/open-sans-v16-latin-italic.eot"), local("Open Sans Italic"), local("OpenSans-Italic"), url("fonts/open-sans/open-sans-v16-latin-italic.eot?#iefix") format("embedded-opentype"), url("fonts/open-sans/open-sans-v16-latin-italic.woff2") format("woff2"), url("fonts/open-sans/open-sans-v16-latin-italic.woff") format("woff"), url("fonts/open-sans/open-sans-v16-latin-italic.ttf") format("truetype"), url("fonts/open-sans/open-sans-v16-latin-italic.svg#OpenSans") format("svg");
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 600;
-  src: url("fonts/open-sans/open-sans-v16-latin-600.eot"), local("Open Sans Bold"), local("OpenSans-SemiBold"), url("fonts/open-sans/open-sans-v16-latin-600.eot?#iefix") format("embedded-opentype"), url("fonts/open-sans/open-sans-v16-latin-600.woff2") format("woff2"), url("fonts/open-sans/open-sans-v16-latin-600.woff") format("woff"), url("fonts/open-sans/open-sans-v16-latin-600.ttf") format("truetype"), url("fonts/open-sans/open-sans-v16-latin-600.svg#OpenSans") format("svg");
-}
-
-@font-face {
-  font-family: 'Open Sans';
-  font-style: normal;
-  font-weight: 700;
-  src: url("fonts/open-sans/open-sans-v16-latin-700.eot"), local("Open Sans Bold"), local("OpenSans-Bold"), url("fonts/open-sans/open-sans-v16-latin-700.eot?#iefix") format("embedded-opentype"), url("fonts/open-sans/open-sans-v16-latin-700.woff2") format("woff2"), url("fonts/open-sans/open-sans-v16-latin-700.woff") format("woff"), url("fonts/open-sans/open-sans-v16-latin-700.ttf") format("truetype"), url("fonts/open-sans/open-sans-v16-latin-700.svg#OpenSans") format("svg");
-}
-
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&display=swap");
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -609,7 +575,7 @@ table th:not([align]) {
 }
 
 .helper--full-height-viewport {
-  height: 100vh;
+  height: calc(100vh - 24px);
 }
 
 .helper--with-radius {
@@ -1729,15 +1695,15 @@ table th:not([align]) {
     margin-bottom: 12px;
     margin-right: 0;
   }
+  .form.form__divider:not([class*='--fixed']) {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
   .form.form--horizontal .form__label:not([class*='--fixed']) {
     margin-bottom: 12px;
     margin-right: 0;
-  }
-  .form.form__divider:not([class*='--fixed']) {
-    display: none;
   }
 }
 
@@ -1781,7 +1747,7 @@ table th:not([align]) {
 }
 
 .typograph.typograph--small {
-  font-size: 14px;
+  font-size: 10px;
 }
 
 .typograph.typograph--large {

@@ -162,13 +162,13 @@
             margin-bottom: $gap
             margin-right: $zero
 
+      &__divider
+        &:not([class*='--fixed'])
+          display: none
+
     +for-size(tablet)
       &--horizontal
         #{ $self }__label
           &:not([class*='--fixed'])
             margin-bottom: $gap
             margin-right: $zero
-
-      &__divider
-        &:not([class*='--fixed'])
-          display: none

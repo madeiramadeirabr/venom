@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-  <head>
-    <title>VENOM</title>
-    <meta charSet="utf-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
-    <link rel="stylesheet" type="text/css" href="../css/venom.min.css">
 
-    <!--
+<head>
+  <title>VENOM</title>
+  <meta charSet="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="../css/venom.min.css">
+
+  <!--
     ░▒▒██░ ░██░▒██████░▒██████░░██░▒███████░▒██████████▒░░▒██░  ██▒▒██▒░
     ▒▒▒██░ ░██░▒██░░░░░▒██░░██░░██░▒██░░░██░▒██░ ██ ░██▒░░░██░  ██▒▒██▒░░
     ░░▒██░ ░██░▒██░███░▒██░░██░░██░▒██░░░██░▒██░ ██ ░██▒░▒▒██░  ██▒▒██▒░░░░
@@ -15,109 +16,120 @@
     ▒▒▒▒▒███▒▒░▒██████░▒██░░██████░▒███████░▒██░ ██ ░██▒░░░███████▒▒██▒░░
     -->
 
-    <!--[if lte IE 8]>
+  <!--[if lte IE 8]>
     <script>document.createElement("header");document.createElement("section");</script>
     <![endif]-->
 
-  </head>
-  <body>
-    <div class="container">
+</head>
+
+<body>
+  <div class="container">
+    <div class="grid__row">
+      <div class="grid__column helper--background-blue helper--color-white helper--with-gap">
+        1/2
+      </div>
+      <div class="grid__column  helper--background-green helper--color-white helper--with-gap">
+        1/2
+      </div>
+    </div>
+    <div class="grid__row">
+      <div class="grid__column--two">
+        1/2
+      </div>
+      <div class="grid__column helper--with-gap-large">
+        1/4
+      </div>
+      <div class="grid__column grid--center helper--with-gap-small">
+        1/4
+      </div>
+    </div>
+
+    <div class="notification notification__container notification__container--orange">
+      <div class="notification notification__content">
+        teste
+      </div>
+      <a class="notification notification__close">
+      </a>
+    </div>
+
+    <form class="form form--fixed">
       <div class="grid__row">
-            <div class="grid__column helper--background-blue helper--color-white helper--with-gap">
-              1/2
-            </div>
-            <div class="grid__column  helper--background-green helper--color-white helper--with-gap">
-              1/2
-            </div>
-      </div>
-      <div class="grid__row">
-            <div class="grid__column--two">
-                1/2
-            </div>
-            <div class="grid__column helper--with-gap-large">
-                1/4
-            </div>
-            <div class="grid__column grid--center helper--with-gap-small">
-                1/4
-            </div>
-      </div>
-
-      <form class="form form--fixed">
-        <div class="grid__row">
-            <div class="grid__column helper--margin-bottom">
-              <div class="grid__columns form--with-danger-focus">
-                <label class="form form__label">teste</label>
-                <div class="grid__column">
-                  <input class="form form__field" />
-                </div>
-              </div>
-          </div>
-          <div class="form form__divider"></div>
-          <div class="grid__column helper--margin-bottom">
-              <div class="grid__columns">
-                  <label class="form form__label">hahaha</label>
-                  <div class="grid__column">
-                    <input class="form form__field form__field--large" />
-                  </div>
-                </div>
-          </div>
-        </div>
-      </form>
-
-      <div class="title">
-          acesse sua conta
-          
-      </div>
-
-      <div class="subtitle">
-          Preencha os campos abaixo, para para entrar na área do cliente.
-        </div>
-        <p class="paragraph">
-asdasd
-        </p>
-      <form class="form">
-          <div class="grid__columns helper--with-border helper--with-gap">
+        <div class="grid__column helper--margin-bottom">
+          <div class="grid__columns form--with-danger-focus">
             <label class="form form__label">teste</label>
             <div class="grid__column">
               <input class="form form__field" />
             </div>
           </div>
-        </form>
-
-      <form class="form helper--margin">
-        <div class="form form__group helper--margin-vertical">
+        </div>
+        <div class="form form__divider"></div>
+        <div class="grid__column helper--margin-bottom">
           <div class="grid__columns">
-            
-            <label for="user" class="form form__group-row grid__row grid__row--fixed">
-              <div class="form form__group-icon">u</div>
-              <div class="grid__column">
-                <input id="user" name="user" class="form form__field form__field--large" placeholder="user" />
-              </div>
-            </label>
-            
-            <label for="password" class="form form__group-row grid__row grid__row--fixed">
-              <div class="form form__group-icon">u</div>
-              <div class="grid__column">
-                <input id="password" name="password" class="form form__field form__field--large" type="password" placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" />
-              </div>
-            </label>
-            
+            <label class="form form__label">hahaha</label>
+            <div class="grid__column">
+              <input class="form form__field form__field--large" />
+            </div>
           </div>
-        </div>
-        <div class="grid__row">
-          <div class="grid__column grid__column--fixed grid__column--four">
-              <button class="button helper--full-width button--blue">teste</button>
-          </div>
-        </div>
-        
-      </form>
-
-      <div class="grid__row">
-        <div class="button__group">
-          <button class="button button--blue">teste</button>
-          <button class="button button--blue">teste</button>
         </div>
       </div>
+    </form>
+
+    <div class="title">
+      acesse sua conta
+
     </div>
-  </body>
+
+    <div class="subtitle">
+      Preencha os campos abaixo, para para entrar na área do cliente.
+    </div>
+    <p class="paragraph">
+      asdasd
+    </p>
+    <form class="form">
+      <div class="grid__columns helper--with-border helper--with-gap">
+        <label class="form form__label">teste</label>
+        <div class="grid__column">
+          <input class="form form__field" />
+        </div>
+      </div>
+    </form>
+
+    <form class="form helper--margin">
+      <div class="form form__group helper--margin-vertical">
+        <div class="grid__columns">
+
+          <label for="user" class="form form__group-row grid__row grid__row--fixed">
+            <div class="form form__group-icon">u</div>
+            <div class="grid__column">
+              <input id="user" name="user" class="form form__field form__field--large" placeholder="user" />
+            </div>
+          </label>
+
+          <label for="password" class="form form__group-row grid__row grid__row--fixed">
+            <div class="form form__group-icon">u</div>
+            <div class="grid__column">
+              <input id="password" name="password" class="form form__field form__field--large" type="password"
+                placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" />
+            </div>
+          </label>
+
+        </div>
+      </div>
+      <div class="grid__row">
+        <div class="grid__column grid__column--fixed grid__column--four">
+          <button class="button  button--blue">teste</button>
+        </div>
+      </div>
+
+    </form>
+
+    <div class="grid__row">
+      <div class="button__group">
+        <button class="button button--blue">teste</button>
+        <button class="button button--blue">teste</button>
+      </div>
+    </div>
+  </div>
+</body>
+
 </html>
