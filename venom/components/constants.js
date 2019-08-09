@@ -1,0 +1,7 @@
+export const COMPONENT_FIELD = 'field'
+export const COMPONENT_PASSWORD_VISIBILITY = 'password-visibility'
+export const COMPONENT_NOTIFICATION = 'notification'
+export const COMPONENT_BUTTON = 'button'
+export const COMPONENT_FORM = 'form'
+export const COMPONENT_PANEL = 'panel'
+export const COMPONENT_LABEL = 'label'
