@@ -52,15 +52,18 @@
 
   &#{ $field }
     background-color: $background-color
-    border: solid $border-width $border-color-flat
-    border-radius: $radius
+    border-bottom: solid $border-width $border-color-flat
+    border-left-width: $zero
+    border-radius: $zero
+    border-right-width: $zero
+    border-top-width: $zero
     box-sizing: border-box
     color: $color-black
     font-size: $size-regular
     font-weight: $weight-regular
     line-height: 1
     padding: $gap
-    transition: border-width $transition-medium $easing, padding $transition-medium $easing
+    transition: border-bottom-width $transition-medium $easing, padding $transition-medium $easing
     width: 100%
 
     &#{$field}
@@ -84,9 +87,9 @@
       border-color: $color-blue
 
     &:focus
-      border-color: $color-grey
-      border-width: $border-width * 2
-      padding: $gap - ( $border-width)
+      border-bottom-color: $color-grey
+      border-bottom-width: $border-width * 2
+      padding-bottom: $gap - $border-width
 
     &:disabled
       opacity: .8

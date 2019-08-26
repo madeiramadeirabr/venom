@@ -30,16 +30,18 @@ $text: $color-grey-darkness !default
 
 // size
 $zero: 0 !default
-$gap-base: 12px !default
+$gap-base: 4px !default
 $border-width: 1px !default
 $border-width-retina: .5px !default
 $border-color: rgba(0, 0, 0, .75) !default
 $border-color-flat: $color-grey-light !default
 
 // gap
-$gap: $gap-base !default;
-$gap-small: ($gap-base / 2) !default
-$gap-large: ($gap-small * 3) !default
+$gap-extra-small: $gap-base !default
+$gap-small: ($gap-base * 2) !default
+$gap: ($gap-base * 3) !default
+$gap-large: ($gap-base * 4) !default
+$gap-extra-large: ($gap-base * 5) !default
 
 $mobile: 370px !default
 $tablet: 768px !default
@@ -48,9 +50,9 @@ $widescreen: 1256px + ($gap * 2) !default
 
 // miscellaneous
 $easing: ease-in !default
-$radius-small: ($gap-base / 6) !default
-$radius: ($gap-base / 4) !default
-$radius-large: ($gap-base / 2) !default
+$radius-small: ($gap-base / 2) !default
+$radius: $gap-base !default
+$radius-large: ($gap-base * 2) !default
 $radius-rounded: 290486px !default
 $transition: 86ms !default
 $transition-medium: ($transition * 2) !default

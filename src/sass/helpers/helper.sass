@@ -5,7 +5,7 @@
   &--hidden
     display: none !important // sass-lint:disable-line no-important
 
-  &--with-pointer
+  &--pointer
     cursor: pointer
 
   &--no-margin
@@ -18,7 +18,7 @@
     border-radius: $zero
 
   &--no-border
-    border-width: 0
+    border-width: $zero
 
   &--no-shadow
     box-shadow: none
@@ -42,6 +42,10 @@
     box-sizing: border-box
     max-height: 100%
 
+  &--with-gap-extra-small
+    box-sizing: border-box
+    padding: $gap-small
+
   &--with-gap-small
     box-sizing: border-box
     padding: $gap-small
@@ -54,7 +58,11 @@
     box-sizing: border-box
     padding: $gap-large
 
-  &--with-border
+  &--with-gap-extra-large
+    box-sizing: border-box
+    padding: $gap-extra-large
+
+  &--border
     border: solid $border-width $border-color-flat
     border-radius: $radius
     box-sizing: border-box
@@ -65,32 +73,68 @@
   &--with-radius
     border-radius: $radius
 
-  &--margin
+  &--with-margin
     margin: $gap
 
     &-left
       margin-left: $gap
 
+      &-extra-small
+        margin-left: $gap-extra-small
+
+      &-small
+        margin-left: $gap-small
+
       &-large
         margin-left: $gap-large
+
+      &-extra-large
+        margin-left: $gap-extra-large
 
     &-right
       margin-right: $gap
 
+      &-extra-small
+        margin-right: $gap-extra-small
+
+      &-small
+        margin-right: $gap-small
+
       &-large
         margin-right: $gap-large
+
+      &-extra-large
+        margin-right: $gap-extra-large
 
     &-top
       margin-top: $gap
 
+      &-extra-small
+        margin-top: $gap-extra-small
+
+      &-small
+        margin-top: $gap-small
+
       &-large
         margin-top: $gap-large
+
+      &-extra-large
+        margin-top: $gap-extra-large
 
     &-bottom
       margin-bottom: $gap
 
+      &-extra-small
+        margin-bottom: $gap-extra-small
+
+      &-small
+        margin-bottom: $gap-small
+
       &-large
         margin-bottom: $gap-large
+
+      &-extra-large
+        margin-bottom: $gap-extra-large
 
     &-large
       margin: $gap-large
@@ -99,17 +143,41 @@
       margin-bottom: $gap
       margin-top: $gap
 
+      &-extra-small
+        margin-bottom: $gap-extra-small
+        margin-top: $gap-extra-small
+
+      &-small
+        margin-bottom: $gap-small
+        margin-top: $gap-small
+
       &-large
         margin-bottom: $gap-large
         margin-top: $gap-large
+
+      &-extra-large
+        margin-bottom: $gap-extra-large
+        margin-top: $gap-extra-large
 
     &-horizontal
       margin-left: $gap
       margin-right: $gap
 
+      &-extra-small
+        margin-left: $gap-extra-small
+        margin-right: $gap-extra-small
+
+      &-small
+        margin-left: $gap-small
+        margin-right: $gap-small
+
       &-large
         margin-left: $gap-large
         margin-right: $gap-large
+
+      &-extra-large
+        margin-left: $gap-extra-large
+        margin-right: $gap-extra-large
 
   &--color
     &-white
@@ -140,5 +208,5 @@
       display: none
 
   +for-retina
-    &--with-border
+    &--border
       border-width: $border-width-retina

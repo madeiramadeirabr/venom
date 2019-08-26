@@ -1,4 +1,5 @@
 .grid
+  $self: &
 
   &--flex
     display: flex
@@ -19,11 +20,45 @@
   &--bottom
     align-items: flex-end
 
-  &--space-around
-    justify-content: space-around
-
-  &--space-between
+  &--with-space
+    align-content: space-around
     justify-content: space-between
+
+    #{ $self }__column
+      &:not(:last-child)
+        margin-right: $gap
+
+    &-extra-small
+      align-content: space-around
+      justify-content: space-between
+
+      #{ $self }__column
+        &:not(:last-child)
+          margin-right: $gap-extra-small
+
+    &-small
+      align-content: space-around
+      justify-content: space-between
+
+      #{ $self }__column
+        &:not(:last-child)
+          margin-right: $gap-small
+
+    &-large
+      align-content: space-around
+      justify-content: space-between
+
+      #{ $self }__column
+        &:not(:last-child)
+          margin-right: $gap-large
+
+    &-extra-large
+      align-content: space-around
+      justify-content: space-between
+
+      #{ $self }__column
+        &:not(:last-child)
+          margin-right: $gap-extra-large
 
   &--first
     order: -1
