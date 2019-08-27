@@ -76,9 +76,16 @@
 
     <div class="title">
       acesse sua conta
+    </div>
+    <br /><br />
 
+    <div class="form form__field--component">
+      <input class="form form__field" id="teste" name="teste"
+        onchange="this.className=(this.value=='') ? 'form form__field' : 'form form__field form__field--activated'" />
+      <label class="form form__label" for="teste">hahaha</label>
     </div>
 
+    <br /><br />
     <div class="subtitle">
       Preencha os campos abaixo, para para entrar na área do cliente.
     </div>
@@ -87,15 +94,19 @@
     </p>
     <form class="form">
       <div class="grid__columns helper--with-border helper--with-gap">
-        <label class="form form__label">teste</label>
         <div class="grid__column">
-          <input class="form form__field" />
+          <input class="form form__field" placeholder="Usuário" />
+        </div>
+      </div>
+      <div class="grid__columns helper--with-border helper--with-gap">
+        <div class="grid__column">
+          <input class="form form__field" placeholder="Usuário" />
         </div>
       </div>
     </form>
 
     <form class="form helper--margin">
-      <div class="form form__group helper--margin-vertical">
+      <div class="form helper--margin-vertical">
         <div class="grid__columns">
 
           <label for="user" class="form form__group-row grid__row grid__row--fixed">

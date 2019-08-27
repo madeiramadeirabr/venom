@@ -1613,15 +1613,26 @@ table th:not([align]) {
   color: #25d466;
 }
 
-.button.button--large {
-  font-size: 18px;
-  padding: 16px;
+.button.button--extra-small {
+  border-radius: 2px;
+  font-size: 10px;
+  padding: 4px;
 }
 
 .button.button--small {
   border-radius: 2px;
   font-size: 10px;
   padding: 8px;
+}
+
+.button.button--large {
+  font-size: 18px;
+  padding: 16px;
+}
+
+.button.button--extra-large {
+  font-size: 22px;
+  padding: 20px;
 }
 
 .button__group {
@@ -1645,6 +1656,24 @@ table th:not([align]) {
   .button__group {
     border-width: 0.5px;
   }
+}
+
+.form.form__field--component {
+  position: relative;
+}
+
+.form.form__field--component .form__label {
+  left: 12px;
+  position: absolute;
+  top: 2px;
+  -webkit-transition: top 200ms ease, color 200ms ease, font-size 200ms ease;
+  transition: top 200ms ease, color 200ms ease, font-size 200ms ease;
+}
+
+.form.form__field--component .form__field:focus + .form__label,
+.form.form__field--component .form__field--activated + .form__label {
+  font-size: 12px;
+  top: -14px;
 }
 
 .form.form__indicator {

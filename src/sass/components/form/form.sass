@@ -5,6 +5,21 @@
   $indicator: '#{ $self }__indicator'
   $icon: '#{ $self }__icon'
 
+  &#{$field}--component
+    position: relative
+
+    #{ $label }
+      left: $gap
+      position: absolute
+      top: 2px
+      transition: top 200ms ease, color 200ms ease, font-size 200ms ease
+
+    #{ $field }
+      &:focus + #{ $label },
+      &--activated + #{ $label}
+        font-size: 12px
+        top: -($gap + 2px)
+
   &#{ $indicator }
     font-size: $size-large
     font-weight: $weight-bold
