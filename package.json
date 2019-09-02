@@ -7,7 +7,7 @@
     "sass-build-autoprefix": "postcss --use autoprefixer --map false --output css/venom.css css/venom.css",
     "sass-build-cleancss": "cleancss -o css/venom.min.css css/venom.css",
     "sass-build-clean": "rimraf css",
-    "sass-build-sass": "node-sass --output-style expanded --source-map true venom.sass css/venom.css",
+    "sass-build-sass": "node-sass --output-style expanded --source-map true sass/venom.sass css/venom.css",
     "deploy": "npm run sass-build-clean && npm run sass-build-sass && npm run sass-build-autoprefix && npm run sass-build-cleancss && gulp",
     "start": "npm run sass-build-sass -- --watch",
     "linter": "sass-lint -c .sass-lint.yml 'src/sass/**/*.sass' -v -q"
@@ -17,6 +17,7 @@
     "clean-css-cli": "^4.3.0",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
+    "gulp-replace": "^1.0.0",
     "node-sass": "^4.12.0",
     "postcss-cli": "^6.1.2",
     "postcss-easy-import": "^3.0.0",

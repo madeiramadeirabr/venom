@@ -40,25 +40,26 @@ body
   font-weight: $weight-regular
 
 a
+  color: $color-secondary
   cursor: pointer
   text-decoration: none
-  color: $color-blue
 
   strong
     color: currentColor
 
     &:hover
-      color: $color-blue-dark
+      color: $color-secondary-dark
 
     &:active
-      color: $color-blue-light
+      color: $color-secondary-light
 
     &:visited
-      color: $color-blue-darkness
+      color: $color-secondary-darkness
 
 hr
   border-width: 0
   display: block
+  height: 1
 
 img
   height: auto
@@ -88,24 +89,25 @@ strong
 fieldset
   border-width: 0
 
-h1
-  font-size: $size-extra-large
-  font-weight: $weight-bold
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+  color: currentColor
   line-height: 1.1
   margin: $zero
   padding: $zero
+
+h1
+  font-size: $size-extra-large
+  font-weight: $weight-bold
 
 h2
   font-size: $size-large
   font-weight: $weight-semibold
-  line-height: 1.1
-  margin: $zero
-  padding: $zero
-
-p
-  line-height: 1.1
-  margin: $zero
-  padding: $zero
 
 pre
   overflow-x: auto

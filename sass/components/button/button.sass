@@ -1,0 +1,76 @@
+.button
+  $self: &
+  +flex-center(row)
+  background-color: $color-white
+  border-color: $color-white
+  border-radius: $radius
+  border-style: solid
+  border-width: $border-width
+  box-shadow: $zero 2px 4px $zero $color-monotone-light
+  color: $color-black
+  cursor: pointer
+  font-size: $size-large
+  font-weight: $weight-semibold
+  line-height: 1
+  outline: none
+  padding: $gap
+  transition: background-color $transition $easing, border-color $transition $easing, color $transition $easing
+
+  &:hover,
+  &:focus,
+  &:active
+    background-color: $color-monotone-lightness
+    color: $color-primary-dark
+
+  &#{ $self }
+    &--is-disabled
+      background-color: $color-monotone-lightness
+      color: $color-monotone-light
+      cursor: default
+      pointer-events: none
+
+      &--is-outline
+        background-color: $color-white
+        border-color: currentColor
+        color: currentColor
+
+        &:hover,
+        &:focus,
+        &:active
+          border-color: $color-dark-dark
+          color: $color-dark-dark
+
+      &--is-link
+        background-color: $color-white
+        border-color: $color-white
+        color: $color-primary
+        text-decoration: underline
+
+        &:hover,
+        &:focus,
+        &:active
+          border-color: $color-primary-dark
+          color: $color-primary-dark
+
+    @each $color, $value in $color-regular-map
+      &--is-#{ $color }
+        background-color: map-get($color-regular-map, $color)
+        border-color: map-get($color-regular-map, $color)
+        color: map-get($color-contrast-map, $color)
+
+        &:hover,
+        &:focus,
+        &:active
+          background-color: map-get($color-dark-map, $color)
+
+          &:disabled,
+          &#{ $self }--is-disabled
+            background-color: map-get($color-lightness-map, $color)
+            border-color: map-get($color-lightness-map, $color)
+
+          &#{ $self }--is-outline
+            &:hover,
+            &:focus,
+            &:active
+              border-color: map-get($color-dark-map, $color)
+              color: map-get($color-dark-map, $color)

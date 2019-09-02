@@ -1,79 +1,103 @@
 .helper
-  &--cleafix
+  &--is-clearfix
     +clearfix
 
-  &--hidden
+  &--is-hidden
     display: none !important // sass-lint:disable-line no-important
 
-  &--pointer
-    cursor: pointer
+  &--has-pointer
+    cursor: pointer !important // sass-lint:disable-line no-important
 
-  &--no-margin
+  &--has-marginless
     margin: $zero
 
-  &--no-padding
+  &--has-paddingless
     padding: $zero
 
-  &--no-radius
+  &--has-radiusless
     border-radius: $zero
 
-  &--no-border
+  &--has-borderless
     border-width: $zero
 
-  &--no-shadow
+  &--has-shadowless
     box-shadow: none
 
-  &--relative
+  &--is-relative
     position: relative
 
-  &--full-width
+  &--is-full-width
     box-sizing: border-box
     width: 100%
 
-  &--max-full-width
+  &--is-max-full-width
     box-sizing: border-box
     max-width: 100%
 
-  &--full-height
+  &--is-full-height
     box-sizing: border-box
     height: 100%
 
-  &--max-full-height
+  &--is-max-full-height
     box-sizing: border-box
     max-height: 100%
 
-  &--with-gap-extra-small
+  &--has-gap-extra-small
     box-sizing: border-box
     padding: $gap-small
 
-  &--with-gap-small
+  &--has-gap-small
     box-sizing: border-box
     padding: $gap-small
 
-  &--with-gap
+  &--has-gap
     box-sizing: border-box
     padding: $gap
 
-  &--with-gap-large
+  &--has-gap-large
     box-sizing: border-box
     padding: $gap-large
 
-  &--with-gap-extra-large
+  &--has-gap-extra-large
     box-sizing: border-box
     padding: $gap-extra-large
 
-  &--border
+  &--has-border
     border: solid $border-width $border-color-flat
     border-radius: $radius
     box-sizing: border-box
 
-  &--full-height-viewport
+  &--is-full-height-viewport
     height: calc(100vh - #{ $gap * 2 })
 
-  &--with-radius
+  &--has-radius
     border-radius: $radius
 
-  &--with-margin
+  &--has-text-small
+    font-size: $size-small
+
+  &--has-text-large
+    font-size: $size-large
+
+  &--has-text-extra-large
+    font-size: $size-large
+
+  &--is-base-line
+    line-height: 1
+
+  &--has-text-left
+    text-align: left
+
+  &--has-text-center
+    text-align: center
+
+  &--has-text-right
+    text-align: center
+
+  &--has-text-justify
+    text-align: justify
+
+  &--has-margin
     margin: $gap
 
     &-left
@@ -179,12 +203,12 @@
         margin-left: $gap-extra-large
         margin-right: $gap-extra-large
 
-  &--color
+  &--has-color
     &-white
       color: $color-white
 
-    &-grey
-      color: $color-grey
+    &-monotone
+      color: $color-monotone
 
     &-black
       color: $color-black
@@ -194,7 +218,7 @@
         color: $value
 
 
-  &--background
+  &--has-background
     @each $color, $value in $color-regular-map
       &-#{$color}
         background-color: $value

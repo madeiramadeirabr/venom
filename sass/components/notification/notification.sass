@@ -19,7 +19,7 @@
 
     &__container
       align-items: center
-      background-color: $color-grey-light
+      background-color: $color-monotone-light
       border-radius: $radius
       box-sizing: border-box
       display: flex
@@ -29,10 +29,10 @@
       width: 100%
 
       &:hover // sass-lint:disable-line nesting-depth
-        background-color: $color-grey-light
+        background-color: $color-monotone-light
 
       @each $color, $value in $color-regular-map
-        &--#{$color}
+        &--is-#{$color}
           background-color: $value
 
           #{ $self }__content

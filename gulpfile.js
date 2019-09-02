@@ -1,4 +1,5 @@
-const { src, dest } = require('gulp');
+const { src, dest } = require('gulp')
+const replace = require('gulp-replace')
 
 exports.default = function () {
 
@@ -10,6 +11,10 @@ exports.default = function () {
     ███    ██████  ██  ██████  ███████  ██  ██  ██    ███████  ██
   `)
 
-  return src('src/resources/fonts/**/*')
-    .pipe(dest('css/fonts'));
+  return src('resources/fonts/**/*')
+    .pipe(dest('css/fonts'))
+
+  // return src([('css/venom.min.css')])
+  //   .pipe(replace('helper', ''))
+  //   .pipe(dest('css/'))
 }

@@ -12,10 +12,11 @@ $family-sans-serif: BlinkMacSystemFont, -apple-system, 'Open Sans', sans-serif !
 $family-monospace: monospace !default
 
 // font-size
-$size-small: 10px !default
+$size-extra-small: 10px !default
+$size-small: 12px !default
 $size-regular: 14px !default
-$size-large: 18px !default
-$size-extra-large: 22px !default
+$size-large: 16px !default
+$size-extra-large: 20px !default
 $size-ultra-large: 32px !default
 
 // font-weight
@@ -26,33 +27,33 @@ $weight-bold: 700 !default
 
 // text
 $render-mode: optimizeLegibility !default
-$text: $color-grey-darkness !default
+$text: $color-black !default
 
 // size
 $zero: 0 !default
-$gap-base: 4px !default
+$base: 4px !default
 $border-width: 1px !default
 $border-width-retina: .5px !default
 $border-color: rgba(0, 0, 0, .75) !default
-$border-color-flat: $color-grey-light !default
+$border-color-flat: $color-monotone-light !default
 
 // gap
-$gap-extra-small: $gap-base !default
-$gap-small: ($gap-base * 2) !default
-$gap: ($gap-base * 3) !default
-$gap-large: ($gap-base * 4) !default
-$gap-extra-large: ($gap-base * 5) !default
+$gap-extra-small: $base !default
+$gap-small: ($base * 2) !default
+$gap: ($base * 3) !default
+$gap-large: ($base * 5) !default
+$gap-extra-large: ($base * 8) !default
 
 $mobile: 370px !default
 $tablet: 768px !default
-$desktop: 1024px !default
-$widescreen: 1256px + ($gap * 2) !default
+$desktop: 1228px !default
+$widescreen: $desktop + ($gap * 2) !default
 
 // miscellaneous
 $easing: ease-in !default
-$radius-small: ($gap-base / 2) !default
-$radius: $gap-base !default
-$radius-large: ($gap-base * 2) !default
+$radius-small: ($base / 2) !default
+$radius: $base !default
+$radius-large: ($base * 2) !default
 $radius-rounded: 290486px !default
 $transition: 86ms !default
 $transition-medium: ($transition * 2) !default

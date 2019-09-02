@@ -1,0 +1,23 @@
+.typograph
+  $self: &
+  color: currentColor
+  line-height: 1.1
+
+  &#{ $self }
+    &__title
+      +clearfix
+      font-size: $size-extra-large
+      font-weight: $weight-bold
+
+    &__subtitle
+      +clearfix
+      font-size: $size-regular
+      font-weight: $weight-semibold
+
+    &__paragraph
+      +clearfix
+      font-size: $size-regular
+      font-weight: $weight-regular
+
+    &--is-upper
+      text-transform: uppercase

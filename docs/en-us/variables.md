@@ -1,6 +1,6 @@
 # Variables
 
-> Venom have a lot of variables inside your basis. That variables can be used in your sass files, to make your customized styles. 
+> Venom have a lot of variables inside your basis. That variables can be used in your sass files, to make your customized styles.
 > Please, be careful to create a variable outside a venom basis, is not recommended recreate him.
 
 # Color
@@ -17,14 +17,14 @@ All the colors have variants, like; `darkness`, `dark`, `light`, `lightness`.
 
 **Usage**
 
-The pattern of color variable is `$color-${COLOR_NAME}-${COLOR_VARIANT_NAME}`. Eg.: 
+The pattern of color variable is `$color-${COLOR_NAME}-${COLOR_VARIANT_NAME}`. Eg.:
 
-![#A50707](https://placehold.it/15/A50707/000000?text=+) `$color-red-light`, 
-![#061B3B](https://placehold.it/15/061B3B/000000?text=+) `$color-blue-darkness`, 
-![#155CC5](https://placehold.it/15/155CC5/000000?text=+) `$color-blue-light`, 
-![#053A6F](https://placehold.it/15/053A6F/000000?text=+) `$color-blue`, 
-![#2773E7](https://placehold.it/15/2773E7/000000?text=+) `$color-blue-lightness`, 
-![#F4821E](https://placehold.it/15/F4821E/000000?text=+) `$color-orange` _(for regular color)_.
+![#A50707](https://placehold.it/15/A50707/000000?text=+) `$color-red-light`,
+![#061B3B](https://placehold.it/15/061B3B/000000?text=+) `$color-blue-darkness`,
+![#155CC5](https://placehold.it/15/155CC5/000000?text=+) `$color-blue-light`,
+![#053A6F](https://placehold.it/15/053A6F/000000?text=+) `$color-blue`,
+![#2773E7](https://placehold.it/15/2773E7/000000?text=+) `$color-blue-lightness`,
+![#F4821E](https://placehold.it/15/F4821E/000000?text=+) `$color-secondary` _(for regular color)_.
 
 **Be careful**
 

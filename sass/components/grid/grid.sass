@@ -2,21 +2,21 @@
   &__row
     display: flex
     flex-direction: row
-    flex-flow: row wrap;
+    flex-flow: row wrap
     max-width: 100%
     width: 100%
 
-    &--reverse
+    &--is-reverse
       flex-direction: row-reverse
 
   &__columns
     display: flex
     flex-direction: column
-    flex-flow: column nowrap;
+    flex-flow: column nowrap
     max-width: 100%
     width: 100%
 
-    &--reverse
+    &--is-reverse
       flex-direction: column-reverse
 
   &__column
@@ -25,7 +25,7 @@
     max-width: 100%
     position: relative
 
-    &--vertical
+    &--is-vertical
       flex-direction: column
 
     @each $name, $count in $numbers
@@ -33,7 +33,7 @@
         flex-grow: $count
         max-width: ($count / 12) * 100%
 
-      &--offset-#{$name}
+      &--is-offset-#{$name}
         margin-left: ($count / 12) * 100%
 
   +for-size(mobile)
@@ -41,7 +41,7 @@
       &:not([class*='--fixed'])
         flex-direction: column
 
-      &--reverse
+      &--is-reverse
         &:not([class*='--fixed'])
           flex-direction: column-reverse
 
@@ -49,12 +49,3 @@
       &:not([class*='--fixed'])
         flex-grow: auto
         max-width: 100%
-
-  +for-size(tablet)
-    &__row
-      &:not([class*='--fixed'])
-        flex-direction: column
-
-      &--reverse
-        &:not([class*='--fixed'])
-          flex-direction: column-reverse

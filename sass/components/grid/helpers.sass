@@ -1,26 +1,26 @@
 .grid
   $self: &
 
-  &--flex
+  &--is-flex
     display: flex
 
-  &--start
+  &--is-start
     justify-content: flex-start
 
-  &--center
+  &--is-center
     align-items: center
     justify-content: center
 
-  &--end
+  &--is-end
     justify-content: flex-end
 
-  &--top
+  &--is-top
     align-items: flex-start
 
-  &--bottom
+  &--is-bottom
     align-items: flex-end
 
-  &--with-space
+  &--has-gutter
     align-content: space-around
     justify-content: space-between
 
@@ -60,11 +60,11 @@
         &:not(:last-child)
           margin-right: $gap-extra-large
 
-  &--first
+  &--is-first
     order: -1
 
-  &--last
+  &--is-last
     order: 1
 
-  &--no-wrap
+  &--has-no-wrap
     flex-wrap: nowrap

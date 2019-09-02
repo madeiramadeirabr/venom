@@ -74,72 +74,81 @@
       </div>
     </form>
 
-    <div class="title">
+    <div class="typograph typograph__title">
       acesse sua conta
     </div>
     <br /><br />
 
-    <div class="form form__field--component">
+    <div class="form form__field--component-with-icon">
+      <label for="teste" class="form form__icon">
+        <img src="https://fonts.gstatic.com/s/i/materialiconsround/person/v1/24px.svg?download=true" />
+      </label>
       <input class="form form__field" id="teste" name="teste"
         onchange="this.className=(this.value=='') ? 'form form__field' : 'form form__field form__field--activated'" />
       <label class="form form__label" for="teste">hahaha</label>
+      <label for="teste" class="form form__icon">
+        <img src="https://fonts.gstatic.com/s/i/materialiconsround/person/v1/24px.svg?download=true" />
+      </label>
     </div>
+  </div>
 
-    <br /><br />
-    <div class="subtitle">
-      Preencha os campos abaixo, para para entrar na área do cliente.
+
+
+  <br /><br />
+  <div class="subtitle">
+    Preencha os campos abaixo, para para entrar na área do cliente.
+  </div>
+  <p class="paragraph">
+    asdasd
+  </p>
+  <form class="form">
+    <div class="grid__columns helper--with-border helper--with-gap">
+      <div class="grid__column">
+        <input class="form form__field" placeholder="Usuário" />
+      </div>
     </div>
-    <p class="paragraph">
-      asdasd
-    </p>
-    <form class="form">
-      <div class="grid__columns helper--with-border helper--with-gap">
-        <div class="grid__column">
-          <input class="form form__field" placeholder="Usuário" />
-        </div>
+    <div class="grid__columns helper--with-border helper--with-gap">
+      <div class="grid__column">
+        <input class="form form__field" placeholder="Usuário" />
       </div>
-      <div class="grid__columns helper--with-border helper--with-gap">
-        <div class="grid__column">
-          <input class="form form__field" placeholder="Usuário" />
-        </div>
+    </div>
+  </form>
+
+  <form class="form helper--margin">
+    <div class="form helper--margin-vertical">
+      <div class="grid__columns">
+
+        <label for="user" class="form form__group-row grid__row grid__row--fixed">
+          <div class="form form__group-icon">u</div>
+          <div class="grid__column">
+            <input id="user" name="user" class="form form__field form__field--large" placeholder="user" />
+          </div>
+        </label>
+
+        <label for="password" class="form form__group-row grid__row grid__row--fixed">
+          <div class="form form__group-icon">u</div>
+          <div class="grid__column">
+            <input id="password" name="password" class="form form__field form__field--large" type="password"
+              placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" />
+          </div>
+        </label>
+
       </div>
-    </form>
-
-    <form class="form helper--margin">
-      <div class="form helper--margin-vertical">
-        <div class="grid__columns">
-
-          <label for="user" class="form form__group-row grid__row grid__row--fixed">
-            <div class="form form__group-icon">u</div>
-            <div class="grid__column">
-              <input id="user" name="user" class="form form__field form__field--large" placeholder="user" />
-            </div>
-          </label>
-
-          <label for="password" class="form form__group-row grid__row grid__row--fixed">
-            <div class="form form__group-icon">u</div>
-            <div class="grid__column">
-              <input id="password" name="password" class="form form__field form__field--large" type="password"
-                placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" />
-            </div>
-          </label>
-
-        </div>
-      </div>
-      <div class="grid__row">
-        <div class="grid__column grid__column--fixed grid__column--four">
-          <button class="button  button--blue">teste</button>
-        </div>
-      </div>
-
-    </form>
-
+    </div>
     <div class="grid__row">
-      <div class="button__group">
-        <button class="button button--blue">teste</button>
-        <button class="button button--blue">teste</button>
+      <div class="grid__column grid__column--fixed grid__column--four">
+        <button class="button  button--blue">teste</button>
       </div>
     </div>
+
+  </form>
+
+  <div class="grid__row">
+    <div class="button__group">
+      <button class="button button--blue">teste</button>
+      <button class="button button--blue">teste</button>
+    </div>
+  </div>
   </div>
 </body>
 
