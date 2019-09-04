@@ -1,15 +1,4 @@
 .helper
-  &--is-clearfix
-    +clearfix
-
-  &--is-hidden
-    display: none !important // sass-lint:disable-line no-important
-
-  &--is-block
-    display: block !important // sass-lint:disable-line no-important
-
-  &--has-pointer
-    cursor: pointer !important // sass-lint:disable-line no-important
 
   &--no-margin
     margin: $zero
@@ -25,14 +14,26 @@
     padding-bottom: $zero
     padding-top: $zero
 
-  &--has-no-radius
+  &--no-radius
     border-radius: $zero
 
-  &--has-no-border
+  &--no-border
     border-width: $zero
 
-  &--has-no-shadow
+  &--no-shadow
     box-shadow: none
+
+  &--is-clearfix
+    +clearfix
+
+  &--is-hidden
+    display: none !important // sass-lint:disable-line no-important
+
+  &--is-block
+    display: block !important // sass-lint:disable-line no-important
+
+  &--has-pointer
+    cursor: pointer !important // sass-lint:disable-line no-important
 
   &--is-relative
     position: relative
@@ -223,7 +224,7 @@
         margin-left: $gap-extra-large
         margin-right: $gap-extra-large
 
-  &--has-color
+  &--has-text
     &-white
       color: $color-white
 
@@ -243,13 +244,13 @@
         background-color: $value
 
   +for-size(mobile)
-    &--hidden-mobile
+    &--is-hidden-mobile
       display: none
 
   +for-size(tablet)
-    &--hidden-tablet
+    &--is-hidden-tablet
       display: none
 
   +for-retina
-    &--border
+    &--has-border
       border-width: $border-width-retina
