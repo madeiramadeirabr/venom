@@ -504,6 +504,7 @@ p {
   line-height: 1.25;
   margin: 0;
   padding: 0;
+  width: 100%;
 }
 
 p + p {
@@ -1672,6 +1673,36 @@ table th:not([align]) {
   color: #0d0d0d;
 }
 
+.helper--no-margin {
+  margin: 0;
+}
+
+.helper--no-gap {
+  padding: 0;
+}
+
+.helper--no-gap-horizontal {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.helper--no-gap-vertical {
+  padding-bottom: 0;
+  padding-top: 0;
+}
+
+.helper--no-radius {
+  border-radius: 0;
+}
+
+.helper--no-border {
+  border-width: 0;
+}
+
+.helper--no-shadow {
+  box-shadow: none;
+}
+
 .helper--is-clearfix::after {
   clear: both;
   content: " ";
@@ -1688,36 +1719,6 @@ table th:not([align]) {
 
 .helper--has-pointer {
   cursor: pointer !important;
-}
-
-.helper--no-margin {
-  margin: 0;
-}
-
-.helper--no-padding {
-  padding: 0;
-}
-
-.helper--no-padding-horizontal {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.helper--no-padding-vertical {
-  padding-bottom: 0;
-  padding-top: 0;
-}
-
-.helper--has-no-radius {
-  border-radius: 0;
-}
-
-.helper--has-no-border {
-  border-width: 0;
-}
-
-.helper--has-no-shadow {
-  box-shadow: none;
 }
 
 .helper--is-relative {
@@ -1772,7 +1773,6 @@ table th:not([align]) {
 .helper--has-border {
   box-sizing: border-box;
   border: solid 1px #b3b3b3;
-  border-radius: 4px;
 }
 
 .helper--is-full-height-viewport {
@@ -1781,49 +1781,6 @@ table th:not([align]) {
 
 .helper--has-radius {
   border-radius: 4px;
-}
-
-.helper--has-text-small {
-  font-size: 12px;
-}
-
-.helper--has-text-large {
-  font-size: 16px;
-}
-
-.helper--has-text-extra-large {
-  font-size: 16px;
-}
-
-.helper--is-base-line {
-  line-height: 1;
-}
-
-.helper--has-text-left {
-  text-align: left;
-}
-
-.helper--has-text-center {
-  text-align: center;
-}
-
-.helper--has-text-right {
-  text-align: center;
-}
-
-.helper--has-text-justify {
-  text-align: justify;
-}
-
-.helper--is-upper {
-  text-transform: uppercase;
-}
-
-.helper--is-truncated {
-  display: block;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 
 .helper--has-margin {
@@ -1964,43 +1921,86 @@ table th:not([align]) {
   margin-right: 32px;
 }
 
-.helper--has-color-white {
+.helper--has-text-small {
+  font-size: 12px;
+}
+
+.helper--has-text-large {
+  font-size: 16px;
+}
+
+.helper--has-text-extra-large {
+  font-size: 16px;
+}
+
+.helper--has-text-base-line {
+  line-height: 1;
+}
+
+.helper--has-text-left {
+  text-align: left;
+}
+
+.helper--has-text-center {
+  text-align: center;
+}
+
+.helper--has-text-right {
+  text-align: center;
+}
+
+.helper--has-text-justify {
+  text-align: justify;
+}
+
+.helper--has-text-upper {
+  text-transform: uppercase;
+}
+
+.helper--has-text-truncated {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.helper--has-text-white {
   color: white;
 }
 
-.helper--has-color-monotone {
+.helper--has-text-monotone {
   color: gray;
 }
 
-.helper--has-color-black {
+.helper--has-text-black {
   color: #0d0d0d;
 }
 
-.helper--has-color-primary {
+.helper--has-text-primary {
   color: #f4831f;
 }
 
-.helper--has-color-secondary {
+.helper--has-text-secondary {
   color: #00549e;
 }
 
-.helper--has-color-danger {
+.helper--has-text-danger {
   color: #db4639;
 }
 
-.helper--has-color-success {
+.helper--has-text-success {
   color: #009e22;
 }
 
-.helper--has-color-warning {
+.helper--has-text-warning {
   color: #fab514;
 }
 
-.helper--has-color-monotone {
+.helper--has-text-monotone {
   color: gray;
 }
 
-.helper--has-color-dark {
+.helper--has-text-dark {
   color: #262626;
 }
 
@@ -2033,19 +2033,19 @@ table th:not([align]) {
 }
 
 @media screen and (max-width: 767px) {
-  .helper--hidden-mobile {
+  .helper--is-hidden-mobile {
     display: none;
   }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1151px) {
-  .helper--hidden-tablet {
+  .helper--is-hidden-tablet {
     display: none;
   }
 }
 
 @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .helper--border {
+  .helper--has-border {
     border-width: 0.5px;
   }
 }

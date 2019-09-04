@@ -3,14 +3,14 @@
   &--no-margin
     margin: $zero
 
-  &--no-padding
+  &--no-gap
     padding: $zero
 
-  &--no-padding-horizontal
+  &--no-gap-horizontal
     padding-left: $zero
     padding-right: $zero
 
-  &--no-padding-vertical
+  &--no-gap-vertical
     padding-bottom: $zero
     padding-top: $zero
 
@@ -77,46 +77,12 @@
   &--has-border
     +border-box
     border: solid $border-width $border-color-flat
-    border-radius: $radius
 
   &--is-full-height-viewport
     height: calc(100vh - #{ $gap-regular * 2 })
 
   &--has-radius
     border-radius: $radius
-
-  &--has-text-small
-    font-size: $size-small
-
-  &--has-text-large
-    font-size: $size-large
-
-  &--has-text-extra-large
-    font-size: $size-large
-
-  &--is-base-line
-    line-height: 1
-
-  &--has-text-left
-    text-align: left
-
-  &--has-text-center
-    text-align: center
-
-  &--has-text-right
-    text-align: center
-
-  &--has-text-justify
-    text-align: justify
-
-  &--is-upper
-    text-transform: uppercase
-
-  &--is-truncated
-    display: block
-    overflow: hidden
-    text-overflow: ellipsis
-    white-space: nowrap
 
   &--has-margin
     margin: $gap-regular
@@ -225,6 +191,40 @@
         margin-right: $gap-extra-large
 
   &--has-text
+
+    &-small
+      font-size: $size-small
+
+    &-large
+      font-size: $size-large
+
+    &-extra-large
+      font-size: $size-large
+
+    &-base-line
+      line-height: 1
+
+    &-left
+      text-align: left
+
+    &-center
+      text-align: center
+
+    &-right
+      text-align: center
+
+    &-justify
+      text-align: justify
+
+    &-upper
+      text-transform: uppercase
+
+    &-truncated
+      display: block
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
+
     &-white
       color: $color-white
 
