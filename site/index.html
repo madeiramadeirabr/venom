@@ -20,135 +20,194 @@
     <script>document.createElement("header");document.createElement("section");</script>
     <![endif]-->
 
+  <style>
+    .grid__columns div,
+    .grid__row div {
+      background: #eee;
+    }
+  </style>
+
 </head>
 
 <body>
   <div class="container">
-    <div class="grid__row">
-      <div class="grid__column helper--background-blue helper--color-white helper--with-gap">
-        1/2
-      </div>
-      <div class="grid__column helper--background-green helper--color-white helper--with-gap">
-        1/2
-      </div>
-    </div>
-    <div class="grid__row grid--with-space">
-      <div class="grid__column grid__column--six helper--background-yellow">
-        1/2
-      </div>
-      <div class="grid__column helper--background-green helper--with-gap-large">
-        1/4
-      </div>
-      <div class="grid__column helper--background-red grid--center helper--with-gap-small">
-        1/4
-      </div>
+
+    <div class="grid grid__row">
+      <div class="grid__column">1/2</div>
+      <div class="grid__column">1/2</div>
     </div>
 
-    <div class="notification notification__container notification__container--orange">
-      <div class="notification notification__content">
-        teste
+    <div class="grid grid__row">
+      <div class="grid__column">1/3</div>
+      <div class="grid__column">1/3</div>
+      <div class="grid__column">1/3</div>
+    </div>
+
+    <div class="grid grid__row">
+      <div class="grid__column">1/4</div>
+      <div class="grid__column">1/4</div>
+      <div class="grid__column">1/4</div>
+      <div class="grid__column">1/4</div>
+    </div>
+
+    <div class="grid grid__row">
+      <div class="grid__column">1/5</div>
+      <div class="grid__column">1/5</div>
+      <div class="grid__column">1/5</div>
+      <div class="grid__column">1/5</div>
+      <div class="grid__column">1/5</div>
+    </div>
+
+    <div class="grid grid__row">
+      <div class="grid__column">1/6</div>
+      <div class="grid__column">1/6</div>
+      <div class="grid__column">1/6</div>
+      <div class="grid__column">1/6</div>
+      <div class="grid__column">1/6</div>
+      <div class="grid__column">1/6</div>
+    </div>
+
+
+    <div class="grid grid__row helper--no-padding">
+      <div class="grid__column grid__column--is-one helper--has-gap">
+        <p>
+          h1
+        </p>
       </div>
-      <a class="notification notification__close">
-      </a>
-    </div>
-
-    <form class="form form--fixed">
-      <div class="grid__row">
-        <div class="grid__column helper--margin-bottom">
-          <div class="grid__columns form--with-danger-focus">
-            <label class="form form__label">teste</label>
-            <div class="grid__column">
-              <input class="form form__field" />
-            </div>
-          </div>
-        </div>
-        <div class="form form__divider"></div>
-        <div class="grid__column helper--margin-bottom">
-          <div class="grid__columns">
-            <label class="form form__label">hahaha</label>
-            <div class="grid__column">
-              <input class="form form__field form__field--large" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </form>
-
-    <div class="typograph typograph__title">
-      acesse sua conta
-    </div>
-    <br /><br />
-
-    <div class="form form__field--component-with-icon">
-      <label for="teste" class="form form__icon">
-        <img src="https://fonts.gstatic.com/s/i/materialiconsround/person/v1/24px.svg?download=true" />
-      </label>
-      <input class="form form__field" id="teste" name="teste"
-        onchange="this.className=(this.value=='') ? 'form form__field' : 'form form__field form__field--activated'" />
-      <label class="form form__label" for="teste">hahaha</label>
-      <label for="teste" class="form form__icon">
-        <img src="https://fonts.gstatic.com/s/i/materialiconsround/person/v1/24px.svg?download=true" />
-      </label>
-    </div>
-  </div>
-
-
-
-  <br /><br />
-  <div class="subtitle">
-    Preencha os campos abaixo, para para entrar na área do cliente.
-  </div>
-  <p class="paragraph">
-    asdasd
-  </p>
-  <form class="form">
-    <div class="grid__columns helper--with-border helper--with-gap">
-      <div class="grid__column">
-        <input class="form form__field" placeholder="Usuário" />
-      </div>
-    </div>
-    <div class="grid__columns helper--with-border helper--with-gap">
-      <div class="grid__column">
-        <input class="form form__field" placeholder="Usuário" />
-      </div>
-    </div>
-  </form>
-
-  <form class="form helper--margin">
-    <div class="form helper--margin-vertical">
-      <div class="grid__columns">
-
-        <label for="user" class="form form__group-row grid__row grid__row--fixed">
-          <div class="form form__group-icon">u</div>
-          <div class="grid__column">
-            <input id="user" name="user" class="form form__field form__field--large" placeholder="user" />
-          </div>
-        </label>
-
-        <label for="password" class="form form__group-row grid__row grid__row--fixed">
-          <div class="form form__group-icon">u</div>
-          <div class="grid__column">
-            <input id="password" name="password" class="form form__field form__field--large" type="password"
-              placeholder="&bull;&bull;&bull;&bull;&bull;&bull;" />
-          </div>
-        </label>
-
-      </div>
-    </div>
-    <div class="grid__row">
-      <div class="grid__column grid__column--fixed grid__column--four">
-        <button class="button  button--blue">teste</button>
+      <div class="grid__column helper--has-gap">
+        <h1>
+          Mussum Ipsum, cacilds vidis litro abertis.
+        </h1>
       </div>
     </div>
 
-  </form>
+    <h1>
+      h1. Mussum Ipsum, cacilds vidis litro abertis
+    </h1>
+    <h2>
+      h2. Mussum Ipsum, cacilds vidis litro abertis
+    </h2>
+    <h3>
+      h3. Mussum Ipsum, cacilds vidis litro abertis
+    </h3>
+    <p>
+      p. Mussum Ipsum, cacilds vidis litro abertis
+    </p>
 
-  <div class="grid__row">
-    <div class="button__group">
-      <button class="button button--blue">teste</button>
-      <button class="button button--blue">teste</button>
+    <div class="grid grid__row">
+      <div class="grid__column grid__column--is-one">one</div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
     </div>
-  </div>
+
+    <div class="grid grid__row">
+      <div class="grid__column grid__column--is-two">two</div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+    </div>
+
+    <div class="grid grid__row">
+      <div class="grid__column grid__column--is-three">three</div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+    </div>
+
+    <div class="grid grid__row">
+      <div class="grid__column grid__column--is-four">four</div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+    </div>
+
+    <div class="grid grid__row">
+      <div class="grid__column grid__column--is-five">five</div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+    </div>
+
+    <div class="grid grid__row">
+      <div class="grid__column grid__column--is-six">six</div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+    </div>
+
+    <div class="grid grid__row">
+      <div class="grid__column grid__column--is-seven">seven</div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+    </div>
+
+    <div class="grid grid__row">
+      <div class="grid__column grid__column--is-eight">eight</div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+    </div>
+
+    <div class="grid grid__row">
+      <div class="grid__column grid__column--is-nine">nine</div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+    </div>
+
+    <div class="grid grid__row">
+      <div class="grid__column grid__column--is-ten">ten</div>
+      <div class="grid__column"></div>
+      <div class="grid__column"></div>
+    </div>
+
+    <div class="grid grid__row">
+      <div class="grid__column grid__column--is-eleven">eleven</div>
+      <div class="grid__column"></div>
+    </div>
+
+    <div class="grid grid__row">
+      <div class="grid__column grid__column--is-twelve">twelve</div>
+    </div>
+
   </div>
 </body>
 

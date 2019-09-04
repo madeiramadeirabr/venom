@@ -57,6 +57,7 @@ a
       color: $color-secondary-darkness
 
 hr
+  +clearfix
   border-width: 0
   display: block
   height: 1
@@ -97,19 +98,36 @@ h5,
 h6,
 p
   color: currentColor
-  line-height: 1.1
+  line-height: 1.25
   margin: $zero
   padding: $zero
 
+p + p
+  margin-bottom: $gap-default
+
 h1
-  font-size: $size-extra-large
+  +clearfix
+  font-size: $size-ultra-large
   font-weight: $weight-bold
 
 h2
+  +clearfix
+  font-size: $size-extra-large
+  font-weight: $weight-bold
+
+h3
+  +clearfix
   font-size: $size-large
   font-weight: $weight-semibold
 
+h1 + h2,
+h2 + h3,
+h2 + p,
+h3 + p
+  margin-top: $gap-regular
+
 pre
+  +clearfix
   overflow-x: auto
   white-space: pre
   word-wrap: normal

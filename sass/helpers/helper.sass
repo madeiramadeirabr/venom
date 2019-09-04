@@ -5,70 +5,81 @@
   &--is-hidden
     display: none !important // sass-lint:disable-line no-important
 
+  &--is-block
+    display: block !important // sass-lint:disable-line no-important
+
   &--has-pointer
     cursor: pointer !important // sass-lint:disable-line no-important
 
-  &--has-marginless
+  &--no-margin
     margin: $zero
 
-  &--has-paddingless
+  &--no-padding
     padding: $zero
 
-  &--has-radiusless
+  &--no-padding-horizontal
+    padding-left: $zero
+    padding-right: $zero
+
+  &--no-padding-vertical
+    padding-bottom: $zero
+    padding-top: $zero
+
+  &--has-no-radius
     border-radius: $zero
 
-  &--has-borderless
+  &--has-no-border
     border-width: $zero
 
-  &--has-shadowless
+  &--has-no-shadow
     box-shadow: none
 
   &--is-relative
     position: relative
 
   &--is-full-width
-    box-sizing: border-box
+    +border-box
     width: 100%
 
   &--is-max-full-width
-    box-sizing: border-box
+    +border-box
     max-width: 100%
 
   &--is-full-height
-    box-sizing: border-box
+    +border-box
     height: 100%
 
   &--is-max-full-height
-    box-sizing: border-box
+    +border-box
     max-height: 100%
 
   &--has-gap-extra-small
-    box-sizing: border-box
+    +border-box
     padding: $gap-small
 
   &--has-gap-small
-    box-sizing: border-box
+    +border-box
     padding: $gap-small
 
   &--has-gap
-    box-sizing: border-box
-    padding: $gap
+    +border-box
+    padding: $gap-regular
 
   &--has-gap-large
-    box-sizing: border-box
+    +border-box
     padding: $gap-large
 
   &--has-gap-extra-large
-    box-sizing: border-box
+    +border-box
     padding: $gap-extra-large
 
   &--has-border
+    +border-box
     border: solid $border-width $border-color-flat
     border-radius: $radius
-    box-sizing: border-box
 
   &--is-full-height-viewport
-    height: calc(100vh - #{ $gap * 2 })
+    height: calc(100vh - #{ $gap-regular * 2 })
 
   &--has-radius
     border-radius: $radius
@@ -97,11 +108,20 @@
   &--has-text-justify
     text-align: justify
 
+  &--is-upper
+    text-transform: uppercase
+
+  &--is-truncated
+    display: block
+    overflow: hidden
+    text-overflow: ellipsis
+    white-space: nowrap
+
   &--has-margin
-    margin: $gap
+    margin: $gap-regular
 
     &-left
-      margin-left: $gap
+      margin-left: $gap-regular
 
       &-extra-small
         margin-left: $gap-extra-small
@@ -116,7 +136,7 @@
         margin-left: $gap-extra-large
 
     &-right
-      margin-right: $gap
+      margin-right: $gap-regular
 
       &-extra-small
         margin-right: $gap-extra-small
@@ -131,7 +151,7 @@
         margin-right: $gap-extra-large
 
     &-top
-      margin-top: $gap
+      margin-top: $gap-regular
 
       &-extra-small
         margin-top: $gap-extra-small
@@ -146,7 +166,7 @@
         margin-top: $gap-extra-large
 
     &-bottom
-      margin-bottom: $gap
+      margin-bottom: $gap-regular
 
       &-extra-small
         margin-bottom: $gap-extra-small
@@ -164,8 +184,8 @@
       margin: $gap-large
 
     &-vertical
-      margin-bottom: $gap
-      margin-top: $gap
+      margin-bottom: $gap-regular
+      margin-top: $gap-regular
 
       &-extra-small
         margin-bottom: $gap-extra-small
@@ -184,8 +204,8 @@
         margin-top: $gap-extra-large
 
     &-horizontal
-      margin-left: $gap
-      margin-right: $gap
+      margin-left: $gap-regular
+      margin-right: $gap-regular
 
       &-extra-small
         margin-left: $gap-extra-small
@@ -216,7 +236,6 @@
     @each $color, $value in $color-regular-map
       &-#{$color}
         color: $value
-
 
   &--has-background
     @each $color, $value in $color-regular-map

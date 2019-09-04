@@ -1,3 +1,5 @@
+@import 'helpers'
+
 .button
   $self: &
   +flex-center(row)
@@ -13,7 +15,7 @@
   font-weight: $weight-semibold
   line-height: 1
   outline: none
-  padding: $gap
+  padding: $gap-regular
   transition: background-color $transition $easing, border-color $transition $easing, color $transition $easing
 
   &:hover,
@@ -23,34 +25,35 @@
     color: $color-primary-dark
 
   &#{ $self }
+    &:disabled,
     &--is-disabled
       background-color: $color-monotone-lightness
       color: $color-monotone-light
       cursor: default
       pointer-events: none
 
-      &--is-outline
-        background-color: $color-white
-        border-color: currentColor
-        color: currentColor
+    &--is-outline
+      background-color: $color-white
+      border-color: currentColor
+      color: currentColor
 
-        &:hover,
-        &:focus,
-        &:active
-          border-color: $color-dark-dark
-          color: $color-dark-dark
+      &:hover,
+      &:focus,
+      &:active
+        border-color: $color-dark-dark
+        color: $color-dark-dark
 
-      &--is-link
-        background-color: $color-white
-        border-color: $color-white
-        color: $color-primary
-        text-decoration: underline
+    &--is-link
+      background-color: $color-white
+      border-color: $color-white
+      color: $color-primary
+      text-decoration: underline
 
-        &:hover,
-        &:focus,
-        &:active
-          border-color: $color-primary-dark
-          color: $color-primary-dark
+      &:hover,
+      &:focus,
+      &:active
+        border-color: $color-primary-dark
+        color: $color-primary-dark
 
     @each $color, $value in $color-regular-map
       &--is-#{ $color }
@@ -63,14 +66,14 @@
         &:active
           background-color: map-get($color-dark-map, $color)
 
-          &:disabled,
-          &#{ $self }--is-disabled
-            background-color: map-get($color-lightness-map, $color)
-            border-color: map-get($color-lightness-map, $color)
+        &:disabled,
+        &#{ $self }--is-disabled
+          background-color: map-get($color-lightness-map, $color)
+          border-color: map-get($color-lightness-map, $color)
 
-          &#{ $self }--is-outline
-            &:hover,
-            &:focus,
-            &:active
-              border-color: map-get($color-dark-map, $color)
-              color: map-get($color-dark-map, $color)
+        &#{ $self }--is-outline
+          &:hover,
+          &:focus,
+          &:active
+            border-color: map-get($color-dark-map, $color)
+            color: map-get($color-dark-map, $color)

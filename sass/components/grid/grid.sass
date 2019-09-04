@@ -1,40 +1,63 @@
+$gutter: 20px
+
 .grid
+  $self: &
+  $column: #{$self + '__column'}
+
   &__row
+    +clearfix
+    align-content: space-around
     display: flex
     flex-direction: row
     flex-flow: row wrap
+    justify-content: space-between
     max-width: 100%
+    padding: $gap-regular $zero
     width: 100%
 
     &--is-reverse
       flex-direction: row-reverse
 
+    #{ $column }
+      &:not(:last-child)
+        margin-right: $gutter / 2
+
+      &:not(:first-child)
+        margin-left: $gutter / 2
+
   &__columns
+    +clearfix
+    align-content: space-around
     display: flex
     flex-direction: column
     flex-flow: column nowrap
+    justify-content: space-between
     max-width: 100%
+    padding: $gap-regular $zero
     width: 100%
 
     &--is-reverse
       flex-direction: column-reverse
 
-  &__column
+  #{ $column }
     display: flex
     flex: 1
     max-width: 100%
     position: relative
 
-    &--is-vertical
-      flex-direction: column
+    &--is-first
+      order: -1
+
+    &--is-last
+      order: 1
 
     @each $name, $count in $numbers
-      &--#{$name}
-        flex-grow: $count
-        max-width: ($count / 12) * 100%
+      &#{$column}--is-#{$name}
+        min-width: ($column-width * $count) + (($count - 1) * $gutter)
+        max-width: ($column-width * $count) + (($count - 1) * $gutter)
 
-      &--is-offset-#{$name}
-        margin-left: ($count / 12) * 100%
+        &-offset
+          margin-left: ($column-width * $count) + (($count - 1) * $gutter)
 
   +for-size(mobile)
     &__row
@@ -49,3 +72,11 @@
       &:not([class*='--fixed'])
         flex-grow: auto
         max-width: 100%
+
+      @each $name, $count in $numbers
+        &--#{$name}-mobile
+          flex-grow: $count
+          max-width: ($count / 4) * 100%
+
+        &--is-offset-#{$name}-mobile
+          margin-left: ($count / 4) * 100%

@@ -15,7 +15,7 @@
     position: relative
 
     #{ $label }
-      left: $gap
+      left: $gap-regular
       position: absolute
       top: $zero
       transition: top 200ms ease, color 200ms ease, font-size 200ms ease
@@ -25,18 +25,23 @@
       &--is-activated + #{ $label}
         color: $color-monotone
         font-size: $size-small
-        top: -$gap
+        top: -$gap-regular
+
+  #{$field-component} + #{$field-component},
+  #{$field-component} + #{$field-component-icon},
+  #{$field-component-icon} + #{$field-component-icon}
+    margin-bottom: $gap-regular
 
   #{$field-component-icon}
     #{ $label }
-      left: $gap * 3
+      left: $gap-regular * 3
 
   #{ $indicator }
     font-size: $size-large
     font-weight: $weight-bold
     line-height: 1
     position: absolute
-    right: $gap
+    right: $gap-regular
     top: calc(calc(100% / 2) - calc(#{ $size-large } / 2))
 
     &--is-success
@@ -56,7 +61,7 @@
     display: flex
     justify-content: center
     text-align: center
-    width: $gap * 2
+    width: $gap-regular * 2
 
     svg
       fill: $color-monotone-light
@@ -73,8 +78,8 @@
     font-size: $size-regular
     font-weight: $weight-regular
     line-height: 1
-    margin-bottom: $gap
-    margin-top: $gap
+    margin-bottom: $gap-regular
+    margin-top: $gap-regular
     transition: color $transition $easing
 
   #{ $field }
@@ -86,7 +91,7 @@
     font-size: $size-regular
     font-weight: $weight-regular
     line-height: 1
-    padding: $gap
+    padding: $gap-regular
     transition: padding $transition-medium $easing
     width: 100%
 
@@ -139,11 +144,11 @@
     &--is-horizontal
       #{ $label }
         margin-bottom: $zero
-        margin-right: $gap
+        margin-right: $gap-regular
         margin-top: $zero
 
     &__divider
-      width: $gap
+      width: $gap-regular
 
     &--danger-focus
       #{ $self }__label
@@ -169,22 +174,10 @@
 
         &:focus
           border-width: $border-width-retina * 3
-          padding: $gap - ( $border-width-retina * 3 )
+          padding: $gap-regular - ( $border-width-retina * 3 )
 
     +for-size(mobile)
-      &--is-horizontal
-        #{ $self }__label
-          &:not([class*='--fixed'])
-            margin-bottom: $gap
-            margin-right: $zero
 
       &__divider
         &:not([class*='--fixed'])
           display: none
-
-    +for-size(tablet)
-      &--is-horizontal
-        #{ $self }__label
-          &:not([class*='--fixed'])
-            margin-bottom: $gap
-            margin-right: $zero
