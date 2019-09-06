@@ -1,46 +1,47 @@
-.notification
-  $self: &
+.venom
+  .notification
+    $self: '.notification'
 
-  &#{ $self }
-    &__content
-      color: $text
-      flex: 1
-      font-size: $size-regular
-      font-weight: $weight-regular
-      line-height: 1.1
-      transition: color $transition $easing
+    &#{ $self }
+      &__content
+        color: $text
+        flex: 1
+        font-size: $size-regular
+        font-weight: $weight-regular
+        line-height: 1.1
+        transition: color $transition $easing
 
-    &__close
-      cursor: pointer
-      width: $size-regular
+      &__close
+        cursor: pointer
+        width: $size-regular
 
-      &::after
-        content: '\2717'
+        &::after
+          content: '\2717'
 
-    &__container
-      align-items: center
-      background-color: $color-monotone-light
-      border-radius: $radius
-      box-sizing: border-box
-      display: flex
-      flex-direction: row
-      padding: $gap-regular
-      transition: background-color $transition $easing, color $transition $easing, display $transition $easing
-      width: 100%
-
-      &:hover // sass-lint:disable-line nesting-depth
+      &__container
+        align-items: center
         background-color: $color-monotone-light
+        border-radius: $radius
+        box-sizing: border-box
+        display: flex
+        flex-direction: row
+        padding: $gap-regular
+        transition: background-color $transition $easing, color $transition $easing, display $transition $easing
+        width: 100%
 
-      @each $color, $value in $color-regular-map
-        &--is-#{$color}
-          background-color: $value
+        &:hover // sass-lint:disable-line nesting-depth
+          background-color: $color-monotone-light
 
-          #{ $self }__content
-            color: map-get($color-contrast-map, $color)
+        @each $color, $value in $color-regular-map
+          &--is-#{$color}
+            background-color: $value
 
-          &:hover // sass-lint:disable-line nesting-depth
-            background-color: map-get($color-lightness-map, $color)
+            #{ $self }__content
+              color: map-get($color-contrast-map, $color)
 
-          #{ $self }__close
-            &::after
-              color: map-get($color-darkness-map, $color)
+            &:hover // sass-lint:disable-line nesting-depth
+              background-color: map-get($color-lightness-map, $color)
+
+            #{ $self }__close
+              &::after
+                color: map-get($color-darkness-map, $color)

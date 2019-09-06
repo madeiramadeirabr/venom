@@ -1,42 +1,44 @@
-.container
-  margin: 0 auto
-
-  &--is-mobile
-    max-width: $mobile
-    width: $mobile
-
-  &--is-full-width
-    max-width: 100%
-    width: 100vw
-
-+for-size(mobile)
+.venom
   .container
-    max-width: 100%
-    width: 100vw
-
-+for-size(tablet)
-  .container
-    max-width: 100%
-    width: 100vw
+    $self: '.container'
+    margin: 0 auto
 
     &--is-mobile
       max-width: $mobile
       width: $mobile
 
-+for-size(desktop)
-  .container
-    max-width: $desktop
-    width: $desktop
+    &--is-full-width
+      max-width: 100%
+      width: 100vw
 
-    &--is-mobile
-      max-width: $mobile
-      width: $mobile
+  +for-size(mobile)
+    .container
+      max-width: 100%
+      width: 100vw
 
-+for-size(widescreen)
-  .container
-    max-width: $widescreen
-    width: $widescreen
+  +for-size(tablet)
+    .container
+      max-width: 100%
+      width: 100vw
 
-    &--is-mobile
-      max-width: $mobile
-      width: $mobile
+      &--is-mobile
+        max-width: $mobile
+        width: $mobile
+
+  +for-size(desktop)
+    .container
+      max-width: $desktop
+      width: $desktop
+
+      &--is-mobile
+        max-width: $mobile
+        width: $mobile
+
+  +for-size(widescreen)
+    .container
+      max-width: $widescreen
+      width: $widescreen
+
+      &--is-mobile
+        max-width: $mobile
+        width: $mobile

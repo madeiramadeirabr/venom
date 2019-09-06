@@ -1,256 +1,258 @@
-.helper
+.venom
+  .helper
+    $self: '.helper'
 
-  &--no-margin
-    margin: $zero
+    &--no-margin
+      margin: $zero
 
-  &--no-gap
-    padding: $zero
+    &--no-gap
+      padding: $zero
 
-  &--no-gap-horizontal
-    padding-left: $zero
-    padding-right: $zero
+    &--no-gap-horizontal
+      padding-left: $zero
+      padding-right: $zero
 
-  &--no-gap-vertical
-    padding-bottom: $zero
-    padding-top: $zero
+    &--no-gap-vertical
+      padding-bottom: $zero
+      padding-top: $zero
 
-  &--no-radius
-    border-radius: $zero
+    &--no-radius
+      border-radius: $zero
 
-  &--no-border
-    border-width: $zero
+    &--no-border
+      border-width: $zero
 
-  &--no-shadow
-    box-shadow: none
+    &--no-shadow
+      box-shadow: none
 
-  &--is-clearfix
-    +clearfix
+    &--is-clearfix
+      +clearfix
 
-  &--is-hidden
-    display: none !important // sass-lint:disable-line no-important
+    &--is-hidden
+      display: none !important // sass-lint:disable-line no-important
 
-  &--is-block
-    display: block !important // sass-lint:disable-line no-important
+    &--is-block
+      display: block !important // sass-lint:disable-line no-important
 
-  &--has-pointer
-    cursor: pointer !important // sass-lint:disable-line no-important
+    &--has-pointer
+      cursor: pointer !important // sass-lint:disable-line no-important
 
-  &--is-relative
-    position: relative
+    &--is-relative
+      position: relative
 
-  &--is-full-width
-    +border-box
-    width: 100%
+    &--is-full-width
+      +border-box
+      width: 100%
 
-  &--is-max-full-width
-    +border-box
-    max-width: 100%
+    &--is-max-full-width
+      +border-box
+      max-width: 100%
 
-  &--is-full-height
-    +border-box
-    height: 100%
+    &--is-full-height
+      +border-box
+      height: 100%
 
-  &--is-max-full-height
-    +border-box
-    max-height: 100%
+    &--is-max-full-height
+      +border-box
+      max-height: 100%
 
-  &--has-gap-extra-small
-    +border-box
-    padding: $gap-small
+    &--has-gap-extra-small
+      +border-box
+      padding: $gap-small
 
-  &--has-gap-small
-    +border-box
-    padding: $gap-small
+    &--has-gap-small
+      +border-box
+      padding: $gap-small
 
-  &--has-gap
-    +border-box
-    padding: $gap-regular
+    &--has-gap
+      +border-box
+      padding: $gap-regular
 
-  &--has-gap-large
-    +border-box
-    padding: $gap-large
+    &--has-gap-large
+      +border-box
+      padding: $gap-large
 
-  &--has-gap-extra-large
-    +border-box
-    padding: $gap-extra-large
+    &--has-gap-extra-large
+      +border-box
+      padding: $gap-extra-large
 
-  &--has-border
-    +border-box
-    border: solid $border-width $border-color-flat
-
-  &--is-full-height-viewport
-    height: calc(100vh - #{ $gap-regular * 2 })
-
-  &--has-radius
-    border-radius: $radius
-
-  &--has-margin
-    margin: $gap-regular
-
-    &-left
-      margin-left: $gap-regular
-
-      &-extra-small
-        margin-left: $gap-extra-small
-
-      &-small
-        margin-left: $gap-small
-
-      &-large
-        margin-left: $gap-large
-
-      &-extra-large
-        margin-left: $gap-extra-large
-
-    &-right
-      margin-right: $gap-regular
-
-      &-extra-small
-        margin-right: $gap-extra-small
-
-      &-small
-        margin-right: $gap-small
-
-      &-large
-        margin-right: $gap-large
-
-      &-extra-large
-        margin-right: $gap-extra-large
-
-    &-top
-      margin-top: $gap-regular
-
-      &-extra-small
-        margin-top: $gap-extra-small
-
-      &-small
-        margin-top: $gap-small
-
-      &-large
-        margin-top: $gap-large
-
-      &-extra-large
-        margin-top: $gap-extra-large
-
-    &-bottom
-      margin-bottom: $gap-regular
-
-      &-extra-small
-        margin-bottom: $gap-extra-small
-
-      &-small
-        margin-bottom: $gap-small
-
-      &-large
-        margin-bottom: $gap-large
-
-      &-extra-large
-        margin-bottom: $gap-extra-large
-
-    &-large
-      margin: $gap-large
-
-    &-vertical
-      margin-bottom: $gap-regular
-      margin-top: $gap-regular
-
-      &-extra-small
-        margin-bottom: $gap-extra-small
-        margin-top: $gap-extra-small
-
-      &-small
-        margin-bottom: $gap-small
-        margin-top: $gap-small
-
-      &-large
-        margin-bottom: $gap-large
-        margin-top: $gap-large
-
-      &-extra-large
-        margin-bottom: $gap-extra-large
-        margin-top: $gap-extra-large
-
-    &-horizontal
-      margin-left: $gap-regular
-      margin-right: $gap-regular
-
-      &-extra-small
-        margin-left: $gap-extra-small
-        margin-right: $gap-extra-small
-
-      &-small
-        margin-left: $gap-small
-        margin-right: $gap-small
-
-      &-large
-        margin-left: $gap-large
-        margin-right: $gap-large
-
-      &-extra-large
-        margin-left: $gap-extra-large
-        margin-right: $gap-extra-large
-
-  &--has-text
-
-    &-small
-      font-size: $size-small
-
-    &-large
-      font-size: $size-large
-
-    &-extra-large
-      font-size: $size-large
-
-    &-base-line
-      line-height: 1
-
-    &-left
-      text-align: left
-
-    &-center
-      text-align: center
-
-    &-right
-      text-align: center
-
-    &-justify
-      text-align: justify
-
-    &-upper
-      text-transform: uppercase
-
-    &-truncated
-      display: block
-      overflow: hidden
-      text-overflow: ellipsis
-      white-space: nowrap
-
-    &-white
-      color: $color-white
-
-    &-monotone
-      color: $color-monotone
-
-    &-black
-      color: $color-black
-
-    @each $color, $value in $color-regular-map
-      &-#{$color}
-        color: $value
-
-  &--has-background
-    @each $color, $value in $color-regular-map
-      &-#{$color}
-        background-color: $value
-
-  +for-size(mobile)
-    &--is-hidden-mobile
-      display: none
-
-  +for-size(tablet)
-    &--is-hidden-tablet
-      display: none
-
-  +for-retina
     &--has-border
-      border-width: $border-width-retina
+      +border-box
+      border: solid $border-width $border-color-flat
+
+    &--is-full-height-viewport
+      height: calc(100vh - #{ $gap-regular * 2 })
+
+    &--has-radius
+      border-radius: $radius
+
+    &--has-margin
+      margin: $gap-regular
+
+      &-left
+        margin-left: $gap-regular
+
+        &-extra-small
+          margin-left: $gap-extra-small
+
+        &-small
+          margin-left: $gap-small
+
+        &-large
+          margin-left: $gap-large
+
+        &-extra-large
+          margin-left: $gap-extra-large
+
+      &-right
+        margin-right: $gap-regular
+
+        &-extra-small
+          margin-right: $gap-extra-small
+
+        &-small
+          margin-right: $gap-small
+
+        &-large
+          margin-right: $gap-large
+
+        &-extra-large
+          margin-right: $gap-extra-large
+
+      &-top
+        margin-top: $gap-regular
+
+        &-extra-small
+          margin-top: $gap-extra-small
+
+        &-small
+          margin-top: $gap-small
+
+        &-large
+          margin-top: $gap-large
+
+        &-extra-large
+          margin-top: $gap-extra-large
+
+      &-bottom
+        margin-bottom: $gap-regular
+
+        &-extra-small
+          margin-bottom: $gap-extra-small
+
+        &-small
+          margin-bottom: $gap-small
+
+        &-large
+          margin-bottom: $gap-large
+
+        &-extra-large
+          margin-bottom: $gap-extra-large
+
+      &-large
+        margin: $gap-large
+
+      &-vertical
+        margin-bottom: $gap-regular
+        margin-top: $gap-regular
+
+        &-extra-small
+          margin-bottom: $gap-extra-small
+          margin-top: $gap-extra-small
+
+        &-small
+          margin-bottom: $gap-small
+          margin-top: $gap-small
+
+        &-large
+          margin-bottom: $gap-large
+          margin-top: $gap-large
+
+        &-extra-large
+          margin-bottom: $gap-extra-large
+          margin-top: $gap-extra-large
+
+      &-horizontal
+        margin-left: $gap-regular
+        margin-right: $gap-regular
+
+        &-extra-small
+          margin-left: $gap-extra-small
+          margin-right: $gap-extra-small
+
+        &-small
+          margin-left: $gap-small
+          margin-right: $gap-small
+
+        &-large
+          margin-left: $gap-large
+          margin-right: $gap-large
+
+        &-extra-large
+          margin-left: $gap-extra-large
+          margin-right: $gap-extra-large
+
+    &--has-text
+
+      &-small
+        font-size: $size-small
+
+      &-large
+        font-size: $size-large
+
+      &-extra-large
+        font-size: $size-large
+
+      &-base-line
+        line-height: 1
+
+      &-left
+        text-align: left
+
+      &-center
+        text-align: center
+
+      &-right
+        text-align: center
+
+      &-justify
+        text-align: justify
+
+      &-upper
+        text-transform: uppercase
+
+      &-truncated
+        display: block
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+
+      &-white
+        color: $color-white
+
+      &-monotone
+        color: $color-monotone
+
+      &-black
+        color: $color-black
+
+      @each $color, $value in $color-regular-map
+        &-#{$color}
+          color: $value
+
+    &--has-background
+      @each $color, $value in $color-regular-map
+        &-#{$color}
+          background-color: $value
+
+    +for-size(mobile)
+      &--is-hidden-mobile
+        display: none
+
+    +for-size(tablet)
+      &--is-hidden-tablet
+        display: none
+
+    +for-retina
+      &--has-border
+        border-width: $border-width-retina

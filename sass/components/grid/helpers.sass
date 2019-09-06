@@ -1,24 +1,26 @@
-.grid
-  $self: &
+.venom
+  .grid
+    $self: '.grid'
+    $self: &
 
-  &--is-flex
-    display: flex
+    &--is-flex
+      display: flex
 
-  &--is-start
-    justify-content: flex-start
+    &--is-start
+      justify-content: flex-start
 
-  &--is-center
-    align-items: center
-    justify-content: center
+    &--is-center
+      align-items: center
+      justify-content: center
 
-  &--is-end
-    justify-content: flex-end
+    &--is-end
+      justify-content: flex-end
 
-  &--is-top
-    align-items: flex-start
+    &--is-top
+      align-items: flex-start
 
-  &--is-bottom
-    align-items: flex-end
+    &--is-bottom
+      align-items: flex-end
 
-  &--has-no-wrap
-    flex-wrap: nowrap
+    &--has-no-wrap
+      flex-wrap: nowrap
