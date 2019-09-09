@@ -677,7 +677,7 @@ html {
           flex-direction: column-reverse;
 }
 
-.venom .grid .grid__column {
+.venom .grid__column {
   display: -webkit-box;
   display: flex;
   -webkit-box-flex: 1;
@@ -686,121 +686,121 @@ html {
   position: relative;
 }
 
-.venom .grid .grid__column--is-first {
+.venom .grid__column--is-first {
   -webkit-box-ordinal-group: 0;
           order: -1;
 }
 
-.venom .grid .grid__column--is-last {
+.venom .grid__column--is-last {
   -webkit-box-ordinal-group: 2;
           order: 1;
 }
 
-.venom .grid .grid__column.grid__column--is-one {
+.venom .grid__column.grid__column--is-one {
   min-width: 84px;
   max-width: 84px;
 }
 
-.venom .grid .grid__column.grid__column--is-one-offset {
+.venom .grid__column.grid__column--is-one-offset {
   margin-left: 84px;
 }
 
-.venom .grid .grid__column.grid__column--is-two {
+.venom .grid__column.grid__column--is-two {
   min-width: 188px;
   max-width: 188px;
 }
 
-.venom .grid .grid__column.grid__column--is-two-offset {
+.venom .grid__column.grid__column--is-two-offset {
   margin-left: 188px;
 }
 
-.venom .grid .grid__column.grid__column--is-three {
+.venom .grid__column.grid__column--is-three {
   min-width: 292px;
   max-width: 292px;
 }
 
-.venom .grid .grid__column.grid__column--is-three-offset {
+.venom .grid__column.grid__column--is-three-offset {
   margin-left: 292px;
 }
 
-.venom .grid .grid__column.grid__column--is-four {
+.venom .grid__column.grid__column--is-four {
   min-width: 396px;
   max-width: 396px;
 }
 
-.venom .grid .grid__column.grid__column--is-four-offset {
+.venom .grid__column.grid__column--is-four-offset {
   margin-left: 396px;
 }
 
-.venom .grid .grid__column.grid__column--is-five {
+.venom .grid__column.grid__column--is-five {
   min-width: 500px;
   max-width: 500px;
 }
 
-.venom .grid .grid__column.grid__column--is-five-offset {
+.venom .grid__column.grid__column--is-five-offset {
   margin-left: 500px;
 }
 
-.venom .grid .grid__column.grid__column--is-six {
+.venom .grid__column.grid__column--is-six {
   min-width: 604px;
   max-width: 604px;
 }
 
-.venom .grid .grid__column.grid__column--is-six-offset {
+.venom .grid__column.grid__column--is-six-offset {
   margin-left: 604px;
 }
 
-.venom .grid .grid__column.grid__column--is-seven {
+.venom .grid__column.grid__column--is-seven {
   min-width: 708px;
   max-width: 708px;
 }
 
-.venom .grid .grid__column.grid__column--is-seven-offset {
+.venom .grid__column.grid__column--is-seven-offset {
   margin-left: 708px;
 }
 
-.venom .grid .grid__column.grid__column--is-eight {
+.venom .grid__column.grid__column--is-eight {
   min-width: 812px;
   max-width: 812px;
 }
 
-.venom .grid .grid__column.grid__column--is-eight-offset {
+.venom .grid__column.grid__column--is-eight-offset {
   margin-left: 812px;
 }
 
-.venom .grid .grid__column.grid__column--is-nine {
+.venom .grid__column.grid__column--is-nine {
   min-width: 916px;
   max-width: 916px;
 }
 
-.venom .grid .grid__column.grid__column--is-nine-offset {
+.venom .grid__column.grid__column--is-nine-offset {
   margin-left: 916px;
 }
 
-.venom .grid .grid__column.grid__column--is-ten {
+.venom .grid__column.grid__column--is-ten {
   min-width: 1020px;
   max-width: 1020px;
 }
 
-.venom .grid .grid__column.grid__column--is-ten-offset {
+.venom .grid__column.grid__column--is-ten-offset {
   margin-left: 1020px;
 }
 
-.venom .grid .grid__column.grid__column--is-eleven {
+.venom .grid__column.grid__column--is-eleven {
   min-width: 1124px;
   max-width: 1124px;
 }
 
-.venom .grid .grid__column.grid__column--is-eleven-offset {
+.venom .grid__column.grid__column--is-eleven-offset {
   margin-left: 1124px;
 }
 
-.venom .grid .grid__column.grid__column--is-twelve {
+.venom .grid__column.grid__column--is-twelve {
   min-width: 1228px;
   max-width: 1228px;
 }
 
-.venom .grid .grid__column.grid__column--is-twelve-offset {
+.venom .grid__column.grid__column--is-twelve-offset {
   margin-left: 1228px;
 }
 
