@@ -1,6 +1,6 @@
 .venom
 
-  .checkmark
+  .check
     position: absolute
     top: 0
     left: 0
@@ -15,8 +15,8 @@
       position: absolute
       display: none
 
-  .radio
-    $self: '.radio'
+  .radio,
+  .checkbox
     +unselectable
     display: block
     position: relative
@@ -27,7 +27,7 @@
 
     &:hover
       input
-        ~ .checkmark
+        ~ .check
             background-color: $color-monotone-light
 
     input
@@ -36,14 +36,14 @@
       cursor: pointer
 
       &:checked
-          ~ .checkmark
+          ~ .check
               background-color: $color-white
               border-color: $color-secondary
 
               &:after
                 display: block
 
-    .checkmark
+    .check
       &:after
         top: 6px
         left: 6px
@@ -51,3 +51,18 @@
         height: 8px
         border-radius: 50%
         background: $color-secondary
+
+  .checkbox
+    .check
+      border-radius: $zero
+
+      &:after
+        left: 7px
+        top: 3px
+        width: 5px
+        height: 10px
+        border: solid $color-secondary
+        background: $color-white
+        border-width: $zero 2px 2px $zero
+        border-radius: $zero
+        transform: rotate(45deg)

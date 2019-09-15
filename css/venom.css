@@ -1679,7 +1679,7 @@ html {
   width: 100%;
 }
 
-.venom .checkmark {
+.venom .check {
   position: absolute;
   top: 0;
   left: 0;
@@ -1690,13 +1690,14 @@ html {
   border: solid 2px #00549e;
 }
 
-.venom .checkmark:after {
+.venom .check:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.venom .radio {
+.venom .radio,
+.venom .checkbox {
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-touch-callout: none;
@@ -1710,32 +1711,54 @@ html {
   font-size: 14px;
 }
 
-.venom .radio:hover input ~ .checkmark {
+.venom .radio:hover input ~ .check,
+.venom .checkbox:hover input ~ .check {
   background-color: #b3b3b3;
 }
 
-.venom .radio input {
+.venom .radio input,
+.venom .checkbox input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-.venom .radio input:checked ~ .checkmark {
+.venom .radio input:checked ~ .check,
+.venom .checkbox input:checked ~ .check {
   background-color: white;
   border-color: #00549e;
 }
 
-.venom .radio input:checked ~ .checkmark:after {
+.venom .radio input:checked ~ .check:after,
+.venom .checkbox input:checked ~ .check:after {
   display: block;
 }
 
-.venom .radio .checkmark:after {
+.venom .radio .check:after,
+.venom .checkbox .check:after {
   top: 6px;
   left: 6px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
   background: #00549e;
+}
+
+.venom .checkbox .check {
+  border-radius: 0;
+}
+
+.venom .checkbox .check:after {
+  left: 7px;
+  top: 3px;
+  width: 5px;
+  height: 10px;
+  border: solid #00549e;
+  background: white;
+  border-width: 0 2px 2px 0;
+  border-radius: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .venom .helper--no-margin {
