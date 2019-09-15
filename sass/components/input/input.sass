@@ -1,0 +1,53 @@
+.venom
+
+  .checkmark
+    position: absolute
+    top: 0
+    left: 0
+    height: 20px
+    width: 20px
+    border-radius: 50%
+    background-color: $color-white
+    border: solid 2px $color-secondary
+
+    &:after
+      content: ""
+      position: absolute
+      display: none
+
+  .radio
+    $self: '.radio'
+    +unselectable
+    display: block
+    position: relative
+    padding-left: 35px
+    margin-bottom: 12px
+    cursor: pointer
+    font-size: $size-regular
+
+    &:hover
+      input
+        ~ .checkmark
+            background-color: $color-monotone-light
+
+    input
+      position: absolute
+      opacity: 0
+      cursor: pointer
+
+      &:checked
+          ~ .checkmark
+              background-color: $color-white
+              border-color: $color-secondary
+
+              &:after
+                display: block
+
+    .checkmark
+      &:after
+        top: 6px
+        left: 6px
+        width: 8px
+        height: 8px
+        border-radius: 50%
+        background: $color-secondary

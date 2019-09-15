@@ -1673,6 +1673,71 @@ html {
   color: #0d0d0d;
 }
 
+.venom .card.card {
+  box-shadow: 0 0 10px 0 #b3b3b3;
+  padding: 12px;
+  width: 100%;
+}
+
+.venom .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: white;
+  border: solid 2px #00549e;
+}
+
+.venom .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.venom .radio {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.venom .radio:hover input ~ .checkmark {
+  background-color: #b3b3b3;
+}
+
+.venom .radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.venom .radio input:checked ~ .checkmark {
+  background-color: white;
+  border-color: #00549e;
+}
+
+.venom .radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.venom .radio .checkmark:after {
+  top: 6px;
+  left: 6px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #00549e;
+}
+
 .venom .helper--no-margin {
   margin: 0;
 }
