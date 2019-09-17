@@ -2097,7 +2097,7 @@ html {
 }
 
 .venom .helper--has-text-extra-large {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .venom .helper--has-text-base-line {
@@ -2113,7 +2113,7 @@ html {
 }
 
 .venom .helper--has-text-right {
-  text-align: center;
+  text-align: right;
 }
 
 .venom .helper--has-text-justify {
