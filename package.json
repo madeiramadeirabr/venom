@@ -4,10 +4,10 @@
   "description": "Venom is an UI KIT with MadeiraMadeira brand",
   "main": "index.js",
   "scripts": {
-    "sass-build-autoprefix": "postcss --use autoprefixer --map false --output css/venom.css css/venom.css",
-    "sass-build-cleancss": "cleancss -o css/venom.min.css css/venom.css",
+    "sass-build-autoprefix": "postcss --use autoprefixer --map false --output dist/venom.css dist/venom.css",
+    "sass-build-cleancss": "cleancss -o dist/venom.min.css dist/venom.css",
     "sass-build-clean": "rimraf css",
-    "sass-build-sass": "node-sass --output-style expanded --source-map true venom.sass css/venom.css",
+    "sass-build-sass": "node-sass --output-style expanded --source-map true venom.sass dist/venom.css",
     "deploy": "npm run sass-build-clean && npm run sass-build-sass && npm run sass-build-autoprefix && npm run sass-build-cleancss && gulp",
     "start": "npm run sass-build-sass -- --watch",
     "linter": "sass-lint -c .sass-lint.yml 'sass/**/*.sass' -v -q"

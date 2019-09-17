@@ -12,10 +12,10 @@ exports.default = function () {
   `)
 
   src('resources/fonts/**/*')
-    .pipe(dest('css/fonts'))
+    .pipe(dest('dist/fonts'))
 
   return src('resources/icons/**/*')
-    .pipe(dest('css/icons'))
+    .pipe(dest('dist/icons'))
 
   // return src([('css/venom.min.css')])
   //   .pipe(replace('helper', ''))
