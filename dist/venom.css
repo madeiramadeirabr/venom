@@ -1305,221 +1305,6 @@ html {
   color: #22bf5b;
 }
 
-.venom .form .form__field-component,
-.venom .form .form__field-component--has-icon {
-  border-bottom: solid 1px #b3b3b3;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  position: relative;
-}
-
-.venom .form .form__field-component .form__label,
-.venom .form .form__field-component--has-icon .form__label {
-  left: 12px;
-  position: absolute;
-  top: 0;
-  -webkit-transition: top 200ms ease, color 200ms ease, font-size 200ms ease;
-  transition: top 200ms ease, color 200ms ease, font-size 200ms ease;
-}
-
-.venom .form .form__field-component .form__field:focus + .form__label,
-.venom .form .form__field-component .form__field--is-activated + .form__label,
-.venom .form .form__field-component--has-icon .form__field:focus + .form__label,
-.venom .form .form__field-component--has-icon .form__field--is-activated + .form__label {
-  color: gray;
-  font-size: 12px;
-  top: -12px;
-}
-
-.venom .form .form__field-component + .form__field-component,
-.venom .form .form__field-component + .form__field-component--has-icon,
-.venom .form .form__field-component--has-icon + .form__field-component--has-icon {
-  margin-bottom: 12px;
-}
-
-.venom .form .form__field-component--has-icon .form__label {
-  left: 36px;
-}
-
-.venom .form .form__indicator {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1;
-  position: absolute;
-  right: 12px;
-  top: calc(calc(100% / 2) - calc(16px / 2));
-}
-
-.venom .form .form__indicator--is-success::after {
-  color: #009e22;
-  content: '\2713';
-}
-
-.venom .form .form__indicator--is-danger::after {
-  color: #db4639;
-  content: '\2717';
-}
-
-.venom .form .form__icon {
-  -webkit-box-align: center;
-          align-items: center;
-  color: #b3b3b3;
-  cursor: text;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  text-align: center;
-  width: 24px;
-}
-
-.venom .form .form__icon svg {
-  fill: #b3b3b3;
-}
-
-.venom .form .form__field + .form__icon {
-  height: 100%;
-  position: absolute;
-  right: 0;
-}
-
-.venom .form .form__label {
-  -webkit-box-align: center;
-          align-items: center;
-  color: #0d0d0d;
-  display: -webkit-box;
-  display: flex;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  margin-bottom: 12px;
-  margin-top: 12px;
-  -webkit-transition: color 86ms ease-in;
-  transition: color 86ms ease-in;
-}
-
-.venom .form .form__field {
-  background-color: rgba(0, 0, 0, 0);
-  border-radius: 0;
-  border-width: 0;
-  box-sizing: border-box;
-  color: #0d0d0d;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 1;
-  padding: 12px;
-  -webkit-transition: padding 172ms ease-in;
-  transition: padding 172ms ease-in;
-  width: 100%;
-}
-
-.venom .form .form__field.form__field--is-extra-small {
-  padding: 4px;
-}
-
-.venom .form .form__field.form__field--is-extra-small:focus {
-  padding: 4px;
-}
-
-.venom .form .form__field.form__field--is-small {
-  padding: 8px;
-}
-
-.venom .form .form__field.form__field--is-small:focus {
-  padding: 8px;
-}
-
-.venom .form .form__field.form__field--is-large {
-  padding: 20px;
-}
-
-.venom .form .form__field.form__field--is-large:focus {
-  padding: 20px;
-}
-
-.venom .form .form__field.form__field--is-extra-large {
-  padding: 32px;
-}
-
-.venom .form .form__field.form__field--is-extra-large:focus {
-  padding: 32px;
-}
-
-.venom .form .form__field.form__field--is-active {
-  border-color: #f4831f;
-}
-
-.venom .form .form__field.form__field--is-focus {
-  border-color: #f4831f;
-}
-
-.venom .form .form__field.form__field--is-disabled {
-  opacity: .8;
-  pointer-events: none;
-}
-
-.venom .form .form__field:active {
-  border-color: #f4831f;
-}
-
-.venom .form .form__field:focus {
-  color: currentColor;
-}
-
-.venom .form .form__field:disabled {
-  opacity: .8;
-  pointer-events: none;
-}
-
-.venom .form.form--is-horizontal .form__label {
-  margin-bottom: 0;
-  margin-right: 12px;
-  margin-top: 0;
-}
-
-.venom .form.form__divider {
-  width: 12px;
-}
-
-.venom .form.form--danger-focus .form__label {
-  color: #be3023;
-  font-weight: 600;
-}
-
-.venom .form.form--danger-focus .form__field {
-  border-color: #be3023;
-  color: #be3023;
-}
-
-.venom .form.form--warning-focus .form__label {
-  color: #d79804;
-  font-weight: 600;
-}
-
-.venom .form.form--warning-focus .form__field {
-  border-color: #d79804;
-  color: #d79804;
-}
-
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
-  .venom .form.form__field {
-    border-width: 0.5px;
-  }
-  .venom .form.form__field:focus {
-    border-width: 1.5px;
-    padding: 10.5px;
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .venom .form.form__divider:not([class*='--fixed']) {
-    display: none;
-  }
-}
-
 .venom .notification.notification__content {
   color: #0d0d0d;
   -webkit-box-flex: 1;
@@ -1782,9 +1567,9 @@ html {
 .venom .text-field {
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-          flex-direction: row;
+          flex-direction: column;
   position: relative;
   width: 100%;
 }
@@ -1801,9 +1586,23 @@ html {
   width: 100%;
 }
 
+.venom .text-field .text-field__container::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+.venom .text-field .text-field__helper {
+  font-size: 10px;
+  font-weight: 400;
+  margin: 4px 12px;
+  color: gray;
+  width: 100%;
+}
+
 .venom .text-field .text-field__label {
   position: absolute;
-  bottom: 4px;
+  bottom: 21px;
   width: calc(100% - 18px);
   left: 0;
   padding: 8px;
@@ -1811,12 +1610,14 @@ html {
   transition: all 172ms ease;
   overflow: hidden;
   border-radius: 4px;
+  cursor: text;
 }
 
-.venom .text-field input,
 .venom .text-field input {
-  border: none;
+  border: solid 1px white;
+  padding: 0;
   margin: 8px;
+  width: calc(100% - 22px);
 }
 
 .venom .text-field input:not([type='checkbox']):focus,
@@ -1825,19 +1626,63 @@ html {
   border: solid 1px #00549e;
   border-radius: 3px;
   margin: 0;
-  padding: 8px;
-  width: calc(100% - 18px);
+  padding: 8px 10px;
 }
 
-.venom .text-field input:focus + .text-field__label {
+.venom .text-field input:focus + .text-field__label,
+.venom .text-field .text-field-is-active .text-field__label {
   color: #00549e;
-  bottom: 29px;
-  left: 8px;
+  bottom: 49px;
+  left: 10px;
   padding: 2px;
   width: auto;
   background: white;
   font-size: 12px;
   line-height: 1;
+}
+
+.venom .text-field.text-field--is-active .text-field__label,
+.venom .text-field.text-field--is-active .text-field__helper {
+  color: #00549e;
+}
+
+.venom .text-field.text-field--is-active .text-field__container,
+.venom .text-field.text-field--is-active input:not([type='checkbox']):focus,
+.venom .text-field.text-field--is-active input:not([type='radio']):focus {
+  border-color: #00549e;
+}
+
+.venom .text-field.text-field--is-danger .text-field__label,
+.venom .text-field.text-field--is-danger .text-field__helper {
+  color: #db4639 !important;
+}
+
+.venom .text-field.text-field--is-danger .text-field__container,
+.venom .text-field.text-field--is-danger input:not([type='checkbox']):focus,
+.venom .text-field.text-field--is-danger input:not([type='radio']):focus {
+  border-color: #db4639 !important;
+}
+
+.venom .text-field.text-field--is-success .text-field__label,
+.venom .text-field.text-field--is-success .text-field__helper {
+  color: #009e22 !important;
+}
+
+.venom .text-field.text-field--is-success .text-field__container,
+.venom .text-field.text-field--is-success input:not([type='checkbox']):focus,
+.venom .text-field.text-field--is-success input:not([type='radio']):focus {
+  border-color: #009e22 !important;
+}
+
+.venom .text-field.text-field--is-warning .text-field__label,
+.venom .text-field.text-field--is-warning .text-field__helper {
+  color: #fab514 !important;
+}
+
+.venom .text-field.text-field--is-warning .text-field__container,
+.venom .text-field.text-field--is-warning input:not([type='checkbox']):focus,
+.venom .text-field.text-field--is-warning input:not([type='radio']):focus {
+  border-color: #fab514 !important;
 }
 
 .venom .helper--has-no-margin {
@@ -1914,7 +1759,7 @@ html {
 
 .venom .helper--has-gap-extra-small {
   box-sizing: border-box;
-  padding: 8px;
+  padding: 4px;
 }
 
 .venom .helper--has-gap-small {

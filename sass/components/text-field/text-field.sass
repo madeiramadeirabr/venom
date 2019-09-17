@@ -1,33 +1,53 @@
 $input-el: '.text-field'
 
+=text-field-is-active
+  color: $color-secondary
+  bottom: 29px
+  left: $gap-small
+  padding: 2px
+  width: auto
+  background: $color-white
+  font-size: 12px
+  line-height: 1
+
 .venom
 
   #{$input-el}
     +clearfix
     display: flex
-    flex-direction: row
+    flex-direction: column
     position: relative
     width: 100%
 
     #{$input-el}__container
+      +clearfix
       border: solid $border-width $color-monotone
       border-radius: $radius
       width: 100%
 
+    #{$input-el}__helper
+      font-size: $size-extra-small
+      font-weight: $weight-regular
+      margin: $base $gap-regular
+      color: $color-monotone
+      width: 100%
+
     #{$input-el}__label
       position: absolute
-      bottom: 4px
+      bottom: 21px
       width: calc(100% - #{ ($gap-small * 2) + ($border-width * 2) } )
       left: $zero
       padding: $gap-small
       transition: all $transition-medium ease
       overflow: hidden
       border-radius: $radius
+      cursor: text
 
-    input,
     input
-      border: none
+      border: solid $border-width $color-white
+      padding: $zero
       margin: $gap-small
+      width: calc(100% - #{ ($gap-regular * 2) - ($border-width * 2) })
 
     input:not([type='checkbox']):focus,
     input:not([type='radio']):focus
@@ -35,16 +55,55 @@ $input-el: '.text-field'
       border: solid 1px $color-secondary
       border-radius: $radius - 1px
       margin: $zero
-      padding: $gap-small
-      width: calc(100% - #{ ($gap-small * 2) + ($border-width * 2) })
+      padding: $gap-small ($gap-regular - 2px)
 
-    input:focus
-      + #{$input-el}__label
+    input:focus + #{$input-el}__label,
+    #{$input-el}-is-active #{$input-el}__label
         color: $color-secondary
-        bottom: 29px
-        left: $gap-small
+        bottom: 49px
+        left: $gap-regular - 2px
         padding: 2px
         width: auto
         background: $color-white
         font-size: 12px
         line-height: 1
+
+    &#{$input-el}--is-active
+      #{$input-el}__label,
+      #{$input-el}__helper
+        color: $color-secondary
+
+      #{$input-el}__container,
+      input:not([type='checkbox']):focus,
+      input:not([type='radio']):focus
+        border-color: $color-secondary
+
+    &#{$input-el}--is-danger
+      #{$input-el}__label,
+      #{$input-el}__helper
+        color: $color-danger !important
+
+      #{$input-el}__container,
+      input:not([type='checkbox']):focus,
+      input:not([type='radio']):focus
+        border-color: $color-danger !important
+
+    &#{$input-el}--is-success
+      #{$input-el}__label,
+      #{$input-el}__helper
+        color: $color-success !important
+
+      #{$input-el}__container,
+      input:not([type='checkbox']):focus,
+      input:not([type='radio']):focus
+        border-color: $color-success !important
+
+    &#{$input-el}--is-warning
+      #{$input-el}__label,
+      #{$input-el}__helper
+        color: $color-warning !important
+
+      #{$input-el}__container,
+      input:not([type='checkbox']):focus,
+      input:not([type='radio']):focus
+        border-color: $color-warning !important
