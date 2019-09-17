@@ -1,0 +1,50 @@
+$input-el: '.text-field'
+
+.venom
+
+  #{$input-el}
+    +clearfix
+    display: flex
+    flex-direction: row
+    position: relative
+    width: 100%
+
+    #{$input-el}__container
+      border: solid $border-width $color-monotone
+      border-radius: $radius
+      width: 100%
+
+    #{$input-el}__label
+      position: absolute
+      bottom: 4px
+      width: calc(100% - #{ ($gap-small * 2) + ($border-width * 2) } )
+      left: $zero
+      padding: $gap-small
+      transition: all $transition-medium ease
+      overflow: hidden
+      border-radius: $radius
+
+    input,
+    input
+      border: none
+      margin: $gap-small
+
+    input:not([type='checkbox']):focus,
+    input:not([type='radio']):focus
+      outline: none
+      border: solid 1px $color-secondary
+      border-radius: $radius - 1px
+      margin: $zero
+      padding: $gap-small
+      width: calc(100% - #{ ($gap-small * 2) + ($border-width * 2) })
+
+    input:focus
+      + #{$input-el}__label
+        color: $color-secondary
+        bottom: 29px
+        left: $gap-small
+        padding: 2px
+        width: auto
+        background: $color-white
+        font-size: 12px
+        line-height: 1

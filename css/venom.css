@@ -1679,7 +1679,23 @@ html {
   width: 100%;
 }
 
-.venom .check {
+.venom .input {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  position: relative;
+  width: 100%;
+}
+
+.venom .input::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+.venom .input .input__marker {
   position: absolute;
   top: 0;
   left: 0;
@@ -1690,14 +1706,13 @@ html {
   border: solid 2px #00549e;
 }
 
-.venom .check:after {
+.venom .input .input__marker:after {
   content: "";
   position: absolute;
   display: none;
 }
 
-.venom .radio,
-.venom .checkbox {
+.venom .input.input__radio, .venom .input.input__checkbox {
   -moz-user-select: none;
   -ms-user-select: none;
   -webkit-touch-callout: none;
@@ -1711,31 +1726,34 @@ html {
   font-size: 14px;
 }
 
-.venom .radio:hover input ~ .check,
-.venom .checkbox:hover input ~ .check {
-  background-color: #b3b3b3;
+.venom .input.input__radio:hover input[type='radio'] ~ .input__marker:after, .venom .input.input__checkbox:hover input[type='radio'] ~ .input__marker:after {
+  content: '';
+  border-radius: 50%;
+  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1);
 }
 
-.venom .radio input,
-.venom .checkbox input {
+.venom .input.input__radio input[type='checkbox'],
+.venom .input.input__radio input[type='radio'], .venom .input.input__checkbox input[type='checkbox'],
+.venom .input.input__checkbox input[type='radio'] {
   position: absolute;
   opacity: 0;
   cursor: pointer;
 }
 
-.venom .radio input:checked ~ .check,
-.venom .checkbox input:checked ~ .check {
+.venom .input.input__radio input[type='checkbox']:checked ~ .input__marker,
+.venom .input.input__radio input[type='radio']:checked ~ .input__marker, .venom .input.input__checkbox input[type='checkbox']:checked ~ .input__marker,
+.venom .input.input__checkbox input[type='radio']:checked ~ .input__marker {
   background-color: white;
   border-color: #00549e;
 }
 
-.venom .radio input:checked ~ .check:after,
-.venom .checkbox input:checked ~ .check:after {
+.venom .input.input__radio input[type='checkbox']:checked ~ .input__marker:after,
+.venom .input.input__radio input[type='radio']:checked ~ .input__marker:after, .venom .input.input__checkbox input[type='checkbox']:checked ~ .input__marker:after,
+.venom .input.input__checkbox input[type='radio']:checked ~ .input__marker:after {
   display: block;
 }
 
-.venom .radio .check:after,
-.venom .checkbox .check:after {
+.venom .input.input__radio .input__marker:after, .venom .input.input__checkbox .input__marker:after {
   top: 6px;
   left: 6px;
   width: 8px;
@@ -1744,11 +1762,11 @@ html {
   background: #00549e;
 }
 
-.venom .checkbox .check {
+.venom .input.input__checkbox .input__marker {
   border-radius: 0;
 }
 
-.venom .checkbox .check:after {
+.venom .input.input__checkbox .input__marker:after {
   left: 7px;
   top: 3px;
   width: 5px;
@@ -1761,33 +1779,94 @@ html {
           transform: rotate(45deg);
 }
 
-.venom .helper--no-margin {
+.venom .text-field {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  position: relative;
+  width: 100%;
+}
+
+.venom .text-field::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+.venom .text-field .text-field__container {
+  border: solid 1px gray;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.venom .text-field .text-field__label {
+  position: absolute;
+  bottom: 4px;
+  width: calc(100% - 18px);
+  left: 0;
+  padding: 8px;
+  -webkit-transition: all 172ms ease;
+  transition: all 172ms ease;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.venom .text-field input,
+.venom .text-field input {
+  border: none;
+  margin: 8px;
+}
+
+.venom .text-field input:not([type='checkbox']):focus,
+.venom .text-field input:not([type='radio']):focus {
+  outline: none;
+  border: solid 1px #00549e;
+  border-radius: 3px;
+  margin: 0;
+  padding: 8px;
+  width: calc(100% - 18px);
+}
+
+.venom .text-field input:focus + .text-field__label {
+  color: #00549e;
+  bottom: 29px;
+  left: 8px;
+  padding: 2px;
+  width: auto;
+  background: white;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.venom .helper--has-no-margin {
   margin: 0;
 }
 
-.venom .helper--no-gap {
+.venom .helper--has-no-gap {
   padding: 0;
 }
 
-.venom .helper--no-gap-horizontal {
+.venom .helper--has-no-gap-horizontal {
   padding-left: 0;
   padding-right: 0;
 }
 
-.venom .helper--no-gap-vertical {
+.venom .helper--has-no-gap-vertical {
   padding-bottom: 0;
   padding-top: 0;
 }
 
-.venom .helper--no-radius {
+.venom .helper--has-no-radius {
   border-radius: 0;
 }
 
-.venom .helper--no-border {
+.venom .helper--has-no-border {
   border-width: 0;
 }
 
-.venom .helper--no-shadow {
+.venom .helper--has-no-shadow {
   box-shadow: none;
 }
 
