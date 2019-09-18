@@ -12,8 +12,6 @@ $input-el: '.text-field'
     #{$input-el}__container
       +clearfix
       border-radius: $radius
-      border: solid $border-width $color-monotone-light
-      padding: $gap-regular
       width: 100%
 
     #{$input-el}__helper
@@ -25,51 +23,41 @@ $input-el: '.text-field'
 
     #{$input-el}__label
       position: absolute
-      top: $zero
-      left: $zero
-      padding: $gap-regular
-      width: calc(100% - #{$gap-regular * 2})
+      top: $gap-regular
+      left: $gap-regular
       transition: all $transition-medium ease
       cursor: text
 
     input
-      border: none
-      padding: $zero
-      margin: $zero
+      border: solid $border-width $color-monotone-lightness
+      padding: $gap-regular
+      border-radius: $radius
       width: 100%
 
     input:not([type='checkbox']):focus,
     input:not([type='radio']):focus
       outline: none
+      border: solid 2px $color-secondary
+      padding: ($gap-regular - 1px) $gap-regular
 
     input:focus + #{$input-el}__label,
     &#{$input-el}--is-active #{$input-el}__label
+        color: $color-secondary
         top: -( $gap-regular / 2)
-        left: $gap-regular - 2px !important
+        left: $gap-regular - 2px
         padding: 2px
         width: auto
         background: $color-white
         font-size: $size-small
         line-height: 1
 
-    &#{$input-el}--has-left-icon
-      #{$input-el}__label
-        left: $gap-regular * 4
-
-    &#{$input-el}--has-left-icon,
-    &#{$input-el}--has-right-icon
-      #{$input-el}__container
-        display: flex
-        flex-direction: row
-
     &#{$input-el}--is-active
       #{$input-el}__label,
       #{$input-el}__helper
         color: $color-secondary
 
-      #{$input-el}__container
-        padding: $gap-regular - 1px
-        border-width: $border-width * 2
+      input:not([type='checkbox']):focus,
+      input:not([type='radio']):focus
         border-color: $color-secondary
 
     &#{$input-el}--is-danger
@@ -77,7 +65,8 @@ $input-el: '.text-field'
       #{$input-el}__helper
         color: $color-danger !important
 
-      #{$input-el}__container
+      input:not([type='checkbox']):focus,
+      input:not([type='radio']):focus
         border-color: $color-danger !important
 
     &#{$input-el}--is-success
@@ -85,7 +74,8 @@ $input-el: '.text-field'
       #{$input-el}__helper
         color: $color-success !important
 
-      #{$input-el}__container
+      input:not([type='checkbox']):focus,
+      input:not([type='radio']):focus
         border-color: $color-success !important
 
     &#{$input-el}--is-warning
@@ -93,5 +83,6 @@ $input-el: '.text-field'
       #{$input-el}__helper
         color: $color-warning !important
 
-      #{$input-el}__container
+      input:not([type='checkbox']):focus,
+      input:not([type='radio']):focus
         border-color: $color-warning !important
