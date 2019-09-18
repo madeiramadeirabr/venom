@@ -7,7 +7,7 @@ $input-el: '.text-field'
     display: flex
     flex-direction: column
     position: relative
-    width: 100%
+    width: calc(100% - #{($gap-regular * 2) + 2})
 
     #{$input-el}__container
       +clearfix
@@ -22,6 +22,8 @@ $input-el: '.text-field'
       margin: $base $gap-regular
       color: $color-monotone
       width: 100%
+      display: block
+      content: ' '
 
     #{$input-el}__label
       position: absolute
@@ -37,6 +39,7 @@ $input-el: '.text-field'
       padding: $zero
       margin: $zero
       width: 100%
+      font-size: $size-regular
 
     input:not([type='checkbox']):focus,
     input:not([type='radio']):focus

@@ -1571,7 +1571,7 @@ html {
   -webkit-box-direction: normal;
           flex-direction: column;
   position: relative;
-  width: 100%;
+  width: calc(100% - 26px);
 }
 
 .venom .text-field::after {
@@ -1599,6 +1599,8 @@ html {
   margin: 4px 12px;
   color: gray;
   width: 100%;
+  display: block;
+  content: ' ';
 }
 
 .venom .text-field .text-field__label {
@@ -1617,6 +1619,7 @@ html {
   padding: 0;
   margin: 0;
   width: 100%;
+  font-size: 14px;
 }
 
 .venom .text-field input:not([type='checkbox']):focus,
