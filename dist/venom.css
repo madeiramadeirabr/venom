@@ -1572,6 +1572,7 @@ html {
           flex-direction: column;
   position: relative;
   width: calc(100% - 26px);
+  margin-bottom: 12px;
 }
 
 .venom .text-field::after {
@@ -1600,7 +1601,7 @@ html {
   color: gray;
   width: 100%;
   display: block;
-  content: ' ';
+  line: 14px;
 }
 
 .venom .text-field .text-field__label {

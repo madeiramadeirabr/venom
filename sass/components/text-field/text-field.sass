@@ -8,6 +8,7 @@ $input-el: '.text-field'
     flex-direction: column
     position: relative
     width: calc(100% - #{($gap-regular * 2) + 2})
+    margin-bottom: $gap-regular
 
     #{$input-el}__container
       +clearfix
@@ -23,7 +24,7 @@ $input-el: '.text-field'
       color: $color-monotone
       width: 100%
       display: block
-      content: ' '
+      line: $size-regular
 
     #{$input-el}__label
       position: absolute
