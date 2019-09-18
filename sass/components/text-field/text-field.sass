@@ -1,15 +1,5 @@
 $input-el: '.text-field'
 
-=text-field-is-active
-  color: $color-secondary
-  bottom: 29px
-  left: $gap-small
-  padding: 2px
-  width: auto
-  background: $color-white
-  font-size: 12px
-  line-height: 1
-
 .venom
 
   #{$input-el}
@@ -58,7 +48,7 @@ $input-el: '.text-field'
       padding: $gap-small ($gap-regular - 2px)
 
     input:focus + #{$input-el}__label,
-    #{$input-el}-is-active #{$input-el}__label
+    &#{$input-el}--is-active #{$input-el}__label
         color: $color-secondary
         bottom: 49px
         left: $gap-regular - 2px
@@ -77,6 +67,9 @@ $input-el: '.text-field'
       input:not([type='checkbox']):focus,
       input:not([type='radio']):focus
         border-color: $color-secondary
+
+      input
+        border-color: $color-secondary !important
 
     &#{$input-el}--is-danger
       #{$input-el}__label,

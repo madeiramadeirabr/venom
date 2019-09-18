@@ -1630,7 +1630,7 @@ html {
 }
 
 .venom .text-field input:focus + .text-field__label,
-.venom .text-field .text-field-is-active .text-field__label {
+.venom .text-field.text-field--is-active .text-field__label {
   color: #00549e;
   bottom: 49px;
   left: 10px;
@@ -1650,6 +1650,10 @@ html {
 .venom .text-field.text-field--is-active input:not([type='checkbox']):focus,
 .venom .text-field.text-field--is-active input:not([type='radio']):focus {
   border-color: #00549e;
+}
+
+.venom .text-field.text-field--is-active input {
+  border-color: #00549e !important;
 }
 
 .venom .text-field.text-field--is-danger .text-field__label,
