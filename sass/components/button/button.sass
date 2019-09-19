@@ -17,13 +17,21 @@
     line-height: 1
     outline: none
     padding: $gap-regular
-    transition: background-color $transition $easing, border-color $transition $easing, color $transition $easing
+    transition: background-color $transition $easing, border-color $transition $easing, color $transition $easing, background $transition-click
+    background-position: center
 
+    
     &:hover,
     &:focus,
-    &:active
       background-color: $color-monotone-lightness
-      color: $color-primary-dark
+      background: radial-gradient(circle, transparent 1%, rgba(255,255,255,0.2) 1%) center/15000%;
+
+    &:active
+      background-size: 100%;
+      transition: background 0s;
+
+
+
 
     &#{ $self }
       &:disabled,

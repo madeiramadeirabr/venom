@@ -1,0 +1,50 @@
+@import 'sass/variables'
+
+.venom
+  .tab
+    background: $color-white
+    height: 100%
+    padding: $gap-regular
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    justify-content: center
+    overflow-x: auto
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+        -ms-flex-direction: column
+            flex-direction: column
+
+    .wave 
+      width: 150px
+      padding: 20px 0
+      background: $color-white
+      color: $color-black
+      overflow: hidden
+      text-align: center
+      -webkit-box-flex: 1
+          -ms-flex-positive: 1
+              flex-grow: 1
+      cursor: pointer
+      position: relative
+      flex-shrink: 0
+      -webkit-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      -o-user-select: none
+      user-select: none
+      transition: background $transition-click
+      background-position: center
+
+      &:hover,
+      &:focus,
+        background-color: $color-monotone-light
+        background: $color-monotone-light radial-gradient(circle, transparent 1%, rgba(0,0,0,0.05) 1%) center/15000%
+
+      &:active
+        background-size: 100%
+        transition: background 0s
+    
+    .indicator
+      border-bottom: $color-secondary 2px solid
+      background-color: $color-monotone-light
