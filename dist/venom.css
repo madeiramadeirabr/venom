@@ -1937,6 +1937,18 @@ html {
   margin-right: 32px;
 }
 
+.venom .helper--has-text-light {
+  font-weight: 300;
+}
+
+.venom .helper--has-text-semibold {
+  font-weight: 600;
+}
+
+.venom .helper--has-text-bold {
+  font-weight: 700;
+}
+
 .venom .helper--has-text-small {
   font-size: 12px;
 }
