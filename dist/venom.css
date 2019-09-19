@@ -118,7 +118,8 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  text-decoration: underline dotted;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -381,7 +382,10 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
-  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%;
 }
 
 .venom body,
@@ -576,28 +580,35 @@ html {
 }
 
 .venom .grid--is-flex {
+  display: -webkit-box;
   display: flex;
 }
 
 .venom .grid--is-start {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+          justify-content: flex-start;
 }
 
 .venom .grid--is-center {
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .venom .grid--is-end {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+          justify-content: flex-end;
 }
 
 .venom .grid--is-top {
-  align-items: flex-start;
+  -webkit-box-align: start;
+          align-items: flex-start;
 }
 
 .venom .grid--is-bottom {
-  align-items: flex-end;
+  -webkit-box-align: end;
+          align-items: flex-end;
 }
 
 .venom .grid--has-no-wrap {
@@ -606,10 +617,14 @@ html {
 
 .venom .grid__row {
   align-content: space-around;
+  display: -webkit-box;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
   flex-flow: row wrap;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   max-width: 100%;
   padding: 12px 0;
   width: 100%;
@@ -622,7 +637,9 @@ html {
 }
 
 .venom .grid__row--is-reverse {
-  flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+          flex-direction: row-reverse;
 }
 
 .venom .grid__row .grid__column:not(:last-child) {
@@ -635,10 +652,14 @@ html {
 
 .venom .grid__columns {
   align-content: space-around;
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   flex-flow: column nowrap;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
   max-width: 100%;
   padding: 12px 0;
   width: 100%;
@@ -651,22 +672,28 @@ html {
 }
 
 .venom .grid__columns--is-reverse {
-  flex-direction: column-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+          flex-direction: column-reverse;
 }
 
 .venom .grid__column {
+  display: -webkit-box;
   display: flex;
-  flex: 1;
+  -webkit-box-flex: 1;
+          flex: 1;
   max-width: 100%;
   position: relative;
 }
 
 .venom .grid__column--is-first {
-  order: -1;
+  -webkit-box-ordinal-group: 0;
+          order: -1;
 }
 
 .venom .grid__column--is-last {
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+          order: 1;
 }
 
 .venom .grid__column.grid__column--is-one {
@@ -779,94 +806,111 @@ html {
 
 @media screen and (max-width: 767px) {
   .venom .grid__row:not([class*='--fixed']) {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+            flex-direction: column;
   }
   .venom .grid__row--is-reverse:not([class*='--fixed']) {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+            flex-direction: column-reverse;
   }
   .venom .grid__column:not([class*='--fixed']) {
-    flex-grow: auto;
+    -webkit-box-flex: auto;
+            flex-grow: auto;
     max-width: 100%;
   }
   .venom .grid__column--one-mobile {
-    flex-grow: 1;
+    -webkit-box-flex: 1;
+            flex-grow: 1;
     max-width: 25%;
   }
   .venom .grid__column--is-offset-one-mobile {
     margin-left: 25%;
   }
   .venom .grid__column--two-mobile {
-    flex-grow: 2;
+    -webkit-box-flex: 2;
+            flex-grow: 2;
     max-width: 50%;
   }
   .venom .grid__column--is-offset-two-mobile {
     margin-left: 50%;
   }
   .venom .grid__column--three-mobile {
-    flex-grow: 3;
+    -webkit-box-flex: 3;
+            flex-grow: 3;
     max-width: 75%;
   }
   .venom .grid__column--is-offset-three-mobile {
     margin-left: 75%;
   }
   .venom .grid__column--four-mobile {
-    flex-grow: 4;
+    -webkit-box-flex: 4;
+            flex-grow: 4;
     max-width: 100%;
   }
   .venom .grid__column--is-offset-four-mobile {
     margin-left: 100%;
   }
   .venom .grid__column--five-mobile {
-    flex-grow: 5;
+    -webkit-box-flex: 5;
+            flex-grow: 5;
     max-width: 125%;
   }
   .venom .grid__column--is-offset-five-mobile {
     margin-left: 125%;
   }
   .venom .grid__column--six-mobile {
-    flex-grow: 6;
+    -webkit-box-flex: 6;
+            flex-grow: 6;
     max-width: 150%;
   }
   .venom .grid__column--is-offset-six-mobile {
     margin-left: 150%;
   }
   .venom .grid__column--seven-mobile {
-    flex-grow: 7;
+    -webkit-box-flex: 7;
+            flex-grow: 7;
     max-width: 175%;
   }
   .venom .grid__column--is-offset-seven-mobile {
     margin-left: 175%;
   }
   .venom .grid__column--eight-mobile {
-    flex-grow: 8;
+    -webkit-box-flex: 8;
+            flex-grow: 8;
     max-width: 200%;
   }
   .venom .grid__column--is-offset-eight-mobile {
     margin-left: 200%;
   }
   .venom .grid__column--nine-mobile {
-    flex-grow: 9;
+    -webkit-box-flex: 9;
+            flex-grow: 9;
     max-width: 225%;
   }
   .venom .grid__column--is-offset-nine-mobile {
     margin-left: 225%;
   }
   .venom .grid__column--ten-mobile {
-    flex-grow: 10;
+    -webkit-box-flex: 10;
+            flex-grow: 10;
     max-width: 250%;
   }
   .venom .grid__column--is-offset-ten-mobile {
     margin-left: 250%;
   }
   .venom .grid__column--eleven-mobile {
-    flex-grow: 11;
+    -webkit-box-flex: 11;
+            flex-grow: 11;
     max-width: 275%;
   }
   .venom .grid__column--is-offset-eleven-mobile {
     margin-left: 275%;
   }
   .venom .grid__column--twelve-mobile {
-    flex-grow: 12;
+    -webkit-box-flex: 12;
+            flex-grow: 12;
     max-width: 300%;
   }
   .venom .grid__column--is-offset-twelve-mobile {
@@ -950,11 +994,16 @@ html {
 
 .venom .button__group {
   align-content: center;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
   align-self: center;
+  display: -webkit-box;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: center;
+          justify-content: center;
   border: solid 1px rgba(0, 0, 0, 0.75);
   border-radius: 4px;
   overflow: hidden;
@@ -966,7 +1015,7 @@ html {
   border-width: 0;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .venom .button.button__group {
     border-width: 0.5px;
   }
@@ -974,11 +1023,16 @@ html {
 
 .venom .button {
   align-content: center;
-  align-items: center;
+  -webkit-box-align: center;
+          align-items: center;
   align-self: center;
+  display: -webkit-box;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
+  -webkit-box-pack: center;
+          justify-content: center;
   background-color: white;
   border-color: white;
   border-radius: 4px;
@@ -992,6 +1046,7 @@ html {
   line-height: 1;
   outline: none;
   padding: 12px;
+  -webkit-transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
   transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
   background-position: center;
 }
@@ -1003,6 +1058,7 @@ html {
 
 .venom .button:active {
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1256,149 +1312,159 @@ html {
   color: #22bf5b;
 }
 
-.venom .notification.notification__content {
+.venom .notification__content {
   color: #0d0d0d;
-  flex: 1;
+  -webkit-box-flex: 1;
+          flex: 1;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.1;
+  -webkit-transition: color 86ms ease-in;
   transition: color 86ms ease-in;
 }
 
-.venom .notification.notification__close {
+.venom .notification__close {
   cursor: pointer;
   width: 14px;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 0;
 }
 
-.venom .notification.notification__close::after {
+.venom .notification__close::after {
   content: '\2717';
 }
 
-.venom .notification.notification__container {
-  align-items: center;
+.venom .notification__container {
+  -webkit-box-align: center;
+          align-items: center;
   background-color: #b3b3b3;
   border-radius: 4px;
   box-sizing: border-box;
+  display: -webkit-box;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
   padding: 12px;
+  -webkit-transition: background-color 86ms ease-in, color 86ms ease-in, display 86ms ease-in;
   transition: background-color 86ms ease-in, color 86ms ease-in, display 86ms ease-in;
   width: 100%;
 }
 
-.venom .notification.notification__container:hover {
+.venom .notification__container:hover {
   background-color: #b3b3b3;
 }
 
-.venom .notification.notification__container--is-primary {
+.venom .notification__container--is-primary {
   background-color: #f4831f;
 }
 
-.venom .notification.notification__container--is-primary .notification__content {
+.venom .notification__container--is-primary .notification__content {
   color: white;
 }
 
-.venom .notification.notification__container--is-primary:hover {
+.venom .notification__container--is-primary:hover {
   background-color: #f79e50;
 }
 
-.venom .notification.notification__container--is-primary .notification__close::after {
+.venom .notification__container--is-primary .notification__close::after {
   color: #be5d09;
 }
 
-.venom .notification.notification__container--is-secondary {
+.venom .notification__container--is-secondary {
   background-color: #00549e;
 }
 
-.venom .notification.notification__container--is-secondary .notification__content {
+.venom .notification__container--is-secondary .notification__content {
   color: white;
 }
 
-.venom .notification.notification__container--is-secondary:hover {
+.venom .notification__container--is-secondary:hover {
   background-color: #0070d1;
 }
 
-.venom .notification.notification__container--is-secondary .notification__close::after {
+.venom .notification__container--is-secondary .notification__close::after {
   color: #001e38;
 }
 
-.venom .notification.notification__container--is-danger {
+.venom .notification__container--is-danger {
   background-color: #db4639;
 }
 
-.venom .notification.notification__container--is-danger .notification__content {
+.venom .notification__container--is-danger .notification__content {
   color: white;
 }
 
-.venom .notification.notification__container--is-danger:hover {
+.venom .notification__container--is-danger:hover {
   background-color: #e36e64;
 }
 
-.venom .notification.notification__container--is-danger .notification__close::after {
+.venom .notification__container--is-danger .notification__close::after {
   color: #a82a1f;
 }
 
-.venom .notification.notification__container--is-success {
+.venom .notification__container--is-success {
   background-color: #009e22;
 }
 
-.venom .notification.notification__container--is-success .notification__content {
+.venom .notification__container--is-success .notification__content {
   color: white;
 }
 
-.venom .notification.notification__container--is-success:hover {
+.venom .notification__container--is-success:hover {
   background-color: #00d12d;
 }
 
-.venom .notification.notification__container--is-success .notification__close::after {
+.venom .notification__container--is-success .notification__close::after {
   color: #006b17;
 }
 
-.venom .notification.notification__container--is-warning {
+.venom .notification__container--is-warning {
   background-color: #fab514;
 }
 
-.venom .notification.notification__container--is-warning .notification__content {
+.venom .notification__container--is-warning .notification__content {
   color: #0d0d0d;
 }
 
-.venom .notification.notification__container--is-warning:hover {
+.venom .notification__container--is-warning:hover {
   background-color: #fcd578;
 }
 
-.venom .notification.notification__container--is-warning .notification__close::after {
+.venom .notification__container--is-warning .notification__close::after {
   color: #a57403;
 }
 
-.venom .notification.notification__container--is-monotone {
+.venom .notification__container--is-monotone {
   background-color: gray;
 }
 
-.venom .notification.notification__container--is-monotone .notification__content {
+.venom .notification__container--is-monotone .notification__content {
   color: #0d0d0d;
 }
 
-.venom .notification.notification__container--is-monotone:hover {
+.venom .notification__container--is-monotone:hover {
   background-color: #cccccc;
 }
 
-.venom .notification.notification__container--is-monotone .notification__close::after {
+.venom .notification__container--is-monotone .notification__close::after {
   color: #333333;
 }
 
-.venom .notification.notification__container--is-dark {
+.venom .notification__container--is-dark {
   background-color: #262626;
 }
 
-.venom .notification.notification__container--is-dark .notification__content {
+.venom .notification__container--is-dark .notification__content {
   color: white;
 }
 
-.venom .notification.notification__container--is-dark:hover {
+.venom .notification__container--is-dark:hover {
   background-color: #404040;
 }
 
-.venom .notification.notification__container--is-dark .notification__close::after {
+.venom .notification__container--is-dark .notification__close::after {
   color: #0d0d0d;
 }
 
@@ -1409,8 +1475,11 @@ html {
 }
 
 .venom .input {
+  display: -webkit-box;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
   position: relative;
   width: 100%;
 }
@@ -1501,12 +1570,16 @@ html {
   background: white;
   border-width: 0 2px 2px 0;
   border-radius: 0;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .venom .text-field {
+  display: -webkit-box;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   position: relative;
   width: calc(100% - 26px);
   margin-bottom: 12px;
@@ -1547,6 +1620,7 @@ html {
   left: 0;
   padding: 12px;
   width: calc(100% - 24px);
+  -webkit-transition: all 172ms ease;
   transition: all 172ms ease;
   cursor: text;
 }
@@ -1580,8 +1654,11 @@ html {
 }
 
 .venom .text-field.text-field--has-left-icon .text-field__container, .venom .text-field.text-field--has-right-icon .text-field__container {
+  display: -webkit-box;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+          flex-direction: row;
 }
 
 .venom .text-field.text-field--is-active .text-field__label,
@@ -1627,9 +1704,9 @@ html {
   height: 100%;
   padding: 12px;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+          justify-content: center;
   overflow-x: auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1655,6 +1732,7 @@ html {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  -webkit-transition: background 400ms;
   transition: background 400ms;
   background-position: center;
 }
@@ -1666,6 +1744,7 @@ html {
 
 .venom .tab .wave:active {
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -2057,10 +2136,9 @@ html {
   }
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .venom .helper--has-border {
     border-width: 0.5px;
   }
 }
-
 /*# sourceMappingURL=venom.css.map */
