@@ -20,18 +20,14 @@
     transition: background-color $transition $easing, border-color $transition $easing, color $transition $easing, background $transition-click
     background-position: center
 
-    
     &:hover,
     &:focus,
-      background-color: $color-monotone-lightness
-      background: radial-gradient(circle, transparent 1%, rgba(255,255,255,0.2) 1%) center/15000%;
+      background-color: $color-monotone-light
+      background: radial-gradient(circle, transparent 1%, rgba(255,255,255,0.2) 1%) center/15000%
 
     &:active
       background-size: 100%;
       transition: background 0s;
-
-
-
 
     &#{ $self }
       &:disabled,
@@ -43,7 +39,7 @@
 
       &--is-outline
         background-color: $color-white
-        border-color: currentColor
+        border-color: $color-monotone
         color: currentColor
 
         &:hover,
@@ -57,12 +53,12 @@
         border-color: $color-white
         color: $color-primary
         text-decoration: underline
+        box-shadow: none
 
         &:hover,
         &:focus,
         &:active
-          border-color: $color-primary-dark
-          color: $color-primary-dark
+          background-color: $color-hover
 
       @each $color, $value in $color-regular-map
         &--is-#{ $color }
@@ -81,8 +77,13 @@
             border-color: map-get($color-lightness-map, $color)
 
           &#{ $self }--is-outline
+            border-color: map-get($color-regular-map, $color)
+            background-color: $color-white
+            color: map-get($color-regular-map, $color)
+
             &:hover,
             &:focus,
             &:active
               border-color: map-get($color-dark-map, $color)
+              background-color: $color-white
               color: map-get($color-dark-map, $color)

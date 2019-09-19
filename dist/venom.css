@@ -1052,7 +1052,7 @@ html {
 }
 
 .venom .button:hover, .venom .button:focus {
-  background-color: #cccccc;
+  background-color: #b3b3b3;
   background: radial-gradient(circle, transparent 1%, rgba(255, 255, 255, 0.2) 1%) center/15000%;
 }
 
@@ -1071,7 +1071,7 @@ html {
 
 .venom .button.button--is-outline {
   background-color: white;
-  border-color: currentColor;
+  border-color: gray;
   color: currentColor;
 }
 
@@ -1085,11 +1085,11 @@ html {
   border-color: white;
   color: #f4831f;
   text-decoration: underline;
+  box-shadow: none;
 }
 
 .venom .button.button--is-link:hover, .venom .button.button--is-link:focus, .venom .button.button--is-link:active {
-  border-color: #d6690a;
-  color: #d6690a;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .venom .button.button--is-primary {
@@ -1107,8 +1107,15 @@ html {
   border-color: #f79e50;
 }
 
+.venom .button.button--is-primary.button--is-outline {
+  border-color: #f4831f;
+  background-color: white;
+  color: #f4831f;
+}
+
 .venom .button.button--is-primary.button--is-outline:hover, .venom .button.button--is-primary.button--is-outline:focus, .venom .button.button--is-primary.button--is-outline:active {
   border-color: #d6690a;
+  background-color: white;
   color: #d6690a;
 }
 
@@ -1127,8 +1134,15 @@ html {
   border-color: #0070d1;
 }
 
+.venom .button.button--is-secondary.button--is-outline {
+  border-color: #00549e;
+  background-color: white;
+  color: #00549e;
+}
+
 .venom .button.button--is-secondary.button--is-outline:hover, .venom .button.button--is-secondary.button--is-outline:focus, .venom .button.button--is-secondary.button--is-outline:active {
   border-color: #00396b;
+  background-color: white;
   color: #00396b;
 }
 
@@ -1147,8 +1161,15 @@ html {
   border-color: #e36e64;
 }
 
+.venom .button.button--is-danger.button--is-outline {
+  border-color: #db4639;
+  background-color: white;
+  color: #db4639;
+}
+
 .venom .button.button--is-danger.button--is-outline:hover, .venom .button.button--is-danger.button--is-outline:focus, .venom .button.button--is-danger.button--is-outline:active {
   border-color: #be3023;
+  background-color: white;
   color: #be3023;
 }
 
@@ -1167,8 +1188,15 @@ html {
   border-color: #00d12d;
 }
 
+.venom .button.button--is-success.button--is-outline {
+  border-color: #009e22;
+  background-color: white;
+  color: #009e22;
+}
+
 .venom .button.button--is-success.button--is-outline:hover, .venom .button.button--is-success.button--is-outline:focus, .venom .button.button--is-success.button--is-outline:active {
   border-color: #00851d;
+  background-color: white;
   color: #00851d;
 }
 
@@ -1187,8 +1215,15 @@ html {
   border-color: #fcd578;
 }
 
+.venom .button.button--is-warning.button--is-outline {
+  border-color: #fab514;
+  background-color: white;
+  color: #fab514;
+}
+
 .venom .button.button--is-warning.button--is-outline:hover, .venom .button.button--is-warning.button--is-outline:focus, .venom .button.button--is-warning.button--is-outline:active {
   border-color: #d79804;
+  background-color: white;
   color: #d79804;
 }
 
@@ -1207,8 +1242,15 @@ html {
   border-color: #cccccc;
 }
 
+.venom .button.button--is-monotone.button--is-outline {
+  border-color: gray;
+  background-color: white;
+  color: gray;
+}
+
 .venom .button.button--is-monotone.button--is-outline:hover, .venom .button.button--is-monotone.button--is-outline:focus, .venom .button.button--is-monotone.button--is-outline:active {
   border-color: #4d4d4d;
+  background-color: white;
   color: #4d4d4d;
 }
 
@@ -1227,8 +1269,15 @@ html {
   border-color: #404040;
 }
 
+.venom .button.button--is-dark.button--is-outline {
+  border-color: #262626;
+  background-color: white;
+  color: #262626;
+}
+
 .venom .button.button--is-dark.button--is-outline:hover, .venom .button.button--is-dark.button--is-outline:focus, .venom .button.button--is-dark.button--is-outline:active {
   border-color: #1a1a1a;
+  background-color: white;
   color: #1a1a1a;
 }
 
