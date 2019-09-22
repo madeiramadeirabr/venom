@@ -1405,115 +1405,115 @@ html {
   background-color: #b3b3b3;
 }
 
-.venom .notification__container--is-primary {
+.venom .notification--is-primary {
   background-color: #f4831f;
 }
 
-.venom .notification__container--is-primary .notification__content {
+.venom .notification--is-primary .notification__content {
   color: white;
 }
 
-.venom .notification__container--is-primary:hover {
+.venom .notification--is-primary:hover {
   background-color: #f79e50;
 }
 
-.venom .notification__container--is-primary .notification__close::after {
+.venom .notification--is-primary .notification__close::after {
   color: #be5d09;
 }
 
-.venom .notification__container--is-secondary {
+.venom .notification--is-secondary {
   background-color: #00549e;
 }
 
-.venom .notification__container--is-secondary .notification__content {
+.venom .notification--is-secondary .notification__content {
   color: white;
 }
 
-.venom .notification__container--is-secondary:hover {
+.venom .notification--is-secondary:hover {
   background-color: #0070d1;
 }
 
-.venom .notification__container--is-secondary .notification__close::after {
+.venom .notification--is-secondary .notification__close::after {
   color: #001e38;
 }
 
-.venom .notification__container--is-danger {
+.venom .notification--is-danger {
   background-color: #db4639;
 }
 
-.venom .notification__container--is-danger .notification__content {
+.venom .notification--is-danger .notification__content {
   color: white;
 }
 
-.venom .notification__container--is-danger:hover {
+.venom .notification--is-danger:hover {
   background-color: #e36e64;
 }
 
-.venom .notification__container--is-danger .notification__close::after {
+.venom .notification--is-danger .notification__close::after {
   color: #a82a1f;
 }
 
-.venom .notification__container--is-success {
+.venom .notification--is-success {
   background-color: #009e22;
 }
 
-.venom .notification__container--is-success .notification__content {
+.venom .notification--is-success .notification__content {
   color: white;
 }
 
-.venom .notification__container--is-success:hover {
+.venom .notification--is-success:hover {
   background-color: #00d12d;
 }
 
-.venom .notification__container--is-success .notification__close::after {
+.venom .notification--is-success .notification__close::after {
   color: #006b17;
 }
 
-.venom .notification__container--is-warning {
+.venom .notification--is-warning {
   background-color: #fab514;
 }
 
-.venom .notification__container--is-warning .notification__content {
+.venom .notification--is-warning .notification__content {
   color: #0d0d0d;
 }
 
-.venom .notification__container--is-warning:hover {
+.venom .notification--is-warning:hover {
   background-color: #fcd578;
 }
 
-.venom .notification__container--is-warning .notification__close::after {
+.venom .notification--is-warning .notification__close::after {
   color: #a57403;
 }
 
-.venom .notification__container--is-monotone {
+.venom .notification--is-monotone {
   background-color: gray;
 }
 
-.venom .notification__container--is-monotone .notification__content {
+.venom .notification--is-monotone .notification__content {
   color: #0d0d0d;
 }
 
-.venom .notification__container--is-monotone:hover {
+.venom .notification--is-monotone:hover {
   background-color: #cccccc;
 }
 
-.venom .notification__container--is-monotone .notification__close::after {
+.venom .notification--is-monotone .notification__close::after {
   color: #333333;
 }
 
-.venom .notification__container--is-dark {
+.venom .notification--is-dark {
   background-color: #262626;
 }
 
-.venom .notification__container--is-dark .notification__content {
+.venom .notification--is-dark .notification__content {
   color: white;
 }
 
-.venom .notification__container--is-dark:hover {
+.venom .notification--is-dark:hover {
   background-color: #404040;
 }
 
-.venom .notification__container--is-dark .notification__close::after {
+.venom .notification--is-dark .notification__close::after {
   color: #0d0d0d;
 }
 

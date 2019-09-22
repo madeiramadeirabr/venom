@@ -34,16 +34,16 @@
       &:hover // sass-lint:disable-line nesting-depth
         background-color: $color-monotone-light
 
-      @each $color, $value in $color-regular-map
-        &--is-#{$color}
-          background-color: $value
+    @each $color, $value in $color-regular-map
+      &--is-#{$color}
+        background-color: $value
 
-          #{ $self }__content
-            color: map-get($color-contrast-map, $color)
+        #{ $self }__content
+          color: map-get($color-contrast-map, $color)
 
-          &:hover // sass-lint:disable-line nesting-depth
-            background-color: map-get($color-lightness-map, $color)
+        &:hover // sass-lint:disable-line nesting-depth
+          background-color: map-get($color-lightness-map, $color)
 
-          #{ $self }__close
-            &::after
-              color: map-get($color-darkness-map, $color)
+        #{ $self }__close
+          &::after
+            color: map-get($color-darkness-map, $color)
