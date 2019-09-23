@@ -2,43 +2,21 @@
   .container
     $self: '.container'
     margin: 0 auto
-
-    &--is-mobile
-      max-width: $mobile
-      width: $mobile
+    max-width: 100%
+    width: 100%
 
     &--is-full-width
-      max-width: 100%
-      width: 100vw
-
-  +for-size(mobile)
-    .container
-      max-width: 100%
-      width: 100vw
-
-  +for-size(tablet)
-    .container
-      max-width: 100%
-      width: 100vw
-
-      &--is-mobile
-        max-width: $mobile
-        width: $mobile
+      max-width: 100% !important
+      width: 100% !important
 
   +for-size(desktop)
     .container
-      max-width: $desktop
-      width: $desktop
+      width: $desktop-width
 
-      &--is-mobile
-        max-width: $mobile
-        width: $mobile
-
-  +for-size(widescreen)
+  +for-size(mobile)
     .container
-      max-width: $widescreen
-      width: $widescreen
 
-      &--is-mobile
-        max-width: $mobile
-        width: $mobile
+  +for-size(tablet)
+    .container
+      max-width: $tablet-width
+      width: $tablet-width
