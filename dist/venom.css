@@ -809,8 +809,8 @@ html {
 }
 
 .venom .container--is-full-width {
-  max-width: 100%;
-  width: 100vw;
+  max-width: 100% !important;
+  width: 100% !important;
 }
 
 @media screen and (min-width: 1224px) {
@@ -1514,7 +1514,7 @@ html {
   color: gray;
   width: 100%;
   display: block;
-  line: 14px;
+  line-height: 14px;
 }
 
 .venom .text-field .text-field__label {
@@ -1605,22 +1605,28 @@ html {
 .venom .tab {
   background: white;
   height: 100%;
-  padding: 12px;
+  padding: 0 12px;
   display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  overflow-x: auto;
+  -webkit-box-pack: left;
+          justify-content: left;
+  border-bottom: #b3b3b3 1px solid;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-box-direction--ms-flex-direction: column;
   -webkit-box-direction--ms-flex-direction-flex-direction: column;
 }
 
+.venom .tab--has-scroll {
+  overflow-x: auto;
+}
+
 .venom .tab .tab__item {
-  width: 150px;
-  padding: 20px 0;
-  background: white;
+  min-width: 150px;
+  padding: 12px;
+  background: #cccccc;
+  border: #b3b3b3 1px solid;
+  margin: 0 5px -1px;
   color: #0d0d0d;
   overflow: hidden;
   text-align: center;
@@ -1638,11 +1644,13 @@ html {
   -webkit-transition: background 400ms;
   transition: background 400ms;
   background-position: center;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 
 .venom .tab .tab__item:hover, .venom .tab .tab__item:focus {
-  background-color: #b3b3b3;
-  background: #b3b3b3 radial-gradient(circle, transparent 1%, rgba(0, 0, 0, 0.05) 1%) center/15000%;
+  background-color: white;
+  background: white radial-gradient(circle, transparent 1%, rgba(0, 0, 0, 0.05) 1%) center/15000%;
 }
 
 .venom .tab .tab__item:active {
@@ -1652,8 +1660,9 @@ html {
 }
 
 .venom .tab .tab__item--has-indicator {
-  border-bottom: #00549e 2px solid;
-  background-color: #b3b3b3;
+  border-bottom-color: white;
+  background-color: white;
+  color: #00549e;
 }
 
 .venom .helper--has-no-margin {
