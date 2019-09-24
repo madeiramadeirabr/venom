@@ -1,0 +1,48 @@
+@import 'sass/variables'
+
+.venom
+  .collapse
+
+    &__title
+      color: $text
+      flex: 1
+      font-size: $size-regular
+      font-weight: $weight-regular
+      line-height: 1.1
+      transition: color $transition $easing
+
+
+    &__container
+      box-shadow: 0 1px 4px rgba(0,0,0,0.2)
+      border-radius: 3px
+      margin: 0 15px
+      padding: $gap-regular
+      box-sizing: border-box
+      display: flex
+      flex-direction: row
+      padding: $gap-regular
+      width: 100%
+      flex-wrap: wrap
+
+    &__content
+      background-color: #eee
+      margin: 0 15px
+      width: 100%
+      padding: $gap-regular
+      box-sizing: border-box
+      font-size: $size-regular
+      border: 1px solid $color-monotone-light
+      border-radius: 3px
+      margin-bottom: 10px
+
+
+    &__open
+      margin-right: 15px
+      cursor: pointer
+      width: $size-regular
+      background: rgba(0,0,0,0)
+      border: none
+      padding: $zero
+
+      &::after
+        content: url(./icons/keyboard-arrow-down.svg)

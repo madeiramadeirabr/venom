@@ -118,8 +118,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -382,10 +381,7 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 .venom body,
@@ -581,35 +577,28 @@ html {
 }
 
 .venom .grid--is-flex {
-  display: -webkit-box;
   display: flex;
 }
 
 .venom .grid--is-start {
-  -webkit-box-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .venom .grid--is-center {
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .venom .grid--is-end {
-  -webkit-box-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .venom .grid--is-top {
-  -webkit-box-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
 
 .venom .grid--is-bottom {
-  -webkit-box-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
 }
 
 .venom .grid--has-no-wrap {
@@ -618,14 +607,10 @@ html {
 
 .venom .grid__row {
   align-content: space-around;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-direction: row;
   flex-flow: row wrap;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   max-width: 100%;
   padding: 0;
   width: 100%;
@@ -639,9 +624,7 @@ html {
 }
 
 .venom .grid__row--is-reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .venom .grid__row .grid__column:not(:last-child) {
@@ -660,8 +643,7 @@ html {
 .venom .grid__column {
   display: block;
   flex-basis: 0;
-  -webkit-box-flex: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   flex-shrink: 1;
   flex: 1;
   padding: 0;
@@ -673,18 +655,15 @@ html {
 }
 
 .venom .grid__column--is-first {
-  -webkit-box-ordinal-group: 0;
-          order: -1;
+  order: -1;
 }
 
 .venom .grid__column--is-last {
-  -webkit-box-ordinal-group: 2;
-          order: 1;
+  order: 1;
 }
 
 .venom .grid__column--is-one {
-  -webkit-box-flex: 0;
-          flex: 0 0 8.33333%;
+  flex: 0 0 8.33333%;
   max-width: 8.33333%;
 }
 
@@ -693,8 +672,7 @@ html {
 }
 
 .venom .grid__column--is-two {
-  -webkit-box-flex: 0;
-          flex: 0 0 16.66667%;
+  flex: 0 0 16.66667%;
   max-width: 16.66667%;
 }
 
@@ -703,8 +681,7 @@ html {
 }
 
 .venom .grid__column--is-three {
-  -webkit-box-flex: 0;
-          flex: 0 0 25%;
+  flex: 0 0 25%;
   max-width: 25%;
 }
 
@@ -713,8 +690,7 @@ html {
 }
 
 .venom .grid__column--is-four {
-  -webkit-box-flex: 0;
-          flex: 0 0 33.33333%;
+  flex: 0 0 33.33333%;
   max-width: 33.33333%;
 }
 
@@ -723,8 +699,7 @@ html {
 }
 
 .venom .grid__column--is-five {
-  -webkit-box-flex: 0;
-          flex: 0 0 41.66667%;
+  flex: 0 0 41.66667%;
   max-width: 41.66667%;
 }
 
@@ -733,8 +708,7 @@ html {
 }
 
 .venom .grid__column--is-six {
-  -webkit-box-flex: 0;
-          flex: 0 0 50%;
+  flex: 0 0 50%;
   max-width: 50%;
 }
 
@@ -743,8 +717,7 @@ html {
 }
 
 .venom .grid__column--is-seven {
-  -webkit-box-flex: 0;
-          flex: 0 0 58.33333%;
+  flex: 0 0 58.33333%;
   max-width: 58.33333%;
 }
 
@@ -753,8 +726,7 @@ html {
 }
 
 .venom .grid__column--is-eight {
-  -webkit-box-flex: 0;
-          flex: 0 0 66.66667%;
+  flex: 0 0 66.66667%;
   max-width: 66.66667%;
 }
 
@@ -763,8 +735,7 @@ html {
 }
 
 .venom .grid__column--is-nine {
-  -webkit-box-flex: 0;
-          flex: 0 0 75%;
+  flex: 0 0 75%;
   max-width: 75%;
 }
 
@@ -773,8 +744,7 @@ html {
 }
 
 .venom .grid__column--is-ten {
-  -webkit-box-flex: 0;
-          flex: 0 0 83.33333%;
+  flex: 0 0 83.33333%;
   max-width: 83.33333%;
 }
 
@@ -783,8 +753,7 @@ html {
 }
 
 .venom .grid__column--is-eleven {
-  -webkit-box-flex: 0;
-          flex: 0 0 91.66667%;
+  flex: 0 0 91.66667%;
   max-width: 91.66667%;
 }
 
@@ -793,8 +762,7 @@ html {
 }
 
 .venom .grid__column--is-twelve {
-  -webkit-box-flex: 0;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
   max-width: 100%;
 }
 
@@ -804,96 +772,84 @@ html {
 
 @media screen and (max-width: 414px) {
   .venom .grid__column--is-one-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 8.33333% !important;
+    flex: 0 0 8.33333% !important;
     max-width: 8.33333% !important;
   }
   .venom .grid__column--is-one-mobile-offset {
     margin-left: 8.33333% !important;
   }
   .venom .grid__column--is-two-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 16.66667% !important;
+    flex: 0 0 16.66667% !important;
     max-width: 16.66667% !important;
   }
   .venom .grid__column--is-two-mobile-offset {
     margin-left: 16.66667% !important;
   }
   .venom .grid__column--is-three-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 25% !important;
+    flex: 0 0 25% !important;
     max-width: 25% !important;
   }
   .venom .grid__column--is-three-mobile-offset {
     margin-left: 25% !important;
   }
   .venom .grid__column--is-four-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 33.33333% !important;
+    flex: 0 0 33.33333% !important;
     max-width: 33.33333% !important;
   }
   .venom .grid__column--is-four-mobile-offset {
     margin-left: 33.33333% !important;
   }
   .venom .grid__column--is-five-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 41.66667% !important;
+    flex: 0 0 41.66667% !important;
     max-width: 41.66667% !important;
   }
   .venom .grid__column--is-five-mobile-offset {
     margin-left: 41.66667% !important;
   }
   .venom .grid__column--is-six-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 50% !important;
+    flex: 0 0 50% !important;
     max-width: 50% !important;
   }
   .venom .grid__column--is-six-mobile-offset {
     margin-left: 50% !important;
   }
   .venom .grid__column--is-seven-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 58.33333% !important;
+    flex: 0 0 58.33333% !important;
     max-width: 58.33333% !important;
   }
   .venom .grid__column--is-seven-mobile-offset {
     margin-left: 58.33333% !important;
   }
   .venom .grid__column--is-eight-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 66.66667% !important;
+    flex: 0 0 66.66667% !important;
     max-width: 66.66667% !important;
   }
   .venom .grid__column--is-eight-mobile-offset {
     margin-left: 66.66667% !important;
   }
   .venom .grid__column--is-nine-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 75% !important;
+    flex: 0 0 75% !important;
     max-width: 75% !important;
   }
   .venom .grid__column--is-nine-mobile-offset {
     margin-left: 75% !important;
   }
   .venom .grid__column--is-ten-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 83.33333% !important;
+    flex: 0 0 83.33333% !important;
     max-width: 83.33333% !important;
   }
   .venom .grid__column--is-ten-mobile-offset {
     margin-left: 83.33333% !important;
   }
   .venom .grid__column--is-eleven-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 91.66667% !important;
+    flex: 0 0 91.66667% !important;
     max-width: 91.66667% !important;
   }
   .venom .grid__column--is-eleven-mobile-offset {
     margin-left: 91.66667% !important;
   }
   .venom .grid__column--is-twelve-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 100% !important;
+    flex: 0 0 100% !important;
     max-width: 100% !important;
   }
   .venom .grid__column--is-twelve-mobile-offset {
@@ -903,96 +859,84 @@ html {
 
 @media screen and (min-width: 768px) and (max-width: 1223px) {
   .venom .grid__column--is-one-tablet {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 8.33333% !important;
+    flex: 0 0 8.33333% !important;
     max-width: 8.33333% !important;
   }
   .venom .grid__column--is-one-tablet-offset {
     margin-left: 8.33333% !important;
   }
   .venom .grid__column--is-two-tablet {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 16.66667% !important;
+    flex: 0 0 16.66667% !important;
     max-width: 16.66667% !important;
   }
   .venom .grid__column--is-two-tablet-offset {
     margin-left: 16.66667% !important;
   }
   .venom .grid__column--is-three-tablet {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 25% !important;
+    flex: 0 0 25% !important;
     max-width: 25% !important;
   }
   .venom .grid__column--is-three-tablet-offset {
     margin-left: 25% !important;
   }
   .venom .grid__column--is-four-tablet {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 33.33333% !important;
+    flex: 0 0 33.33333% !important;
     max-width: 33.33333% !important;
   }
   .venom .grid__column--is-four-tablet-offset {
     margin-left: 33.33333% !important;
   }
   .venom .grid__column--is-five-tablet {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 41.66667% !important;
+    flex: 0 0 41.66667% !important;
     max-width: 41.66667% !important;
   }
   .venom .grid__column--is-five-tablet-offset {
     margin-left: 41.66667% !important;
   }
   .venom .grid__column--is-six-tablet {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 50% !important;
+    flex: 0 0 50% !important;
     max-width: 50% !important;
   }
   .venom .grid__column--is-six-tablet-offset {
     margin-left: 50% !important;
   }
   .venom .grid__column--is-seven-tablet {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 58.33333% !important;
+    flex: 0 0 58.33333% !important;
     max-width: 58.33333% !important;
   }
   .venom .grid__column--is-seven-tablet-offset {
     margin-left: 58.33333% !important;
   }
   .venom .grid__column--is-eight-tablet {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 66.66667% !important;
+    flex: 0 0 66.66667% !important;
     max-width: 66.66667% !important;
   }
   .venom .grid__column--is-eight-tablet-offset {
     margin-left: 66.66667% !important;
   }
   .venom .grid__column--is-nine-tablet {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 75% !important;
+    flex: 0 0 75% !important;
     max-width: 75% !important;
   }
   .venom .grid__column--is-nine-tablet-offset {
     margin-left: 75% !important;
   }
   .venom .grid__column--is-ten-tablet {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 83.33333% !important;
+    flex: 0 0 83.33333% !important;
     max-width: 83.33333% !important;
   }
   .venom .grid__column--is-ten-tablet-offset {
     margin-left: 83.33333% !important;
   }
   .venom .grid__column--is-eleven-tablet {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 91.66667% !important;
+    flex: 0 0 91.66667% !important;
     max-width: 91.66667% !important;
   }
   .venom .grid__column--is-eleven-tablet-offset {
     margin-left: 91.66667% !important;
   }
   .venom .grid__column--is-twelve-tablet {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 100% !important;
+    flex: 0 0 100% !important;
     max-width: 100% !important;
   }
   .venom .grid__column--is-twelve-tablet-offset {
@@ -1046,16 +990,11 @@ html {
 
 .venom .button__group {
   align-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   align-self: center;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  -webkit-box-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   border: solid 1px rgba(0, 0, 0, 0.75);
   border-radius: 4px;
   overflow: hidden;
@@ -1067,7 +1006,7 @@ html {
   border-width: 0;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .venom .button.button__group {
     border-width: 0.5px;
   }
@@ -1075,16 +1014,11 @@ html {
 
 .venom .button {
   align-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   align-self: center;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  -webkit-box-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   background-color: white;
   border-color: white;
   border-radius: 4px;
@@ -1098,7 +1032,6 @@ html {
   line-height: 1;
   outline: none;
   padding: 12px;
-  -webkit-transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
   transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
   background-position: center;
 }
@@ -1110,7 +1043,6 @@ html {
 
 .venom .button:active {
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1415,12 +1347,10 @@ html {
 
 .venom .notification__content {
   color: #0d0d0d;
-  -webkit-box-flex: 1;
-          flex: 1;
+  flex: 1;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.1;
-  -webkit-transition: color 86ms ease-in;
   transition: color 86ms ease-in;
 }
 
@@ -1437,18 +1367,13 @@ html {
 }
 
 .venom .notification__container {
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   background-color: #b3b3b3;
   border-radius: 4px;
   box-sizing: border-box;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-direction: row;
   padding: 12px;
-  -webkit-transition: background-color 86ms ease-in, color 86ms ease-in, display 86ms ease-in;
   transition: background-color 86ms ease-in, color 86ms ease-in, display 86ms ease-in;
   width: 100%;
 }
@@ -1576,11 +1501,8 @@ html {
 }
 
 .venom .input {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-direction: row;
   position: relative;
   width: 100%;
 }
@@ -1671,16 +1593,12 @@ html {
   background: white;
   border-width: 0 2px 2px 0;
   border-radius: 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .venom .text-field {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-direction: column;
   position: relative;
   width: calc(100% - 26px);
   margin-bottom: 12px;
@@ -1721,7 +1639,6 @@ html {
   left: 0;
   padding: 12px;
   width: calc(100% - 24px);
-  -webkit-transition: all 172ms ease;
   transition: all 172ms ease;
   cursor: text;
 }
@@ -1755,11 +1672,8 @@ html {
 }
 
 .venom .text-field.text-field--has-left-icon .text-field__container, .venom .text-field.text-field--has-right-icon .text-field__container {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .venom .text-field.text-field--is-active .text-field__label,
@@ -1805,9 +1719,9 @@ html {
   height: 100%;
   padding: 0 12px;
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-          justify-content: left;
+  justify-content: left;
   border-bottom: #b3b3b3 1px solid;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -1839,11 +1753,9 @@ html {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  -webkit-transition: background 400ms;
   transition: background 400ms;
   background-position: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .venom .tab .tab__item:hover, .venom .tab .tab__item:focus {
@@ -1853,7 +1765,6 @@ html {
 
 .venom .tab .tab__item:active {
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1861,6 +1772,53 @@ html {
   border-bottom-color: white;
   background-color: white;
   color: #00549e;
+}
+
+.venom .collapse__title {
+  color: #0d0d0d;
+  flex: 1;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.1;
+  transition: color 86ms ease-in;
+}
+
+.venom .collapse__container {
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+  margin: 0 15px;
+  padding: 12px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  padding: 12px;
+  width: 100%;
+  flex-wrap: wrap;
+}
+
+.venom .collapse__content {
+  background-color: #eee;
+  margin: 0 15px;
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  font-size: 14px;
+  border: 1px solid #b3b3b3;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+.venom .collapse__open {
+  margin-right: 15px;
+  cursor: pointer;
+  width: 14px;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 0;
+}
+
+.venom .collapse__open::after {
+  content: url(./icons/keyboard-arrow-down.svg);
 }
 
 .venom .helper--has-no-margin {
@@ -2250,9 +2208,10 @@ html {
   }
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .venom .helper--has-border {
     border-width: 0.5px;
   }
 }
+
 /*# sourceMappingURL=venom.css.map */
