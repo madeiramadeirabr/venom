@@ -1817,10 +1817,6 @@ html {
   padding: 0;
 }
 
-.venom .collapse__open::after {
-  content: url(./icons/keyboard-arrow-down.svg);
-}
-
 .venom .helper--has-no-margin {
   margin: 0;
 }
