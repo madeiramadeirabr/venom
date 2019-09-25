@@ -1,4 +1,5 @@
 @import 'sass/variables'
+@import 'sass/variables'
 
 .venom
   .tab
@@ -9,7 +10,6 @@
     display: -ms-flexbox
     display: flex
     justify-content: left
-    border-bottom: $color-monotone-light 1px solid
     -webkit-box-orient: vertical
     -webkit-box-direction: normal
         -ms-flex-direction: column
@@ -21,8 +21,6 @@
     .tab__item 
       min-width: 150px
       padding: 12px
-      background: $color-monotone-lightness
-      border: $color-monotone-light 1px solid
       margin: 0 5px -1px
       color: $color-black
       overflow: hidden
@@ -41,17 +39,41 @@
       transition: background $transition-click
       background-position: center
       justify-content: center
+      border-bottom: transparent solid 2px    
 
       &:hover,
       &:focus,
-        background-color: $color-white
-        background: $color-white radial-gradient(circle, transparent 1%, rgba(0,0,0,0.05) 1%) center/15000%
+        background-color: $color-monotone-light
+        background: $color-monotone-lightness radial-gradient(circle, transparent 1%, $color-monotone-light 1%) center/15000%
 
       &:active
         background-size: 100%
         transition: background 0s
     
       &--has-indicator
-        border-bottom-color: $color-white
-        background-color: $color-white
-        color: $color-secondary
+        background: $color-monotone-lightness
+        border-bottom: $color-secondary solid 2px    
+
+    &--is-oldstyle
+      border-bottom: $color-monotone-light 1px solid
+      .tab__item
+        background: $color-monotone-lightness
+        border: $color-monotone-light 1px solid
+        
+        &:hover,
+        &:focus,
+          background-color: $color-white
+          background: $color-white radial-gradient(circle, transparent 1%, rgba(0,0,0,0.05) 1%) center/15000%
+        
+        &:active
+          background-size: 100%
+          transition: background 0s
+    
+        &--has-indicator
+          border-bottom-color: $color-white
+          background-color: $color-white
+          color: $color-secondary
+
+  @media screen and (max-width: $tablet-width)
+    .tab
+      overflow-x: auto
