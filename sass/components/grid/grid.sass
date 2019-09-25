@@ -1,4 +1,5 @@
 $column: '.grid__column'
+$columns: '.grid__columns'
 $row: '.grid__row'
 
 .venom
@@ -29,8 +30,35 @@ $row: '.grid__row'
 
       &--has-no-gutter
         #{ $column }
-          margin-left: $zero
-          margin-right: $zero
+          margin-left: $zero !important
+          margin-right: $zero !important
+
+    &__columns
+      +clearfix
+      align-content: space-around
+      display: flex
+      flex-direction: column
+      flex-flow: column wrap
+      justify-content: space-between
+      max-width: 100%
+      padding: $zero
+      width: 100%
+      margin: $gap-regular $zero
+
+      &--is-reverse
+        flex-direction: column-reverse
+
+      #{ $column }
+        &:not(:last-child)
+          margin-bottom: $desktop-column-gap
+
+        &:not(:first-child)
+          margin-top: $desktop-column-gap
+
+      &--has-no-gutter
+        #{ $column }
+          margin-top: $zero !important
+          margin-bottom: $zero !important
 
     &__column
       display: block
@@ -59,6 +87,17 @@ $row: '.grid__row'
             margin-left: $count
 
   +for-size(mobile)
+    #{ $columns }
+      padding-left: $gap-small
+      padding-right: $gap-small
+
+      #{ $column }
+        &:not(:last-child)
+          margin-bottom: $mobile-column-gap
+
+        &:not(:first-child)
+          margin-top: $mobile-column-gap
+
     #{ $row }
       padding-left: $gap-small
       padding-right: $gap-small

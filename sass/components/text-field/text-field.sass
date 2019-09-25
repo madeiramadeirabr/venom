@@ -36,6 +36,7 @@ $input-el: '.text-field'
       cursor: text
 
     input
+      +border-box
       border: none
       border-radius: $radius
       padding: $gap-regular
@@ -76,9 +77,11 @@ $input-el: '.text-field'
         color: $color-secondary
 
       #{$input-el}__container
-        padding: $gap-regular - 1px
         border-width: $border-width * 2
         border-color: $color-secondary
+
+        input
+          padding: $gap-regular - 1px
 
     &#{$input-el}--is-danger
       #{$input-el}__label,

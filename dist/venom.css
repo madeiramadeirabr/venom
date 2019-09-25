@@ -657,8 +657,49 @@ html {
 }
 
 .venom .grid__row--has-no-gutter .grid__column {
-  margin-left: 0;
-  margin-right: 0;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.venom .grid__columns {
+  align-content: space-around;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  flex-flow: column wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  max-width: 100%;
+  padding: 0;
+  width: 100%;
+  margin: 12px 0;
+}
+
+.venom .grid__columns::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+.venom .grid__columns--is-reverse {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+          flex-direction: column-reverse;
+}
+
+.venom .grid__columns .grid__column:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.venom .grid__columns .grid__column:not(:first-child) {
+  margin-top: 12px;
+}
+
+.venom .grid__columns--has-no-gutter .grid__column {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
 }
 
 .venom .grid__column {
@@ -807,6 +848,16 @@ html {
 }
 
 @media screen and (max-width: 414px) {
+  .venom .grid__columns {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+  .venom .grid__columns .grid__column:not(:last-child) {
+    margin-bottom: 8px;
+  }
+  .venom .grid__columns .grid__column:not(:first-child) {
+    margin-top: 8px;
+  }
   .venom .grid__row {
     padding-left: 8px;
     padding-right: 8px;
@@ -1769,6 +1820,7 @@ html {
 }
 
 .venom .text-field input {
+  box-sizing: border-box !important;
   border: none;
   border-radius: 4px;
   padding: 12px;
@@ -1815,9 +1867,12 @@ html {
 }
 
 .venom .text-field.text-field--is-active .text-field__container {
-  padding: 11px;
   border-width: 2px;
   border-color: #00549e;
+}
+
+.venom .text-field.text-field--is-active .text-field__container input {
+  padding: 11px;
 }
 
 .venom .text-field.text-field--is-danger .text-field__label,
