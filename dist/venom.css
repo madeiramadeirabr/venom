@@ -458,7 +458,7 @@ html {
 .venom hr {
   border-width: 0;
   display: block;
-  height: 1;
+  height: 1px;
 }
 
 .venom hr::after {
