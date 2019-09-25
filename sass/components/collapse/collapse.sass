@@ -23,6 +23,7 @@
       padding: $gap-regular
       width: 100%
       flex-wrap: wrap
+      cursor: pointer
 
     &__content
       background-color: #eee
@@ -45,4 +46,15 @@
       padding: $zero
 
       &::after
-        //content: url(./icons/keyboard-arrow-down.svg)
+        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>')
+
+    &__close
+      margin-right: 15px
+      cursor: pointer
+      width: $size-regular
+      background: rgba(0,0,0,0)
+      border: none
+      padding: $zero
+
+      &::after
+        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.12 14.71L12 10.83l3.88 3.88c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 8.71c-.39-.39-1.02-.39-1.41 0L6.7 13.3c-.39.39-.39 1.02 0 1.41.39.38 1.03.39 1.42 0z"/></svg>')
