@@ -874,7 +874,7 @@ html {
 
 @media screen and (max-width: 414px) {
   .venom .grid__columns {
-    padding: 8px;
+    padding: 16px;
     margin: 0;
   }
   .venom .grid__columns > .grid__column:not(:last-child) {
@@ -884,7 +884,7 @@ html {
     margin-top: 8px;
   }
   .venom .grid__row {
-    padding: 8px;
+    padding: 16px;
     margin: 0;
   }
   .venom .grid__row > .grid__column:not(:last-child) {
@@ -993,7 +993,7 @@ html {
 
 @media screen and (min-width: 768px) and (max-width: 1223px) {
   .venom .grid__columns {
-    padding: 8px;
+    padding: 16px;
     margin: 0;
   }
   .venom .grid__columns > .grid__column:not(:last-child) {
@@ -1003,7 +1003,7 @@ html {
     margin-top: 8px;
   }
   .venom .grid__row {
-    padding: 8px;
+    padding: 16px;
     margin: 0;
   }
   .venom .grid__row > .grid__column:not(:last-child) {
