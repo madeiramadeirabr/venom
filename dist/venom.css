@@ -876,20 +876,20 @@ html {
     padding: 8px;
     margin: 0;
   }
-  .venom .grid__columns .grid__column:not(:last-child) {
+  .venom .grid__columns > .grid__column:not(:last-child) {
     margin-bottom: 8px;
   }
-  .venom .grid__columns .grid__column:not(:first-child) {
+  .venom .grid__columns > .grid__column:not(:first-child) {
     margin-top: 8px;
   }
   .venom .grid__row {
     padding: 8px;
     margin: 0;
   }
-  .venom .grid__row .grid__column:not(:last-child) {
+  .venom .grid__row > .grid__column:not(:last-child) {
     margin-right: 8px;
   }
-  .venom .grid__row .grid__column:not(:first-child) {
+  .venom .grid__row > .grid__column:not(:first-child) {
     margin-left: 8px;
   }
   .venom .grid__column--is-one-mobile {
