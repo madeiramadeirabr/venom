@@ -7,14 +7,14 @@ $input-el: '.text-field'
     display: flex
     flex-direction: column
     position: relative
-    width: calc(100% - #{($gap-regular * 2) + 2})
+    width: 100%
     margin-bottom: $gap-regular
 
     #{$input-el}__container
       +clearfix
       border-radius: $radius
       border: solid $border-width $color-monotone-light
-      padding: $gap-regular
+      padding: $zero
       width: 100%
 
     #{$input-el}__helper
@@ -31,13 +31,14 @@ $input-el: '.text-field'
       top: $zero
       left: $zero
       padding: $gap-regular
-      width: calc(100% - #{$gap-regular * 2})
+      width: 100%
       transition: all $transition-medium ease
       cursor: text
 
     input
       border: none
-      padding: $zero
+      border-radius: $radius
+      padding: $gap-regular
       margin: $zero
       width: 100%
       font-size: $size-regular
@@ -65,6 +66,9 @@ $input-el: '.text-field'
       #{$input-el}__container
         display: flex
         flex-direction: row
+
+      span
+        margin: $gap-regular
 
     &#{$input-el}--is-active
       #{$input-el}__label,

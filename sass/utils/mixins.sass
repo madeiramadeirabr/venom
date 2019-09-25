@@ -5,8 +5,7 @@
     display: table
 
 =border-box
-  box-sizing: border-box
-
+  box-sizing: border-box !important
 
 =flex-center($direction)
   align-content: center
@@ -25,12 +24,11 @@
   user-select: none
 
 =box-shadow
-  box-shadow: $zero $zero 10px $zero $color-monotone-light
+  box-shadow: $zero 2px 5px $zero $color-monotone-light
 
 
 %unselectable
   +unselectable
-
 
 =for-size($range)
   @if $range == mobile

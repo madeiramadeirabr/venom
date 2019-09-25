@@ -1,8 +1,9 @@
 .venom
   .card
-    $self: '.card'
+    +border-box
+    padding: $gap-regular
+    width: 100%
 
-    &#{ $self }
-      +box-shadow
-      padding: $gap-regular
-      width: 100%
+    @each $color, $value in $color-regular-map
+      &--is-#{$color}
+        border: solid 1px map-get($color-regular-map, $color) !important

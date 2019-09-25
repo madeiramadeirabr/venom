@@ -2,11 +2,42 @@
   .helper
     $self: '.helper'
 
+    &--is-link
+      color: $color-secondary
+      text-decoration: underline $color-secondary
+      font-weight: $weight-bold
+      font-size: $size-regular
+
+    &--has-shadow
+      +box-shadow
+
+    &--has-border-radius
+      border-radius: $radius
+
+    &--has-border
+      &-left
+        border-left-width: 1px
+        border-left-style: solid
+
+        &-large
+          border-left-width: 2px
+
+      &-right
+        border-right-width: 1px
+
+        &-large
+          border-right-width: 2px
+
+      @each $color, $value in $color-regular-map
+        &-#{$color}
+          border-color: map-get($color-regular-map, $color)
+
+
     &--has-no-margin
-      margin: $zero
+      margin: $zero !important // sass-lint:disable-line no-important
 
     &--has-no-gap
-      padding: $zero
+      padding: $zero !important // sass-lint:disable-line no-important
 
     &--has-no-gap-horizontal
       padding-left: $zero
@@ -20,10 +51,10 @@
       border-radius: $zero
 
     &--has-no-border
-      border-width: $zero
+      border-width: $zero !important // sass-lint:disable-line no-important
 
     &--has-no-shadow
-      box-shadow: none
+      box-shadow: none !important // sass-lint:disable-line no-important
 
     &--is-clearfix
       +clearfix
@@ -41,44 +72,37 @@
       position: relative
 
     &--is-full-width
-      +border-box
-      width: 100%
+      width: 100% !important // sass-lint:disable-line no-important
 
     &--is-max-full-width
-      +border-box
-      max-width: 100%
+      max-width: 100% !important // sass-lint:disable-line no-important
 
     &--is-full-height
-      +border-box
-      height: 100%
+      height: 100% !important
 
     &--is-max-full-height
-      +border-box
-      max-height: 100%
+      max-height: 100% !important
 
     &--has-gap-extra-small
-      +border-box
-      padding: $gap-extra-small
+      padding: $gap-extra-small !important
 
     &--has-gap-small
-      +border-box
-      padding: $gap-small
+      padding: $gap-small !important
 
     &--has-gap
-      +border-box
-      padding: $gap-regular
+      padding: $gap-regular !important
 
     &--has-gap-large
-      +border-box
-      padding: $gap-large
+      padding: $gap-large !important
 
     &--has-gap-extra-large
-      +border-box
-      padding: $gap-extra-large
+      padding: $gap-extra-large  !important
 
     &--has-border
-      +border-box
       border: solid $border-width $border-color-flat
+
+    &--has-border-large
+      border-width: $border-width-large !important
 
     &--is-full-height-viewport
       height: calc(100vh - #{ $gap-regular * 2 })
@@ -87,7 +111,7 @@
       border-radius: $radius
 
     &--has-margin
-      margin: $gap-regular
+      margin: $gap-regular !important // sass-lint:disable-line no-important
 
       &-left
         margin-left: $gap-regular
@@ -204,16 +228,16 @@
         font-weight: $weight-bold
 
       &-extra-small
-        font-size: $size-extra-small
+        font-size: $size-extra-small !important // sass-lint:disable-line no-important
 
       &-small
-        font-size: $size-small
+        font-size: $size-small !important // sass-lint:disable-line no-important
 
       &-large
-        font-size: $size-large
+        font-size: $size-large !important // sass-lint:disable-line no-important
 
       &-extra-large
-        font-size: $size-extra-large
+        font-size: $size-extra-large !important // sass-lint:disable-line no-important
 
       &-base-line
         line-height: 1
