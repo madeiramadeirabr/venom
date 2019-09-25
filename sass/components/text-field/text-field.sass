@@ -7,7 +7,7 @@ $input-el: '.text-field'
     display: flex
     flex-direction: column
     position: relative
-    max-width: 100%
+    width: 100%
     margin-bottom: $gap-regular
 
     #{$input-el}__container
@@ -68,8 +68,9 @@ $input-el: '.text-field'
         display: flex
         flex-direction: row
 
-      span
+      #{$input-el}__icon
         margin: $gap-regular
+        width: $gap-regular * 3
 
     &#{$input-el}--is-active
       #{$input-el}__label,

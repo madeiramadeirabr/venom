@@ -397,6 +397,7 @@ html {
 .venom small,
 .venom strong,
 .venom i {
+  box-sizing: border-box !important;
   color: currentColor;
 }
 
@@ -407,6 +408,7 @@ html {
 .venom header,
 .venom hgroup,
 .venom section {
+  box-sizing: border-box !important;
   display: block;
 }
 
@@ -430,6 +432,7 @@ html {
 }
 
 .venom a {
+  box-sizing: border-box !important;
   color: #00549e;
   cursor: pointer;
   text-decoration: none;
@@ -477,6 +480,7 @@ html {
 .venom textarea,
 .venom select,
 .venom input {
+  box-sizing: border-box !important;
   outline: none;
 }
 
@@ -505,6 +509,7 @@ html {
 .venom h5,
 .venom h6,
 .venom p {
+  box-sizing: border-box !important;
   color: currentColor;
   line-height: 1.25;
   margin: 0;
@@ -1775,7 +1780,7 @@ html {
   -webkit-box-direction: normal;
           flex-direction: column;
   position: relative;
-  max-width: 100%;
+  width: 100%;
   margin-bottom: 12px;
 }
 
@@ -1857,8 +1862,9 @@ html {
           flex-direction: row;
 }
 
-.venom .text-field.text-field--has-left-icon span, .venom .text-field.text-field--has-right-icon span {
+.venom .text-field.text-field--has-left-icon .text-field__icon, .venom .text-field.text-field--has-right-icon .text-field__icon {
   margin: 12px;
+  width: 36px;
 }
 
 .venom .text-field.text-field--is-active .text-field__label,
@@ -2145,10 +2151,12 @@ html {
 }
 
 .venom .helper--is-full-width {
+  box-sizing: border-box !important;
   width: 100% !important;
 }
 
 .venom .helper--is-max-full-width {
+  box-sizing: border-box !important;
   max-width: 100% !important;
 }
 
