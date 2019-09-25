@@ -672,9 +672,9 @@ html {
   -webkit-box-pack: justify;
           justify-content: space-between;
   max-width: 100%;
-  padding: 0;
+  padding: 12px 0;
   width: 100%;
-  margin: 12px 0;
+  margin: 0;
 }
 
 .venom .grid__columns::after {
@@ -849,8 +849,8 @@ html {
 
 @media screen and (max-width: 414px) {
   .venom .grid__columns {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 8px;
+    margin: 0;
   }
   .venom .grid__columns .grid__column:not(:last-child) {
     margin-bottom: 8px;
@@ -859,8 +859,8 @@ html {
     margin-top: 8px;
   }
   .venom .grid__row {
-    padding-left: 8px;
-    padding-right: 8px;
+    padding: 8px;
+    margin: 0;
   }
   .venom .grid__row .grid__column:not(:last-child) {
     margin-right: 8px;
@@ -1515,7 +1515,7 @@ html {
   padding: 12px;
   -webkit-transition: background-color 86ms ease-in, color 86ms ease-in, display 86ms ease-in;
   transition: background-color 86ms ease-in, color 86ms ease-in, display 86ms ease-in;
-  width: 100%;
+  max-width: 100%;
 }
 
 .venom .notification__container:hover {
@@ -1637,7 +1637,7 @@ html {
 .venom .card {
   box-sizing: border-box !important;
   padding: 12px;
-  width: 100%;
+  max-width: 100%;
 }
 
 .venom .card--is-primary {
@@ -1675,7 +1675,7 @@ html {
   -webkit-box-direction: normal;
           flex-direction: row;
   position: relative;
-  width: 100%;
+  max-width: 100%;
 }
 
 .venom .input::after {
@@ -1775,7 +1775,7 @@ html {
   -webkit-box-direction: normal;
           flex-direction: column;
   position: relative;
-  width: 100%;
+  max-width: 100%;
   margin-bottom: 12px;
 }
 
@@ -1789,7 +1789,7 @@ html {
   border-radius: 4px;
   border: solid 1px #b3b3b3;
   padding: 0;
-  width: 100%;
+  max-width: 100%;
 }
 
 .venom .text-field .text-field__container::after {
@@ -1803,7 +1803,7 @@ html {
   font-weight: 400;
   margin: 4px 12px;
   color: gray;
-  width: 100%;
+  max-width: 100%;
   display: block;
   line-height: 14px;
 }
@@ -1813,7 +1813,7 @@ html {
   top: 0;
   left: 0;
   padding: 12px;
-  width: 100%;
+  max-width: 100%;
   -webkit-transition: all 172ms ease;
   transition: all 172ms ease;
   cursor: text;

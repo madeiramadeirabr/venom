@@ -41,9 +41,9 @@ $row: '.grid__row'
       flex-flow: column wrap
       justify-content: space-between
       max-width: 100%
-      padding: $zero
+      padding: $gap-regular $zero
       width: 100%
-      margin: $gap-regular $zero
+      margin: $zero
 
       &--is-reverse
         flex-direction: column-reverse
@@ -88,8 +88,8 @@ $row: '.grid__row'
 
   +for-size(mobile)
     #{ $columns }
-      padding-left: $gap-small
-      padding-right: $gap-small
+      padding: $gap-small
+      margin: $zero
 
       #{ $column }
         &:not(:last-child)
@@ -99,8 +99,8 @@ $row: '.grid__row'
           margin-top: $mobile-column-gap
 
     #{ $row }
-      padding-left: $gap-small
-      padding-right: $gap-small
+      padding: $gap-small
+      margin: $zero
 
       #{ $column }
         &:not(:last-child)

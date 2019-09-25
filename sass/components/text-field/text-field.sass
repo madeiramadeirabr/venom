@@ -7,7 +7,7 @@ $input-el: '.text-field'
     display: flex
     flex-direction: column
     position: relative
-    width: 100%
+    max-width: 100%
     margin-bottom: $gap-regular
 
     #{$input-el}__container
@@ -15,14 +15,14 @@ $input-el: '.text-field'
       border-radius: $radius
       border: solid $border-width $color-monotone-light
       padding: $zero
-      width: 100%
+      max-width: 100%
 
     #{$input-el}__helper
       font-size: $size-extra-small
       font-weight: $weight-regular
       margin: $base $gap-regular
       color: $color-monotone
-      width: 100%
+      max-width: 100%
       display: block
       line-height: $size-regular
 
@@ -31,7 +31,7 @@ $input-el: '.text-field'
       top: $zero
       left: $zero
       padding: $gap-regular
-      width: 100%
+      max-width: 100%
       transition: all $transition-medium ease
       cursor: text
 
