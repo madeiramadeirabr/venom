@@ -21,7 +21,7 @@ $row: '.grid__row'
       &--is-reverse
         flex-direction: row-reverse
 
-      #{ $column }
+      > #{ $column }
         &:not(:last-child)
           margin-right: $desktop-column-gap
 
@@ -48,7 +48,7 @@ $row: '.grid__row'
       &--is-reverse
         flex-direction: column-reverse
 
-      #{ $column }
+      > #{ $column }
         &:not(:last-child)
           margin-bottom: $desktop-column-gap
 

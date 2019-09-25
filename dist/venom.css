@@ -672,11 +672,11 @@ html {
           flex-direction: row-reverse;
 }
 
-.venom .grid__row .grid__column:not(:last-child) {
+.venom .grid__row > .grid__column:not(:last-child) {
   margin-right: 12px;
 }
 
-.venom .grid__row .grid__column:not(:first-child) {
+.venom .grid__row > .grid__column:not(:first-child) {
   margin-left: 12px;
 }
 
@@ -713,11 +713,11 @@ html {
           flex-direction: column-reverse;
 }
 
-.venom .grid__columns .grid__column:not(:last-child) {
+.venom .grid__columns > .grid__column:not(:last-child) {
   margin-bottom: 12px;
 }
 
-.venom .grid__columns .grid__column:not(:first-child) {
+.venom .grid__columns > .grid__column:not(:first-child) {
   margin-top: 12px;
 }
 
