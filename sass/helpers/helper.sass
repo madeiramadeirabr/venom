@@ -7,6 +7,7 @@
       text-decoration: underline $color-secondary
       font-weight: $weight-bold
       font-size: $size-regular
+      letter-spacing: .5px
 
     &--has-shadow
       +box-shadow
@@ -217,6 +218,23 @@
         &-extra-large
           margin-left: $gap-extra-large
           margin-right: $gap-extra-large
+
+    &--is-text
+      &-subititle
+        font-size: $size-large
+        letter-spacing: .15px
+        font-weight: $size-regular
+
+      &-caption
+        font-size: $size-small
+        letter-spacing: .4px
+        font-weight: $size-regular
+
+      &-overline
+        font-size: $size-small
+        letter-spacing: 2px
+        text-transform: uppercase
+        font-weight: $size-regular
 
     &--has-text
 

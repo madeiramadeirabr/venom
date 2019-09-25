@@ -44,6 +44,7 @@ html
     color: $text
     font-family: $family-sans-serif
     font-weight: $weight-regular
+    letter-spacing: 0.25px
     font-size: $size-regular
 
   a
@@ -107,6 +108,7 @@ html
   h6,
   p
     +border-box
+    +clearfix
     color: currentColor
     line-height: 1.25
     margin: $zero
@@ -117,25 +119,42 @@ html
     margin-bottom: $gap-default
 
   h1
-    +clearfix
-    font-size: $size-ultra-large
-    font-weight: $weight-bold
+    font-size: 32px
+    font-weight: $weight-light
+    letter-spacing: 0.25px
 
   h2
-    +clearfix
-    font-size: $size-extra-large
-    font-weight: $weight-bold
+    font-size: 28px
+    font-weight: $weight-light
+    letter-spacing: 0.18px
 
   h3
-    +clearfix
-    font-size: $size-large
+    font-size: 24px
+    font-weight: $weight-light
+
+  h4
+    font-size: 20px
     font-weight: $weight-semibold
+    letter-spacing: 0.25px
+
+  h5
+    font-size: 18px
+    font-weight: $weight-semibold
+    letter-spacing: 0.5px
+
+  h6
+    font-size: 18px
+    font-weight: $weight-semibold
+    letter-spacing: 0.25px
 
   h1 + h2,
   h2 + h3,
   h2 + p,
   h3 + p
     margin-top: $gap-regular
+
+  p
+    letter-spacing: 0.25px
 
   pre
     +clearfix
