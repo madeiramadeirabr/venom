@@ -1,7 +1,9 @@
+$column: '.grid__column'
+$row: '.grid__row'
+
 .venom
   .grid
-    $self: '.grid'
-    $column: #{$self + '__column'}
+    $self: &
 
     &__row
       +clearfix
@@ -56,20 +58,31 @@
           &-offset
             margin-left: $count
 
-      +for-size(mobile)
-        @each $name, $count in $numbers
-          &--is-#{$name}-mobile
-            flex: 0 0 $count !important
-            max-width: $count !important
+  +for-size(mobile)
+    #{ $row }
+      padding-left: $gap-small
+      padding-right: $gap-small
 
-            &-offset
-              margin-left: $count  !important
+      #{ $column }
+        &:not(:last-child)
+          margin-right: $mobile-column-gap
 
-      +for-size(tablet)
-        @each $name, $count in $numbers
-          &--is-#{$name}-tablet
-            flex: 0 0 $count !important
-            max-width: $count !important
+        &:not(:first-child)
+          margin-left: $mobile-column-gap
 
-            &-offset
-              margin-left: $count  !important
+    @each $name, $count in $numbers
+      &--is-#{$name}-mobile
+        flex: 0 0 $count !important
+        max-width: $count !important
+
+        &-offset
+          margin-left: $count  !important
+
+  +for-size(tablet)
+    @each $name, $count in $numbers
+      &--is-#{$name}-tablet
+        flex: 0 0 $count !important
+        max-width: $count !important
+
+        &-offset
+          margin-left: $count  !important
