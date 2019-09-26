@@ -1997,6 +1997,160 @@ html {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.12 14.71L12 10.83l3.88 3.88c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 8.71c-.39-.39-1.02-.39-1.41 0L6.7 13.3c-.39.39-.39 1.02 0 1.41.39.38 1.03.39 1.42 0z"/></svg>');
 }
 
+.venom.modal--is-hidden {
+  overflow: hidden;
+}
+
+.venom .modal {
+  overflow: auto;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(10, 10, 10, 0.86);
+  z-index: 101;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .venom .modal__card {
+    max-width: calc( 100vh - 40px);
+    max-height: calc( 100vh - 40px);
+  }
+  .venom .modal.modal--is-hidden {
+    display: none;
+  }
+}
+
+.venom .modal__card {
+  background-color: white;
+}
+
+.venom .modal__card__close {
+  margin-right: 15px;
+  cursor: pointer;
+  width: 14px;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  padding: 0;
+  background-color: rgba(10, 10, 10, 0.2);
+  border: none;
+  border-radius: 290486px;
+  cursor: pointer;
+  display: inline-block;
+  flex-shrink: 0;
+  font-size: 0;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+  width: 20px;
+}
+
+.venom .modal__card__close::after, .venom .modal__card__close::before {
+  background-color: #fff;
+  content: "";
+  display: block;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -webkit-transform-origin: center center;
+  transform-origin: center center;
+}
+
+.venom .modal__card__close::before {
+  height: 2px;
+  width: 50%;
+}
+
+.venom .modal__card__close::after {
+  height: 50%;
+  width: 2px;
+}
+
+.venom .modal__card__header {
+  background-color: #cccccc;
+  font-size: 20px;
+  padding: 12px;
+  color: #00549e;
+  font-weight: 700;
+  display: -webkit-box;
+  display: flex;
+}
+
+.venom .modal__card__header.delete {
+  background-color: rgba(10, 10, 10, 0.2);
+  border: none;
+  border-radius: 290486px;
+  cursor: pointer;
+  display: inline-block;
+  -webkit-box-flex: 0;
+          flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 0;
+  height: 20px;
+  max-height: 20px;
+  max-width: 20px;
+  min-height: 20px;
+  min-width: 20px;
+  outline: none;
+  position: relative;
+  vertical-align: top;
+  width: 20px;
+}
+
+.venom .modal__body {
+  background-color: white;
+  padding: 12px;
+}
+
+.venom .modal__footer {
+  background-color: white;
+  padding: 12px;
+  display: -webkit-box;
+  display: flex;
+}
+
+.venom .modal__footer__close {
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.venom .modal__footer__action {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .venom .modal {
+    display: block;
+    -webkit-transition: left 1s ease;
+    transition: left 1s ease;
+    width: 100%;
+    height: 100%;
+  }
+  .venom .modal.modal--is-hidden {
+    right: auto;
+    left: -300vh;
+  }
+  .venom .modal__card {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .venom .helper--is-link {
   color: #00549e;
   -webkit-text-decoration: underline #00549e;
