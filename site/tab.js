@@ -38,7 +38,7 @@ function displaySelectedTab(selectedTable) {
      
 const modal = document.querySelector('.modal');
 const closeModal = document.querySelector('.modal__card__close');
-const closeBtn = document.querySelector('.modal__footer__close');
+const closeBtn = document.querySelector('.modal__card__footer__close');
 
 closeModal.addEventListener("click", () => {
     document.documentElement.style.overflow = 'scroll';
