@@ -1726,6 +1726,7 @@ html {
   border: solid 1px #b3b3b3;
   padding: 0;
   max-width: 100%;
+  background-color: white;
 }
 
 .venom .text-field .text-field__container::after {
