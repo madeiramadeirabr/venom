@@ -118,8 +118,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -382,10 +381,7 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 .venom body,
@@ -444,15 +440,15 @@ html {
 }
 
 .venom a strong:hover {
-  color: #00396b;
+  color: #004785;
 }
 
 .venom a strong:active {
-  color: #0062b8;
+  color: #2e77b2;
 }
 
 .venom a strong:visited {
-  color: #001e38;
+  color: #004785;
 }
 
 .venom hr {
@@ -610,35 +606,28 @@ html {
 }
 
 .venom .grid--is-flex {
-  display: -webkit-box;
   display: flex;
 }
 
 .venom .grid--is-start {
-  -webkit-box-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .venom .grid--is-center {
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
 .venom .grid--is-end {
-  -webkit-box-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .venom .grid--is-top {
-  -webkit-box-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
 
 .venom .grid--is-bottom {
-  -webkit-box-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
 }
 
 .venom .grid--has-no-wrap {
@@ -647,14 +636,10 @@ html {
 
 .venom .grid__row {
   align-content: space-around;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-direction: row;
   flex-flow: row wrap;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   max-width: 100%;
   padding: 12px;
   width: 100%;
@@ -668,9 +653,7 @@ html {
 }
 
 .venom .grid__row--is-reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .venom .grid__row > .grid__column:not(:last-child) {
@@ -688,14 +671,10 @@ html {
 
 .venom .grid__columns {
   align-content: space-around;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-direction: column;
   flex-flow: column wrap;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   max-width: 100%;
   padding: 12px;
   width: 100%;
@@ -709,9 +688,7 @@ html {
 }
 
 .venom .grid__columns--is-reverse {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-          flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 .venom .grid__columns > .grid__column:not(:last-child) {
@@ -730,8 +707,7 @@ html {
 .venom .grid__column {
   display: block;
   flex-basis: 0;
-  -webkit-box-flex: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   flex-shrink: 1;
   flex: 1;
   padding: 0;
@@ -743,18 +719,15 @@ html {
 }
 
 .venom .grid__column--is-first {
-  -webkit-box-ordinal-group: 0;
-          order: -1;
+  order: -1;
 }
 
 .venom .grid__column--is-last {
-  -webkit-box-ordinal-group: 2;
-          order: 1;
+  order: 1;
 }
 
 .venom .grid__column--is-one {
-  -webkit-box-flex: 0;
-          flex: 0 0 calc(8.33333% - 12px);
+  flex: 0 0 calc(8.33333% - 12px);
   max-width: 8.33333%;
 }
 
@@ -763,8 +736,7 @@ html {
 }
 
 .venom .grid__column--is-two {
-  -webkit-box-flex: 0;
-          flex: 0 0 calc(16.66667% - 12px);
+  flex: 0 0 calc(16.66667% - 12px);
   max-width: 16.66667%;
 }
 
@@ -773,8 +745,7 @@ html {
 }
 
 .venom .grid__column--is-three {
-  -webkit-box-flex: 0;
-          flex: 0 0 calc(25% - 12px);
+  flex: 0 0 calc(25% - 12px);
   max-width: 25%;
 }
 
@@ -783,8 +754,7 @@ html {
 }
 
 .venom .grid__column--is-four {
-  -webkit-box-flex: 0;
-          flex: 0 0 calc(33.33333% - 12px);
+  flex: 0 0 calc(33.33333% - 12px);
   max-width: 33.33333%;
 }
 
@@ -793,8 +763,7 @@ html {
 }
 
 .venom .grid__column--is-five {
-  -webkit-box-flex: 0;
-          flex: 0 0 calc(41.66667% - 12px);
+  flex: 0 0 calc(41.66667% - 12px);
   max-width: 41.66667%;
 }
 
@@ -803,8 +772,7 @@ html {
 }
 
 .venom .grid__column--is-six {
-  -webkit-box-flex: 0;
-          flex: 0 0 calc(50% - 12px);
+  flex: 0 0 calc(50% - 12px);
   max-width: 50%;
 }
 
@@ -813,8 +781,7 @@ html {
 }
 
 .venom .grid__column--is-seven {
-  -webkit-box-flex: 0;
-          flex: 0 0 calc(58.33333% - 12px);
+  flex: 0 0 calc(58.33333% - 12px);
   max-width: 58.33333%;
 }
 
@@ -823,8 +790,7 @@ html {
 }
 
 .venom .grid__column--is-eight {
-  -webkit-box-flex: 0;
-          flex: 0 0 calc(66.66667% - 12px);
+  flex: 0 0 calc(66.66667% - 12px);
   max-width: 66.66667%;
 }
 
@@ -833,8 +799,7 @@ html {
 }
 
 .venom .grid__column--is-nine {
-  -webkit-box-flex: 0;
-          flex: 0 0 calc(75% - 12px);
+  flex: 0 0 calc(75% - 12px);
   max-width: 75%;
 }
 
@@ -843,8 +808,7 @@ html {
 }
 
 .venom .grid__column--is-ten {
-  -webkit-box-flex: 0;
-          flex: 0 0 calc(83.33333% - 12px);
+  flex: 0 0 calc(83.33333% - 12px);
   max-width: 83.33333%;
 }
 
@@ -853,8 +817,7 @@ html {
 }
 
 .venom .grid__column--is-eleven {
-  -webkit-box-flex: 0;
-          flex: 0 0 calc(91.66667% - 12px);
+  flex: 0 0 calc(91.66667% - 12px);
   max-width: 91.66667%;
 }
 
@@ -863,8 +826,7 @@ html {
 }
 
 .venom .grid__column--is-twelve {
-  -webkit-box-flex: 0;
-          flex: 0 0 calc(100% - 12px);
+  flex: 0 0 calc(100% - 12px);
   max-width: 100%;
 }
 
@@ -897,104 +859,91 @@ html {
     margin: 0 !important;
   }
   .venom .grid__column--is-one-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 calc(8.33333% - 12px) !important;
+    flex: 0 0 calc(8.33333% - 12px) !important;
     max-width: 8.33333% !important;
   }
   .venom .grid__column--is-one-mobile-offset {
     margin-left: 8.33333% !important;
   }
   .venom .grid__column--is-two-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 calc(16.66667% - 12px) !important;
+    flex: 0 0 calc(16.66667% - 12px) !important;
     max-width: 16.66667% !important;
   }
   .venom .grid__column--is-two-mobile-offset {
     margin-left: 16.66667% !important;
   }
   .venom .grid__column--is-three-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 calc(25% - 12px) !important;
+    flex: 0 0 calc(25% - 12px) !important;
     max-width: 25% !important;
   }
   .venom .grid__column--is-three-mobile-offset {
     margin-left: 25% !important;
   }
   .venom .grid__column--is-four-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 calc(33.33333% - 12px) !important;
+    flex: 0 0 calc(33.33333% - 12px) !important;
     max-width: 33.33333% !important;
   }
   .venom .grid__column--is-four-mobile-offset {
     margin-left: 33.33333% !important;
   }
   .venom .grid__column--is-five-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 calc(41.66667% - 12px) !important;
+    flex: 0 0 calc(41.66667% - 12px) !important;
     max-width: 41.66667% !important;
   }
   .venom .grid__column--is-five-mobile-offset {
     margin-left: 41.66667% !important;
   }
   .venom .grid__column--is-six-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 calc(50% - 12px) !important;
+    flex: 0 0 calc(50% - 12px) !important;
     max-width: 50% !important;
   }
   .venom .grid__column--is-six-mobile-offset {
     margin-left: 50% !important;
   }
   .venom .grid__column--is-seven-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 calc(58.33333% - 12px) !important;
+    flex: 0 0 calc(58.33333% - 12px) !important;
     max-width: 58.33333% !important;
   }
   .venom .grid__column--is-seven-mobile-offset {
     margin-left: 58.33333% !important;
   }
   .venom .grid__column--is-eight-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 calc(66.66667% - 12px) !important;
+    flex: 0 0 calc(66.66667% - 12px) !important;
     max-width: 66.66667% !important;
   }
   .venom .grid__column--is-eight-mobile-offset {
     margin-left: 66.66667% !important;
   }
   .venom .grid__column--is-nine-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 calc(75% - 12px) !important;
+    flex: 0 0 calc(75% - 12px) !important;
     max-width: 75% !important;
   }
   .venom .grid__column--is-nine-mobile-offset {
     margin-left: 75% !important;
   }
   .venom .grid__column--is-ten-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 calc(83.33333% - 12px) !important;
+    flex: 0 0 calc(83.33333% - 12px) !important;
     max-width: 83.33333% !important;
   }
   .venom .grid__column--is-ten-mobile-offset {
     margin-left: 83.33333% !important;
   }
   .venom .grid__column--is-eleven-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 calc(91.66667% - 12px) !important;
+    flex: 0 0 calc(91.66667% - 12px) !important;
     max-width: 91.66667% !important;
   }
   .venom .grid__column--is-eleven-mobile-offset {
     margin-left: 91.66667% !important;
   }
   .venom .grid__column--is-twelve-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 calc(100% - 12px) !important;
+    flex: 0 0 calc(100% - 12px) !important;
     max-width: 100% !important;
   }
   .venom .grid__column--is-twelve-mobile-offset {
     margin-left: 100% !important;
   }
   .venom .grid__column--is-twelve-mobile {
-    -webkit-box-flex: 0 !important;
-            flex: 0 0 100% !important;
+    flex: 0 0 100% !important;
     margin: 0 !important;
   }
 }
@@ -1045,16 +994,11 @@ html {
 
 .venom .button__group {
   align-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   align-self: center;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  -webkit-box-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   border: solid 1px rgba(0, 0, 0, 0.75);
   border-radius: 4px;
   overflow: hidden;
@@ -1066,25 +1010,21 @@ html {
   border-width: 0;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .venom .button.button__group {
     border-width: 0.5px;
   }
 }
 
 .venom .button {
+  margin: 12px;
   box-shadow: 0 2px 5px 0 #b3b3b3;
   align-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   align-self: center;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  -webkit-box-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   background-color: white;
   border-color: white;
   border-radius: 4px;
@@ -1097,21 +1037,20 @@ html {
   line-height: 1;
   outline: none;
   padding: 12px;
-  -webkit-transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
   transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
   background-position: center;
   letter-spacing: .75px;
 }
 
-.venom .button:hover, .venom .button:focus {
-  background-color: #b3b3b3;
-  background: radial-gradient(circle, transparent 1%, rgba(255, 255, 255, 0.2) 1%) center/15000%;
+.venom .button .button__icon {
+  display: flex;
+  width: 48px;
+  justify-content: center;
 }
 
-.venom .button:active {
-  background-size: 100%;
-  -webkit-transition: background 0s;
-  transition: background 0s;
+.venom .button__text {
+  flex: 1;
+  flex-basis: 100%;
 }
 
 .venom .button.button:disabled, .venom .button.button--is-disabled {
@@ -1125,6 +1064,7 @@ html {
   background-color: white;
   border-color: gray;
   color: currentColor;
+  box-shadow: none;
 }
 
 .venom .button.button--is-outline:hover, .venom .button.button--is-outline:focus, .venom .button.button--is-outline:active {
@@ -1133,15 +1073,23 @@ html {
 }
 
 .venom .button.button--is-link {
-  background-color: white;
-  border-color: white;
-  color: #f4831f;
-  text-decoration: underline;
+  background-color: transparent;
+  color: #00549e;
   box-shadow: none;
 }
 
-.venom .button.button--is-link:hover, .venom .button.button--is-link:focus, .venom .button.button--is-link:active {
-  background-color: rgba(0, 0, 0, 0.1);
+.venom .button.button--is-link:hover {
+  background-color: #e9f0f7;
+}
+
+.venom .button.button--is-link:focus {
+  background: #b9d0e4 radial-gradient(circle, transparent 1%, #e9f0f7 1%) center/15000%;
+}
+
+.venom .button.button--is-link:active {
+  background-color: #b9d0e4;
+  background-size: 100%;
+  transition: background 0s;
 }
 
 .venom .button.button--is-primary {
@@ -1150,13 +1098,28 @@ html {
   color: white;
 }
 
-.venom .button.button--is-primary:hover, .venom .button.button--is-primary:focus, .venom .button.button--is-primary:active {
-  background-color: #d6690a;
+.venom .button.button--is-primary:hover {
+  background: #e56e06;
+}
+
+.venom .button.button--is-primary:focus {
+  background: #e56e06 radial-gradient(circle, transparent 1%, #f4831f 1%) center/15000%;
+}
+
+.venom .button.button--is-primary:active {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.venom .button.button--is-primary:active.button--is-dragged {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
+  border: none;
 }
 
 .venom .button.button--is-primary:disabled, .venom .button.button--is-primary.button--is-disabled {
-  background-color: #f79e50;
-  border-color: #f79e50;
+  background-color: #cccccc;
+  border: none;
 }
 
 .venom .button.button--is-primary.button--is-outline {
@@ -1165,10 +1128,48 @@ html {
   color: #f4831f;
 }
 
-.venom .button.button--is-primary.button--is-outline:hover, .venom .button.button--is-primary.button--is-outline:focus, .venom .button.button--is-primary.button--is-outline:active {
-  border-color: #d6690a;
+.venom .button.button--is-primary.button--is-outline:hover {
+  background: #fef4ec;
+}
+
+.venom .button.button--is-primary.button--is-outline:focus {
+  background: #fcdcc0 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+}
+
+.venom .button.button--is-primary.button--is-outline:active {
+  border-color: #e56e06;
+  color: #e56e06;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.venom .button.button--is-primary.button--is-outline:disabled, .venom .button.button--is-primary.button--is-outline.button--is-disabled {
   background-color: white;
-  color: #d6690a;
+  border-color: #cccccc;
+  border-style: solid;
+  border-width: 1px;
+  color: #999999;
+}
+
+.venom .button.button--is-primary.button--is-link {
+  background-color: transparent;
+  border: none;
+  color: #f4831f;
+}
+
+.venom .button.button--is-primary.button--is-link:hover {
+  background-color: #fef4ec;
+}
+
+.venom .button.button--is-primary.button--is-link:focus {
+  background: #fcdcc0 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+}
+
+.venom .button.button--is-primary.button--is-link:active {
+  border-color: #e56e06;
+  color: #e56e06;
+  background-size: 100%;
+  transition: background 0s;
 }
 
 .venom .button.button--is-secondary {
@@ -1177,13 +1178,28 @@ html {
   color: white;
 }
 
-.venom .button.button--is-secondary:hover, .venom .button.button--is-secondary:focus, .venom .button.button--is-secondary:active {
-  background-color: #00396b;
+.venom .button.button--is-secondary:hover {
+  background: #004785;
+}
+
+.venom .button.button--is-secondary:focus {
+  background: #004785 radial-gradient(circle, transparent 1%, #00549e 1%) center/15000%;
+}
+
+.venom .button.button--is-secondary:active {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.venom .button.button--is-secondary:active.button--is-dragged {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
+  border: none;
 }
 
 .venom .button.button--is-secondary:disabled, .venom .button.button--is-secondary.button--is-disabled {
-  background-color: #0070d1;
-  border-color: #0070d1;
+  background-color: #cccccc;
+  border: none;
 }
 
 .venom .button.button--is-secondary.button--is-outline {
@@ -1192,10 +1208,48 @@ html {
   color: #00549e;
 }
 
-.venom .button.button--is-secondary.button--is-outline:hover, .venom .button.button--is-secondary.button--is-outline:focus, .venom .button.button--is-secondary.button--is-outline:active {
-  border-color: #00396b;
+.venom .button.button--is-secondary.button--is-outline:hover {
+  background: #e9f0f7;
+}
+
+.venom .button.button--is-secondary.button--is-outline:focus {
+  background: #b9d0e4 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+}
+
+.venom .button.button--is-secondary.button--is-outline:active {
+  border-color: #004785;
+  color: #004785;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.venom .button.button--is-secondary.button--is-outline:disabled, .venom .button.button--is-secondary.button--is-outline.button--is-disabled {
   background-color: white;
-  color: #00396b;
+  border-color: #cccccc;
+  border-style: solid;
+  border-width: 1px;
+  color: #999999;
+}
+
+.venom .button.button--is-secondary.button--is-link {
+  background-color: transparent;
+  border: none;
+  color: #00549e;
+}
+
+.venom .button.button--is-secondary.button--is-link:hover {
+  background-color: #e9f0f7;
+}
+
+.venom .button.button--is-secondary.button--is-link:focus {
+  background: #b9d0e4 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+}
+
+.venom .button.button--is-secondary.button--is-link:active {
+  border-color: #004785;
+  color: #004785;
+  background-size: 100%;
+  transition: background 0s;
 }
 
 .venom .button.button--is-danger {
@@ -1204,13 +1258,28 @@ html {
   color: white;
 }
 
-.venom .button.button--is-danger:hover, .venom .button.button--is-danger:focus, .venom .button.button--is-danger:active {
-  background-color: #be3023;
+.venom .button.button--is-danger:hover {
+  background: #be3023;
+}
+
+.venom .button.button--is-danger:focus {
+  background: #be3023 radial-gradient(circle, transparent 1%, #db4639 1%) center/15000%;
+}
+
+.venom .button.button--is-danger:active {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.venom .button.button--is-danger:active.button--is-dragged {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
+  border: none;
 }
 
 .venom .button.button--is-danger:disabled, .venom .button.button--is-danger.button--is-disabled {
-  background-color: #e36e64;
-  border-color: #e36e64;
+  background-color: #cccccc;
+  border: none;
 }
 
 .venom .button.button--is-danger.button--is-outline {
@@ -1219,10 +1288,48 @@ html {
   color: #db4639;
 }
 
-.venom .button.button--is-danger.button--is-outline:hover, .venom .button.button--is-danger.button--is-outline:focus, .venom .button.button--is-danger.button--is-outline:active {
+.venom .button.button--is-danger.button--is-outline:hover {
+  background: #e36e64;
+}
+
+.venom .button.button--is-danger.button--is-outline:focus {
+  background: #df5a4e radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+}
+
+.venom .button.button--is-danger.button--is-outline:active {
   border-color: #be3023;
-  background-color: white;
   color: #be3023;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.venom .button.button--is-danger.button--is-outline:disabled, .venom .button.button--is-danger.button--is-outline.button--is-disabled {
+  background-color: white;
+  border-color: #cccccc;
+  border-style: solid;
+  border-width: 1px;
+  color: #999999;
+}
+
+.venom .button.button--is-danger.button--is-link {
+  background-color: transparent;
+  border: none;
+  color: #db4639;
+}
+
+.venom .button.button--is-danger.button--is-link:hover {
+  background-color: #e36e64;
+}
+
+.venom .button.button--is-danger.button--is-link:focus {
+  background: #df5a4e radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+}
+
+.venom .button.button--is-danger.button--is-link:active {
+  border-color: #be3023;
+  color: #be3023;
+  background-size: 100%;
+  transition: background 0s;
 }
 
 .venom .button.button--is-success {
@@ -1231,13 +1338,28 @@ html {
   color: white;
 }
 
-.venom .button.button--is-success:hover, .venom .button.button--is-success:focus, .venom .button.button--is-success:active {
-  background-color: #00851d;
+.venom .button.button--is-success:hover {
+  background: #00851d;
+}
+
+.venom .button.button--is-success:focus {
+  background: #00851d radial-gradient(circle, transparent 1%, #009e22 1%) center/15000%;
+}
+
+.venom .button.button--is-success:active {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.venom .button.button--is-success:active.button--is-dragged {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
+  border: none;
 }
 
 .venom .button.button--is-success:disabled, .venom .button.button--is-success.button--is-disabled {
-  background-color: #00d12d;
-  border-color: #00d12d;
+  background-color: #cccccc;
+  border: none;
 }
 
 .venom .button.button--is-success.button--is-outline {
@@ -1246,10 +1368,48 @@ html {
   color: #009e22;
 }
 
-.venom .button.button--is-success.button--is-outline:hover, .venom .button.button--is-success.button--is-outline:focus, .venom .button.button--is-success.button--is-outline:active {
+.venom .button.button--is-success.button--is-outline:hover {
+  background: #00d12d;
+}
+
+.venom .button.button--is-success.button--is-outline:focus {
+  background: #00b828 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+}
+
+.venom .button.button--is-success.button--is-outline:active {
   border-color: #00851d;
-  background-color: white;
   color: #00851d;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.venom .button.button--is-success.button--is-outline:disabled, .venom .button.button--is-success.button--is-outline.button--is-disabled {
+  background-color: white;
+  border-color: #cccccc;
+  border-style: solid;
+  border-width: 1px;
+  color: #999999;
+}
+
+.venom .button.button--is-success.button--is-link {
+  background-color: transparent;
+  border: none;
+  color: #009e22;
+}
+
+.venom .button.button--is-success.button--is-link:hover {
+  background-color: #00d12d;
+}
+
+.venom .button.button--is-success.button--is-link:focus {
+  background: #00b828 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+}
+
+.venom .button.button--is-success.button--is-link:active {
+  border-color: #00851d;
+  color: #00851d;
+  background-size: 100%;
+  transition: background 0s;
 }
 
 .venom .button.button--is-warning {
@@ -1258,13 +1418,28 @@ html {
   color: #0d0d0d;
 }
 
-.venom .button.button--is-warning:hover, .venom .button.button--is-warning:focus, .venom .button.button--is-warning:active {
-  background-color: #d79804;
+.venom .button.button--is-warning:hover {
+  background: #d79804;
+}
+
+.venom .button.button--is-warning:focus {
+  background: #d79804 radial-gradient(circle, transparent 1%, #fab514 1%) center/15000%;
+}
+
+.venom .button.button--is-warning:active {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.venom .button.button--is-warning:active.button--is-dragged {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
+  border: none;
 }
 
 .venom .button.button--is-warning:disabled, .venom .button.button--is-warning.button--is-disabled {
-  background-color: #fcd578;
-  border-color: #fcd578;
+  background-color: #cccccc;
+  border: none;
 }
 
 .venom .button.button--is-warning.button--is-outline {
@@ -1273,10 +1448,48 @@ html {
   color: #fab514;
 }
 
-.venom .button.button--is-warning.button--is-outline:hover, .venom .button.button--is-warning.button--is-outline:focus, .venom .button.button--is-warning.button--is-outline:active {
+.venom .button.button--is-warning.button--is-outline:hover {
+  background: #fcd578;
+}
+
+.venom .button.button--is-warning.button--is-outline:focus {
+  background: #fbc546 radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
+}
+
+.venom .button.button--is-warning.button--is-outline:active {
   border-color: #d79804;
-  background-color: white;
   color: #d79804;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.venom .button.button--is-warning.button--is-outline:disabled, .venom .button.button--is-warning.button--is-outline.button--is-disabled {
+  background-color: white;
+  border-color: #cccccc;
+  border-style: solid;
+  border-width: 1px;
+  color: #999999;
+}
+
+.venom .button.button--is-warning.button--is-link {
+  background-color: transparent;
+  border: none;
+  color: #fab514;
+}
+
+.venom .button.button--is-warning.button--is-link:hover {
+  background-color: #fcd578;
+}
+
+.venom .button.button--is-warning.button--is-link:focus {
+  background: #fbc546 radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
+}
+
+.venom .button.button--is-warning.button--is-link:active {
+  border-color: #d79804;
+  color: #d79804;
+  background-size: 100%;
+  transition: background 0s;
 }
 
 .venom .button.button--is-monotone {
@@ -1285,13 +1498,28 @@ html {
   color: #0d0d0d;
 }
 
-.venom .button.button--is-monotone:hover, .venom .button.button--is-monotone:focus, .venom .button.button--is-monotone:active {
-  background-color: #4d4d4d;
+.venom .button.button--is-monotone:hover {
+  background: #4d4d4d;
+}
+
+.venom .button.button--is-monotone:focus {
+  background: #4d4d4d radial-gradient(circle, transparent 1%, gray 1%) center/15000%;
+}
+
+.venom .button.button--is-monotone:active {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.venom .button.button--is-monotone:active.button--is-dragged {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
+  border: none;
 }
 
 .venom .button.button--is-monotone:disabled, .venom .button.button--is-monotone.button--is-disabled {
   background-color: #cccccc;
-  border-color: #cccccc;
+  border: none;
 }
 
 .venom .button.button--is-monotone.button--is-outline {
@@ -1300,10 +1528,48 @@ html {
   color: gray;
 }
 
-.venom .button.button--is-monotone.button--is-outline:hover, .venom .button.button--is-monotone.button--is-outline:focus, .venom .button.button--is-monotone.button--is-outline:active {
+.venom .button.button--is-monotone.button--is-outline:hover {
+  background: #cccccc;
+}
+
+.venom .button.button--is-monotone.button--is-outline:focus {
+  background: #b3b3b3 radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
+}
+
+.venom .button.button--is-monotone.button--is-outline:active {
   border-color: #4d4d4d;
-  background-color: white;
   color: #4d4d4d;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.venom .button.button--is-monotone.button--is-outline:disabled, .venom .button.button--is-monotone.button--is-outline.button--is-disabled {
+  background-color: white;
+  border-color: #cccccc;
+  border-style: solid;
+  border-width: 1px;
+  color: #999999;
+}
+
+.venom .button.button--is-monotone.button--is-link {
+  background-color: transparent;
+  border: none;
+  color: gray;
+}
+
+.venom .button.button--is-monotone.button--is-link:hover {
+  background-color: #cccccc;
+}
+
+.venom .button.button--is-monotone.button--is-link:focus {
+  background: #b3b3b3 radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
+}
+
+.venom .button.button--is-monotone.button--is-link:active {
+  border-color: #4d4d4d;
+  color: #4d4d4d;
+  background-size: 100%;
+  transition: background 0s;
 }
 
 .venom .button.button--is-dark {
@@ -1312,13 +1578,28 @@ html {
   color: white;
 }
 
-.venom .button.button--is-dark:hover, .venom .button.button--is-dark:focus, .venom .button.button--is-dark:active {
-  background-color: #1a1a1a;
+.venom .button.button--is-dark:hover {
+  background: #1a1a1a;
+}
+
+.venom .button.button--is-dark:focus {
+  background: #1a1a1a radial-gradient(circle, transparent 1%, #262626 1%) center/15000%;
+}
+
+.venom .button.button--is-dark:active {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.venom .button.button--is-dark:active.button--is-dragged {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
+  border: none;
 }
 
 .venom .button.button--is-dark:disabled, .venom .button.button--is-dark.button--is-disabled {
-  background-color: #404040;
-  border-color: #404040;
+  background-color: #cccccc;
+  border: none;
 }
 
 .venom .button.button--is-dark.button--is-outline {
@@ -1327,10 +1608,48 @@ html {
   color: #262626;
 }
 
-.venom .button.button--is-dark.button--is-outline:hover, .venom .button.button--is-dark.button--is-outline:focus, .venom .button.button--is-dark.button--is-outline:active {
+.venom .button.button--is-dark.button--is-outline:hover {
+  background: #404040;
+}
+
+.venom .button.button--is-dark.button--is-outline:focus {
+  background: #333333 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+}
+
+.venom .button.button--is-dark.button--is-outline:active {
   border-color: #1a1a1a;
-  background-color: white;
   color: #1a1a1a;
+  background-size: 100%;
+  transition: background 0s;
+}
+
+.venom .button.button--is-dark.button--is-outline:disabled, .venom .button.button--is-dark.button--is-outline.button--is-disabled {
+  background-color: white;
+  border-color: #cccccc;
+  border-style: solid;
+  border-width: 1px;
+  color: #999999;
+}
+
+.venom .button.button--is-dark.button--is-link {
+  background-color: transparent;
+  border: none;
+  color: #262626;
+}
+
+.venom .button.button--is-dark.button--is-link:hover {
+  background-color: #404040;
+}
+
+.venom .button.button--is-dark.button--is-link:focus {
+  background: #333333 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+}
+
+.venom .button.button--is-dark.button--is-link:active {
+  border-color: #1a1a1a;
+  color: #1a1a1a;
+  background-size: 100%;
+  transition: background 0s;
 }
 
 .venom .button--is-facebook {
@@ -1415,12 +1734,10 @@ html {
 
 .venom .notification__content {
   color: #0d0d0d;
-  -webkit-box-flex: 1;
-          flex: 1;
+  flex: 1;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.1;
-  -webkit-transition: color 86ms ease-in;
   transition: color 86ms ease-in;
 }
 
@@ -1437,18 +1754,13 @@ html {
 }
 
 .venom .notification__container {
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   background-color: #b3b3b3;
   border-radius: 4px;
   box-sizing: border-box;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-direction: row;
   padding: 12px;
-  -webkit-transition: background-color 86ms ease-in, color 86ms ease-in, display 86ms ease-in;
   transition: background-color 86ms ease-in, color 86ms ease-in, display 86ms ease-in;
   max-width: 100%;
 }
@@ -1466,11 +1778,11 @@ html {
 }
 
 .venom .notification--is-primary:hover {
-  background-color: #f79e50;
+  background-color: #fef4ec;
 }
 
 .venom .notification--is-primary .notification__close::after {
-  color: #be5d09;
+  color: #853700;
 }
 
 .venom .notification--is-secondary {
@@ -1482,11 +1794,11 @@ html {
 }
 
 .venom .notification--is-secondary:hover {
-  background-color: #0070d1;
+  background-color: #e9f0f7;
 }
 
 .venom .notification--is-secondary .notification__close::after {
-  color: #001e38;
+  color: #004785;
 }
 
 .venom .notification--is-danger {
@@ -1604,11 +1916,8 @@ html {
 }
 
 .venom .input {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-direction: row;
   position: relative;
   width: 100%;
   line-height: 24px;
@@ -1700,16 +2009,12 @@ html {
   background: white;
   border-width: 0 2px 2px 0;
   border-radius: 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .venom .text-field {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-direction: column;
   position: relative;
   width: 100%;
   margin-bottom: 12px;
@@ -1751,7 +2056,6 @@ html {
   left: 0;
   padding: 12px;
   max-width: 100%;
-  -webkit-transition: all 172ms ease;
   transition: all 172ms ease;
   cursor: text;
 }
@@ -1787,20 +2091,14 @@ html {
 }
 
 .venom .text-field.text-field--has-left-icon .text-field__container, .venom .text-field.text-field--has-right-icon .text-field__container {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .venom .text-field.text-field--has-left-icon .text-field__icon, .venom .text-field.text-field--has-right-icon .text-field__icon {
-  -webkit-box-align: center;
-          align-items: center;
-  display: -webkit-box;
+  align-items: center;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 48px;
 }
 
@@ -1850,9 +2148,9 @@ html {
   height: 100%;
   padding: 0 12px;
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-          justify-content: left;
+  justify-content: left;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-box-direction--ms-flex-direction: column;
@@ -1881,11 +2179,9 @@ html {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  -webkit-transition: background 400ms;
   transition: background 400ms;
   background-position: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   border-bottom: transparent solid 2px;
 }
 
@@ -1896,7 +2192,6 @@ html {
 
 .venom .tab .tab__item:active {
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1921,7 +2216,6 @@ html {
 
 .venom .tab--is-oldstyle .tab__item:active {
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1939,12 +2233,10 @@ html {
 
 .venom .collapse__title {
   color: #0d0d0d;
-  -webkit-box-flex: 1;
-          flex: 1;
+  flex: 1;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.1;
-  -webkit-transition: color 86ms ease-in;
   transition: color 86ms ease-in;
 }
 
@@ -1954,11 +2246,8 @@ html {
   margin: 0 15px;
   padding: 12px;
   box-sizing: border-box;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-direction: row;
   padding: 12px;
   width: 100%;
   flex-wrap: wrap;
@@ -2016,12 +2305,9 @@ html {
   bottom: 0;
   background-color: rgba(10, 10, 10, 0.86);
   z-index: 101;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -2092,7 +2378,6 @@ html {
   padding: 12px;
   color: #00549e;
   font-weight: 700;
-  display: -webkit-box;
   display: flex;
 }
 
@@ -2102,8 +2387,7 @@ html {
   border-radius: 290486px;
   cursor: pointer;
   display: inline-block;
-  -webkit-box-flex: 0;
-          flex-grow: 0;
+  flex-grow: 0;
   flex-shrink: 0;
   font-size: 0;
   height: 20px;
@@ -2125,7 +2409,6 @@ html {
 .venom .modal__card__footer {
   background-color: white;
   padding: 12px;
-  display: -webkit-box;
   display: flex;
 }
 
@@ -2142,7 +2425,6 @@ html {
 @media screen and (max-width: 768px) {
   .venom .modal {
     display: block;
-    -webkit-transition: left 1s ease;
     transition: left 1s ease;
     width: 100%;
     height: 100%;
@@ -2159,8 +2441,7 @@ html {
 
 .venom .helper--is-link {
   color: #00549e;
-  -webkit-text-decoration: underline #00549e;
-          text-decoration: underline #00549e;
+  text-decoration: underline #00549e;
   font-weight: 700;
   font-size: 14px;
   letter-spacing: .5px;
@@ -2625,9 +2906,10 @@ html {
   }
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .venom .helper--has-border {
     border-width: 0.5px;
   }
 }
+
 /*# sourceMappingURL=venom.css.map */

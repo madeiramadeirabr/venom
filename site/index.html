@@ -116,13 +116,24 @@
 
     <br>
 
-    <button class="button button--is-secondary">secondary</button>
-    <button class="button button--is-secondary button--is-outline">secondary outline</button>
-    <button class="button button--is-primary">primary</button>
+    <button class="button button--is-secondary" draggable="true" ondragend="drop(event)" ondragover="drag(event)" >
+      <label class="button__icon">
+        s
+      </label>
+      <span class="button__text">
+        secondary
+      </span>
+      <label class="button__icon">
+        s
+      </label>
+    </button>
+    <button class="button button--is-secondary button--is-outline" draggable="true" ondragend="drop(event)" ondragover="drag(event)">secondary outline</button>
+    <button class="button button--is-primary" style="margin: 10px" draggable="true" ondragend="drop(event)" ondragover="drag(event)">primary</button>
     <button class="button button--is-primary button--is-outline">primary outline</button>
     <button class="button">default</button>
     <button class="button button--is-outline">default outline</button>
     <button class="button button--is-link">default link</button>
+    <button class="button button--is-primary button--is-link">default link</button>
 
 
     <br />

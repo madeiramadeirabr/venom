@@ -6,6 +6,14 @@ console.log(tabs);
 applyIndicatorClass(tabs[0]);
 displaySelectedTab(tabsContent[0].dataset.index);
 
+function drag(event) {
+    event.target.classList.add("button--is-dragged");
+}
+
+function drop(event) {
+    console.log("Drop");
+    event.target.classList.remove("button--is-dragged");
+}
 
 for (let tab of tabs) {
     tab.addEventListener("click", (event) => {
