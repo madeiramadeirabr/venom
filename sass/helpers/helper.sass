@@ -295,15 +295,35 @@
       &-white
         color: $color-white
 
+        svg
+          path
+            &:not([fill])
+              color: $color-white
+
       &-monotone
         color: $color-monotone
+
+        svg
+          path
+            &:not([fill])
+              color: $color-monotone
 
       &-black
         color: $color-black
 
+        svg
+          path
+            &:not([fill])
+              color: $color-black
+
       @each $color, $value in $color-regular-map
         &-#{$color}
           color: $value
+
+          svg
+            path
+              &:not([fill])
+                color: $value
 
     &--has-background
       @each $color, $value in $color-regular-map

@@ -2408,10 +2408,6 @@ html {
   content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.12 14.71L12 10.83l3.88 3.88c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 8.71c-.39-.39-1.02-.39-1.41 0L6.7 13.3c-.39.39-.39 1.02 0 1.41.39.38 1.03.39 1.42 0z"/></svg>');
 }
 
-.venom.modal--is-hidden {
-  overflow: hidden;
-}
-
 .venom .modal {
   overflow: auto;
   position: fixed;
@@ -2429,22 +2425,26 @@ html {
           align-items: center;
 }
 
+.venom .modal--is-hidden {
+  overflow: hidden;
+}
+
 @media screen and (min-width: 768px) {
-  .venom .modal__card {
+  .venom .modal__container {
     max-width: calc( 100vh - 40px);
     max-height: calc( 100vh - 40px);
   }
-  .venom .modal.modal--is-hidden {
+  .venom .modal--is-hidden {
     display: none;
   }
 }
 
-.venom .modal__card {
+.venom .modal__container {
   background-color: white;
 }
 
-.venom .modal__card__close {
-  margin-right: 15px;
+.venom .modal__close {
+  margin-right: 12px;
   cursor: pointer;
   width: 14px;
   background: rgba(0, 0, 0, 0);
@@ -2457,18 +2457,18 @@ html {
   display: inline-block;
   flex-shrink: 0;
   font-size: 0;
-  height: 20px;
-  max-height: 20px;
-  max-width: 20px;
-  min-height: 20px;
-  min-width: 20px;
+  height: 24px;
+  max-height: 24px;
+  max-width: 24px;
+  min-height: 24px;
+  min-width: 24px;
   outline: none;
   position: relative;
   vertical-align: top;
-  width: 20px;
+  width: 24px;
 }
 
-.venom .modal__card__close::after, .venom .modal__card__close::before {
+.venom .modal__close::after, .venom .modal__close::before {
   background-color: #fff;
   content: "";
   display: block;
@@ -2481,82 +2481,34 @@ html {
   transform-origin: center center;
 }
 
-.venom .modal__card__close::before {
+.venom .modal__close::before {
   height: 2px;
   width: 50%;
 }
 
-.venom .modal__card__close::after {
+.venom .modal__close::after {
   height: 50%;
   width: 2px;
 }
 
-.venom .modal__card__header {
-  background-color: #cccccc;
-  font-size: 20px;
-  padding: 12px;
-  color: #00549e;
-  font-weight: 700;
-  display: -webkit-box;
-  display: flex;
-}
-
-.venom .modal__card__header.delete {
-  background-color: rgba(10, 10, 10, 0.2);
-  border: none;
-  border-radius: 290486px;
-  cursor: pointer;
-  display: inline-block;
-  -webkit-box-flex: 0;
-          flex-grow: 0;
-  flex-shrink: 0;
-  font-size: 0;
-  height: 20px;
-  max-height: 20px;
-  max-width: 20px;
-  min-height: 20px;
-  min-width: 20px;
-  outline: none;
-  position: relative;
-  vertical-align: top;
-  width: 20px;
-}
-
-.venom .modal__card__body {
+.venom .modal__body {
   background-color: white;
   padding: 12px;
-}
-
-.venom .modal__card__footer {
-  background-color: white;
-  padding: 12px;
-  display: -webkit-box;
-  display: flex;
-}
-
-.venom .modal__card__footer__close {
-  margin-left: auto;
-  margin-right: 0;
-}
-
-.venom .modal__card__footer__action {
-  margin-left: 0;
-  margin-right: auto;
 }
 
 @media screen and (max-width: 768px) {
   .venom .modal {
     display: block;
-    -webkit-transition: left 1s ease;
-    transition: left 1s ease;
+    -webkit-transition: left 344ms ease-in;
+    transition: left 344ms ease-in;
     width: 100%;
     height: 100%;
   }
-  .venom .modal.modal--is-hidden {
+  .venom .modal--is-hidden {
     right: auto;
     left: -300vh;
   }
-  .venom .modal__card {
+  .venom .modal__container {
     width: 100%;
     height: 100%;
   }
@@ -2994,7 +2946,15 @@ html {
   color: white;
 }
 
+.venom .helper--has-text-white svg path:not([fill]) {
+  color: white;
+}
+
 .venom .helper--has-text-monotone {
+  color: gray;
+}
+
+.venom .helper--has-text-monotone svg path:not([fill]) {
   color: gray;
 }
 
@@ -3002,7 +2962,15 @@ html {
   color: #0d0d0d;
 }
 
+.venom .helper--has-text-black svg path:not([fill]) {
+  color: #0d0d0d;
+}
+
 .venom .helper--has-text-primary {
+  color: #f4831f;
+}
+
+.venom .helper--has-text-primary svg path:not([fill]) {
   color: #f4831f;
 }
 
@@ -3010,7 +2978,15 @@ html {
   color: #00549e;
 }
 
+.venom .helper--has-text-secondary svg path:not([fill]) {
+  color: #00549e;
+}
+
 .venom .helper--has-text-danger {
+  color: #db4639;
+}
+
+.venom .helper--has-text-danger svg path:not([fill]) {
   color: #db4639;
 }
 
@@ -3018,7 +2994,15 @@ html {
   color: #009e22;
 }
 
+.venom .helper--has-text-success svg path:not([fill]) {
+  color: #009e22;
+}
+
 .venom .helper--has-text-warning {
+  color: #fab514;
+}
+
+.venom .helper--has-text-warning svg path:not([fill]) {
   color: #fab514;
 }
 
@@ -3026,7 +3010,15 @@ html {
   color: gray;
 }
 
+.venom .helper--has-text-monotone svg path:not([fill]) {
+  color: gray;
+}
+
 .venom .helper--has-text-dark {
+  color: #262626;
+}
+
+.venom .helper--has-text-dark svg path:not([fill]) {
   color: #262626;
 }
 
