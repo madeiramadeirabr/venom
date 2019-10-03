@@ -2521,6 +2521,10 @@ html {
   transition: height 172ms ease-in;
 }
 
+.venom .panel .panel__arrow {
+  cursor: pointer;
+}
+
 .venom .panel .panel__arrow svg {
   -webkit-transition: -webkit-transform 172ms ease-in;
   transition: -webkit-transform 172ms ease-in;
