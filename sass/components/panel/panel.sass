@@ -1,0 +1,31 @@
+.venom
+  .panel
+    $self: '.panel'
+
+    #{ $self }
+      &__body
+        display: none
+        height: $zero
+        transition: height $transition-medium $easing
+
+      &__arrow
+        svg
+          transition: transform $transition-medium $easing
+
+    &#{ $self }
+      &--is-open
+        .panel__arrow
+          svg
+            transform: rotate(180deg)
+
+        .panel__body
+          height: 100%
+          display: block !important
+
+      &--has-description
+        .panel__description
+          display: block
+
+      &--has-no-description
+        .panel__description
+          display: none !important

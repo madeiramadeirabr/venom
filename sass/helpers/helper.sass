@@ -2,6 +2,12 @@
   .helper
     $self: '.helper'
 
+    &--is-on-left
+      float: left
+
+    &--is-on-right
+      float: right
+
     &--is-link
       color: $color-secondary
       text-decoration: underline $color-secondary
@@ -240,6 +246,9 @@
 
       &-light
         font-weight: $weight-light
+
+      &-regular
+        font-weight: $weight-regular
 
       &-semibold
         font-weight: $weight-semibold
