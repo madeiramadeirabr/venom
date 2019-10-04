@@ -2951,7 +2951,7 @@ html {
 }
 
 .venom .helper--has-text-white svg path:not([fill]) {
-  color: white;
+  fill: white;
 }
 
 .venom .helper--has-text-monotone {
@@ -2959,7 +2959,7 @@ html {
 }
 
 .venom .helper--has-text-monotone svg path:not([fill]) {
-  color: gray;
+  fill: gray;
 }
 
 .venom .helper--has-text-black {
@@ -2967,7 +2967,7 @@ html {
 }
 
 .venom .helper--has-text-black svg path:not([fill]) {
-  color: #0d0d0d;
+  fill: #0d0d0d;
 }
 
 .venom .helper--has-text-primary {
@@ -2975,7 +2975,7 @@ html {
 }
 
 .venom .helper--has-text-primary svg path:not([fill]) {
-  color: #f4831f;
+  fill: #f4831f;
 }
 
 .venom .helper--has-text-secondary {
@@ -2983,7 +2983,7 @@ html {
 }
 
 .venom .helper--has-text-secondary svg path:not([fill]) {
-  color: #00549e;
+  fill: #00549e;
 }
 
 .venom .helper--has-text-danger {
@@ -2991,7 +2991,7 @@ html {
 }
 
 .venom .helper--has-text-danger svg path:not([fill]) {
-  color: #db4639;
+  fill: #db4639;
 }
 
 .venom .helper--has-text-success {
@@ -2999,7 +2999,7 @@ html {
 }
 
 .venom .helper--has-text-success svg path:not([fill]) {
-  color: #009e22;
+  fill: #009e22;
 }
 
 .venom .helper--has-text-warning {
@@ -3007,7 +3007,7 @@ html {
 }
 
 .venom .helper--has-text-warning svg path:not([fill]) {
-  color: #fab514;
+  fill: #fab514;
 }
 
 .venom .helper--has-text-monotone {
@@ -3015,7 +3015,7 @@ html {
 }
 
 .venom .helper--has-text-monotone svg path:not([fill]) {
-  color: gray;
+  fill: gray;
 }
 
 .venom .helper--has-text-dark {
@@ -3023,7 +3023,7 @@ html {
 }
 
 .venom .helper--has-text-dark svg path:not([fill]) {
-  color: #262626;
+  fill: #262626;
 }
 
 .venom .helper--has-background-primary {

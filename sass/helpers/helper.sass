@@ -298,7 +298,7 @@
         svg
           path
             &:not([fill])
-              color: $color-white
+              fill: $color-white
 
       &-monotone
         color: $color-monotone
@@ -306,7 +306,7 @@
         svg
           path
             &:not([fill])
-              color: $color-monotone
+              fill: $color-monotone
 
       &-black
         color: $color-black
@@ -314,7 +314,7 @@
         svg
           path
             &:not([fill])
-              color: $color-black
+              fill: $color-black
 
       @each $color, $value in $color-regular-map
         &-#{$color}
@@ -323,7 +323,7 @@
           svg
             path
               &:not([fill])
-                color: $value
+                fill: $value
 
     &--has-background
       @each $color, $value in $color-regular-map
