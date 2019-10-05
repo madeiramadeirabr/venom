@@ -614,31 +614,34 @@ html {
   display: flex;
 }
 
-.venom .grid--is-start {
+.venom .grid--has-content-start {
   -webkit-box-pack: start;
           justify-content: flex-start;
 }
 
-.venom .grid--is-center {
-  -webkit-box-align: center;
-          align-items: center;
+.venom .grid--has-content-center {
   -webkit-box-pack: center;
           justify-content: center;
 }
 
-.venom .grid--is-end {
+.venom .grid--has-content-end {
   -webkit-box-pack: end;
           justify-content: flex-end;
 }
 
-.venom .grid--is-top {
+.venom .grid--has-items-start {
   -webkit-box-align: start;
           align-items: flex-start;
 }
 
-.venom .grid--is-bottom {
-  -webkit-box-align: end;
-          align-items: flex-end;
+.venom .grid--has-items-center {
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+
+.venom .grid--has-items-end {
+  -webkit-box-align: flex-ned;
+          align-items: flex-ned;
 }
 
 .venom .grid--has-no-wrap {
