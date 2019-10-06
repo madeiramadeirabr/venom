@@ -41,10 +41,10 @@ $row: '.grid__row'
         flex-grow: 1
         flex-basis: 0
         max-width: calc(100% - 24px)
-        padding: $desktop-column-gap
+        padding: $zero
 
-        &--has-no-gutter
-          padding: $zero
+        &--has-gutter
+          padding: $desktop-column-gap
 
         &--is-first
           order: -1
@@ -75,4 +75,4 @@ $row: '.grid__row'
               max-width: calc(#{ $count } - #{ $desktop-column-gap * 2}) !important
 
               &-offset-mobile
-                margin-left: $count
+                margin-left: calc(#{ $count } - #{ $desktop-column-gap * 2}) !important
