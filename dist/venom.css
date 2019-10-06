@@ -692,7 +692,7 @@ html {
   box-sizing: border-box !important;
   -webkit-box-flex: 0;
           flex: 0 0 auto;
-  height: 20px;
+  min-height: 1px;
   margin: 12px;
   -webkit-box-flex: 1;
           flex-grow: 1;
