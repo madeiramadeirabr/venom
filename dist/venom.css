@@ -698,6 +698,7 @@ html {
           flex-grow: 1;
   flex-basis: 0;
   max-width: calc(100% - 24px);
+  padding: 12px;
 }
 
 .venom .grid__row > .grid__column--has-no-gutter, .venom .grid__columns > .grid__column--has-no-gutter {
