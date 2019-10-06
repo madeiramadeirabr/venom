@@ -36,7 +36,8 @@ $input-el: '.text-field'
       transition: all $transition-medium ease
       cursor: text
 
-    input
+    input,
+    textarea
       +border-box
       border: none
       border-radius: $radius
@@ -50,6 +51,7 @@ $input-el: '.text-field'
       outline: none
 
     input:focus + #{$input-el}__label,
+    textarea:focus + #{$input-el}__label,
     &#{$input-el}--is-active #{$input-el}__label
         top: -( $gap-regular / 2)
         left: $gap-regular - 2px !important

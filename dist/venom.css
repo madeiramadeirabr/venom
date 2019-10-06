@@ -2164,7 +2164,8 @@ html {
   cursor: text;
 }
 
-.venom .text-field input {
+.venom .text-field input,
+.venom .text-field textarea {
   box-sizing: border-box !important;
   border: none;
   border-radius: 4px;
@@ -2180,6 +2181,7 @@ html {
 }
 
 .venom .text-field input:focus + .text-field__label,
+.venom .text-field textarea:focus + .text-field__label,
 .venom .text-field.text-field--is-active .text-field__label {
   top: -6px;
   left: 10px !important;
