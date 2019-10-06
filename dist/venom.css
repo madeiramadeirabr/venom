@@ -635,13 +635,13 @@ html {
 }
 
 .venom .grid--has-items-center {
-  -webkit-box-pack: center;
-          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
 }
 
 .venom .grid--has-items-end {
-  -webkit-box-align: flex-ned;
-          align-items: flex-ned;
+  -webkit-box-align: end;
+          align-items: flex-end;
 }
 
 .venom .grid--has-no-wrap {
