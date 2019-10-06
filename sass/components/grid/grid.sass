@@ -2,91 +2,76 @@ $column: '.grid__column'
 $columns: '.grid__columns'
 $row: '.grid__row'
 
+
 .venom
   .grid
     $self: &
 
     &__row
-      +clearfix
-      align-content: space-around
+      +border-box
       display: flex
+      flex: 0 1 auto
       flex-direction: row
-      flex-flow: row wrap
-      justify-content: space-between
-      max-width: 100%
-      padding: $zero
-      width: 100%
+      flex-wrap: wrap
       margin: $zero
+      padding: $zero
 
       &--is-reverse
         flex-direction: row-reverse
 
-      &--has-no-gutter
-        > #{ $column }
-          padding: $zero !important
-
     &__columns
-      +clearfix
-      align-content: space-around
+      +border-box
       display: flex
+      flex: 0 1 auto
       flex-direction: column
-      flex-flow: column wrap
-      justify-content: space-between
-      max-width: 100%
-      padding: $desktop-column-gap
-      width: 100%
+      flex-wrap: wrap
       margin: $zero
+      padding: $zero
 
       &--is-reverse
         flex-direction: column-reverse
 
-      &--has-no-gutter
-        > #{ $column }
-          margin: $zero !important
-
-    &__column
-      display: block
-      flex-basis: 0
-      flex-grow: 1
-      flex-shrink: 1
-      flex: 1
-      padding: $zero
-      min-height: 1px
-
-      &--has-gutter
-        padding: $desktop-column-gap
-
-      &--is-first
-        order: -1
-
-      &--is-last
-        order: 1
-
-      @each $name, $count in $numbers
-        &--is-#{$name}
-          flex: 0 0 $count
-
-          &-offset
-            margin-left: $count
-
-      &--is-twelve
-        flex: 0 0 100%
-
-  +for-size(mobile)
-    #{ $columns },
-    #{ $row }
-
+    &__row,
+    &__columns
       > #{ $column }
-        &--has-no-gutter-mobile
-          > #{ $column }
-            padding: $zero !important
+        +border-box
+        flex: 0 0 auto
+        height: 20px
+        margin: $desktop-column-gap
+        flex-grow: 1
+        flex-basis: 0
+        max-width: calc(100% - 24px)
+
+        &--has-no-gutter
+          padding: $zero
+
+        &--is-first
+          order: -1
+
+        &--is-last
+          order: 1
 
         @each $name, $count in $numbers
-          &--is-#{$name}-mobile
-            flex: 0 0 $count !important
+          &--is-#{$name}
+            flex-basis: calc(#{ $count } - #{ $desktop-column-gap * 2})
+            max-width: calc(#{ $count } - #{ $desktop-column-gap * 2})
 
             &-offset
-              margin-left: $count  !important
+              margin-left: $count
 
-        &--is-twelve-mobile
-          flex: 0 0 100% !important
+        &--is-auto
+          flex: 0 0 auto
+          width: auto
+          max-width: 100%
+
+    +for-size(mobile)
+      &__row,
+      &__columns
+        > #{ $column }
+          @each $name, $count in $numbers
+            &--is-#{$name}-mobile
+              flex-basis: calc(#{ $count } - #{ $desktop-column-gap * 2}) !important
+              max-width: calc(#{ $count } - #{ $desktop-column-gap * 2}) !important
+
+              &-offset-mobile
+                margin-left: $count
