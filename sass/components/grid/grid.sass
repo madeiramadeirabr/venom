@@ -31,48 +31,44 @@ $row: '.grid__row'
       &--is-reverse
         flex-direction: column-reverse
 
-    &__row,
-    &__columns
-      > #{ $column }
-        +border-box
+    &__column
+      +border-box
+      flex: 0 0 auto
+      min-height: 1px
+      margin: $desktop-column-gap
+      flex-grow: 1
+      flex-basis: 0
+      max-width: calc(100% - #{ $desktop-column-gap * 2 })
+      padding: $zero
+
+      &--has-gutter
+        padding: $desktop-column-gap
+
+      &--is-first
+        order: -1
+
+      &--is-last
+        order: 1
+
+      @each $name, $count in $numbers
+        &--is-#{$name}
+          flex-basis: calc(#{ $count } - #{ $desktop-column-gap * 2})
+          max-width: calc(#{ $count } - #{ $desktop-column-gap * 2})
+
+          &-offset
+            margin-left: $count
+
+      &--is-auto
         flex: 0 0 auto
-        min-height: 1px
-        margin: $desktop-column-gap
-        flex-grow: 1
-        flex-basis: 0
-        max-width: calc(100% - 24px)
-        padding: $zero
-
-        &--has-gutter
-          padding: $desktop-column-gap
-
-        &--is-first
-          order: -1
-
-        &--is-last
-          order: 1
-
-        @each $name, $count in $numbers
-          &--is-#{$name}
-            flex-basis: calc(#{ $count } - #{ $desktop-column-gap * 2})
-            max-width: calc(#{ $count } - #{ $desktop-column-gap * 2})
-
-            &-offset
-              margin-left: $count
-
-        &--is-auto
-          flex: 0 0 auto
-          width: auto
-          max-width: 100%
+        width: auto
+        max-width: 100%
 
     +for-size(mobile)
-      &__row,
-      &__columns
-        > #{ $column }
-          @each $name, $count in $numbers
-            &--is-#{$name}-mobile
-              flex-basis: calc(#{ $count } - #{ $desktop-column-gap * 2}) !important
-              max-width: calc(#{ $count } - #{ $desktop-column-gap * 2}) !important
+      &__column
+        @each $name, $count in $numbers
+          &--is-#{$name}-mobile
+            flex-basis: calc(#{ $count } - #{ $desktop-column-gap * 2}) !important
+            max-width: calc(#{ $count } - #{ $desktop-column-gap * 2}) !important
 
-              &-offset-mobile
-                margin-left: calc(#{ $count } - #{ $desktop-column-gap * 2}) !important
+            &-offset-mobile
+              margin-left: calc(#{ $count } - #{ $desktop-column-gap * 2}) !important

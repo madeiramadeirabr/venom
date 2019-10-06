@@ -21,6 +21,9 @@
     background-position: center
     letter-spacing: .75px
 
+    + .button
+      margin-right: $gap-regular
+
     #{$self}__icon
       display: flex
       width: 48px
@@ -73,7 +76,7 @@
 
           &:hover
             background: map-get($color-dark-map, $color)
-          
+
           &:focus
             background: map-get($color-dark-map, $color) radial-gradient(circle, transparent 1%, map-get($color-regular-map, $color) 1%) center/15000%
 
@@ -84,7 +87,7 @@
             &#{ $self }--is-dragged
               box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48)
               border: none
-            
+
           &:disabled,
           &#{ $self }--is-disabled
             background-color: #cccccc
@@ -100,10 +103,10 @@
 
             &:focus
               background: map-get($color-light-map, $color) radial-gradient(circle, transparent 1%, map-get($color-contrast-map, $color) 1%) center/15000%
-            
+
             &:active
               border-color: map-get($color-dark-map, $color)
-              color: map-get($color-dark-map, $color)    
+              color: map-get($color-dark-map, $color)
               background-size: 100%;
               transition: background 0s;
 
@@ -125,10 +128,9 @@
 
             &:focus
               background: map-get($color-light-map, $color) radial-gradient(circle, transparent 1%, map-get($color-contrast-map, $color) 1%) center/15000%
-            
+
             &:active
               border-color: map-get($color-dark-map, $color)
-              color: map-get($color-dark-map, $color)    
+              color: map-get($color-dark-map, $color)
               background-size: 100%;
               transition: background 0s;
-      
