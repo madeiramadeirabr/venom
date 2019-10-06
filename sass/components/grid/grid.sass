@@ -14,10 +14,17 @@ $row: '.grid__row'
       flex-direction: row
       flex-wrap: wrap
       margin: $zero
-      padding: $zero
+      padding: $desktop-column-gap
 
       &--is-reverse
         flex-direction: row-reverse
+
+      &--has-no-gap-vertical
+        padding-bottom: $zero
+        padding-top: $zero
+
+      &--has-no-gap-vertical
+        padding: $zero
 
     &__columns
       +border-box
@@ -26,23 +33,33 @@ $row: '.grid__row'
       flex-direction: column
       flex-wrap: wrap
       margin: $zero
-      padding: $zero
+      padding: $desktop-column-gap
 
       &--is-reverse
         flex-direction: column-reverse
+
+      &--has-no-gap-vertical
+        padding-bottom: $zero
+        padding-top: $zero
+
+      &--has-no-gap-vertical
+        padding: $zero
 
     &__column
       +border-box
       flex: 0 0 auto
       min-height: 1px
-      margin: $desktop-column-gap
+      margin: $zero $desktop-column-gap
       flex-grow: 1
       flex-basis: 0
-      max-width: calc(100% - #{ $desktop-column-gap * 2 })
+      max-width: calc(100% - #{ $desktop-column-gap })
       padding: $zero
 
       &--has-gutter
         padding: $desktop-column-gap
+
+      &--has-no-margin
+        margin: $zero
 
       &--is-first
         order: -1
@@ -52,23 +69,40 @@ $row: '.grid__row'
 
       @each $name, $count in $numbers
         &--is-#{$name}
-          flex-basis: calc(#{ $count } - #{ $desktop-column-gap * 2})
-          max-width: calc(#{ $count } - #{ $desktop-column-gap * 2})
+          flex-basis: calc(#{ $count } - #{ $desktop-column-gap})
+          max-width: calc(#{ $count } - #{ $desktop-column-gap})
 
           &-offset
-            margin-left: $count
+            margin-left: calc(#{ $count } - #{ $desktop-column-gap})
+
+        &--is-twelve
+          flex-basis: 100%
+          max-width: 100%
 
       &--is-auto
         flex: 0 0 auto
         width: auto
         max-width: 100%
 
+    &__row,
+    &__columns
+      > #{ $column }
+        &:last-child
+          margin-right: $zero
+
+        &:first-child
+          margin-left: $zero
+
     +for-size(mobile)
       &__column
         @each $name, $count in $numbers
           &--is-#{$name}-mobile
-            flex-basis: calc(#{ $count } - #{ $desktop-column-gap * 2}) !important
-            max-width: calc(#{ $count } - #{ $desktop-column-gap * 2}) !important
+            flex-basis: calc(#{ $count } - #{ $desktop-column-gap}) !important
+            max-width: calc(#{ $count } - #{ $desktop-column-gap}) !important
 
             &-offset-mobile
-              margin-left: calc(#{ $count } - #{ $desktop-column-gap * 2}) !important
+              margin-left: calc(#{ $count } - #{ $desktop-column-gap}) !important
+
+        &--is-twelve-mobile
+          flex-basis: 100% !important
+          max-width: 100% !important
