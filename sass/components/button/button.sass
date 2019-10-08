@@ -29,6 +29,11 @@
       width: 48px
       justify-content: center
 
+      svg
+        path
+          &:not([fill])
+            fill: $color-black
+
     &__text
       flex: 1
       flex-basis: 100%

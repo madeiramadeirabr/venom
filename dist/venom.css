@@ -1113,6 +1113,10 @@ html {
           justify-content: center;
 }
 
+.venom .button .button__icon svg path:not([fill]) {
+  fill: #0d0d0d;
+}
+
 .venom .button__text {
   -webkit-box-flex: 1;
           flex: 1;
@@ -2498,6 +2502,8 @@ html {
 .venom .modal__body {
   background-color: white;
   padding: 12px;
+  overflow-y: auto;
+  max-height: 100%;
 }
 
 @media screen and (max-width: 768px) {
