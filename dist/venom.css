@@ -1098,7 +1098,7 @@ html {
   -webkit-transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
   transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
   background-position: center;
-  letter-spacing: .75px;
+  letter-spacing: .25px;
 }
 
 .venom .button + .button {
@@ -2574,6 +2574,8 @@ html {
 
 .venom .helper--is-no-list-style {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .venom .helper--is-link {
