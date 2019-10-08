@@ -719,6 +719,13 @@ html {
   padding: 0;
 }
 
+.venom .grid__column--has-content-centered {
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
 .venom .grid__column--has-gutter {
   padding: 12px;
 }
