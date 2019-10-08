@@ -1114,7 +1114,7 @@ html {
 }
 
 .venom .button .button__icon svg path:not([fill]) {
-  fill: #0d0d0d;
+  fill: currentColor;
 }
 
 .venom .button__text {
