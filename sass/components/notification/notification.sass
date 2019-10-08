@@ -12,13 +12,15 @@
 
     &__close
       cursor: pointer
-      width: $size-regular
+      width: $size-regular * 2
       background: rgba(0,0,0,0)
       border: none
       padding: $zero
 
-      &::after
-        content: '\2717'
+      svg
+        path
+          &:not([fill])
+            fill: currentColor
 
     &__container
       align-items: center
@@ -43,7 +45,3 @@
 
         &:hover // sass-lint:disable-line nesting-depth
           background-color: map-get($color-lightness-map, $color)
-
-        #{ $self }__close
-          &::after
-            color: map-get($color-darkness-map, $color)

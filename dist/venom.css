@@ -1837,14 +1837,14 @@ html {
 
 .venom .notification__close {
   cursor: pointer;
-  width: 14px;
+  width: 28px;
   background: rgba(0, 0, 0, 0);
   border: none;
   padding: 0;
 }
 
-.venom .notification__close::after {
-  content: '\2717';
+.venom .notification__close svg path:not([fill]) {
+  fill: currentColor;
 }
 
 .venom .notification__container {
@@ -1880,10 +1880,6 @@ html {
   background-color: #fef4ec;
 }
 
-.venom .notification--is-primary .notification__close::after {
-  color: #853700;
-}
-
 .venom .notification--is-secondary {
   background-color: #00549e;
 }
@@ -1894,10 +1890,6 @@ html {
 
 .venom .notification--is-secondary:hover {
   background-color: #e9f0f7;
-}
-
-.venom .notification--is-secondary .notification__close::after {
-  color: #004785;
 }
 
 .venom .notification--is-danger {
@@ -1912,10 +1904,6 @@ html {
   background-color: #e36e64;
 }
 
-.venom .notification--is-danger .notification__close::after {
-  color: #a82a1f;
-}
-
 .venom .notification--is-success {
   background-color: #009e22;
 }
@@ -1926,10 +1914,6 @@ html {
 
 .venom .notification--is-success:hover {
   background-color: #00d12d;
-}
-
-.venom .notification--is-success .notification__close::after {
-  color: #006b17;
 }
 
 .venom .notification--is-warning {
@@ -1944,10 +1928,6 @@ html {
   background-color: #fcd578;
 }
 
-.venom .notification--is-warning .notification__close::after {
-  color: #a57403;
-}
-
 .venom .notification--is-monotone {
   background-color: gray;
 }
@@ -1960,10 +1940,6 @@ html {
   background-color: #cccccc;
 }
 
-.venom .notification--is-monotone .notification__close::after {
-  color: #333333;
-}
-
 .venom .notification--is-dark {
   background-color: #262626;
 }
@@ -1974,10 +1950,6 @@ html {
 
 .venom .notification--is-dark:hover {
   background-color: #404040;
-}
-
-.venom .notification--is-dark .notification__close::after {
-  color: #0d0d0d;
 }
 
 .venom .card {
