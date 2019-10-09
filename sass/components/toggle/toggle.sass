@@ -26,8 +26,12 @@ $toggle: '.toggle'
     input
       display: none
 
+    &#{ $toggle }--is-success
+      input:checked ~ #{ $toggle }__track
+        box-shadow: inset $zero $zero $zero ($gap-regular * 2) $color-success
+
     input:checked ~ #{ $toggle }__track
-      box-shadow: inset $zero $zero $zero ($gap-regular * 2) #4bd863
+      box-shadow: inset $zero $zero $zero ($gap-regular * 2) $color-secondary
 
     input:checked ~ #{ $toggle }__switch
       right: 2px
