@@ -715,7 +715,7 @@ html {
   -webkit-box-flex: 1;
           flex-grow: 1;
   flex-basis: 0;
-  max-width: calc(100% - 12px);
+  max-width: calc(100% - 24px);
   padding: 0;
 }
 
@@ -756,6 +756,7 @@ html {
 .venom .grid__column--is-twelve {
   flex-basis: 100%;
   max-width: 100%;
+  margin: 0;
 }
 
 .venom .grid__column--is-two {
@@ -770,6 +771,7 @@ html {
 .venom .grid__column--is-twelve {
   flex-basis: 100%;
   max-width: 100%;
+  margin: 0;
 }
 
 .venom .grid__column--is-three {
@@ -784,6 +786,7 @@ html {
 .venom .grid__column--is-twelve {
   flex-basis: 100%;
   max-width: 100%;
+  margin: 0;
 }
 
 .venom .grid__column--is-four {
@@ -798,6 +801,7 @@ html {
 .venom .grid__column--is-twelve {
   flex-basis: 100%;
   max-width: 100%;
+  margin: 0;
 }
 
 .venom .grid__column--is-five {
@@ -812,6 +816,7 @@ html {
 .venom .grid__column--is-twelve {
   flex-basis: 100%;
   max-width: 100%;
+  margin: 0;
 }
 
 .venom .grid__column--is-six {
@@ -826,6 +831,7 @@ html {
 .venom .grid__column--is-twelve {
   flex-basis: 100%;
   max-width: 100%;
+  margin: 0;
 }
 
 .venom .grid__column--is-seven {
@@ -840,6 +846,7 @@ html {
 .venom .grid__column--is-twelve {
   flex-basis: 100%;
   max-width: 100%;
+  margin: 0;
 }
 
 .venom .grid__column--is-eight {
@@ -854,6 +861,7 @@ html {
 .venom .grid__column--is-twelve {
   flex-basis: 100%;
   max-width: 100%;
+  margin: 0;
 }
 
 .venom .grid__column--is-nine {
@@ -868,6 +876,7 @@ html {
 .venom .grid__column--is-twelve {
   flex-basis: 100%;
   max-width: 100%;
+  margin: 0;
 }
 
 .venom .grid__column--is-ten {
@@ -882,6 +891,7 @@ html {
 .venom .grid__column--is-twelve {
   flex-basis: 100%;
   max-width: 100%;
+  margin: 0;
 }
 
 .venom .grid__column--is-eleven {
@@ -896,6 +906,7 @@ html {
 .venom .grid__column--is-twelve {
   flex-basis: 100%;
   max-width: 100%;
+  margin: 0;
 }
 
 .venom .grid__column--is-auto {
@@ -914,6 +925,13 @@ html {
 }
 
 @media screen and (max-width: 414px) {
+  .venom .grid__row, .venom .grid__columns {
+    padding: 8px 16px;
+  }
+  .venom .grid__column {
+    margin: 0 8px;
+    max-width: calc(100% - 16px);
+  }
   .venom .grid__column--is-one-mobile {
     flex-basis: calc(8.33333% - 8px) !important;
     max-width: calc(8.33333% - 8px) !important;
@@ -992,8 +1010,9 @@ html {
     margin-left: calc(91.66667% - 8px) !important;
   }
   .venom .grid__column--is-twelve-mobile {
-    flex-basis: calc(100% - 8px) !important;
-    max-width: calc(100% - 8px) !important;
+    flex-basis: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
   }
   .venom .grid__column--is-first-mobile {
     -webkit-box-ordinal-group: 0 !important;

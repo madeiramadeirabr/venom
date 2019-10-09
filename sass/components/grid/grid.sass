@@ -47,12 +47,12 @@ $row: '.grid__row'
 
     &__column
       +border-box
-      flex: 0 0 auto
+      flex: $zero $zero auto
       min-height: 1px
       margin: $zero $desktop-column-gap
       flex-grow: 1
-      flex-basis: 0
-      max-width: calc(100% - #{ $desktop-column-gap })
+      flex-basis: $zero
+      max-width: calc(100% - #{ $desktop-column-gap * 2 })
       padding: $zero
 
       &--has-content-centered
@@ -82,9 +82,10 @@ $row: '.grid__row'
         &--is-twelve
           flex-basis: 100%
           max-width: 100%
+          margin: $zero
 
       &--is-auto
-        flex: 0 0 auto
+        flex: $zero $zero auto
         width: auto
         max-width: 100%
 
@@ -98,7 +99,14 @@ $row: '.grid__row'
           margin-left: $zero
 
     +for-size(mobile)
+      &__row,
+      &__columns
+        padding: $mobile-column-gap ($mobile-column-gap * 2)
+
       &__column
+        margin: $zero $mobile-column-gap
+        max-width: calc(100% - #{ $mobile-column-gap * 2 })
+
         @each $name, $count in $numbers
           &--is-#{$name}-mobile
             flex-basis: calc(#{ $count } - #{ $mobile-column-gap}) !important
@@ -108,8 +116,9 @@ $row: '.grid__row'
               margin-left: calc(#{ $count } - #{ $mobile-column-gap}) !important
 
         &--is-twelve-mobile
-          flex-basis: calc(100% - #{ $mobile-column-gap}) !important
-          max-width: calc(100% - #{ $mobile-column-gap}) !important
+          flex-basis: 100% !important
+          max-width: 100% !important
+          margin: $zero !important
 
         &--is-first-mobile
           order: -1 !important
