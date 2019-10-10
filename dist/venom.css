@@ -2449,7 +2449,7 @@ html {
 }
 
 .venom .modal {
-  overflow: auto;
+  overflow: hidden;
   position: fixed;
   left: 0;
   right: 0;
@@ -2481,6 +2481,7 @@ html {
 
 .venom .modal__container {
   background-color: white;
+  overflow-y: auto;
 }
 
 .venom .modal__close {
@@ -2535,6 +2536,7 @@ html {
   background-color: white;
   padding: 12px;
   overflow-y: auto;
+  overflow-x: hidden;
   max-height: 100%;
 }
 
