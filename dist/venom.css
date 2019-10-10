@@ -2937,7 +2937,7 @@ html {
 }
 
 .venom .pricetag--is-success:before {
-  border-right: 12px solid #009e22;
+  border-right: 12px solid #009e22 !important;
 }
 
 .venom .pricetag--is-danger {
@@ -2946,7 +2946,7 @@ html {
 }
 
 .venom .pricetag--is-danger:before {
-  border-right: 12px solid #db4639;
+  border-right: 12px solid #db4639 !important;
 }
 
 .venom .pricetag--is-primary {
@@ -2955,7 +2955,7 @@ html {
 }
 
 .venom .pricetag--is-primary:before {
-  border-right: 12px solid #00549e;
+  border-right: 12px solid #00549e !important;
 }
 
 .venom .pricetag--is-secondary {
@@ -2964,7 +2964,7 @@ html {
 }
 
 .venom .pricetag--is-secondary:before {
-  border-right: 12px solid #00549e;
+  border-right: 12px solid #00549e !important;
 }
 
 .venom .pricetag:before {
@@ -2974,7 +2974,7 @@ html {
   line-height: 0;
   text-indent: 14px;
   left: -12px;
-  top: -1px;
+  top: 0;
   width: 0;
   height: 0;
   border-right: 12px solid gray;

@@ -18,28 +18,28 @@
       border: 0 solid $color-success
 
       &:before
-        border-right: $gap-regular solid $color-success
+        border-right: $gap-regular solid $color-success !important
 
     &--is-danger
       background: $color-danger
       border: 0 solid $color-danger
 
       &:before
-        border-right: $gap-regular solid $color-danger
+        border-right: $gap-regular solid $color-danger !important
 
     &--is-primary
       background: $color-primary
       border: 0 solid $color-primary
 
       &:before
-        border-right: $gap-regular solid $color-secondary
+        border-right: $gap-regular solid $color-secondary !important
 
     &--is-secondary
       background: $color-secondary
       border: 0 solid $color-secondary
 
       &:before
-        border-right: $gap-regular solid $color-secondary
+        border-right: $gap-regular solid $color-secondary !important
 
     &:before
       position: absolute
@@ -48,7 +48,7 @@
       line-height: $zero
       text-indent: $size-regular
       left: -$gap-regular
-      top: -1px
+      top: $zero
       width: $zero
       height: $zero
       border-right: $gap-regular solid $color-monotone
