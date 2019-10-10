@@ -2914,6 +2914,72 @@ html {
   }
 }
 
+.venom .pricetag {
+  white-space: nowrap;
+  position: relative;
+  margin: 0;
+  display: inline-block;
+  height: 24px;
+  padding: 0 24px 0 12px;
+  background: gray;
+  border: 0 solid gray;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  color: white;
+  line-height: 24px;
+}
+
+.venom .pricetag--is-success {
+  background: #009e22;
+  border: 0 solid #009e22;
+}
+
+.venom .pricetag--is-success:before {
+  border-right: 12px solid #009e22;
+}
+
+.venom .pricetag--is-danger {
+  background: #db4639;
+  border: 0 solid #db4639;
+}
+
+.venom .pricetag--is-danger:before {
+  border-right: 12px solid #db4639;
+}
+
+.venom .pricetag--is-primary {
+  background: #f4831f;
+  border: 0 solid #f4831f;
+}
+
+.venom .pricetag--is-primary:before {
+  border-right: 12px solid #00549e;
+}
+
+.venom .pricetag--is-secondary {
+  background: #00549e;
+  border: 0 solid #00549e;
+}
+
+.venom .pricetag--is-secondary:before {
+  border-right: 12px solid #00549e;
+}
+
+.venom .pricetag:before {
+  position: absolute;
+  content: " ";
+  font-size: 14px;
+  line-height: 0;
+  text-indent: 14px;
+  left: -12px;
+  top: -1px;
+  width: 0;
+  height: 0;
+  border-right: 12px solid gray;
+  border-top: 12px solid transparent;
+  border-bottom: 12px solid transparent;
+}
+
 .venom .helper--is-inline {
   display: inline !important;
 }

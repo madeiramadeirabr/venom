@@ -1,0 +1,56 @@
+.venom
+  .pricetag
+    white-space: nowrap
+    position: relative
+    margin: $zero
+    display: inline-block
+    height: $gap-regular * 2
+    padding: $zero ($gap-regular * 2) $zero $gap-regular
+    background: $color-monotone
+    border: 0 solid $color-monotone
+    border-top-width: 1px
+    border-bottom-width: 1px
+    color: $color-white
+    line-height: $gap-regular * 2
+
+    &--is-success
+      background: $color-success
+      border: 0 solid $color-success
+
+      &:before
+        border-right: $gap-regular solid $color-success
+
+    &--is-danger
+      background: $color-danger
+      border: 0 solid $color-danger
+
+      &:before
+        border-right: $gap-regular solid $color-danger
+
+    &--is-primary
+      background: $color-primary
+      border: 0 solid $color-primary
+
+      &:before
+        border-right: $gap-regular solid $color-secondary
+
+    &--is-secondary
+      background: $color-secondary
+      border: 0 solid $color-secondary
+
+      &:before
+        border-right: $gap-regular solid $color-secondary
+
+    &:before
+      position: absolute
+      content: " "
+      font-size: $size-regular
+      line-height: $zero
+      text-indent: $size-regular
+      left: -$gap-regular
+      top: -1px
+      width: $zero
+      height: $zero
+      border-right: $gap-regular solid $color-monotone
+      border-top: $gap-regular solid transparent
+      border-bottom: $gap-regular solid transparent
