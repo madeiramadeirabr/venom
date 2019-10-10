@@ -175,3 +175,21 @@ html
 
       &:not([align])
         text-align: left
+
+  [class*="-success"]
+    svg
+      path
+        &:not([fill])
+          fill: $color-success !important
+
+  [class*="-danger"]
+    svg
+      path
+        &:not([fill])
+          fill: $color-danger !important
+
+  [class*="-warning"]
+    svg
+      path
+        &:not([fill])
+          fill: $color-warning !important

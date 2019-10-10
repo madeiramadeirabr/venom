@@ -609,6 +609,18 @@ html {
   text-align: left;
 }
 
+.venom [class*="-success"] svg path:not([fill]) {
+  fill: #009e22 !important;
+}
+
+.venom [class*="-danger"] svg path:not([fill]) {
+  fill: #db4639 !important;
+}
+
+.venom [class*="-warning"] svg path:not([fill]) {
+  fill: #fab514 !important;
+}
+
 .venom .grid--is-flex {
   display: -webkit-box;
   display: flex;
@@ -2163,6 +2175,10 @@ html {
   -webkit-transition: all 172ms ease;
   transition: all 172ms ease;
   cursor: text;
+}
+
+.venom .text-field svg path:not([fill]) {
+  fill: gray;
 }
 
 .venom .text-field input,

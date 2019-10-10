@@ -36,6 +36,11 @@ $input-el: '.text-field'
       transition: all $transition-medium ease
       cursor: text
 
+    svg
+      path
+        &:not([fill])
+          fill: $color-monotone
+
     input,
     textarea
       +border-box
