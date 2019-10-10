@@ -470,7 +470,7 @@ html {
 
 .venom img {
   height: auto;
-  max-width: 100%;
+  width: 100%;
 }
 
 .venom input[type='checkbox'],
@@ -654,6 +654,18 @@ html {
 .venom .grid--has-items-end {
   -webkit-box-align: end;
           align-items: flex-end;
+}
+
+.venom .grid--has-self-align-start {
+  align-self: flex-start;
+}
+
+.venom .grid--has-self-align-center {
+  align-self: flex-center;
+}
+
+.venom .grid--has-self-align-end {
+  align-self: flex-end;
 }
 
 .venom .grid--has-no-wrap {
@@ -2538,6 +2550,10 @@ html {
   }
 }
 
+.venom .panel .panel {
+  background-color: white;
+}
+
 .venom .panel .panel__body {
   display: none;
   height: 0;
@@ -2908,6 +2924,28 @@ html {
   list-style: none;
   margin: 0;
   padding: 0;
+}
+
+.venom .helper--has-border-dashed {
+  width: 100%;
+  border-bottom: solid 1px dashed;
+}
+
+.venom .helper--has-border-dashed::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+.venom .helper--has-top-dashed {
+  width: 100%;
+  border-bottom: solid 1px dashed;
+}
+
+.venom .helper--has-top-dashed::after {
+  clear: both;
+  content: " ";
+  display: table;
 }
 
 .venom .helper--is-link {
