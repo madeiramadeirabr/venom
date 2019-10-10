@@ -1174,6 +1174,12 @@ html {
   flex-basis: 100%;
 }
 
+.venom .button--has-content-center .button__text {
+  -webkit-box-flex: 0;
+          flex: 0;
+  flex-basis: 100%;
+}
+
 .venom .button.button:disabled, .venom .button.button--is-disabled {
   background-color: #cccccc;
   color: #b3b3b3;
@@ -2550,43 +2556,43 @@ html {
   }
 }
 
-.venom .panel .panel {
+.venom .panel {
   background-color: white;
 }
 
-.venom .panel .panel__body {
+.venom .panel__body {
   display: none;
   height: 0;
   -webkit-transition: height 172ms ease-in;
   transition: height 172ms ease-in;
 }
 
-.venom .panel .panel__arrow {
+.venom .panel__arrow {
   cursor: pointer;
 }
 
-.venom .panel .panel__arrow svg {
+.venom .panel__arrow svg {
   -webkit-transition: -webkit-transform 172ms ease-in;
   transition: -webkit-transform 172ms ease-in;
   transition: transform 172ms ease-in;
   transition: transform 172ms ease-in, -webkit-transform 172ms ease-in;
 }
 
-.venom .panel.panel--is-open .panel__arrow svg {
+.venom .panel--is-open .panel__arrow svg {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
 
-.venom .panel.panel--is-open .panel__body {
+.venom .panel--is-open .panel__body {
   height: 100%;
   display: block !important;
 }
 
-.venom .panel.panel--has-description .panel__description {
+.venom .panel--has-description .panel__description {
   display: block;
 }
 
-.venom .panel.panel--has-no-description .panel__description {
+.venom .panel--has-no-description .panel__description {
   display: none !important;
 }
 
@@ -2928,7 +2934,7 @@ html {
 
 .venom .helper--has-border-dashed {
   width: 100%;
-  border-bottom: solid 1px dashed;
+  border-bottom: dashed 1px gray;
 }
 
 .venom .helper--has-border-dashed::after {
@@ -2939,7 +2945,7 @@ html {
 
 .venom .helper--has-top-dashed {
   width: 100%;
-  border-bottom: solid 1px dashed;
+  border-bottom: dashed 1px gray;
 }
 
 .venom .helper--has-top-dashed::after {
