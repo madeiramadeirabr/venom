@@ -2737,6 +2737,161 @@ html {
   top: calc(50% - 8px);
 }
 
+.venom .loading {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.8);
+  top: 0;
+}
+
+.venom .loading__content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: grid;
+}
+
+.venom .loading__content > p {
+  color: #333;
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  margin-top: 12px;
+}
+
+.venom .loading__icon {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin-top: -40px;
+  height: 100%;
+}
+
+.venom .loading__icon > svg {
+  width: 40px;
+  height: 40px;
+  margin-left: -20px;
+  display: block;
+  position: relative;
+}
+
+.venom .loading .spinner {
+  -webkit-animation: rotator 1.4s linear infinite;
+          animation: rotator 1.4s linear infinite;
+}
+
+@-webkit-keyframes rotator {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+@keyframes rotator {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+}
+
+.venom .loading .path {
+  stroke-dasharray: 187;
+  stroke-dashoffset: 0;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+          animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+}
+
+@-webkit-keyframes colors {
+  0% {
+    stroke: red;
+  }
+  14.285714286% {
+    stroke: orange;
+  }
+  28.571428572% {
+    stroke: yellow;
+  }
+  42.857142858% {
+    stroke: green;
+  }
+  57.142857144% {
+    stroke: blue;
+  }
+  71.42857143% {
+    stroke: indigo;
+  }
+  100% {
+    stroke: violet;
+  }
+}
+
+@keyframes colors {
+  0% {
+    stroke: red;
+  }
+  14.285714286% {
+    stroke: orange;
+  }
+  28.571428572% {
+    stroke: yellow;
+  }
+  42.857142858% {
+    stroke: green;
+  }
+  57.142857144% {
+    stroke: blue;
+  }
+  71.42857143% {
+    stroke: indigo;
+  }
+  100% {
+    stroke: violet;
+  }
+}
+
+@-webkit-keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+}
+
+@keyframes dash {
+  0% {
+    stroke-dashoffset: 187;
+  }
+  50% {
+    stroke-dashoffset: 46.75;
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
+  }
+  100% {
+    stroke-dashoffset: 187;
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+}
+
 .venom .helper--is-inline {
   display: inline !important;
 }
