@@ -3260,6 +3260,21 @@ html {
   .venom .helper--has-no-radius-mobile {
     border-radius: 0 !important;
   }
+  .venom .helper--has-margin {
+    margin: 12px !important;
+  }
+  .venom .helper--has-margin-left-mobile {
+    margin-left: 12px;
+  }
+  .venom .helper--has-margin-right-mobile {
+    margin-right: 12px;
+  }
+  .venom .helper--has-margin-top-mobile {
+    margin-top: 12px;
+  }
+  .venom .helper--has-margin-bottom-mobile {
+    margin-bottom: 12px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 1223px) {

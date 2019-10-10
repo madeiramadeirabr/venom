@@ -362,6 +362,21 @@
       &--has-no-radius-mobile
         border-radius: $zero !important // sass-lint:disable-line no-important
 
+      &--has-margin
+        margin: $gap-regular !important // sass-lint:disable-line no-important
+
+        &-left-mobile
+          margin-left: $gap-regular
+
+        &-right-mobile
+          margin-right: $gap-regular
+
+        &-top-mobile
+          margin-top: $gap-regular
+
+        &-bottom-mobile
+          margin-bottom: $gap-regular
+
     +for-size(tablet)
       &--is-hidden-tablet
         display: none
