@@ -345,6 +345,23 @@
       &--is-hidden-mobile
         display: none
 
+      &--has-no-margin-mobile
+        margin: $zero !important // sass-lint:disable-line no-important
+
+      &--has-no-gap-mobile
+        padding: $zero !important // sass-lint:disable-line no-important
+
+      &--has-no-gap-horizontal-mobile
+        padding-left: $zero
+        padding-right: $zero
+
+      &--has-no-gap-vertical-mobile
+        padding-bottom: $zero
+        padding-top: $zero
+
+      &--has-no-radius-mobile
+        border-radius: $zero
+
     +for-size(tablet)
       &--is-hidden-tablet
         display: none

@@ -1135,7 +1135,7 @@ html {
 .venom .button .button__icon {
   display: -webkit-box;
   display: flex;
-  width: 48px;
+  width: 36px;
   -webkit-box-pack: center;
           justify-content: center;
 }
@@ -1865,7 +1865,6 @@ html {
 .venom .notification__close {
   cursor: pointer;
   width: 28px;
-  background: rgba(0, 0, 0, 0);
   border: none;
   padding: 0;
 }
@@ -3243,6 +3242,23 @@ html {
 @media screen and (max-width: 414px) {
   .venom .helper--is-hidden-mobile {
     display: none;
+  }
+  .venom .helper--has-no-margin-mobile {
+    margin: 0 !important;
+  }
+  .venom .helper--has-no-gap-mobile {
+    padding: 0 !important;
+  }
+  .venom .helper--has-no-gap-horizontal-mobile {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .venom .helper--has-no-gap-vertical-mobile {
+    padding-bottom: 0;
+    padding-top: 0;
+  }
+  .venom .helper--has-no-radius-mobile {
+    border-radius: 0;
   }
 }
 
