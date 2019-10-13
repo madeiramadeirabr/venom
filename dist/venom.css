@@ -516,7 +516,7 @@ html {
   line-height: 1.25;
   margin: 0;
   padding: 0;
-  width: 100%;
+  max-width: 100%;
 }
 
 .venom h1::after,
@@ -2010,7 +2010,7 @@ html {
 
 .venom .card {
   box-sizing: border-box !important;
-  padding: 12px;
+  padding: 20px;
   width: 100%;
 }
 
@@ -2541,7 +2541,7 @@ html {
 
 .venom .modal__body {
   background-color: white;
-  padding: 12px;
+  padding: 20px;
   overflow-y: auto;
   overflow-x: hidden;
   max-height: 100%;
