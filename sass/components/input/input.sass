@@ -10,6 +10,7 @@ $input-el: '.input'
     width: 100%
     line-height: $gap-regular * 2
     font-size: $size-large
+    font-weight: $weight-regular
 
     #{$input-el}__marker
       position: absolute
@@ -49,12 +50,15 @@ $input-el: '.input'
         cursor: pointer
 
         &:checked
-            ~ #{$input-el}__marker
-                background-color: $color-white
-                border-color: $color-secondary
+          ~ #{$input-el}__marker
+            background-color: $color-white
+            border-color: $color-secondary
 
-                &:after
-                  display: block
+            &:after
+              display: block
+
+          ~ #{$input-el}__text
+            font-weight: $weight-bold
 
       #{$input-el}__marker
         &:after
