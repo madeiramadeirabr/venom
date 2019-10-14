@@ -2798,7 +2798,74 @@ html {
   position: relative;
 }
 
-.venom .loading .spinner {
+@keyframes ld-float-px {
+  0%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+            animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  50% {
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  }
+  30% {
+    -webkit-transform: translate(0, -10px);
+    transform: translate(0, -10px);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    -webkit-transform: translate(0, -10px);
+    transform: translate(0, -10px);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+@-webkit-keyframes ld-float-px {
+  0%, 100% {
+    -webkit-animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+            animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+  }
+  50% {
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+  }
+  0% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  }
+  30% {
+    -webkit-transform: translate(0, -10px);
+    transform: translate(0, -10px);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  50% {
+    -webkit-transform: translate(0, -10px);
+    transform: translate(0, -10px);
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
+  }
+}
+
+.venom .loading .ld.ld-float-px {
+  -webkit-animation: ld-float-px 1s infinite;
+  animation: ld-float-px 1s infinite;
+}
+
+.venom .loading--is-oldstyle .spinner {
   -webkit-animation: rotator 1.4s linear infinite;
           animation: rotator 1.4s linear infinite;
 }
@@ -2825,7 +2892,7 @@ html {
   }
 }
 
-.venom .loading .path {
+.venom .loading--is-oldstyle .path {
   stroke-dasharray: 187;
   stroke-dashoffset: 0;
   -webkit-transform-origin: center;
