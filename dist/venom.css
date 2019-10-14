@@ -775,168 +775,157 @@ html {
 }
 
 .venom .grid__column--is-one {
-  flex-basis: calc(8.33333% - 12px);
-  max-width: calc(8.33333% - 12px);
+  flex-basis: calc(8.33333% - 24px);
+  max-width: calc(8.33333% - 24px);
 }
 
 .venom .grid__column--is-one-offset {
-  margin-left: calc(8.33333% - 12px);
+  margin-left: calc(8.33333% - 24px);
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: 100%;
-  max-width: 100%;
-  margin: 0;
+  flex-basis: calc( 100% - 24px);
+  max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-two {
-  flex-basis: calc(16.66667% - 12px);
-  max-width: calc(16.66667% - 12px);
+  flex-basis: calc(16.66667% - 24px);
+  max-width: calc(16.66667% - 24px);
 }
 
 .venom .grid__column--is-two-offset {
-  margin-left: calc(16.66667% - 12px);
+  margin-left: calc(16.66667% - 24px);
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: 100%;
-  max-width: 100%;
-  margin: 0;
+  flex-basis: calc( 100% - 24px);
+  max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-three {
-  flex-basis: calc(25% - 12px);
-  max-width: calc(25% - 12px);
+  flex-basis: calc(25% - 24px);
+  max-width: calc(25% - 24px);
 }
 
 .venom .grid__column--is-three-offset {
-  margin-left: calc(25% - 12px);
+  margin-left: calc(25% - 24px);
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: 100%;
-  max-width: 100%;
-  margin: 0;
+  flex-basis: calc( 100% - 24px);
+  max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-four {
-  flex-basis: calc(33.33333% - 12px);
-  max-width: calc(33.33333% - 12px);
+  flex-basis: calc(33.33333% - 24px);
+  max-width: calc(33.33333% - 24px);
 }
 
 .venom .grid__column--is-four-offset {
-  margin-left: calc(33.33333% - 12px);
+  margin-left: calc(33.33333% - 24px);
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: 100%;
-  max-width: 100%;
-  margin: 0;
+  flex-basis: calc( 100% - 24px);
+  max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-five {
-  flex-basis: calc(41.66667% - 12px);
-  max-width: calc(41.66667% - 12px);
+  flex-basis: calc(41.66667% - 24px);
+  max-width: calc(41.66667% - 24px);
 }
 
 .venom .grid__column--is-five-offset {
-  margin-left: calc(41.66667% - 12px);
+  margin-left: calc(41.66667% - 24px);
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: 100%;
-  max-width: 100%;
-  margin: 0;
+  flex-basis: calc( 100% - 24px);
+  max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-six {
-  flex-basis: calc(50% - 12px);
-  max-width: calc(50% - 12px);
+  flex-basis: calc(50% - 24px);
+  max-width: calc(50% - 24px);
 }
 
 .venom .grid__column--is-six-offset {
-  margin-left: calc(50% - 12px);
+  margin-left: calc(50% - 24px);
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: 100%;
-  max-width: 100%;
-  margin: 0;
+  flex-basis: calc( 100% - 24px);
+  max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-seven {
-  flex-basis: calc(58.33333% - 12px);
-  max-width: calc(58.33333% - 12px);
+  flex-basis: calc(58.33333% - 24px);
+  max-width: calc(58.33333% - 24px);
 }
 
 .venom .grid__column--is-seven-offset {
-  margin-left: calc(58.33333% - 12px);
+  margin-left: calc(58.33333% - 24px);
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: 100%;
-  max-width: 100%;
-  margin: 0;
+  flex-basis: calc( 100% - 24px);
+  max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-eight {
-  flex-basis: calc(66.66667% - 12px);
-  max-width: calc(66.66667% - 12px);
+  flex-basis: calc(66.66667% - 24px);
+  max-width: calc(66.66667% - 24px);
 }
 
 .venom .grid__column--is-eight-offset {
-  margin-left: calc(66.66667% - 12px);
+  margin-left: calc(66.66667% - 24px);
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: 100%;
-  max-width: 100%;
-  margin: 0;
+  flex-basis: calc( 100% - 24px);
+  max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-nine {
-  flex-basis: calc(75% - 12px);
-  max-width: calc(75% - 12px);
+  flex-basis: calc(75% - 24px);
+  max-width: calc(75% - 24px);
 }
 
 .venom .grid__column--is-nine-offset {
-  margin-left: calc(75% - 12px);
+  margin-left: calc(75% - 24px);
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: 100%;
-  max-width: 100%;
-  margin: 0;
+  flex-basis: calc( 100% - 24px);
+  max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-ten {
-  flex-basis: calc(83.33333% - 12px);
-  max-width: calc(83.33333% - 12px);
+  flex-basis: calc(83.33333% - 24px);
+  max-width: calc(83.33333% - 24px);
 }
 
 .venom .grid__column--is-ten-offset {
-  margin-left: calc(83.33333% - 12px);
+  margin-left: calc(83.33333% - 24px);
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: 100%;
-  max-width: 100%;
-  margin: 0;
+  flex-basis: calc( 100% - 24px);
+  max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-eleven {
-  flex-basis: calc(91.66667% - 12px);
-  max-width: calc(91.66667% - 12px);
+  flex-basis: calc(91.66667% - 24px);
+  max-width: calc(91.66667% - 24px);
 }
 
 .venom .grid__column--is-eleven-offset {
-  margin-left: calc(91.66667% - 12px);
+  margin-left: calc(91.66667% - 24px);
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: 100%;
-  max-width: 100%;
-  margin: 0;
+  flex-basis: calc( 100% - 24px);
+  max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-auto {
@@ -944,14 +933,6 @@ html {
           flex: 0 0 auto;
   width: auto;
   max-width: 100%;
-}
-
-.venom .grid__row > .grid__column:last-child, .venom .grid__columns > .grid__column:last-child {
-  margin-right: 0;
-}
-
-.venom .grid__row > .grid__column:first-child, .venom .grid__columns > .grid__column:first-child {
-  margin-left: 0;
 }
 
 @media screen and (max-width: 414px) {
@@ -963,86 +944,85 @@ html {
     max-width: calc(100% - 16px);
   }
   .venom .grid__column--is-one-mobile {
-    flex-basis: calc(8.33333% - 8px) !important;
-    max-width: calc(8.33333% - 8px) !important;
+    flex-basis: calc(8.33333% - 16px) !important;
+    max-width: calc(8.33333% - 16px) !important;
   }
   .venom .grid__column--is-one-mobile-offset-mobile {
-    margin-left: calc(8.33333% - 8px) !important;
+    margin-left: calc(8.33333% - 16px) !important;
   }
   .venom .grid__column--is-two-mobile {
-    flex-basis: calc(16.66667% - 8px) !important;
-    max-width: calc(16.66667% - 8px) !important;
+    flex-basis: calc(16.66667% - 16px) !important;
+    max-width: calc(16.66667% - 16px) !important;
   }
   .venom .grid__column--is-two-mobile-offset-mobile {
-    margin-left: calc(16.66667% - 8px) !important;
+    margin-left: calc(16.66667% - 16px) !important;
   }
   .venom .grid__column--is-three-mobile {
-    flex-basis: calc(25% - 8px) !important;
-    max-width: calc(25% - 8px) !important;
+    flex-basis: calc(25% - 16px) !important;
+    max-width: calc(25% - 16px) !important;
   }
   .venom .grid__column--is-three-mobile-offset-mobile {
-    margin-left: calc(25% - 8px) !important;
+    margin-left: calc(25% - 16px) !important;
   }
   .venom .grid__column--is-four-mobile {
-    flex-basis: calc(33.33333% - 8px) !important;
-    max-width: calc(33.33333% - 8px) !important;
+    flex-basis: calc(33.33333% - 16px) !important;
+    max-width: calc(33.33333% - 16px) !important;
   }
   .venom .grid__column--is-four-mobile-offset-mobile {
-    margin-left: calc(33.33333% - 8px) !important;
+    margin-left: calc(33.33333% - 16px) !important;
   }
   .venom .grid__column--is-five-mobile {
-    flex-basis: calc(41.66667% - 8px) !important;
-    max-width: calc(41.66667% - 8px) !important;
+    flex-basis: calc(41.66667% - 16px) !important;
+    max-width: calc(41.66667% - 16px) !important;
   }
   .venom .grid__column--is-five-mobile-offset-mobile {
-    margin-left: calc(41.66667% - 8px) !important;
+    margin-left: calc(41.66667% - 16px) !important;
   }
   .venom .grid__column--is-six-mobile {
-    flex-basis: calc(50% - 8px) !important;
-    max-width: calc(50% - 8px) !important;
+    flex-basis: calc(50% - 16px) !important;
+    max-width: calc(50% - 16px) !important;
   }
   .venom .grid__column--is-six-mobile-offset-mobile {
-    margin-left: calc(50% - 8px) !important;
+    margin-left: calc(50% - 16px) !important;
   }
   .venom .grid__column--is-seven-mobile {
-    flex-basis: calc(58.33333% - 8px) !important;
-    max-width: calc(58.33333% - 8px) !important;
+    flex-basis: calc(58.33333% - 16px) !important;
+    max-width: calc(58.33333% - 16px) !important;
   }
   .venom .grid__column--is-seven-mobile-offset-mobile {
-    margin-left: calc(58.33333% - 8px) !important;
+    margin-left: calc(58.33333% - 16px) !important;
   }
   .venom .grid__column--is-eight-mobile {
-    flex-basis: calc(66.66667% - 8px) !important;
-    max-width: calc(66.66667% - 8px) !important;
+    flex-basis: calc(66.66667% - 16px) !important;
+    max-width: calc(66.66667% - 16px) !important;
   }
   .venom .grid__column--is-eight-mobile-offset-mobile {
-    margin-left: calc(66.66667% - 8px) !important;
+    margin-left: calc(66.66667% - 16px) !important;
   }
   .venom .grid__column--is-nine-mobile {
-    flex-basis: calc(75% - 8px) !important;
-    max-width: calc(75% - 8px) !important;
+    flex-basis: calc(75% - 16px) !important;
+    max-width: calc(75% - 16px) !important;
   }
   .venom .grid__column--is-nine-mobile-offset-mobile {
-    margin-left: calc(75% - 8px) !important;
+    margin-left: calc(75% - 16px) !important;
   }
   .venom .grid__column--is-ten-mobile {
-    flex-basis: calc(83.33333% - 8px) !important;
-    max-width: calc(83.33333% - 8px) !important;
+    flex-basis: calc(83.33333% - 16px) !important;
+    max-width: calc(83.33333% - 16px) !important;
   }
   .venom .grid__column--is-ten-mobile-offset-mobile {
-    margin-left: calc(83.33333% - 8px) !important;
+    margin-left: calc(83.33333% - 16px) !important;
   }
   .venom .grid__column--is-eleven-mobile {
-    flex-basis: calc(91.66667% - 8px) !important;
-    max-width: calc(91.66667% - 8px) !important;
+    flex-basis: calc(91.66667% - 16px) !important;
+    max-width: calc(91.66667% - 16px) !important;
   }
   .venom .grid__column--is-eleven-mobile-offset-mobile {
-    margin-left: calc(91.66667% - 8px) !important;
+    margin-left: calc(91.66667% - 16px) !important;
   }
   .venom .grid__column--is-twelve-mobile {
-    flex-basis: 100% !important;
-    max-width: 100% !important;
-    margin: 0 !important;
+    flex-basis: calc( 100% - 24px) !important;
+    max-width: calc( 100% - 24px) !important;
   }
   .venom .grid__column--is-first-mobile {
     -webkit-box-ordinal-group: 0 !important;
