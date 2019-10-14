@@ -15,6 +15,7 @@ $row: '.grid__row'
       flex-wrap: wrap
       margin: $zero
       padding: $desktop-column-gap
+      align-items: stretch
 
       &--is-reverse
         flex-direction: row-reverse
@@ -23,13 +24,17 @@ $row: '.grid__row'
         padding-bottom: $zero
         padding-top: $zero
 
-      &--has-no-gap-vertical
+      &--has-no-gap
         padding: $zero
+
+      &--is-table
+        padding: $zero
+
 
     &__columns
       +border-box
       display: flex
-      flex: 0 1 auto
+      flex: 1 1 auto
       flex-direction: column
       flex-wrap: wrap
       margin: $zero
@@ -42,7 +47,7 @@ $row: '.grid__row'
         padding-bottom: $zero
         padding-top: $zero
 
-      &--has-no-gap-vertical
+      &--has-no-gap
         padding: $zero
 
     &__column
@@ -73,11 +78,11 @@ $row: '.grid__row'
 
       @each $name, $count in $numbers
         &--is-#{$name}
-          flex-basis: calc(#{ $count } - #{ $desktop-column-gap})
-          max-width: calc(#{ $count } - #{ $desktop-column-gap})
+          flex-basis: calc(#{ $count } - #{ $desktop-column-gap })
+          max-width: calc(#{ $count } - #{ $desktop-column-gap })
 
           &-offset
-            margin-left: calc(#{ $count } - #{ $desktop-column-gap})
+            margin-left: calc(#{ $count } - #{ $desktop-column-gap })
 
         &--is-twelve
           flex-basis: 100%

@@ -684,6 +684,8 @@ html {
   flex-wrap: wrap;
   margin: 0;
   padding: 12px;
+  -webkit-box-align: stretch;
+          align-items: stretch;
 }
 
 .venom .grid__row--is-reverse {
@@ -697,7 +699,11 @@ html {
   padding-top: 0;
 }
 
-.venom .grid__row--has-no-gap-vertical {
+.venom .grid__row--has-no-gap {
+  padding: 0;
+}
+
+.venom .grid__row--is-table {
   padding: 0;
 }
 
@@ -705,8 +711,8 @@ html {
   box-sizing: border-box !important;
   display: -webkit-box;
   display: flex;
-  -webkit-box-flex: 0;
-          flex: 0 1 auto;
+  -webkit-box-flex: 1;
+          flex: 1 1 auto;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
@@ -726,7 +732,7 @@ html {
   padding-top: 0;
 }
 
-.venom .grid__columns--has-no-gap-vertical {
+.venom .grid__columns--has-no-gap {
   padding: 0;
 }
 
