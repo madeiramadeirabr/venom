@@ -117,3 +117,12 @@ $input-el: '.text-field'
 
       #{$input-el}__container
         border-color: $color-warning !important
+
+    &#{$input-el}--is-disabled
+      #{$input-el}__container
+        border-color: $color-grey-500
+        input
+          color: $color-grey-500
+
+      #{$input-el}__label
+        color: $color-grey-600
