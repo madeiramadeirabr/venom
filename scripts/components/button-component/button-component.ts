@@ -3,7 +3,6 @@ import { FieldComponent } from '../field-component/index'
 import { Venom } from '../../venom'
 import { InputComponent } from '../input-component'
 import { TListening, TInjectHandler, IButtonComponent } from './types'
-import { Component } from '../component'
 
 export class ButtonComponent extends InputComponent implements IButtonComponent {
   private _tag: string

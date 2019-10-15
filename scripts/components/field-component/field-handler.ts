@@ -13,7 +13,8 @@ import {
   Zipcode,
   State,
   Password,
-  Common
+  Common,
+  Monetary
 } from './handlers/index'
 import { FieldComponent } from './field-component'
 import { THandlers, THandler } from './types'
@@ -112,6 +113,12 @@ export class FieldHandler {
         const vPassword: THandler = { trigger: 'keyup', name: 'password', handler: Password }
         handlers.push(vPassword)
         if (trigger && trigger !== 'keyup') handlers.push({ ...vPassword, trigger })
+      }
+
+      if (validator.includes('monetary')) {
+        const vMonetary: THandler = { trigger: 'keyup', name: 'monetary', handler: Monetary }
+        handlers.push(vMonetary)
+        if (trigger && trigger !== 'keyup') handlers.push({ ...vMonetary, trigger })
       }
     } else {
       const vCommon: THandler = { trigger: 'keyup', name: 'common', handler: Common }

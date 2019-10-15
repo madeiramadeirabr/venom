@@ -51,9 +51,11 @@ export class FieldComponent extends InputComponent {
     return required || false
   }
 
-  setValue(value: string): this {
+  setValue(value: string, forceIsValid: boolean = false): this {
     this._valueHandler(value)
     super.setValue(value)
+
+    if (forceIsValid) this.isValid = true
     return this
   }
 
