@@ -2383,7 +2383,9 @@ html {
 
 .venom .modal__container {
   background-color: white;
-  overflow-y: auto;
+  overflow-y: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .venom .modal__close {
@@ -2440,6 +2442,18 @@ html {
   overflow-y: auto;
   overflow-x: hidden;
   max-height: 100%;
+}
+
+.venom .modal__header {
+  position: relative;
+  padding: 12px;
+  color: #00549e;
+  font-weight: 700;
+}
+
+.venom .modal__footer {
+  position: relative;
+  padding: 12px;
 }
 
 @media screen and (max-width: 768px) {
