@@ -118,8 +118,7 @@ abbr[title] {
   /* 1 */
   text-decoration: underline;
   /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted;
+  text-decoration: underline dotted;
   /* 2 */
 }
 
@@ -382,10 +381,7 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
-  -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 .venom body,
@@ -622,38 +618,31 @@ html {
 }
 
 .venom .grid--is-flex {
-  display: -webkit-box;
   display: flex;
 }
 
 .venom .grid--has-content-start {
-  -webkit-box-pack: start;
-          justify-content: flex-start;
+  justify-content: flex-start;
 }
 
 .venom .grid--has-content-center {
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .venom .grid--has-content-end {
-  -webkit-box-pack: end;
-          justify-content: flex-end;
+  justify-content: flex-end;
 }
 
 .venom .grid--has-items-start {
-  -webkit-box-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
 
 .venom .grid--has-items-center {
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .venom .grid--has-items-end {
-  -webkit-box-align: end;
-          align-items: flex-end;
+  align-items: flex-end;
 }
 
 .venom .grid--has-self-align-start {
@@ -674,24 +663,17 @@ html {
 
 .venom .grid__row {
   box-sizing: border-box !important;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-flex: 0;
-          flex: 0 1 auto;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex: 0 1 auto;
+  flex-direction: row;
   flex-wrap: wrap;
   margin: 0;
   padding: 12px;
-  -webkit-box-align: stretch;
-          align-items: stretch;
+  align-items: stretch;
 }
 
 .venom .grid__row--is-reverse {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 
 .venom .grid__row--has-no-gap-vertical {
@@ -709,22 +691,16 @@ html {
 
 .venom .grid__columns {
   box-sizing: border-box !important;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-flex: 0;
-          flex: 0 0 auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  flex: 0 0 auto;
+  flex-direction: column;
   flex-wrap: wrap;
   margin: 0;
   padding: 12px;
 }
 
 .venom .grid__columns--is-reverse {
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-          flex-direction: column-reverse;
+  flex-direction: column-reverse;
 }
 
 .venom .grid__columns--has-no-gap-vertical {
@@ -738,22 +714,18 @@ html {
 
 .venom .grid__column {
   box-sizing: border-box !important;
-  -webkit-box-flex: 0;
-          flex: 0 0 auto;
+  flex: 0 0 auto;
   min-height: 1px;
   margin: 0 12px;
-  -webkit-box-flex: 1;
-          flex-grow: 1;
+  flex-grow: 1;
   flex-basis: 0;
   max-width: calc(100% - 24px);
   padding: 0;
 }
 
 .venom .grid__column--has-content-centered {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .venom .grid__column--has-gutter {
@@ -765,13 +737,11 @@ html {
 }
 
 .venom .grid__column--is-first {
-  -webkit-box-ordinal-group: 0;
-          order: -1;
+  order: -1;
 }
 
 .venom .grid__column--is-last {
-  -webkit-box-ordinal-group: 2;
-          order: 1;
+  order: 1;
 }
 
 .venom .grid__column--is-one {
@@ -929,8 +899,7 @@ html {
 }
 
 .venom .grid__column--is-auto {
-  -webkit-box-flex: 0;
-          flex: 0 0 auto;
+  flex: 0 0 auto;
   width: auto;
   max-width: 100%;
 }
@@ -1025,12 +994,10 @@ html {
     max-width: calc( 100% - 24px) !important;
   }
   .venom .grid__column--is-first-mobile {
-    -webkit-box-ordinal-group: 0 !important;
-            order: -1 !important;
+    order: -1 !important;
   }
   .venom .grid__column--is-last-mobile {
-    -webkit-box-ordinal-group: 2 !important;
-            order: 1 !important;
+    order: 1 !important;
   }
 }
 
@@ -1080,16 +1047,11 @@ html {
 
 .venom .button__group {
   align-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   align-self: center;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  -webkit-box-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   border: solid 1px rgba(0, 0, 0, 0.75);
   border-radius: 4px;
   overflow: hidden;
@@ -1101,7 +1063,7 @@ html {
   border-width: 0;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .venom .button.button__group {
     border-width: 0.5px;
   }
@@ -1110,16 +1072,11 @@ html {
 .venom .button {
   box-shadow: 0 2px 5px 0 #b3b3b3;
   align-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   align-self: center;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
-  -webkit-box-pack: center;
-          justify-content: center;
+  flex-direction: row;
+  justify-content: center;
   background-color: white;
   border-color: white;
   border-radius: 4px;
@@ -1132,7 +1089,6 @@ html {
   line-height: 1;
   outline: none;
   padding: 12px;
-  -webkit-transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
   transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
   background-position: center;
   letter-spacing: .25px;
@@ -1143,11 +1099,9 @@ html {
 }
 
 .venom .button .button__icon {
-  display: -webkit-box;
   display: flex;
   width: 36px;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .venom .button .button__icon svg path:not([fill]) {
@@ -1155,14 +1109,12 @@ html {
 }
 
 .venom .button__text {
-  -webkit-box-flex: 1;
-          flex: 1;
+  flex: 1;
   flex-basis: 100%;
 }
 
 .venom .button--has-content-center .button__text {
-  -webkit-box-flex: 0;
-          flex: 0;
+  flex: 0;
   flex-basis: 100%;
 }
 
@@ -1202,7 +1154,6 @@ html {
 .venom .button.button--is-link:active {
   background-color: #b9d0e4;
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1223,7 +1174,6 @@ html {
 .venom .button.button--is-primary:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1255,7 +1205,6 @@ html {
   border-color: #e56e06;
   color: #e56e06;
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1285,7 +1234,6 @@ html {
   border-color: #e56e06;
   color: #e56e06;
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1306,7 +1254,6 @@ html {
 .venom .button.button--is-secondary:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1338,7 +1285,6 @@ html {
   border-color: #004785;
   color: #004785;
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1368,7 +1314,6 @@ html {
   border-color: #004785;
   color: #004785;
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1389,7 +1334,6 @@ html {
 .venom .button.button--is-danger:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1421,7 +1365,6 @@ html {
   border-color: #be3023;
   color: #be3023;
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1451,7 +1394,6 @@ html {
   border-color: #be3023;
   color: #be3023;
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1472,7 +1414,6 @@ html {
 .venom .button.button--is-success:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1504,7 +1445,6 @@ html {
   border-color: #00851d;
   color: #00851d;
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1534,7 +1474,6 @@ html {
   border-color: #00851d;
   color: #00851d;
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1555,7 +1494,6 @@ html {
 .venom .button.button--is-warning:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1587,7 +1525,6 @@ html {
   border-color: #d79804;
   color: #d79804;
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1617,7 +1554,6 @@ html {
   border-color: #d79804;
   color: #d79804;
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1638,7 +1574,6 @@ html {
 .venom .button.button--is-monotone:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1670,7 +1605,6 @@ html {
   border-color: #4d4d4d;
   color: #4d4d4d;
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1700,7 +1634,6 @@ html {
   border-color: #4d4d4d;
   color: #4d4d4d;
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1721,7 +1654,6 @@ html {
 .venom .button.button--is-dark:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1753,7 +1685,6 @@ html {
   border-color: #1a1a1a;
   color: #1a1a1a;
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1783,7 +1714,6 @@ html {
   border-color: #1a1a1a;
   color: #1a1a1a;
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1869,12 +1799,10 @@ html {
 
 .venom .notification__content {
   color: #333;
-  -webkit-box-flex: 1;
-          flex: 1;
+  flex: 1;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.1;
-  -webkit-transition: color 86ms ease-in;
   transition: color 86ms ease-in;
 }
 
@@ -1890,18 +1818,13 @@ html {
 }
 
 .venom .notification__container {
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   background-color: #b3b3b3;
   border-radius: 4px;
   box-sizing: border-box;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-direction: row;
   padding: 12px;
-  -webkit-transition: background-color 86ms ease-in, color 86ms ease-in, display 86ms ease-in;
   transition: background-color 86ms ease-in, color 86ms ease-in, display 86ms ease-in;
   max-width: 100%;
 }
@@ -2029,11 +1952,8 @@ html {
 }
 
 .venom .input {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-direction: row;
   position: relative;
   width: 100%;
   line-height: 24px;
@@ -2132,16 +2052,12 @@ html {
   background: white;
   border-width: 0 2px 2px 0;
   border-radius: 0;
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .venom .text-field {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
+  flex-direction: column;
   position: relative;
   width: 100%;
   margin-bottom: 12px;
@@ -2183,7 +2099,6 @@ html {
   left: 0;
   padding: 12px;
   max-width: 100%;
-  -webkit-transition: all 172ms ease;
   transition: all 172ms ease;
   cursor: text;
 }
@@ -2225,20 +2140,14 @@ html {
 }
 
 .venom .text-field.text-field--has-left-icon .text-field__container, .venom .text-field.text-field--has-right-icon .text-field__container {
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-direction: row;
 }
 
 .venom .text-field.text-field--has-left-icon .text-field__icon, .venom .text-field.text-field--has-right-icon .text-field__icon {
-  -webkit-box-align: center;
-          align-items: center;
-  display: -webkit-box;
+  align-items: center;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   width: 48px;
 }
 
@@ -2283,14 +2192,22 @@ html {
   border-color: #fab514 !important;
 }
 
+.venom .text-field.text-field--is-disabled .text-field__container {
+  border-color: #707070;
+}
+
+.venom .text-field.text-field--is-disabled .text-field__container input {
+  color: #707070;
+}
+
 .venom .tab {
   background: white;
   height: 100%;
   padding: 0 12px;
   display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-          justify-content: left;
+  justify-content: left;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-box-direction--ms-flex-direction: column;
@@ -2319,11 +2236,9 @@ html {
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
-  -webkit-transition: background 400ms;
   transition: background 400ms;
   background-position: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   border-bottom: transparent solid 2px;
 }
 
@@ -2334,7 +2249,6 @@ html {
 
 .venom .tab .tab__item:active {
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -2359,7 +2273,6 @@ html {
 
 .venom .tab--is-oldstyle .tab__item:active {
   background-size: 100%;
-  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -2377,12 +2290,10 @@ html {
 
 .venom .collapse__title {
   color: #333;
-  -webkit-box-flex: 1;
-          flex: 1;
+  flex: 1;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.1;
-  -webkit-transition: color 86ms ease-in;
   transition: color 86ms ease-in;
 }
 
@@ -2392,11 +2303,8 @@ html {
   margin: 0 15px;
   padding: 12px;
   box-sizing: border-box;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-direction: row;
+  flex-direction: row;
   padding: 12px;
   width: 100%;
   flex-wrap: wrap;
@@ -2450,12 +2358,9 @@ html {
   bottom: 0;
   background-color: rgba(10, 10, 10, 0.86);
   z-index: 100;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
 .venom .modal--is-hidden {
@@ -2536,7 +2441,6 @@ html {
 @media screen and (max-width: 768px) {
   .venom .modal {
     display: block;
-    -webkit-transition: left 344ms ease-in;
     transition: left 344ms ease-in;
     width: 100%;
     height: 100%;
@@ -2558,7 +2462,6 @@ html {
 .venom .panel__body {
   display: none;
   height: 0;
-  -webkit-transition: height 172ms ease-in;
   transition: height 172ms ease-in;
 }
 
@@ -2567,15 +2470,11 @@ html {
 }
 
 .venom .panel__arrow svg {
-  -webkit-transition: -webkit-transform 172ms ease-in;
-  transition: -webkit-transform 172ms ease-in;
   transition: transform 172ms ease-in;
-  transition: transform 172ms ease-in, -webkit-transform 172ms ease-in;
 }
 
 .venom .panel--is-open .panel__arrow svg {
-  -webkit-transform: rotate(180deg);
-          transform: rotate(180deg);
+  transform: rotate(180deg);
 }
 
 .venom .panel--is-open .panel__body {
@@ -2630,12 +2529,9 @@ html {
 .venom .toggle input:checked ~ .toggle__switch {
   right: 2px;
   left: 24px;
-  -webkit-transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  -webkit-transition-property: left, right;
   transition-property: left, right;
-  -webkit-transition-delay: 172ms, 0s;
-          transition-delay: 172ms, 0s;
+  transition-delay: 172ms, 0s;
 }
 
 .venom .toggle__switch {
@@ -2647,12 +2543,9 @@ html {
   background-color: #fff;
   border-radius: 12px;
   z-index: 1;
-  -webkit-transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  -webkit-transition-property: left, right;
   transition-property: left, right;
-  -webkit-transition-delay: 0s, 172ms;
-          transition-delay: 0s, 172ms;
+  transition-delay: 0s, 172ms;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -2662,7 +2555,6 @@ html {
   top: 0;
   right: 0;
   bottom: 0;
-  -webkit-transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
@@ -2766,28 +2658,21 @@ html {
 .venom .loading__content {
   width: 100%;
   height: 100%;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-          flex-direction: column;
-  -webkit-box-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .venom .loading__content > p {
-  -webkit-box-flex: 0;
-          flex: 0;
+  flex: 0;
   color: #333;
   text-align: center;
   margin-top: 12px;
 }
 
 .venom .loading__icon {
-  -webkit-box-flex: 0;
-          flex: 0;
+  flex: 0;
 }
 
 .venom .loading__icon > svg {
@@ -2800,12 +2685,10 @@ html {
 
 @keyframes ld-float-px {
   0%, 100% {
-    -webkit-animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
-            animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
   }
   50% {
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+    animation-timing-function: linear;
   }
   0% {
     -webkit-transform: translate(0, 0);
@@ -2831,12 +2714,10 @@ html {
 
 @-webkit-keyframes ld-float-px {
   0%, 100% {
-    -webkit-animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
-            animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+    animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
   }
   50% {
-    -webkit-animation-timing-function: linear;
-            animation-timing-function: linear;
+    animation-timing-function: linear;
   }
   0% {
     -webkit-transform: translate(0, 0);
@@ -2866,63 +2747,32 @@ html {
 }
 
 .venom .loading--is-oldstyle .spinner {
-  -webkit-animation: rotator 1.4s linear infinite;
-          animation: rotator 1.4s linear infinite;
+  animation: rotator 1.4s linear infinite;
 }
 
 @-webkit-keyframes rotator {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
+    transform: rotate(270deg);
   }
 }
 
 @keyframes rotator {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(270deg);
-            transform: rotate(270deg);
+    transform: rotate(270deg);
   }
 }
 
 .venom .loading--is-oldstyle .path {
   stroke-dasharray: 187;
   stroke-dashoffset: 0;
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
-          animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
-}
-
-@-webkit-keyframes colors {
-  0% {
-    stroke: red;
-  }
-  14.285714286% {
-    stroke: orange;
-  }
-  28.571428572% {
-    stroke: yellow;
-  }
-  42.857142858% {
-    stroke: green;
-  }
-  57.142857144% {
-    stroke: blue;
-  }
-  71.42857143% {
-    stroke: indigo;
-  }
-  100% {
-    stroke: violet;
-  }
+  transform-origin: center;
+  animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
 }
 
 @keyframes colors {
@@ -2955,13 +2805,11 @@ html {
   }
   50% {
     stroke-dashoffset: 46.75;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
+    transform: rotate(135deg);
   }
   100% {
     stroke-dashoffset: 187;
-    -webkit-transform: rotate(450deg);
-            transform: rotate(450deg);
+    transform: rotate(450deg);
   }
 }
 
@@ -2971,13 +2819,11 @@ html {
   }
   50% {
     stroke-dashoffset: 46.75;
-    -webkit-transform: rotate(135deg);
-            transform: rotate(135deg);
+    transform: rotate(135deg);
   }
   100% {
     stroke-dashoffset: 187;
-    -webkit-transform: rotate(450deg);
-            transform: rotate(450deg);
+    transform: rotate(450deg);
   }
 }
 
@@ -3089,8 +2935,7 @@ html {
 
 .venom .helper--is-link {
   color: #00549e;
-  -webkit-text-decoration: underline #00549e;
-          text-decoration: underline #00549e;
+  text-decoration: underline #00549e;
   font-weight: 700;
   font-size: 14px;
   letter-spacing: .5px;
@@ -3631,9 +3476,10 @@ html {
   }
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
+@media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min--moz-device-pixel-ratio: 2), only screen and (-o-min-device-pixel-ratio: 2 / 1), only screen and (min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi), only screen and (min-resolution: 2dppx) {
   .venom .helper--has-border {
     border-width: 0.5px;
   }
 }
+
 /*# sourceMappingURL=venom.css.map */
