@@ -2200,6 +2200,10 @@ html {
   color: #707070;
 }
 
+.venom .text-field.text-field--is-disabled .text-field__label {
+  color: #5c5c5c;
+}
+
 .venom .tab {
   background: white;
   height: 100%;
