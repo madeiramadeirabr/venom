@@ -1,0 +1,18 @@
+import { TModifier } from './types';
+export declare const SUCCESS_MODIFIER: TModifier;
+export declare const DANGER_MODIFIER: TModifier;
+export declare const WARNING_MODIFIER: TModifier;
+export declare const INFO_MODIFIER: TModifier;
+export declare const ACTIVE_MODIFIER: string;
+export declare const DISABLED_MODIFIER: string;
+export declare const HIDDEN_MODIFIER: string;
+export declare const COMPONENT_FIELD: string;
+export declare const COMPONENT_PASSWORD_VISIBILITY: string;
+export declare const COMPONENT_NOTIFICATION: string;
+export declare const COMPONENT_BUTTON: string;
+export declare const COMPONENT_PANEL: string;
+export declare const COMPONENT_TABS: string;
+export declare const COMPONENT_COLLAPSE: string;
+export declare const COMPONENT_MODAL: string;
+export declare const COMPONENT_TOGGLE: string;
+export declare const COMPONENT_LOADING: string;

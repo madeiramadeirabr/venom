@@ -1,0 +1,34 @@
+import { THandlers } from './types';
+import { InputComponent } from '../input-component';
+import { TModifier } from '../types';
+export declare class FieldComponent extends InputComponent {
+    protected validators: any;
+    protected isValid: boolean;
+    protected _containerEl: HTMLDivElement;
+    protected _helperEl: HTMLSpanElement;
+    protected _mainEl: HTMLDivElement;
+    constructor(el: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement, handlers: THandlers);
+    getListener(): any;
+    getIsRequired(): boolean;
+    setValue(value: string, forceIsValid?: boolean): this;
+    _valueHandler(value: string): void;
+    setDisabled(value: boolean): this;
+    setHelperContent(content: string): this;
+    setFocus(): this;
+    setBlur(): this;
+    getInstance(): this;
+    pushValidators(name: string, trigger: EventListener): this;
+    setIsValid(name: string, trigger: string, isValid: boolean): this;
+    notify(): void;
+    getIsValid(): boolean;
+    reset(): void;
+    injectHandlers(handlers: THandlers): this;
+    _getContainerElement(): HTMLDivElement;
+    _getHelperElement(): HTMLSpanElement;
+    _getMainElement(): HTMLDivElement;
+    clearClassnames(): void;
+    changeClassnames(success?: boolean): void;
+    update(changeClassnames?: boolean): this;
+    setActive(value?: boolean): this;
+    setModifier(modifier: TModifier): this;
+}
