@@ -1,0 +1,35 @@
+.venom
+  .button
+    $self: '.button'
+
+    &#{$self}
+      &--is-extra-small
+        font-size: $size-small
+        padding: $gap-extra-small
+
+      &--is-small
+        font-size: $size-small
+        padding: $gap-small
+
+      &--is-large
+        font-size: $size-large
+        padding: $gap-large
+
+      &--is-extra-large
+        font-size: $size-extra-large
+        padding: $gap-extra-large
+
+    &__group
+      +flex-center(row)
+      border: solid $border-width $border-color
+      border-radius: $radius
+      overflow: hidden
+      padding: $zero
+
+      &#{$self}
+        border-radius: $zero
+        border-width: $zero
+
+    +for-retina
+      &#{$self}__group
+        border-width: $border-width-retina

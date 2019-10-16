@@ -1,0 +1,22 @@
+.venom
+  .container
+    $self: '.container'
+    margin: 0 auto
+    max-width: 100%
+    width: 100%
+
+    &--is-full-width
+      max-width: 100% !important
+      width: 100% !important
+
+  +for-size(desktop)
+    .container
+      width: $desktop-width
+
+  +for-size(mobile)
+    .container
+
+  +for-size(tablet)
+    .container
+      max-width: $tablet-width
+      width: $tablet-width

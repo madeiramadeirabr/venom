@@ -1,0 +1,81 @@
+.helper--has-tooltip
+  position: ralative
+
+.helper--has-tooltip:hover + .tooltip,
+.helper--has-tooltip:focus + .tooltip
+	opacity: 1
+	pointer-events: inherit
+  top: $zero
+  left: 50%
+
+.venom
+  .tooltip
+    +box-shadow
+    display: block
+    position: absolute
+    padding: $gap-regular
+    border-radius: $radius
+    background: $color-monotone-dark
+    text-align: center
+    color: $color-white
+    opacity: $zero
+    pointer-events: none
+    z-index: 5
+    font-size: $size-small
+
+    &:after
+      border-top: $radius solid $color-monotone-dark
+
+    &:hover
+      opacity: 1
+      pointer-events: inherit
+
+    &--is-bottom
+      &:after
+        content: ''
+        display: block
+        margin: $zero auto
+        width: $zero
+        height: $zero
+        border: $gap-small solid transparent
+        border-top: $gap-small solid $color-monotone-dark
+        position: absolute
+        bottom: -($gap-small * 2)
+        left: calc(50% - #{$gap-small})
+
+    &--is-top
+      &:after
+        content: ''
+        display: block
+        margin: $zero auto
+        width: $zero
+        height: $zero
+        border: $gap-small solid transparent
+        border-bottom: $gap-small solid $color-monotone-dark
+        position: absolute
+        top: -($gap-small * 2)
+        left: calc(50% - #{$radius})
+
+    &--is-right
+      &:after
+        content: ' '
+        display: block
+        width: $zero
+        height: $zero
+        border: $gap-small solid transparent
+        border-left: $gap-small solid $color-monotone-dark
+        position: absolute
+        right: -($gap-small * 2)
+        top: calc(50% - #{$gap-small})
+
+    &--is-left
+      &:after
+        content: ' '
+        display: block
+        width: $zero
+        height: $zero
+        border: $gap-small solid transparent
+        border-right: $gap-small solid $color-monotone-dark
+        position: absolute
+        left: -($gap-small * 2)
+        top: calc(50% - #{$gap-small})

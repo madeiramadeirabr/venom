@@ -1,0 +1,195 @@
+html
+  -moz-osx-font-smoothing: grayscale // sass-lint:disable-line no-vendor-prefixes
+  -webkit-font-smoothing: antialiased // sass-lint:disable-line no-vendor-prefixes
+  min-width: $body-min-width
+  overflow-x: $body-overflow-x
+  overflow-y: $body-overflow-y
+  text-rendering: $body-rendering
+  text-size-adjust: 100%
+
+.venom
+  body,
+  button,
+  input,
+  select,
+  textarea,
+  span,
+  small,
+  strong,
+  i
+    +border-box
+    color: currentColor
+
+  article,
+  aside,
+  figure,
+  footer,
+  header,
+  hgroup,
+  section
+    +border-box
+    display: block
+
+  div
+    +border-box
+
+  code,
+  pre
+    -moz-osx-font-smoothing: auto // sass-lint:disable-line no-vendor-prefixes
+    -webkit-font-smoothing: auto // sass-lint:disable-line no-vendor-prefixes
+    font-family: $family-monospace
+
+  body
+    background-color: $background-color
+    color: $text
+    font-family: $family-sans-serif
+    font-weight: $weight-regular
+    letter-spacing: 0.25px
+    font-size: $size-regular
+
+  a
+    +border-box
+    color: $color-secondary
+    cursor: pointer
+    text-decoration: none
+
+    strong
+      color: currentColor
+
+      &:hover
+        color: $color-secondary-600
+
+      &:active
+        color: $color-secondary-400
+
+      &:visited
+        color: $color-secondary-800
+
+  hr
+    +clearfix
+    border-width: 0
+    display: block
+    height: 1px
+    width: 100%
+
+  img
+    height: auto
+    width: 100%
+
+  input[type='checkbox'], // sass-lint:disable-line no-qualifying-elements force-attribute-nesting
+  input[type='radio'] // sass-lint:disable-line no-qualifying-elements force-attribute-nesting
+    vertical-align: baseline
+
+  button,
+  textarea,
+  select,
+  input
+    +border-box
+    outline: none
+
+  small
+    font-size: $size-small
+    font-weight: inherit
+
+  span
+    font-style: inherit
+    font-weight: inherit
+
+  strong
+    font-weight: $weight-bold
+
+  fieldset
+    border-width: 0
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p
+    +border-box
+    +clearfix
+    color: currentColor
+    line-height: 1.25
+    margin: $zero
+    padding: $zero
+    max-width: 100%
+
+  p + p
+    margin-bottom: $gap-default
+
+  h1
+    font-size: 32px
+    font-weight: $weight-light
+    letter-spacing: 0.25px
+
+  h2
+    font-size: 28px
+    font-weight: $weight-light
+    letter-spacing: 0.18px
+
+  h3
+    font-size: 24px
+    font-weight: $weight-light
+
+  h4
+    font-size: 20px
+    font-weight: $weight-semibold
+    letter-spacing: 0.25px
+
+  h5
+    font-size: 18px
+    font-weight: $weight-semibold
+    letter-spacing: 0.5px
+
+  h6
+    font-size: 18px
+    font-weight: $weight-semibold
+    letter-spacing: 0.25px
+
+  h1 + h2,
+  h2 + h3,
+  h2 + p,
+  h3 + p
+    margin-top: $gap-regular
+
+  p
+    letter-spacing: 0.25px
+
+  pre
+    +clearfix
+    overflow-x: auto
+    white-space: pre
+    word-wrap: normal
+
+    code
+      background-color: transparent
+      color: currentColor
+      padding: 0
+
+  table
+    td,
+    th
+      vertical-align: top
+
+      &:not([align])
+        text-align: left
+
+  [class*="-success"]
+    svg
+      path
+        &:not([fill])
+          fill: $color-success !important
+
+  [class*="-danger"]
+    svg
+      path
+        &:not([fill])
+          fill: $color-danger !important
+
+  [class*="-warning"]
+    svg
+      path
+        &:not([fill])
+          fill: $color-warning !important

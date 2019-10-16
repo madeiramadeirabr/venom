@@ -64,6 +64,8 @@
     "dist/utils",
     "dist/venom.css",
     "dist/icons",
-    "dist/venom.min.css"
+    "dist/venom.min.css",
+    "dist/venom.sass",
+    "dist/sass"
   ]
 }

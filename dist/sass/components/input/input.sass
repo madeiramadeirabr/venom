@@ -1,0 +1,85 @@
+$input-el: '.input'
+
+.venom
+
+  .input
+    +clearfix
+    display: flex
+    flex-direction: row
+    position: relative
+    width: 100%
+    line-height: $gap-regular * 2
+    font-size: $size-large
+    font-weight: $weight-regular
+
+    #{$input-el}__marker
+      position: absolute
+      top: 0
+      left: 0
+      height: 24px
+      width: 24px
+      border-radius: 50%
+      background-color: $color-white
+      border: solid 2px $color-secondary
+
+      &:after
+        content: ""
+        position: absolute
+        display: none
+
+    &#{$input-el}__radio,
+    &#{$input-el}__checkbox
+      +unselectable
+      display: block
+      position: relative
+      padding-left: $gap-regular * 3
+      margin-bottom: $gap-regular
+      cursor: pointer
+
+      &:hover
+        input[type='radio']
+          ~ #{$input-el}__marker:after
+              content: ''
+              border-radius: 50%
+              box-shadow: $zero $zero $zero $gap-small $color-hover
+
+      input[type='checkbox'],
+      input[type='radio']
+        position: absolute
+        opacity: 0
+        cursor: pointer
+
+        &:checked
+          ~ #{$input-el}__marker
+            background-color: $color-white
+            border-color: $color-secondary
+
+            &:after
+              display: block
+
+          ~ #{$input-el}__text
+            font-weight: $weight-bold
+
+      #{$input-el}__marker
+        &:after
+          top: 6px
+          left: 6px
+          width: 8px
+          height: 8px
+          border-radius: 50%
+          background: $color-secondary
+
+    &#{$input-el}__checkbox
+      #{$input-el}__marker
+        border-radius: $zero
+
+        &:after
+          left: 7px
+          top: 3px
+          width: 5px
+          height: 10px
+          border: solid $color-secondary
+          background: $color-white
+          border-width: $zero 2px 2px $zero
+          border-radius: $zero
+          transform: rotate(45deg)

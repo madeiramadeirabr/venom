@@ -1,0 +1,121 @@
+$column: '.grid__column'
+$columns: '.grid__columns'
+$row: '.grid__row'
+
+
+.venom
+  .grid
+    $self: &
+
+    &__row
+      +border-box
+      display: flex
+      flex: 0 1 auto
+      flex-direction: row
+      flex-wrap: wrap
+      margin: $zero
+      padding: $desktop-column-gap
+      align-items: stretch
+
+      &--is-reverse
+        flex-direction: row-reverse
+
+      &--has-no-gap-vertical
+        padding-bottom: $zero
+        padding-top: $zero
+
+      &--has-no-gap
+        padding: $zero
+
+      &--is-table
+        padding: $zero
+
+
+    &__columns
+      +border-box
+      display: flex
+      flex: 0 0 auto
+      flex-direction: column
+      flex-wrap: wrap
+      margin: $zero
+      padding: $desktop-column-gap
+
+      &--is-reverse
+        flex-direction: column-reverse
+
+      &--has-no-gap-vertical
+        padding-bottom: $zero
+        padding-top: $zero
+
+      &--has-no-gap
+        padding: $zero
+
+    &__column
+      +border-box
+      flex: $zero $zero auto
+      min-height: 1px
+      margin: $zero $desktop-column-gap
+      flex-grow: 1
+      flex-basis: $zero
+      max-width: calc(100% - #{ $desktop-column-gap * 2 })
+      padding: $zero
+
+      &--has-content-centered
+        display: flex
+        align-items: center
+
+      &--has-gutter
+        padding: $desktop-column-gap
+
+      &--has-no-margin
+        margin: $zero
+
+      &--is-first
+        order: -1
+
+      &--is-last
+        order: 1
+
+      @each $name, $count in $numbers
+        &--is-#{$name}
+          flex-basis: calc(#{ $count } - #{ $desktop-column-gap * 2 })
+          max-width: calc(#{ $count } - #{ $desktop-column-gap * 2 })
+
+          &-offset
+            margin-left: calc(#{ $count } - #{ $desktop-column-gap * 2 })
+
+        &--is-twelve
+          flex-basis: calc( 100% - #{ $desktop-column-gap * 2 })
+          max-width: calc( 100% - #{ $desktop-column-gap * 2 })
+
+      &--is-auto
+        flex: $zero $zero auto
+        width: auto
+        max-width: 100%
+
+    +for-size(mobile)
+      &__row,
+      &__columns
+        padding: $mobile-column-gap ($mobile-column-gap * 2)
+
+      &__column
+        margin: $zero $mobile-column-gap
+        max-width: calc(100% - #{ $mobile-column-gap * 2 })
+
+        @each $name, $count in $numbers
+          &--is-#{$name}-mobile
+            flex-basis: calc(#{ $count } - #{ $mobile-column-gap * 2 }) !important
+            max-width: calc(#{ $count } - #{ $mobile-column-gap * 2 }) !important
+
+            &-offset-mobile
+              margin-left: calc(#{ $count } - #{ $mobile-column-gap * 2 }) !important
+
+        &--is-twelve-mobile
+          flex-basis: calc( 100% - #{ $desktop-column-gap * 2 }) !important
+          max-width: calc( 100% - #{ $desktop-column-gap * 2 }) !important
+
+        &--is-first-mobile
+          order: -1 !important
+
+        &--is-last-mobile
+          order: 1 !important

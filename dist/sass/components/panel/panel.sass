@@ -1,0 +1,32 @@
+$description: '.panel__description'
+.venom
+  .panel
+    $self: '.panel'
+    background-color: $color-white
+
+    &__body
+      display: none
+      height: $zero
+      transition: height $transition-medium $easing
+
+    &__arrow
+      cursor: pointer
+      svg
+        transition: transform $transition-medium $easing
+
+    &--is-open
+      .panel__arrow
+        svg
+          transform: rotate(180deg)
+
+      .panel__body
+        height: 100%
+        display: block !important
+
+    &--has-description
+      #{ $description }
+        display: block
+
+    &--has-no-description
+      #{ $description }
+        display: none !important

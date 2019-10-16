@@ -1,0 +1,79 @@
+@import 'sass/variables'
+@import 'sass/variables'
+
+.venom
+  .tab
+    background: $color-white
+    height: 100%
+    padding: 0 $gap-regular
+    display: -webkit-box
+    display: -ms-flexbox
+    display: flex
+    justify-content: left
+    -webkit-box-orient: vertical
+    -webkit-box-direction: normal
+        -ms-flex-direction: column
+            flex-direction: column
+
+    &--has-scroll
+      overflow-x: auto
+
+    .tab__item 
+      min-width: 150px
+      padding: 12px
+      margin: 0 5px -1px
+      color: $color-black
+      overflow: hidden
+      text-align: center
+      -webkit-box-flex: 1
+          -ms-flex-positive: 1
+              flex-grow: 1
+      cursor: pointer
+      position: relative
+      flex-shrink: 0
+      -webkit-user-select: none
+      -moz-user-select: none
+      -ms-user-select: none
+      -o-user-select: none
+      user-select: none
+      transition: background $transition-click
+      background-position: center
+      justify-content: center
+      border-bottom: transparent solid 2px    
+
+      &:hover,
+      &:focus,
+        background-color: $color-monotone-light
+        background: $color-monotone-lightness radial-gradient(circle, transparent 1%, $color-monotone-light 1%) center/15000%
+
+      &:active
+        background-size: 100%
+        transition: background 0s
+    
+      &--has-indicator
+        background: $color-monotone-lightness
+        border-bottom: $color-secondary solid 2px    
+
+    &--is-oldstyle
+      border-bottom: $color-monotone-light 1px solid
+      .tab__item
+        background: $color-monotone-lightness
+        border: $color-monotone-light 1px solid
+        
+        &:hover,
+        &:focus,
+          background-color: $color-white
+          background: $color-white radial-gradient(circle, transparent 1%, rgba(0,0,0,0.05) 1%) center/15000%
+        
+        &:active
+          background-size: 100%
+          transition: background 0s
+    
+        &--has-indicator
+          border-bottom-color: $color-white
+          background-color: $color-white
+          color: $color-secondary
+
+  @media screen and (max-width: $tablet-width)
+    .tab
+      overflow-x: auto

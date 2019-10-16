@@ -1,0 +1,47 @@
+=clearfix
+  &::after
+    clear: both
+    content: $content
+    display: table
+
+=border-box
+  box-sizing: border-box !important
+
+=flex-center($direction)
+  align-content: center
+  align-items: center
+  align-self: center
+  display: flex
+  flex-direction: $direction
+  justify-content: center
+
+
+=unselectable
+  -moz-user-select: none // sass-lint:disable-line no-vendor-prefixes
+  -ms-user-select: none // sass-lint:disable-line no-vendor-prefixes
+  -webkit-touch-callout: none // sass-lint:disable-line no-vendor-prefixes
+  -webkit-user-select: none // sass-lint:disable-line no-vendor-prefixes
+  user-select: none
+
+=box-shadow
+  box-shadow: $zero 2px 5px $zero $color-monotone-light
+
+
+%unselectable
+  +unselectable
+
+=for-size($range)
+  @if $range == mobile
+    @media screen and (max-width: $mobile-width)
+      @content
+  @else if $range == tablet
+    @media screen and (min-width: $tablet-width) and (max-width: $desktop-width - 1px)
+      @content
+  @else
+    @media screen and (min-width: $desktop-width)
+      @content
+
+
+=for-retina
+  @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) // sass-lint:disable-line no-vendor-prefixes space-around-operator
+    @content
