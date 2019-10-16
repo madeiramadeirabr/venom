@@ -62,10 +62,10 @@
     "dist/types.d.ts",
     "dist/components",
     "dist/utils",
-    "dist/venom.css",
     "dist/icons",
+    "dist/venom.css",
     "dist/venom.min.css",
     "dist/venom.sass",
-    "dist/sass"
+    "sass/**/*.sass"
   ]
 }

@@ -14,8 +14,8 @@ exports.default = function() {
   )
 
   src('resources/fonts/**/*').pipe(dest('dist/fonts'))
-  src('sass/**/*').pipe(dest('dist/sass'))
-  src('venom.sass').pipe(dest('dist'))
+  // src('sass/**/*').pipe(dest('dist/sass'))
+  // src('venom.sass').pipe(dest('dist'))
   return src('resources/icons/**/*').pipe(dest('dist/icons'))
 
   // return src([('css/venom.min.css')])
