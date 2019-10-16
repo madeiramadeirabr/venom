@@ -8,7 +8,7 @@
     "sass-build-autoprefix": "postcss --use autoprefixer --map false --output dist/venom.css dist/venom.css",
     "sass-build-cleancss": "cleancss -o dist/venom.min.css dist/venom.css",
     "sass-build-clean": "rimraf css",
-    "sass-build-sass": "node-sass --output-style expanded --source-map true venom.sass dist/venom.css",
+    "sass-build-sass": "node-sass --output-style expanded --source-map true sass/venom.sass dist/venom.css",
     "deploy": "npm run sass-build-clean && npm run sass-build-sass && npm run sass-build-autoprefix && npm run sass-build-cleancss && gulp",
     "start": "npm run sass-build-sass -- --watch",
     "linter": "sass-lint -c .sass-lint.yml 'sass/**/*.sass' -v -q",
@@ -65,7 +65,6 @@
     "dist/icons",
     "dist/venom.css",
     "dist/venom.min.css",
-    "dist/venom.sass",
     "sass/**/*.sass"
   ]
 }
