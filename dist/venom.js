@@ -1,4 +1,6 @@
-export var Venom = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Venom = {
     observers: [],
     subscribe: function (instance) {
         var alias = instance.alias;

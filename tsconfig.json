@@ -6,9 +6,10 @@
     "noImplicitAny": true,
     "removeComments": true,
     "allowSyntheticDefaultImports": true,
-    "module": "es6",
+    "module": "commonjs",
     "target": "es5",
-    "declaration": true
+    "declaration": true,
+    "moduleResolution": "node"
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules", "dist", "**/*.spec.ts"]

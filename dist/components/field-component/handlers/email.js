@@ -1,13 +1,15 @@
-import { emailIsValid } from '../../../utils/validators/index';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var index_1 = require("../../../utils/validators/index");
 var MIN_LENGTH = 5, MAX_LENGTH = 112;
-export function Email(component, event) {
+function Email(component, event) {
     function parsed(value) {
         return value.replace(/[&\/\\#,+()$~%'":*?<>{}]/g, '').toLowerCase();
     }
     function validate(value) {
         if (value === void 0) { value = ''; }
         var email = parsed(value);
-        return emailIsValid(email);
+        return index_1.emailIsValid(email);
     }
     var clearClassnames = component.clearClassnames, update = component.update, setIsValid = component.setIsValid, getValue = component.getValue, setValue = component.setValue, setHelperContent = component.setHelperContent, TRIGGER = 'blur', trigger = event.target.dataset.trigger, type = event.type, onlyValidateOnBlur = trigger === TRIGGER, valueParsed = parsed(getValue()), valueLength = valueParsed.length, isValid = validate(valueParsed);
     setValue(valueParsed);
@@ -26,4 +28,5 @@ export function Email(component, event) {
     }
     return false;
 }
+exports.Email = Email;
 //# sourceMappingURL=email.js.map

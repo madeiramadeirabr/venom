@@ -1,6 +1,8 @@
-import { zipcodeIsValid } from '../../../utils/validators/index';
-import { zipcodeMask } from '../../../utils/mask';
-export function Zipcode(component, e) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var index_1 = require("../../../utils/validators/index");
+var mask_1 = require("../../../utils/mask");
+function Zipcode(component, e) {
     var clearClassnames = component.clearClassnames, update = component.update, setIsValid = component.setIsValid, getValue = component.getValue, setValue = component.setValue, setHelperContent = component.setHelperContent;
     function parsed(value) {
         return value.replace(/\D/g, '');
@@ -8,10 +10,10 @@ export function Zipcode(component, e) {
     function validate(value) {
         if (value === void 0) { value = ''; }
         var zipcode = parsed(value);
-        return zipcodeIsValid(zipcode);
+        return index_1.zipcodeIsValid(zipcode);
     }
     var type = e.type, TRIGGER = 'blur', target = event.target, trigger = target.dataset.trigger, onlyValidateOnBlur = trigger === TRIGGER, value = getValue(), valueParsed = parsed(value), valueLength = valueParsed.length, isValid = validate(valueParsed);
-    setValue(zipcodeMask(valueParsed));
+    setValue(mask_1.zipcodeMask(valueParsed));
     if (valueLength < 8) {
         clearClassnames();
         return false;
@@ -27,4 +29,5 @@ export function Zipcode(component, e) {
     }
     return false;
 }
+exports.Zipcode = Zipcode;
 //# sourceMappingURL=zipcode.js.map

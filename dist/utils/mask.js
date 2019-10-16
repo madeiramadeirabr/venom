@@ -1,17 +1,24 @@
-import VMasker from 'vanilla-masker';
-export function personDocumentMask(num) {
-    return VMasker.toPattern(num, '999.999.999-99');
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var vanilla_masker_1 = require("vanilla-masker");
+function personDocumentMask(num) {
+    return vanilla_masker_1.default.toPattern(num, '999.999.999-99');
 }
-export function legalPersonDocumentMask(num) {
-    return VMasker.toPattern(num, '99.999.999/9999-99');
+exports.personDocumentMask = personDocumentMask;
+function legalPersonDocumentMask(num) {
+    return vanilla_masker_1.default.toPattern(num, '99.999.999/9999-99');
 }
-export function mobileMask(num) {
-    return VMasker.toPattern(num, '(99) 99999-9999');
+exports.legalPersonDocumentMask = legalPersonDocumentMask;
+function mobileMask(num) {
+    return vanilla_masker_1.default.toPattern(num, '(99) 99999-9999');
 }
-export function phoneMask(num) {
-    return VMasker.toPattern(num, '(99) 9999-9999');
+exports.mobileMask = mobileMask;
+function phoneMask(num) {
+    return vanilla_masker_1.default.toPattern(num, '(99) 9999-9999');
 }
-export function zipcodeMask(num) {
-    return VMasker.toPattern(num, '99.999-999');
+exports.phoneMask = phoneMask;
+function zipcodeMask(num) {
+    return vanilla_masker_1.default.toPattern(num, '99.999-999');
 }
+exports.zipcodeMask = zipcodeMask;
 //# sourceMappingURL=mask.js.map

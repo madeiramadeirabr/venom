@@ -2,8 +2,8 @@
   "name": "venom",
   "version": "0.1.0",
   "description": "Venom is an UI KIT with MadeiraMadeira brand",
-  "main": "dist/venom.js",
-  "types": "dist/venom.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "sass-build-autoprefix": "postcss --use autoprefixer --map false --output dist/venom.css dist/venom.css",
     "sass-build-cleancss": "cleancss -o dist/venom.min.css dist/venom.css",
@@ -49,5 +49,14 @@
     "url": "https://github.com/madeiramadeirabe/venom/issues"
   },
   "homepage": "https://github.com/madeiramadeirabe/venom#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "files": [
+    "dist/index.js",
+    "dist/index.d.ts",
+    "dist/components",
+    "dist/utils"
+  ]
 }

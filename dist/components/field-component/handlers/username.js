@@ -1,5 +1,7 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var MAX_LENGTH = 72;
-export function Username(component, e) {
+function Username(component, e) {
     function parsed(value) {
         return value
             .toLowerCase()
@@ -29,4 +31,5 @@ export function Username(component, e) {
     }
     return false;
 }
+exports.Username = Username;
 //# sourceMappingURL=username.js.map

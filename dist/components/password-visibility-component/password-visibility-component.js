@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,9 +12,10 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { Venom } from '../../venom';
-import { Component } from '../component';
-import { HIDDEN_MODIFIER } from '../constants';
+Object.defineProperty(exports, "__esModule", { value: true });
+var venom_1 = require("../../venom");
+var component_1 = require("../component");
+var constants_1 = require("../constants");
 var PasswordVisibilityComponent = (function (_super) {
     __extends(PasswordVisibilityComponent, _super);
     function PasswordVisibilityComponent(el) {
@@ -22,12 +24,12 @@ var PasswordVisibilityComponent = (function (_super) {
             var type = _this._target.getType(), isVisible = type === 'text';
             _this._target.setType(isVisible ? 'password' : 'text');
             if (isVisible) {
-                _this._getInvisible().classList.add(HIDDEN_MODIFIER);
-                _this._getVisible().classList.remove(HIDDEN_MODIFIER);
+                _this._getInvisible().classList.add(constants_1.HIDDEN_MODIFIER);
+                _this._getVisible().classList.remove(constants_1.HIDDEN_MODIFIER);
             }
             else {
-                _this._getVisible().classList.add(HIDDEN_MODIFIER);
-                _this._getInvisible().classList.remove(HIDDEN_MODIFIER);
+                _this._getVisible().classList.add(constants_1.HIDDEN_MODIFIER);
+                _this._getInvisible().classList.remove(constants_1.HIDDEN_MODIFIER);
             }
         };
         _this.getInstance = _this.getInstance.bind(_this);
@@ -63,7 +65,7 @@ var PasswordVisibilityComponent = (function (_super) {
         var invisible = document.createElement('span');
         invisible.setAttribute('title', 'Esconder senha');
         invisible.dataset.passwordVisibility = 'off';
-        invisible.classList.add(HIDDEN_MODIFIER);
+        invisible.classList.add(constants_1.HIDDEN_MODIFIER);
         var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
         var path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
         path.setAttribute('d', 'M288 144a110.94 110.94 0 0 0-31.24 5 55.4 55.4 0 0 1 7.24 27 56 56 0 0 1-56 56 55.4 55.4 0 0 1-27-7.24A111.71 111.71 0 1 0 288 144zm284.52 97.4C518.29 135.59 410.93 64 288 64S57.68 135.64 3.48 241.41a32.35 32.35 0 0 0 0 29.19C57.71 376.41 165.07 448 288 448s230.32-71.64 284.52-177.41a32.35 32.35 0 0 0 0-29.19zM288 400c-98.65 0-189.09-55-237.93-144C98.91 167 189.34 112 288 112s189.09 55 237.93 144C477.1 345 386.66 400 288 400z');
@@ -78,7 +80,7 @@ var PasswordVisibilityComponent = (function (_super) {
     };
     PasswordVisibilityComponent.prototype._initialize = function () {
         var target = this.getAttributes().target;
-        var targetComponent = Venom.getComponent(target);
+        var targetComponent = venom_1.Venom.getComponent(target);
         if (targetComponent)
             this._target = targetComponent;
         this._createVisible();
@@ -86,6 +88,6 @@ var PasswordVisibilityComponent = (function (_super) {
         this.attachEvent('click', this._onChangeVisibility);
     };
     return PasswordVisibilityComponent;
-}(Component));
-export { PasswordVisibilityComponent };
+}(component_1.Component));
+exports.PasswordVisibilityComponent = PasswordVisibilityComponent;
 //# sourceMappingURL=password-visibility-component.js.map

@@ -1,4 +1,6 @@
-export function Monetary(component, e) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function Monetary(component, e) {
     var clearClassnames = component.clearClassnames, update = component.update, setIsValid = component.setIsValid, getValue = component.getValue, setValue = component.setValue, setHelperContent = component.setHelperContent;
     function parsed(value) {
         var money = parseFloat(value.replace(/\D/g, '')) / 100;
@@ -24,4 +26,5 @@ export function Monetary(component, e) {
     }
     return false;
 }
+exports.Monetary = Monetary;
 //# sourceMappingURL=monetary.js.map

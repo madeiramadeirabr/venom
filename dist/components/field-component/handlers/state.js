@@ -1,4 +1,6 @@
-export function State(component, e) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function State(component, e) {
     var getValue = component.getValue, setActive = component.setActive, type = e.type;
     if (type === 'focus')
         setActive(true);
@@ -6,4 +8,5 @@ export function State(component, e) {
         setActive(getValue().length > 0);
     return false;
 }
+exports.State = State;
 //# sourceMappingURL=state.js.map

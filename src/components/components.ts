@@ -1,4 +1,4 @@
-import { Venom } from 'venom'
+import { Venom } from '../venom'
 import {
   COMPONENT_FIELD,
   COMPONENT_PASSWORD_VISIBILITY,

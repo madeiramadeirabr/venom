@@ -1,4 +1,6 @@
-import { DANGER_MODIFIER, WARNING_MODIFIER, SUCCESS_MODIFIER, INFO_MODIFIER, HIDDEN_MODIFIER } from "./constants";
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var constants_1 = require("./constants");
 var Component = (function () {
     function Component(element) {
         this._element = element;
@@ -80,10 +82,10 @@ var Component = (function () {
     Component.prototype.clearModifiers = function () {
         var _this = this;
         var modifiers = [
-            DANGER_MODIFIER,
-            WARNING_MODIFIER,
-            INFO_MODIFIER,
-            SUCCESS_MODIFIER
+            constants_1.DANGER_MODIFIER,
+            constants_1.WARNING_MODIFIER,
+            constants_1.INFO_MODIFIER,
+            constants_1.SUCCESS_MODIFIER
         ];
         modifiers.map(function (modifier) {
             if (_this.getClassnames().contains(_this.getComponentName() + modifier)) {
@@ -100,19 +102,19 @@ var Component = (function () {
     };
     Component.prototype.hide = function () {
         var Classnames = this.getClassnames();
-        if (!Classnames.contains(HIDDEN_MODIFIER))
-            Classnames.add(HIDDEN_MODIFIER);
+        if (!Classnames.contains(constants_1.HIDDEN_MODIFIER))
+            Classnames.add(constants_1.HIDDEN_MODIFIER);
         return this;
     };
     Component.prototype.show = function () {
         var Classnames = this.getClassnames();
         console.log("Classnames", Classnames);
-        if (Classnames.contains(HIDDEN_MODIFIER))
-            Classnames.remove(HIDDEN_MODIFIER);
+        if (Classnames.contains(constants_1.HIDDEN_MODIFIER))
+            Classnames.remove(constants_1.HIDDEN_MODIFIER);
         return this;
     };
     Component.prototype.toggle = function () {
-        if (this.getClassnames().contains(HIDDEN_MODIFIER)) {
+        if (this.getClassnames().contains(constants_1.HIDDEN_MODIFIER)) {
             this.show();
         }
         else {
@@ -129,5 +131,5 @@ var Component = (function () {
     };
     return Component;
 }());
-export { Component };
+exports.Component = Component;
 //# sourceMappingURL=component.js.map

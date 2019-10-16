@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,8 +12,9 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { Component } from '../component';
-import { HIDDEN_MODIFIER } from '../constants';
+Object.defineProperty(exports, "__esModule", { value: true });
+var component_1 = require("../component");
+var constants_1 = require("../constants");
 var ELEMENT_CONTENT = '.notification__content', ELEMENT_CLOSE = '.notification__close';
 var NotificationComponent = (function (_super) {
     __extends(NotificationComponent, _super);
@@ -59,12 +61,12 @@ var NotificationComponent = (function (_super) {
     };
     NotificationComponent.prototype._toggle = function (visibile) {
         if (visibile) {
-            if (this.getClassnames().contains(HIDDEN_MODIFIER))
-                this.getClassnames().remove(HIDDEN_MODIFIER);
+            if (this.getClassnames().contains(constants_1.HIDDEN_MODIFIER))
+                this.getClassnames().remove(constants_1.HIDDEN_MODIFIER);
         }
         else {
-            if (!this.getClassnames().contains(HIDDEN_MODIFIER))
-                this.getClassnames().add(HIDDEN_MODIFIER);
+            if (!this.getClassnames().contains(constants_1.HIDDEN_MODIFIER))
+                this.getClassnames().add(constants_1.HIDDEN_MODIFIER);
         }
     };
     NotificationComponent.prototype._hide = function (event) {
@@ -90,6 +92,6 @@ var NotificationComponent = (function (_super) {
         return this;
     };
     return NotificationComponent;
-}(Component));
-export { NotificationComponent };
+}(component_1.Component));
+exports.NotificationComponent = NotificationComponent;
 //# sourceMappingURL=notification-component.js.map

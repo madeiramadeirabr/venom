@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,7 +12,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { Component } from '../component';
+Object.defineProperty(exports, "__esModule", { value: true });
+var component_1 = require("../component");
 var TabsComponent = (function (_super) {
     __extends(TabsComponent, _super);
     function TabsComponent(element) {
@@ -78,6 +80,6 @@ var TabsComponent = (function (_super) {
         this.displaySelectedTab(index);
     };
     return TabsComponent;
-}(Component));
-export { TabsComponent };
+}(component_1.Component));
+exports.TabsComponent = TabsComponent;
 //# sourceMappingURL=tabs-component.js.map

@@ -1,3 +1,5 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var DDD = [
     '11',
     '12',
@@ -67,16 +69,18 @@ var DDD = [
     '98',
     '99'
 ];
-export function emailIsValid(email) {
+function emailIsValid(email) {
     var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
 }
-export function usernameIsValid(username) {
+exports.emailIsValid = emailIsValid;
+function usernameIsValid(username) {
     var regName = /^[a-zA-Z]+ [a-zA-Z]+$/;
     var username = username.replace(/[0-9]/g, '');
     return !regName.test(username) ? false : true;
 }
-export function mobileIsValid(mobile) {
+exports.usernameIsValid = usernameIsValid;
+function mobileIsValid(mobile) {
     mobile = mobile.replace(/\D/g, '');
     var ddd = "" + mobile[0] + mobile[1], third = mobile[2];
     if (third !== '9')
@@ -85,15 +89,18 @@ export function mobileIsValid(mobile) {
         return false;
     return mobile.length === 11;
 }
-export function phoneIsValid(phone) {
+exports.mobileIsValid = mobileIsValid;
+function phoneIsValid(phone) {
     phone = phone.replace(/\D/g, '');
     var ddd = "" + phone[0] + phone[1];
     if (!DDD.includes(ddd))
         return false;
     return phone.length === 10;
 }
-export function zipcodeIsValid(zipcode) {
+exports.phoneIsValid = phoneIsValid;
+function zipcodeIsValid(zipcode) {
     zipcode = zipcode.replace(/\D/g, '');
     return zipcode.length === 8;
 }
+exports.zipcodeIsValid = zipcodeIsValid;
 //# sourceMappingURL=common.js.map

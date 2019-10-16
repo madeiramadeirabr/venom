@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,7 +12,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { Component } from '../component';
+Object.defineProperty(exports, "__esModule", { value: true });
+var component_1 = require("../component");
 var HEADER = '[data-panel="header"]', TITLE = '[data-panel="title"]', SUBTITLE = '[data-panel="subtitle"]', BUTTON = '.panel__arrow', DESCRIPTION = '[data-panel="description"]', BODY = '[data-panel="body"]', OPEN_MODIFIER = 'panel--is-open', NO_DESCRIPTION_MODIFIER = 'panel--has-no-description';
 var PanelComponent = (function (_super) {
     __extends(PanelComponent, _super);
@@ -125,6 +127,6 @@ var PanelComponent = (function (_super) {
         return this;
     };
     return PanelComponent;
-}(Component));
-export { PanelComponent };
+}(component_1.Component));
+exports.PanelComponent = PanelComponent;
 //# sourceMappingURL=panel-component.js.map

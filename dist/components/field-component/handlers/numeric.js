@@ -1,4 +1,6 @@
-export function Numeric(component, e) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function Numeric(component, e) {
     var clearClassnames = component.clearClassnames, update = component.update, setIsValid = component.setIsValid, getValue = component.getValue, setHelperContent = component.setHelperContent, type = event.type, value = getValue(), valueLength = value.length, isValid = /^\d+$/.test(value);
     setIsValid('numeric', type, isValid);
     setHelperContent('');
@@ -14,4 +16,5 @@ export function Numeric(component, e) {
     }
     return false;
 }
+exports.Numeric = Numeric;
 //# sourceMappingURL=numeric.js.map

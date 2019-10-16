@@ -1,17 +1,19 @@
-import { Venom } from 'venom';
-import { COMPONENT_FIELD, COMPONENT_PASSWORD_VISIBILITY, COMPONENT_NOTIFICATION, COMPONENT_BUTTON, COMPONENT_PANEL, COMPONENT_TABS, COMPONENT_COLLAPSE, COMPONENT_MODAL, COMPONENT_TOGGLE, COMPONENT_LOADING } from './constants';
-import { FieldHandler } from './field-component/index';
-import { PasswordVisibilityComponent } from './password-visibility-component/index';
-import { NotificationComponent } from './notification-component/index';
-import { ButtonComponent } from './button-component/index';
-import { PanelComponent } from './panel-component/index';
-import { Component } from './component';
-import { TabsComponent } from './tabs-component/tabs-component';
-import { CollapsComponent } from './collapse-component/collapse-component';
-import { ModalComponent } from './modal-component/index';
-import { ToggleComponent } from './toggle-component/index';
-import { LoadingComponent } from './loading-component/index';
-export var Components = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var venom_1 = require("../venom");
+var constants_1 = require("./constants");
+var index_1 = require("./field-component/index");
+var index_2 = require("./password-visibility-component/index");
+var index_3 = require("./notification-component/index");
+var index_4 = require("./button-component/index");
+var index_5 = require("./panel-component/index");
+var component_1 = require("./component");
+var tabs_component_1 = require("./tabs-component/tabs-component");
+var collapse_component_1 = require("./collapse-component/collapse-component");
+var index_6 = require("./modal-component/index");
+var index_7 = require("./toggle-component/index");
+var index_8 = require("./loading-component/index");
+exports.Components = {
     initialize: function (alias) {
         if (alias === void 0) { alias = ''; }
         var reload = alias !== null ? true : false, elements = reload ? document.querySelector("[data-alias=" + alias + "]").querySelectorAll('[data-venom]') : document.querySelectorAll('[data-venom]'), elementsCount = elements.length;
@@ -20,63 +22,63 @@ export var Components = {
         for (var i = 0; i < elementsCount; i++) {
             var el = elements[i], _a = el.dataset, alias_1 = _a.alias, component = _a.component;
             var Instance = false;
-            if (!Venom.get(alias_1) || reload) {
+            if (!venom_1.Venom.get(alias_1) || reload) {
                 if (component) {
-                    if (component === COMPONENT_FIELD)
+                    if (component === constants_1.COMPONENT_FIELD)
                         Instance = {
                             alias: alias_1,
-                            component: new FieldHandler(el).getComponent()
+                            component: new index_1.FieldHandler(el).getComponent()
                         };
-                    if (component === COMPONENT_PASSWORD_VISIBILITY)
+                    if (component === constants_1.COMPONENT_PASSWORD_VISIBILITY)
                         Instance = {
                             alias: alias_1,
-                            component: new PasswordVisibilityComponent(el).getComponent()
+                            component: new index_2.PasswordVisibilityComponent(el).getComponent()
                         };
-                    if (component === COMPONENT_NOTIFICATION)
+                    if (component === constants_1.COMPONENT_NOTIFICATION)
                         Instance = {
                             alias: alias_1,
-                            component: new NotificationComponent(el).getComponent()
+                            component: new index_3.NotificationComponent(el).getComponent()
                         };
-                    if (component === COMPONENT_BUTTON)
+                    if (component === constants_1.COMPONENT_BUTTON)
                         Instance = {
                             alias: alias_1,
-                            component: new ButtonComponent(el).getComponent()
+                            component: new index_4.ButtonComponent(el).getComponent()
                         };
-                    if (component === COMPONENT_PANEL)
+                    if (component === constants_1.COMPONENT_PANEL)
                         Instance = {
                             alias: alias_1,
-                            component: new PanelComponent(el).getComponent()
+                            component: new index_5.PanelComponent(el).getComponent()
                         };
-                    if (component === COMPONENT_TABS)
+                    if (component === constants_1.COMPONENT_TABS)
                         Instance = {
                             alias: alias_1,
-                            component: new TabsComponent(el).getComponent()
+                            component: new tabs_component_1.TabsComponent(el).getComponent()
                         };
-                    if (component === COMPONENT_COLLAPSE)
+                    if (component === constants_1.COMPONENT_COLLAPSE)
                         Instance = {
                             alias: alias_1,
-                            component: new CollapsComponent(el).getComponent()
+                            component: new collapse_component_1.CollapsComponent(el).getComponent()
                         };
-                    if (component === COMPONENT_MODAL)
+                    if (component === constants_1.COMPONENT_MODAL)
                         Instance = {
                             alias: alias_1,
-                            component: new ModalComponent(el).getComponent()
+                            component: new index_6.ModalComponent(el).getComponent()
                         };
-                    if (component === COMPONENT_TOGGLE)
+                    if (component === constants_1.COMPONENT_TOGGLE)
                         Instance = {
                             alias: alias_1,
-                            component: new ToggleComponent(el).getComponent()
+                            component: new index_7.ToggleComponent(el).getComponent()
                         };
-                    if (component === COMPONENT_LOADING)
+                    if (component === constants_1.COMPONENT_LOADING)
                         Instance = {
                             alias: alias_1,
-                            component: new LoadingComponent(el).getComponent()
+                            component: new index_8.LoadingComponent(el).getComponent()
                         };
                 }
                 if (!Instance) {
-                    Instance = { alias: alias_1, component: new Component(el).getComponent() };
+                    Instance = { alias: alias_1, component: new component_1.Component(el).getComponent() };
                 }
-                Venom.subscribe(Instance);
+                venom_1.Venom.subscribe(Instance);
             }
         }
     },

@@ -1,4 +1,6 @@
-export function personDocumentIsValid(num) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function personDocumentIsValid(num) {
     if (num === void 0) { num = ""; }
     num = num.replace(/\D/g, "");
     if (num === null || num === undefined || num === "")
@@ -32,7 +34,8 @@ export function personDocumentIsValid(num) {
     }
     return false;
 }
-export function legalPersonDocumentIsValid(cnpj) {
+exports.personDocumentIsValid = personDocumentIsValid;
+function legalPersonDocumentIsValid(cnpj) {
     if (cnpj === void 0) { cnpj = ""; }
     cnpj = cnpj.replace(/[^\d]+/g, "");
     if (cnpj == "")
@@ -77,4 +80,5 @@ export function legalPersonDocumentIsValid(cnpj) {
         return false;
     return true;
 }
+exports.legalPersonDocumentIsValid = legalPersonDocumentIsValid;
 //# sourceMappingURL=document.js.map

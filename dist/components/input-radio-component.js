@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,7 +12,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { Component } from './component';
+Object.defineProperty(exports, "__esModule", { value: true });
+var component_1 = require("./component");
 var InputComponent = (function (_super) {
     __extends(InputComponent, _super);
     function InputComponent(element) {
@@ -65,6 +67,6 @@ var InputComponent = (function (_super) {
             : false;
     };
     return InputComponent;
-}(Component));
-export { InputComponent };
+}(component_1.Component));
+exports.InputComponent = InputComponent;
 //# sourceMappingURL=input-radio-component.js.map

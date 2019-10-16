@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,11 +12,12 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { Venom } from '../../venom';
-import { ButtonComponent } from '../button-component/index';
-import { InputComponent } from '../input-component';
-import { TEXT_FIELD_ELEMENT } from './constants';
-import { SUCCESS_MODIFIER, DANGER_MODIFIER, WARNING_MODIFIER, ACTIVE_MODIFIER, DISABLED_MODIFIER } from '../constants';
+Object.defineProperty(exports, "__esModule", { value: true });
+var venom_1 = require("../../venom");
+var index_1 = require("../button-component/index");
+var input_component_1 = require("../input-component");
+var constants_1 = require("./constants");
+var constants_2 = require("../constants");
 var FieldComponent = (function (_super) {
     __extends(FieldComponent, _super);
     function FieldComponent(el, handlers) {
@@ -48,7 +50,7 @@ var FieldComponent = (function (_super) {
         var listener = this.getAttributes().listener;
         if (!listener)
             return false;
-        var instance = Venom.get(listener);
+        var instance = venom_1.Venom.get(listener);
         if (instance)
             return instance.component;
     };
@@ -75,7 +77,7 @@ var FieldComponent = (function (_super) {
         if (prevDisabled !== value) {
             _super.prototype.setDisabled.call(this, value);
             var classList = this._getMainElement().classList;
-            var DISABLE_MODIFIER = TEXT_FIELD_ELEMENT + DISABLED_MODIFIER;
+            var DISABLE_MODIFIER = constants_1.TEXT_FIELD_ELEMENT + constants_2.DISABLED_MODIFIER;
             if (!classList.contains(DISABLE_MODIFIER))
                 classList.add(DISABLE_MODIFIER);
         }
@@ -125,7 +127,7 @@ var FieldComponent = (function (_super) {
     };
     FieldComponent.prototype.notify = function () {
         var listener = this.getListener();
-        if (listener instanceof ButtonComponent)
+        if (listener instanceof index_1.ButtonComponent)
             listener.notify();
     };
     FieldComponent.prototype.getIsValid = function () {
@@ -172,19 +174,19 @@ var FieldComponent = (function (_super) {
     };
     FieldComponent.prototype.clearClassnames = function () {
         var classList = this._getMainElement().classList;
-        if (classList.contains(TEXT_FIELD_ELEMENT + SUCCESS_MODIFIER))
-            classList.remove(TEXT_FIELD_ELEMENT + SUCCESS_MODIFIER);
-        if (classList.contains(TEXT_FIELD_ELEMENT + DANGER_MODIFIER))
-            classList.remove(TEXT_FIELD_ELEMENT + DANGER_MODIFIER);
-        if (classList.contains(TEXT_FIELD_ELEMENT + DANGER_MODIFIER))
-            classList.remove(TEXT_FIELD_ELEMENT + WARNING_MODIFIER);
-        if (classList.contains(TEXT_FIELD_ELEMENT + DISABLED_MODIFIER))
-            classList.remove(TEXT_FIELD_ELEMENT + DISABLED_MODIFIER);
+        if (classList.contains(constants_1.TEXT_FIELD_ELEMENT + constants_2.SUCCESS_MODIFIER))
+            classList.remove(constants_1.TEXT_FIELD_ELEMENT + constants_2.SUCCESS_MODIFIER);
+        if (classList.contains(constants_1.TEXT_FIELD_ELEMENT + constants_2.DANGER_MODIFIER))
+            classList.remove(constants_1.TEXT_FIELD_ELEMENT + constants_2.DANGER_MODIFIER);
+        if (classList.contains(constants_1.TEXT_FIELD_ELEMENT + constants_2.DANGER_MODIFIER))
+            classList.remove(constants_1.TEXT_FIELD_ELEMENT + constants_2.WARNING_MODIFIER);
+        if (classList.contains(constants_1.TEXT_FIELD_ELEMENT + constants_2.DISABLED_MODIFIER))
+            classList.remove(constants_1.TEXT_FIELD_ELEMENT + constants_2.DISABLED_MODIFIER);
     };
     FieldComponent.prototype.changeClassnames = function (success) {
         if (success === void 0) { success = true; }
         var classList = this._getMainElement().classList;
-        var className = "" + TEXT_FIELD_ELEMENT + (success ? SUCCESS_MODIFIER : DANGER_MODIFIER);
+        var className = "" + constants_1.TEXT_FIELD_ELEMENT + (success ? constants_2.SUCCESS_MODIFIER : constants_2.DANGER_MODIFIER);
         if (!classList.contains(className))
             classList.add(className);
     };
@@ -199,7 +201,7 @@ var FieldComponent = (function (_super) {
         if (value === void 0) { value = true; }
         var mainEl = this._getMainElement();
         if (mainEl) {
-            var classList = mainEl.classList, ACTIVATED_MODIFIER = TEXT_FIELD_ELEMENT + ACTIVE_MODIFIER;
+            var classList = mainEl.classList, ACTIVATED_MODIFIER = constants_1.TEXT_FIELD_ELEMENT + constants_2.ACTIVE_MODIFIER;
             if (value) {
                 if (!classList.contains(ACTIVATED_MODIFIER))
                     classList.add(ACTIVATED_MODIFIER);
@@ -215,13 +217,13 @@ var FieldComponent = (function (_super) {
         var mainEl = this._getMainElement();
         if (mainEl) {
             this.clearClassnames();
-            var classList = mainEl.classList, MODIFIER = TEXT_FIELD_ELEMENT + modifier;
+            var classList = mainEl.classList, MODIFIER = constants_1.TEXT_FIELD_ELEMENT + modifier;
             if (!classList.contains(MODIFIER))
                 classList.add(MODIFIER);
         }
         return this;
     };
     return FieldComponent;
-}(InputComponent));
-export { FieldComponent };
+}(input_component_1.InputComponent));
+exports.FieldComponent = FieldComponent;
 //# sourceMappingURL=field-component.js.map

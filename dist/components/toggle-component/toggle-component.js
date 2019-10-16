@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,7 +12,8 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { Component } from '../component';
+Object.defineProperty(exports, "__esModule", { value: true });
+var component_1 = require("../component");
 var ToggleComponent = (function (_super) {
     __extends(ToggleComponent, _super);
     function ToggleComponent(el) {
@@ -63,6 +65,6 @@ var ToggleComponent = (function (_super) {
         return this;
     };
     return ToggleComponent;
-}(Component));
-export { ToggleComponent };
+}(component_1.Component));
+exports.ToggleComponent = ToggleComponent;
 //# sourceMappingURL=toggle-component.js.map

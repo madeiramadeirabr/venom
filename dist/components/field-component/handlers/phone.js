@@ -1,17 +1,19 @@
-import { phoneIsValid } from '../../../utils/validators/index';
-import { phoneMask } from '../../../utils/mask';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var index_1 = require("../../../utils/validators/index");
+var mask_1 = require("../../../utils/mask");
 var LENGTH_MAX = 11;
-export function Phone(component, e) {
+function Phone(component, e) {
     function parsed(value) {
         return value.replace(/\D/g, '');
     }
     function validate(value) {
         if (value === void 0) { value = ''; }
         var mobile = parsed(value);
-        return phoneIsValid(mobile);
+        return index_1.phoneIsValid(mobile);
     }
     var clearClassnames = component.clearClassnames, update = component.update, setIsValid = component.setIsValid, getValue = component.getValue, setValue = component.setValue, setHelperContent = component.setHelperContent, type = event.type, value = getValue(), valueParsed = parsed(value), valueLength = valueParsed.length, isValid = validate(valueParsed);
-    setValue(phoneMask(valueParsed));
+    setValue(mask_1.phoneMask(valueParsed));
     setIsValid('mobile', type, isValid);
     setHelperContent('');
     if (valueLength < LENGTH_MAX) {
@@ -26,4 +28,5 @@ export function Phone(component, e) {
     }
     return false;
 }
+exports.Phone = Phone;
 //# sourceMappingURL=phone.js.map

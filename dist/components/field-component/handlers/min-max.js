@@ -1,4 +1,6 @@
-export function MinMax(component, e) {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+function MinMax(component, e) {
     var clearClassnames = component.clearClassnames, update = component.update, setIsValid = component.setIsValid, getValue = component.getValue, setValue = component.setValue, setHelperContent = component.setHelperContent, type = event ? event.type : 'keyup', target = event.target, _a = target.dataset, trigger = _a.trigger, minLength = _a.minLength, maxLength = _a.maxLength, LENGTH_MIN = minLength || '0', LENGTH_MAX = maxLength || '255';
     var value = getValue(), valueLength = value.length;
     if (valueLength > parseInt(LENGTH_MAX, 10)) {
@@ -17,4 +19,5 @@ export function MinMax(component, e) {
     clearClassnames();
     return false;
 }
+exports.MinMax = MinMax;
 //# sourceMappingURL=min-max.js.map

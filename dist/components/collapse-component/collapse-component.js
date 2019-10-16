@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,8 +12,9 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-import { Component } from '../component';
-import { HIDDEN_MODIFIER } from '../constants';
+Object.defineProperty(exports, "__esModule", { value: true });
+var component_1 = require("../component");
+var constants_1 = require("../constants");
 var CollapsComponent = (function (_super) {
     __extends(CollapsComponent, _super);
     function CollapsComponent(element) {
@@ -33,7 +35,7 @@ var CollapsComponent = (function (_super) {
         });
     };
     CollapsComponent.prototype.change = function () {
-        var isHidden = this._content.classList.contains(HIDDEN_MODIFIER);
+        var isHidden = this._content.classList.contains(constants_1.HIDDEN_MODIFIER);
         if (isHidden) {
             this.open();
         }
@@ -43,7 +45,7 @@ var CollapsComponent = (function (_super) {
         return this;
     };
     CollapsComponent.prototype.close = function () {
-        this._content.classList.add(HIDDEN_MODIFIER);
+        this._content.classList.add(constants_1.HIDDEN_MODIFIER);
         this._button.classList.add('collapse__open');
         this._button.classList.remove('collapse__close');
         return this;
@@ -51,7 +53,7 @@ var CollapsComponent = (function (_super) {
     CollapsComponent.prototype.closeAll = function () {
         if (this._element.parentElement) {
             this._element.parentElement.querySelectorAll('.collapse__content').forEach(function (content) {
-                content.classList.add(HIDDEN_MODIFIER);
+                content.classList.add(constants_1.HIDDEN_MODIFIER);
             });
             this._element.parentElement.querySelectorAll('.collapse__container').forEach(function (container) {
                 ;
@@ -64,12 +66,12 @@ var CollapsComponent = (function (_super) {
     };
     CollapsComponent.prototype.open = function () {
         this.closeAll();
-        this._content.classList.remove(HIDDEN_MODIFIER);
+        this._content.classList.remove(constants_1.HIDDEN_MODIFIER);
         this._button.classList.remove('collapse__open');
         this._button.classList.add('collapse__close');
         return this;
     };
     return CollapsComponent;
-}(Component));
-export { CollapsComponent };
+}(component_1.Component));
+exports.CollapsComponent = CollapsComponent;
 //# sourceMappingURL=collapse-component.js.map

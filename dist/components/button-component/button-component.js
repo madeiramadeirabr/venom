@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -11,10 +12,11 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+Object.defineProperty(exports, "__esModule", { value: true });
 var DISABLED_CLASSNAME = 'button--is-disabled';
-import { FieldComponent } from '../field-component/index';
-import { Venom } from '../../venom';
-import { InputComponent } from '../input-component';
+var index_1 = require("../field-component/index");
+var venom_1 = require("../../venom");
+var input_component_1 = require("../input-component");
 var ButtonComponent = (function (_super) {
     __extends(ButtonComponent, _super);
     function ButtonComponent(element) {
@@ -65,9 +67,9 @@ var ButtonComponent = (function (_super) {
                 targets_1.push(target);
             }
             targets_1.map(function (t) {
-                var instance = Venom.get(t);
+                var instance = venom_1.Venom.get(t);
                 if (instance) {
-                    if (instance.component instanceof FieldComponent) {
+                    if (instance.component instanceof index_1.FieldComponent) {
                         listening_1.push(instance);
                     }
                 }
@@ -139,6 +141,6 @@ var ButtonComponent = (function (_super) {
         return this;
     };
     return ButtonComponent;
-}(InputComponent));
-export { ButtonComponent };
+}(input_component_1.InputComponent));
+exports.ButtonComponent = ButtonComponent;
 //# sourceMappingURL=button-component.js.map
