@@ -65,7 +65,9 @@
     "webpack-dev-server": "^3.8.2",
     "webpack-merge": "^4.2.2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@madeiramadeira/venom": "^1.0.1"
+  },
   "browserslist": [
     "> 1%",
     "ie >= 8",

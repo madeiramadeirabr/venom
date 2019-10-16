@@ -44,5 +44,7 @@
     "babel-plugin-module-resolver": "^3.2.0",
     "typescript": "^3.6.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@madeiramadeira/venom": "^1.0.1"
+  }
 }

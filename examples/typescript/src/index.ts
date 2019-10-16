@@ -1,5 +1,5 @@
-import { Components } from 'venom'
-import { ButtonComponent } from 'venom'
+import { Components } from '@madeiramadeira/venom'
+import { ButtonComponent } from '@madeiramadeira/venom'
 
 Components.initialize()
 

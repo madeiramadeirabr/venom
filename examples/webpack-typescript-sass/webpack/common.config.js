@@ -6,7 +6,7 @@ const LoaderOptionsPlugin = require('webpack/lib/LoaderOptionsPlugin')
 module.exports = {
   entry: {
     /* common */
-    'css/venom/bundle': 'venom/dist/venom.css',
+    'css/venom/bundle': '@madeiramadeira/venom/dist/venom.css',
 
     /* test */
     'css/test/bundle': './src/resources/styles/pages/test.sass',
