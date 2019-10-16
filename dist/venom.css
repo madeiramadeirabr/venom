@@ -383,7 +383,6 @@ html {
   overflow-y: scroll;
   text-rendering: optimizeLegibility;
   -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
           text-size-adjust: 100%;
 }
@@ -622,62 +621,110 @@ html {
 }
 
 .venom .grid--is-flex {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 
 .venom .grid--has-content-start {
-  justify-content: flex-start;
+  -webkit-box-pack: start;
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 .venom .grid--has-content-center {
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .venom .grid--has-content-end {
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .venom .grid--has-items-start {
-  align-items: flex-start;
+  -webkit-box-align: start;
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 
 .venom .grid--has-items-center {
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .venom .grid--has-items-end {
-  align-items: flex-end;
+  -webkit-box-align: end;
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 .venom .grid--has-self-align-start {
-  align-self: flex-start;
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
 }
 
 .venom .grid--has-self-align-center {
-  align-self: flex-center;
+  -webkit-align-self: flex-center;
+      -ms-flex-item-align: flex-center;
+          align-self: flex-center;
 }
 
 .venom .grid--has-self-align-end {
-  align-self: flex-end;
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
 }
 
 .venom .grid--has-no-wrap {
-  flex-wrap: nowrap;
+  -webkit-flex-wrap: nowrap;
+      -ms-flex-wrap: nowrap;
+          flex-wrap: nowrap;
 }
 
 .venom .grid__row {
   box-sizing: border-box !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex: 0 1 auto;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+      -ms-flex: 0 1 auto;
+          flex: 0 1 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   margin: 0;
   padding: 12px;
-  align-items: stretch;
+  -webkit-box-align: stretch;
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
 .venom .grid__row--is-reverse {
-  flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 
 .venom .grid__row--has-no-gap-vertical {
@@ -695,16 +742,32 @@ html {
 
 .venom .grid__columns {
   box-sizing: border-box !important;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex: 0 0 auto;
-  flex-direction: column;
-  flex-wrap: wrap;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   margin: 0;
   padding: 12px;
 }
 
 .venom .grid__columns--is-reverse {
-  flex-direction: column-reverse;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: column-reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
 .venom .grid__columns--has-no-gap-vertical {
@@ -718,18 +781,32 @@ html {
 
 .venom .grid__column {
   box-sizing: border-box !important;
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   min-height: 1px;
   margin: 0 12px;
-  flex-grow: 1;
-  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  -webkit-flex-basis: 0;
+      -ms-flex-preferred-size: 0;
+          flex-basis: 0;
   max-width: calc(100% - 24px);
   padding: 0;
 }
 
 .venom .grid__column--has-content-centered {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .venom .grid__column--has-gutter {
@@ -741,15 +818,23 @@ html {
 }
 
 .venom .grid__column--is-first {
-  order: -1;
+  -webkit-box-ordinal-group: 0;
+  -webkit-order: -1;
+      -ms-flex-order: -1;
+          order: -1;
 }
 
 .venom .grid__column--is-last {
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
 }
 
 .venom .grid__column--is-one {
-  flex-basis: calc(8.33333% - 24px);
+  -webkit-flex-basis: calc(8.33333% - 24px);
+      -ms-flex-preferred-size: calc(8.33333% - 24px);
+          flex-basis: calc(8.33333% - 24px);
   max-width: calc(8.33333% - 24px);
 }
 
@@ -758,12 +843,16 @@ html {
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: calc( 100% - 24px);
+  -webkit-flex-basis: calc( 100% - 24px);
+      -ms-flex-preferred-size: calc( 100% - 24px);
+          flex-basis: calc( 100% - 24px);
   max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-two {
-  flex-basis: calc(16.66667% - 24px);
+  -webkit-flex-basis: calc(16.66667% - 24px);
+      -ms-flex-preferred-size: calc(16.66667% - 24px);
+          flex-basis: calc(16.66667% - 24px);
   max-width: calc(16.66667% - 24px);
 }
 
@@ -772,12 +861,16 @@ html {
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: calc( 100% - 24px);
+  -webkit-flex-basis: calc( 100% - 24px);
+      -ms-flex-preferred-size: calc( 100% - 24px);
+          flex-basis: calc( 100% - 24px);
   max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-three {
-  flex-basis: calc(25% - 24px);
+  -webkit-flex-basis: calc(25% - 24px);
+      -ms-flex-preferred-size: calc(25% - 24px);
+          flex-basis: calc(25% - 24px);
   max-width: calc(25% - 24px);
 }
 
@@ -786,12 +879,16 @@ html {
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: calc( 100% - 24px);
+  -webkit-flex-basis: calc( 100% - 24px);
+      -ms-flex-preferred-size: calc( 100% - 24px);
+          flex-basis: calc( 100% - 24px);
   max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-four {
-  flex-basis: calc(33.33333% - 24px);
+  -webkit-flex-basis: calc(33.33333% - 24px);
+      -ms-flex-preferred-size: calc(33.33333% - 24px);
+          flex-basis: calc(33.33333% - 24px);
   max-width: calc(33.33333% - 24px);
 }
 
@@ -800,12 +897,16 @@ html {
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: calc( 100% - 24px);
+  -webkit-flex-basis: calc( 100% - 24px);
+      -ms-flex-preferred-size: calc( 100% - 24px);
+          flex-basis: calc( 100% - 24px);
   max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-five {
-  flex-basis: calc(41.66667% - 24px);
+  -webkit-flex-basis: calc(41.66667% - 24px);
+      -ms-flex-preferred-size: calc(41.66667% - 24px);
+          flex-basis: calc(41.66667% - 24px);
   max-width: calc(41.66667% - 24px);
 }
 
@@ -814,12 +915,16 @@ html {
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: calc( 100% - 24px);
+  -webkit-flex-basis: calc( 100% - 24px);
+      -ms-flex-preferred-size: calc( 100% - 24px);
+          flex-basis: calc( 100% - 24px);
   max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-six {
-  flex-basis: calc(50% - 24px);
+  -webkit-flex-basis: calc(50% - 24px);
+      -ms-flex-preferred-size: calc(50% - 24px);
+          flex-basis: calc(50% - 24px);
   max-width: calc(50% - 24px);
 }
 
@@ -828,12 +933,16 @@ html {
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: calc( 100% - 24px);
+  -webkit-flex-basis: calc( 100% - 24px);
+      -ms-flex-preferred-size: calc( 100% - 24px);
+          flex-basis: calc( 100% - 24px);
   max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-seven {
-  flex-basis: calc(58.33333% - 24px);
+  -webkit-flex-basis: calc(58.33333% - 24px);
+      -ms-flex-preferred-size: calc(58.33333% - 24px);
+          flex-basis: calc(58.33333% - 24px);
   max-width: calc(58.33333% - 24px);
 }
 
@@ -842,12 +951,16 @@ html {
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: calc( 100% - 24px);
+  -webkit-flex-basis: calc( 100% - 24px);
+      -ms-flex-preferred-size: calc( 100% - 24px);
+          flex-basis: calc( 100% - 24px);
   max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-eight {
-  flex-basis: calc(66.66667% - 24px);
+  -webkit-flex-basis: calc(66.66667% - 24px);
+      -ms-flex-preferred-size: calc(66.66667% - 24px);
+          flex-basis: calc(66.66667% - 24px);
   max-width: calc(66.66667% - 24px);
 }
 
@@ -856,12 +969,16 @@ html {
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: calc( 100% - 24px);
+  -webkit-flex-basis: calc( 100% - 24px);
+      -ms-flex-preferred-size: calc( 100% - 24px);
+          flex-basis: calc( 100% - 24px);
   max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-nine {
-  flex-basis: calc(75% - 24px);
+  -webkit-flex-basis: calc(75% - 24px);
+      -ms-flex-preferred-size: calc(75% - 24px);
+          flex-basis: calc(75% - 24px);
   max-width: calc(75% - 24px);
 }
 
@@ -870,12 +987,16 @@ html {
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: calc( 100% - 24px);
+  -webkit-flex-basis: calc( 100% - 24px);
+      -ms-flex-preferred-size: calc( 100% - 24px);
+          flex-basis: calc( 100% - 24px);
   max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-ten {
-  flex-basis: calc(83.33333% - 24px);
+  -webkit-flex-basis: calc(83.33333% - 24px);
+      -ms-flex-preferred-size: calc(83.33333% - 24px);
+          flex-basis: calc(83.33333% - 24px);
   max-width: calc(83.33333% - 24px);
 }
 
@@ -884,12 +1005,16 @@ html {
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: calc( 100% - 24px);
+  -webkit-flex-basis: calc( 100% - 24px);
+      -ms-flex-preferred-size: calc( 100% - 24px);
+          flex-basis: calc( 100% - 24px);
   max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-eleven {
-  flex-basis: calc(91.66667% - 24px);
+  -webkit-flex-basis: calc(91.66667% - 24px);
+      -ms-flex-preferred-size: calc(91.66667% - 24px);
+          flex-basis: calc(91.66667% - 24px);
   max-width: calc(91.66667% - 24px);
 }
 
@@ -898,12 +1023,17 @@ html {
 }
 
 .venom .grid__column--is-twelve {
-  flex-basis: calc( 100% - 24px);
+  -webkit-flex-basis: calc( 100% - 24px);
+      -ms-flex-preferred-size: calc( 100% - 24px);
+          flex-basis: calc( 100% - 24px);
   max-width: calc( 100% - 24px);
 }
 
 .venom .grid__column--is-auto {
-  flex: 0 0 auto;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
   width: auto;
   max-width: 100%;
 }
@@ -917,91 +1047,121 @@ html {
     max-width: calc(100% - 16px);
   }
   .venom .grid__column--is-one-mobile {
-    flex-basis: calc(8.33333% - 16px) !important;
+    -webkit-flex-basis: calc(8.33333% - 16px) !important;
+        -ms-flex-preferred-size: calc(8.33333% - 16px) !important;
+            flex-basis: calc(8.33333% - 16px) !important;
     max-width: calc(8.33333% - 16px) !important;
   }
   .venom .grid__column--is-one-mobile-offset-mobile {
     margin-left: calc(8.33333% - 16px) !important;
   }
   .venom .grid__column--is-two-mobile {
-    flex-basis: calc(16.66667% - 16px) !important;
+    -webkit-flex-basis: calc(16.66667% - 16px) !important;
+        -ms-flex-preferred-size: calc(16.66667% - 16px) !important;
+            flex-basis: calc(16.66667% - 16px) !important;
     max-width: calc(16.66667% - 16px) !important;
   }
   .venom .grid__column--is-two-mobile-offset-mobile {
     margin-left: calc(16.66667% - 16px) !important;
   }
   .venom .grid__column--is-three-mobile {
-    flex-basis: calc(25% - 16px) !important;
+    -webkit-flex-basis: calc(25% - 16px) !important;
+        -ms-flex-preferred-size: calc(25% - 16px) !important;
+            flex-basis: calc(25% - 16px) !important;
     max-width: calc(25% - 16px) !important;
   }
   .venom .grid__column--is-three-mobile-offset-mobile {
     margin-left: calc(25% - 16px) !important;
   }
   .venom .grid__column--is-four-mobile {
-    flex-basis: calc(33.33333% - 16px) !important;
+    -webkit-flex-basis: calc(33.33333% - 16px) !important;
+        -ms-flex-preferred-size: calc(33.33333% - 16px) !important;
+            flex-basis: calc(33.33333% - 16px) !important;
     max-width: calc(33.33333% - 16px) !important;
   }
   .venom .grid__column--is-four-mobile-offset-mobile {
     margin-left: calc(33.33333% - 16px) !important;
   }
   .venom .grid__column--is-five-mobile {
-    flex-basis: calc(41.66667% - 16px) !important;
+    -webkit-flex-basis: calc(41.66667% - 16px) !important;
+        -ms-flex-preferred-size: calc(41.66667% - 16px) !important;
+            flex-basis: calc(41.66667% - 16px) !important;
     max-width: calc(41.66667% - 16px) !important;
   }
   .venom .grid__column--is-five-mobile-offset-mobile {
     margin-left: calc(41.66667% - 16px) !important;
   }
   .venom .grid__column--is-six-mobile {
-    flex-basis: calc(50% - 16px) !important;
+    -webkit-flex-basis: calc(50% - 16px) !important;
+        -ms-flex-preferred-size: calc(50% - 16px) !important;
+            flex-basis: calc(50% - 16px) !important;
     max-width: calc(50% - 16px) !important;
   }
   .venom .grid__column--is-six-mobile-offset-mobile {
     margin-left: calc(50% - 16px) !important;
   }
   .venom .grid__column--is-seven-mobile {
-    flex-basis: calc(58.33333% - 16px) !important;
+    -webkit-flex-basis: calc(58.33333% - 16px) !important;
+        -ms-flex-preferred-size: calc(58.33333% - 16px) !important;
+            flex-basis: calc(58.33333% - 16px) !important;
     max-width: calc(58.33333% - 16px) !important;
   }
   .venom .grid__column--is-seven-mobile-offset-mobile {
     margin-left: calc(58.33333% - 16px) !important;
   }
   .venom .grid__column--is-eight-mobile {
-    flex-basis: calc(66.66667% - 16px) !important;
+    -webkit-flex-basis: calc(66.66667% - 16px) !important;
+        -ms-flex-preferred-size: calc(66.66667% - 16px) !important;
+            flex-basis: calc(66.66667% - 16px) !important;
     max-width: calc(66.66667% - 16px) !important;
   }
   .venom .grid__column--is-eight-mobile-offset-mobile {
     margin-left: calc(66.66667% - 16px) !important;
   }
   .venom .grid__column--is-nine-mobile {
-    flex-basis: calc(75% - 16px) !important;
+    -webkit-flex-basis: calc(75% - 16px) !important;
+        -ms-flex-preferred-size: calc(75% - 16px) !important;
+            flex-basis: calc(75% - 16px) !important;
     max-width: calc(75% - 16px) !important;
   }
   .venom .grid__column--is-nine-mobile-offset-mobile {
     margin-left: calc(75% - 16px) !important;
   }
   .venom .grid__column--is-ten-mobile {
-    flex-basis: calc(83.33333% - 16px) !important;
+    -webkit-flex-basis: calc(83.33333% - 16px) !important;
+        -ms-flex-preferred-size: calc(83.33333% - 16px) !important;
+            flex-basis: calc(83.33333% - 16px) !important;
     max-width: calc(83.33333% - 16px) !important;
   }
   .venom .grid__column--is-ten-mobile-offset-mobile {
     margin-left: calc(83.33333% - 16px) !important;
   }
   .venom .grid__column--is-eleven-mobile {
-    flex-basis: calc(91.66667% - 16px) !important;
+    -webkit-flex-basis: calc(91.66667% - 16px) !important;
+        -ms-flex-preferred-size: calc(91.66667% - 16px) !important;
+            flex-basis: calc(91.66667% - 16px) !important;
     max-width: calc(91.66667% - 16px) !important;
   }
   .venom .grid__column--is-eleven-mobile-offset-mobile {
     margin-left: calc(91.66667% - 16px) !important;
   }
   .venom .grid__column--is-twelve-mobile {
-    flex-basis: calc( 100% - 24px) !important;
+    -webkit-flex-basis: calc( 100% - 24px) !important;
+        -ms-flex-preferred-size: calc( 100% - 24px) !important;
+            flex-basis: calc( 100% - 24px) !important;
     max-width: calc( 100% - 24px) !important;
   }
   .venom .grid__column--is-first-mobile {
-    order: -1 !important;
+    -webkit-box-ordinal-group: 0 !important;
+    -webkit-order: -1 !important;
+        -ms-flex-order: -1 !important;
+            order: -1 !important;
   }
   .venom .grid__column--is-last-mobile {
-    order: 1 !important;
+    -webkit-box-ordinal-group: 2 !important;
+    -webkit-order: 1 !important;
+        -ms-flex-order: 1 !important;
+            order: 1 !important;
   }
 }
 
@@ -1050,12 +1210,29 @@ html {
 }
 
 .venom .button__group {
-  align-content: center;
-  align-items: center;
-  align-self: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: solid 1px rgba(0, 0, 0, 0.75);
   border-radius: 4px;
   overflow: hidden;
@@ -1075,12 +1252,29 @@ html {
 
 .venom .button {
   box-shadow: 0 2px 5px 0 #b3b3b3;
-  align-content: center;
-  align-items: center;
-  align-self: center;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: white;
   border-color: white;
   border-radius: 4px;
@@ -1093,6 +1287,7 @@ html {
   line-height: 1;
   outline: none;
   padding: 12px;
+  -webkit-transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
   transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
   background-position: center;
   letter-spacing: .25px;
@@ -1103,9 +1298,15 @@ html {
 }
 
 .venom .button .button__icon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
   width: 36px;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .venom .button .button__icon svg path:not([fill]) {
@@ -1113,13 +1314,23 @@ html {
 }
 
 .venom .button__text {
-  flex: 1;
-  flex-basis: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
 }
 
 .venom .button--has-content-center .button__text {
-  flex: 0;
-  flex-basis: 100%;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
 }
 
 .venom .button.button:disabled, .venom .button.button--is-disabled {
@@ -1152,12 +1363,14 @@ html {
 }
 
 .venom .button.button--is-link:focus {
+  background: #b9d0e4 -webkit-radial-gradient(circle, transparent 1%, #e9f0f7 1%) center/15000%;
   background: #b9d0e4 radial-gradient(circle, transparent 1%, #e9f0f7 1%) center/15000%;
 }
 
 .venom .button.button--is-link:active {
   background-color: #b9d0e4;
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1172,12 +1385,14 @@ html {
 }
 
 .venom .button.button--is-primary:focus {
+  background: #e56e06 -webkit-radial-gradient(circle, transparent 1%, #f4831f 1%) center/15000%;
   background: #e56e06 radial-gradient(circle, transparent 1%, #f4831f 1%) center/15000%;
 }
 
 .venom .button.button--is-primary:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1202,6 +1417,7 @@ html {
 }
 
 .venom .button.button--is-primary.button--is-outline:focus {
+  background: #fcdcc0 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
   background: #fcdcc0 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
 }
 
@@ -1209,6 +1425,7 @@ html {
   border-color: #e56e06;
   color: #e56e06;
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1231,6 +1448,7 @@ html {
 }
 
 .venom .button.button--is-primary.button--is-link:focus {
+  background: #fcdcc0 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
   background: #fcdcc0 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
 }
 
@@ -1238,6 +1456,7 @@ html {
   border-color: #e56e06;
   color: #e56e06;
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1252,12 +1471,14 @@ html {
 }
 
 .venom .button.button--is-secondary:focus {
+  background: #004785 -webkit-radial-gradient(circle, transparent 1%, #00549e 1%) center/15000%;
   background: #004785 radial-gradient(circle, transparent 1%, #00549e 1%) center/15000%;
 }
 
 .venom .button.button--is-secondary:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1282,6 +1503,7 @@ html {
 }
 
 .venom .button.button--is-secondary.button--is-outline:focus {
+  background: #b9d0e4 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
   background: #b9d0e4 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
 }
 
@@ -1289,6 +1511,7 @@ html {
   border-color: #004785;
   color: #004785;
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1311,6 +1534,7 @@ html {
 }
 
 .venom .button.button--is-secondary.button--is-link:focus {
+  background: #b9d0e4 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
   background: #b9d0e4 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
 }
 
@@ -1318,6 +1542,7 @@ html {
   border-color: #004785;
   color: #004785;
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1332,12 +1557,14 @@ html {
 }
 
 .venom .button.button--is-danger:focus {
+  background: #be3023 -webkit-radial-gradient(circle, transparent 1%, #db4639 1%) center/15000%;
   background: #be3023 radial-gradient(circle, transparent 1%, #db4639 1%) center/15000%;
 }
 
 .venom .button.button--is-danger:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1362,6 +1589,7 @@ html {
 }
 
 .venom .button.button--is-danger.button--is-outline:focus {
+  background: #df5a4e -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
   background: #df5a4e radial-gradient(circle, transparent 1%, white 1%) center/15000%;
 }
 
@@ -1369,6 +1597,7 @@ html {
   border-color: #be3023;
   color: #be3023;
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1391,6 +1620,7 @@ html {
 }
 
 .venom .button.button--is-danger.button--is-link:focus {
+  background: #df5a4e -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
   background: #df5a4e radial-gradient(circle, transparent 1%, white 1%) center/15000%;
 }
 
@@ -1398,6 +1628,7 @@ html {
   border-color: #be3023;
   color: #be3023;
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1412,12 +1643,14 @@ html {
 }
 
 .venom .button.button--is-success:focus {
+  background: #00851d -webkit-radial-gradient(circle, transparent 1%, #009e22 1%) center/15000%;
   background: #00851d radial-gradient(circle, transparent 1%, #009e22 1%) center/15000%;
 }
 
 .venom .button.button--is-success:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1442,6 +1675,7 @@ html {
 }
 
 .venom .button.button--is-success.button--is-outline:focus {
+  background: #00b828 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
   background: #00b828 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
 }
 
@@ -1449,6 +1683,7 @@ html {
   border-color: #00851d;
   color: #00851d;
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1471,6 +1706,7 @@ html {
 }
 
 .venom .button.button--is-success.button--is-link:focus {
+  background: #00b828 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
   background: #00b828 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
 }
 
@@ -1478,6 +1714,7 @@ html {
   border-color: #00851d;
   color: #00851d;
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1492,12 +1729,14 @@ html {
 }
 
 .venom .button.button--is-warning:focus {
+  background: #d79804 -webkit-radial-gradient(circle, transparent 1%, #fab514 1%) center/15000%;
   background: #d79804 radial-gradient(circle, transparent 1%, #fab514 1%) center/15000%;
 }
 
 .venom .button.button--is-warning:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1522,6 +1761,7 @@ html {
 }
 
 .venom .button.button--is-warning.button--is-outline:focus {
+  background: #fbc546 -webkit-radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
   background: #fbc546 radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
 }
 
@@ -1529,6 +1769,7 @@ html {
   border-color: #d79804;
   color: #d79804;
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1551,6 +1792,7 @@ html {
 }
 
 .venom .button.button--is-warning.button--is-link:focus {
+  background: #fbc546 -webkit-radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
   background: #fbc546 radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
 }
 
@@ -1558,6 +1800,7 @@ html {
   border-color: #d79804;
   color: #d79804;
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1572,12 +1815,14 @@ html {
 }
 
 .venom .button.button--is-monotone:focus {
+  background: #4d4d4d -webkit-radial-gradient(circle, transparent 1%, gray 1%) center/15000%;
   background: #4d4d4d radial-gradient(circle, transparent 1%, gray 1%) center/15000%;
 }
 
 .venom .button.button--is-monotone:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1602,6 +1847,7 @@ html {
 }
 
 .venom .button.button--is-monotone.button--is-outline:focus {
+  background: #b3b3b3 -webkit-radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
   background: #b3b3b3 radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
 }
 
@@ -1609,6 +1855,7 @@ html {
   border-color: #4d4d4d;
   color: #4d4d4d;
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1631,6 +1878,7 @@ html {
 }
 
 .venom .button.button--is-monotone.button--is-link:focus {
+  background: #b3b3b3 -webkit-radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
   background: #b3b3b3 radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
 }
 
@@ -1638,6 +1886,7 @@ html {
   border-color: #4d4d4d;
   color: #4d4d4d;
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1652,12 +1901,14 @@ html {
 }
 
 .venom .button.button--is-dark:focus {
+  background: #1a1a1a -webkit-radial-gradient(circle, transparent 1%, #262626 1%) center/15000%;
   background: #1a1a1a radial-gradient(circle, transparent 1%, #262626 1%) center/15000%;
 }
 
 .venom .button.button--is-dark:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1682,6 +1933,7 @@ html {
 }
 
 .venom .button.button--is-dark.button--is-outline:focus {
+  background: #333333 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
   background: #333333 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
 }
 
@@ -1689,6 +1941,7 @@ html {
   border-color: #1a1a1a;
   color: #1a1a1a;
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1711,6 +1964,7 @@ html {
 }
 
 .venom .button.button--is-dark.button--is-link:focus {
+  background: #333333 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
   background: #333333 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
 }
 
@@ -1718,6 +1972,7 @@ html {
   border-color: #1a1a1a;
   color: #1a1a1a;
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -1803,10 +2058,14 @@ html {
 
 .venom .notification__content {
   color: #333;
-  flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.1;
+  -webkit-transition: color 86ms ease-in;
   transition: color 86ms ease-in;
 }
 
@@ -1822,13 +2081,24 @@ html {
 }
 
 .venom .notification__container {
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #b3b3b3;
   border-radius: 4px;
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding: 12px;
+  -webkit-transition: background-color 86ms ease-in, color 86ms ease-in, display 86ms ease-in;
   transition: background-color 86ms ease-in, color 86ms ease-in, display 86ms ease-in;
   max-width: 100%;
 }
@@ -1956,8 +2226,15 @@ html {
 }
 
 .venom .input {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   position: relative;
   width: 100%;
   line-height: 24px;
@@ -2056,12 +2333,21 @@ html {
   background: white;
   border-width: 0 2px 2px 0;
   border-radius: 0;
-  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 
 .venom .text-field {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   width: 100%;
   margin-bottom: 12px;
@@ -2103,6 +2389,7 @@ html {
   left: 0;
   padding: 12px;
   max-width: 100%;
+  -webkit-transition: all 172ms ease;
   transition: all 172ms ease;
   cursor: text;
 }
@@ -2144,14 +2431,30 @@ html {
 }
 
 .venom .text-field.text-field--has-left-icon .text-field__container, .venom .text-field.text-field--has-right-icon .text-field__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .venom .text-field.text-field--has-left-icon .text-field__icon, .venom .text-field.text-field--has-right-icon .text-field__icon {
-  align-items: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 48px;
 }
 
@@ -2212,9 +2515,16 @@ html {
   background: white;
   height: 100%;
   padding: 0 12px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
   display: flex;
-  justify-content: left;
+  -webkit-box-pack: left;
+  -webkit-justify-content: left;
+      -ms-flex-pack: left;
+          justify-content: left;
   -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
   -webkit-box-direction--ms-flex-direction: column;
   -webkit-box-direction--ms-flex-direction-flex-direction: column;
 }
@@ -2235,25 +2545,33 @@ html {
   -webkit-box-flex--ms-flex-positive-flex-grow: 1;
   cursor: pointer;
   position: relative;
-  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   -o-user-select: none;
   user-select: none;
+  -webkit-transition: background 400ms;
   transition: background 400ms;
   background-position: center;
-  justify-content: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border-bottom: transparent solid 2px;
 }
 
 .venom .tab .tab__item:hover, .venom .tab .tab__item:focus {
   background-color: #b3b3b3;
+  background: #cccccc -webkit-radial-gradient(circle, transparent 1%, #b3b3b3 1%) center/15000%;
   background: #cccccc radial-gradient(circle, transparent 1%, #b3b3b3 1%) center/15000%;
 }
 
 .venom .tab .tab__item:active {
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -2273,11 +2591,13 @@ html {
 
 .venom .tab--is-oldstyle .tab__item:hover, .venom .tab--is-oldstyle .tab__item:focus {
   background-color: white;
+  background: white -webkit-radial-gradient(circle, transparent 1%, rgba(0, 0, 0, 0.05) 1%) center/15000%;
   background: white radial-gradient(circle, transparent 1%, rgba(0, 0, 0, 0.05) 1%) center/15000%;
 }
 
 .venom .tab--is-oldstyle .tab__item:active {
   background-size: 100%;
+  -webkit-transition: background 0s;
   transition: background 0s;
 }
 
@@ -2295,10 +2615,14 @@ html {
 
 .venom .collapse__title {
   color: #333;
-  flex: 1;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   font-size: 14px;
   font-weight: 400;
   line-height: 1.1;
+  -webkit-transition: color 86ms ease-in;
   transition: color 86ms ease-in;
 }
 
@@ -2308,11 +2632,20 @@ html {
   margin: 0 15px;
   padding: 12px;
   box-sizing: border-box;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
   padding: 12px;
   width: 100%;
-  flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
   cursor: pointer;
 }
 
@@ -2363,9 +2696,18 @@ html {
   bottom: 0;
   background-color: rgba(10, 10, 10, 0.86);
   z-index: 100;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .venom .modal--is-hidden {
@@ -2385,8 +2727,15 @@ html {
 .venom .modal__container {
   background-color: white;
   overflow-y: hidden;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .venom .modal__close {
@@ -2401,7 +2750,9 @@ html {
   border-radius: 290486px;
   cursor: pointer;
   display: inline-block;
-  flex-shrink: 0;
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
   font-size: 0;
   height: 24px;
   max-height: 24px;
@@ -2421,8 +2772,12 @@ html {
   left: 50%;
   position: absolute;
   top: 50%;
-  transform: translateX(-50%) translateY(-50%) rotate(45deg);
-  transform-origin: center center;
+  -webkit-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -ms-transform: translateX(-50%) translateY(-50%) rotate(45deg);
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  -webkit-transform-origin: center center;
+  -ms-transform-origin: center center;
+      transform-origin: center center;
 }
 
 .venom .modal__close::before {
@@ -2458,6 +2813,7 @@ html {
 @media screen and (max-width: 768px) {
   .venom .modal {
     display: block;
+    -webkit-transition: left 344ms ease-in;
     transition: left 344ms ease-in;
     width: 100%;
     height: 100%;
@@ -2479,6 +2835,7 @@ html {
 .venom .panel__body {
   display: none;
   height: 0;
+  -webkit-transition: height 172ms ease-in;
   transition: height 172ms ease-in;
 }
 
@@ -2487,11 +2844,16 @@ html {
 }
 
 .venom .panel__arrow svg {
+  -webkit-transition: -webkit-transform 172ms ease-in;
+  transition: -webkit-transform 172ms ease-in;
   transition: transform 172ms ease-in;
+  transition: transform 172ms ease-in, -webkit-transform 172ms ease-in;
 }
 
 .venom .panel--is-open .panel__arrow svg {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 
 .venom .panel--is-open .panel__body {
@@ -2546,9 +2908,12 @@ html {
 .venom .toggle input:checked ~ .toggle__switch {
   right: 2px;
   left: 24px;
+  -webkit-transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transition-property: left, right;
   transition-property: left, right;
-  transition-delay: 172ms, 0s;
+  -webkit-transition-delay: 172ms, 0s;
+          transition-delay: 172ms, 0s;
 }
 
 .venom .toggle__switch {
@@ -2560,9 +2925,12 @@ html {
   background-color: #fff;
   border-radius: 12px;
   z-index: 1;
+  -webkit-transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transition-property: left, right;
   transition-property: left, right;
-  transition-delay: 0s, 172ms;
+  -webkit-transition-delay: 0s, 172ms;
+          transition-delay: 0s, 172ms;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
@@ -2572,6 +2940,7 @@ html {
   top: 0;
   right: 0;
   bottom: 0;
+  -webkit-transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
@@ -2675,21 +3044,40 @@ html {
 .venom .loading__content {
   width: 100%;
   height: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .venom .loading__content > p {
-  flex: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
   color: #333;
   text-align: center;
   margin-top: 12px;
 }
 
 .venom .loading__icon {
-  flex: 0;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
 }
 
 .venom .loading__icon > svg {
@@ -2710,18 +3098,22 @@ html {
             animation-timing-function: linear;
   }
   0% {
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
   }
   30% {
+    -webkit-transform: translate(0, -10px);
     transform: translate(0, -10px);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   }
   50% {
+    -webkit-transform: translate(0, -10px);
     transform: translate(0, -10px);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   }
   100% {
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
   }
@@ -2737,18 +3129,22 @@ html {
             animation-timing-function: linear;
   }
   0% {
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
   }
   30% {
+    -webkit-transform: translate(0, -10px);
     transform: translate(0, -10px);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   }
   50% {
+    -webkit-transform: translate(0, -10px);
     transform: translate(0, -10px);
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.3);
   }
   100% {
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
     box-shadow: 0 0 0 rgba(0, 0, 0, 0.3);
   }
@@ -2766,26 +3162,32 @@ html {
 
 @-webkit-keyframes rotator {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
   }
 }
 
 @keyframes rotator {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   100% {
-    transform: rotate(270deg);
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
   }
 }
 
 .venom .loading--is-oldstyle .path {
   stroke-dasharray: 187;
   stroke-dashoffset: 0;
-  transform-origin: center;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
   -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
           animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
 }
@@ -2844,11 +3246,13 @@ html {
   }
   50% {
     stroke-dashoffset: 46.75;
-    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
   }
   100% {
     stroke-dashoffset: 187;
-    transform: rotate(450deg);
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
   }
 }
 
@@ -2858,11 +3262,13 @@ html {
   }
   50% {
     stroke-dashoffset: 46.75;
-    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+            transform: rotate(135deg);
   }
   100% {
     stroke-dashoffset: 187;
-    transform: rotate(450deg);
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
   }
 }
 

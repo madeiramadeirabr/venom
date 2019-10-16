@@ -44,7 +44,5 @@
     "babel-plugin-module-resolver": "^3.2.0",
     "typescript": "^3.6.4"
   },
-  "dependencies": {
-    "venom": "github:madeiramadeirabr/venom#master"
-  }
+  "dependencies": {}
 }

@@ -1,9 +1,10 @@
 {
-  "name": "venom",
-  "version": "0.1.0",
-  "description": "Venom is an UI KIT with MadeiraMadeira brand",
+  "name": "@madeiramadeira/venom",
+  "version": "1.0.0",
+  "description": "Venom is an UI KIT and javascript Components with MadeiraMadeira brand",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "private": false,
   "scripts": {
     "sass-build-autoprefix": "postcss --use autoprefixer --map false --output dist/venom.css dist/venom.css",
     "sass-build-cleancss": "cleancss -o dist/venom.min.css dist/venom.css",
