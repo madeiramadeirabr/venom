@@ -56,6 +56,10 @@
   "files": [
     "dist/index.js",
     "dist/index.d.ts",
+    "dist/venom.js",
+    "dist/venom.d.ts",
+    "dist/types.js",
+    "dist/types.d.ts",
     "dist/components",
     "dist/utils"
   ]
