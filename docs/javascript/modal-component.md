@@ -62,11 +62,12 @@ For create a instance in `venom` and print a `HTMLElement` in your document.
 </div>
 ```
 
-**Javascript**
+**Typescript**
 
-```javascript
+```typescript
 import { Venom } from 'venom'
+import { ModalComponent } from '@madeiramadeira/venom/components/modal-component/index'
 
-const modal = Venom.getComponent('custom-modal')
+const modal = Venom.getComponent('custom-modal') as ModalComponent
 modal.show()
 ```

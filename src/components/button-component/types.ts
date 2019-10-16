@@ -1,14 +1,14 @@
-import { IInputComponent } from "../../components/types";
+import { IInputComponent } from '../../components/types'
 
 export type TListening = {
-  component?: IInputComponent;
-};
+  component?: IInputComponent
+}
 
 export type TInjectHandler = {
-  trigger: string;
-  callback: EventListener;
-};
+  trigger: string
+  callback: EventListener
+}
 
 export interface IButtonComponent {
-  getInstance(): this;
+  getInstance(): this
 }

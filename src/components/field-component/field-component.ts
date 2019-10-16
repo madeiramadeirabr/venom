@@ -106,9 +106,7 @@ export class FieldComponent extends InputComponent {
     if (isValid !== this.isValid) {
       let indexOf = -1
 
-      this.validators.map((validator: any, index: number) =>
-        validator.name === name && validator.trigger === trigger ? (indexOf = index) : false
-      )
+      this.validators.map((validator: any, index: number) => (validator.name === name && validator.trigger === trigger ? (indexOf = index) : false))
 
       if (indexOf >= 0 && this.validators[indexOf].value !== isValid) this.validators[indexOf].value = isValid
 

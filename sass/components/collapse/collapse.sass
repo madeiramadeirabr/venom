@@ -12,9 +12,9 @@
       transition: color $transition $easing
 
     &__container
-      box-shadow: 0 1px 4px rgba(0,0,0,0.2)
-      border-radius: 3px
-      margin: 0 15px
+      +box-shadow
+      border-radius: $radius
+      margin: 0 $gap-regular
       padding: $gap-regular
       box-sizing: border-box
       display: flex
@@ -26,7 +26,7 @@
 
     &__content
       background-color: #eee
-      margin: 0 15px
+      margin: 0 $gap-regular
       width: 100%
       padding: $gap-regular
       box-sizing: border-box
@@ -36,7 +36,7 @@
       margin-bottom: 10px
 
     &__open
-      margin-right: 15px
+      margin-right: $gap-regular
       cursor: pointer
       width: $size-regular
       background: rgba(0,0,0,0)
@@ -47,10 +47,10 @@
         content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>')
 
     &__close
-      margin-right: 15px
+      margin-right: $gap-regular
       cursor: pointer
       width: $size-regular
-      background: rgba(0,0,0,0)
+      background: rgba(0, 0, 0, 0)
       border: none
       padding: $zero
 

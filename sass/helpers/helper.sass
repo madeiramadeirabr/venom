@@ -2,6 +2,11 @@
   .helper
     $self: '.helper'
 
+    &--has-scroll-horizontal
+      overflow-x: scroll !important
+      padding-top: $gap-small
+      padding-bottom: $gap-small
+
     &--is-inline
       display: inline !important
 
@@ -56,7 +61,6 @@
       @each $color, $value in $color-regular-map
         &-#{$color}
           border-color: map-get($color-regular-map, $color)
-
 
     &--has-no-margin
       margin: $zero !important // sass-lint:disable-line no-important

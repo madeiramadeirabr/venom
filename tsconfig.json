@@ -11,6 +11,6 @@
     "declaration": true,
     "moduleResolution": "node"
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "docs/en-us/toggle-component.ts"],
   "exclude": ["node_modules", "dist", "**/*.spec.ts"]
 }

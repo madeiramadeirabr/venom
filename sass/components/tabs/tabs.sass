@@ -1,11 +1,8 @@
-@import 'sass/variables'
-@import 'sass/variables'
-
 .venom
   .tab
     background: $color-white
     height: 100%
-    padding: 0 $gap-regular
+    padding: $zero $gap-regular
     display: -webkit-box
     display: -ms-flexbox
     display: flex
@@ -18,10 +15,10 @@
     &--has-scroll
       overflow-x: auto
 
-    .tab__item 
+    .tab__item
       min-width: 150px
-      padding: 12px
-      margin: 0 5px -1px
+      padding: $gap-regular
+      margin: 0 $gap-extra-small -1px
       color: $color-black
       overflow: hidden
       text-align: center
@@ -30,7 +27,7 @@
               flex-grow: 1
       cursor: pointer
       position: relative
-      flex-shrink: 0
+      flex-shrink: $zero
       -webkit-user-select: none
       -moz-user-select: none
       -ms-user-select: none
@@ -39,7 +36,7 @@
       transition: background $transition-click
       background-position: center
       justify-content: center
-      border-bottom: transparent solid 2px    
+      border-bottom: transparent solid 2px
 
       &:hover,
       &:focus,
@@ -49,26 +46,26 @@
       &:active
         background-size: 100%
         transition: background 0s
-    
+
       &--has-indicator
         background: $color-monotone-lightness
-        border-bottom: $color-secondary solid 2px    
+        border-bottom: $color-secondary solid 2px
 
     &--is-oldstyle
       border-bottom: $color-monotone-light 1px solid
       .tab__item
         background: $color-monotone-lightness
         border: $color-monotone-light 1px solid
-        
+
         &:hover,
         &:focus,
           background-color: $color-white
           background: $color-white radial-gradient(circle, transparent 1%, rgba(0,0,0,0.05) 1%) center/15000%
-        
+
         &:active
           background-size: 100%
           transition: background 0s
-    
+
         &--has-indicator
           border-bottom-color: $color-white
           background-color: $color-white

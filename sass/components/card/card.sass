@@ -4,6 +4,9 @@
     padding: $gap-large
     width: 100%
 
+    &--is-double-border
+      border-width: 2px
+
     @each $color, $value in $color-regular-map
       &--is-#{$color}
         border: solid 1px map-get($color-regular-map, $color) !important

@@ -162,11 +162,19 @@ html
     overflow-x: auto
     white-space: pre
     word-wrap: normal
+    padding: $gap-regular !important
+    margin: 0 !important
+
+    &:after
+      content: ""
+      display: none
 
     code
       background-color: transparent
       color: currentColor
-      padding: 0
+      padding: $zero
+      white-space: pre
+      word-wrap: normal
 
   table
     td,

@@ -1,6 +1,18 @@
 @import 'helpers'
 
 .venom
+
+  .buttons
+    display: flex
+    flex-direction: row
+    scroll-direction: horizontal
+    overflow-x: scroll
+    padding: $gap-extra-small $zero
+
+    .button
+      &:not(:last-child):not(.helper--is-full-width)
+        margin-right: $gap-regular
+
   .button
     $self: '.button'
     +box-shadow
@@ -20,9 +32,6 @@
     transition: background-color $transition $easing, border-color $transition $easing, color $transition $easing, background $transition-click
     background-position: center
     letter-spacing: .25px
-
-    + .button
-      margin-right: $gap-regular
 
     #{$self}__icon
       display: flex

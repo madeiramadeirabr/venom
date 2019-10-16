@@ -14,41 +14,30 @@ $row: '.grid__row'
       flex-direction: row
       flex-wrap: wrap
       margin: $zero
-      padding: $desktop-column-gap
-      align-items: stretch
+      padding: $desktop-column-gap $zero
 
       &--is-reverse
         flex-direction: row-reverse
 
-      &--has-no-gap-vertical
-        padding-bottom: $zero
-        padding-top: $zero
-
       &--has-no-gap
         padding: $zero
-
-      &--is-table
-        padding: $zero
-
 
     &__columns
       +border-box
       display: flex
-      flex: 0 0 auto
       flex-direction: column
-      flex-wrap: wrap
       margin: $zero
-      padding: $desktop-column-gap
+      padding: $desktop-column-gap $zero
 
       &--is-reverse
         flex-direction: column-reverse
 
-      &--has-no-gap-vertical
-        padding-bottom: $zero
-        padding-top: $zero
-
       &--has-no-gap
         padding: $zero
+
+      #{ $column }
+        min-height: auto
+        margin: $desktop-column-gap
 
     &__column
       +border-box
@@ -59,10 +48,6 @@ $row: '.grid__row'
       flex-basis: $zero
       max-width: calc(100% - #{ $desktop-column-gap * 2 })
       padding: $zero
-
-      &--has-content-centered
-        display: flex
-        align-items: center
 
       &--has-gutter
         padding: $desktop-column-gap
@@ -93,10 +78,45 @@ $row: '.grid__row'
         width: auto
         max-width: 100%
 
+    +for-size(tablet)
+      &__row,
+      &__columns
+        padding: $mobile-column-gap $zero
+
+      &__columns
+        #{ $column }
+          margin: $mobile-column-gap
+
+      &__column
+        margin: $zero $mobile-column-gap
+        max-width: calc(100% - #{ $mobile-column-gap * 2 })
+
+        @each $name, $count in $numbers
+          &--is-#{$name}-tablet
+            flex-basis: calc(#{ $count } - #{ $mobile-column-gap * 2 }) !important
+            max-width: calc(#{ $count } - #{ $mobile-column-gap * 2 }) !important
+
+            &-offset-tablet
+              margin-left: calc(#{ $count } - #{ $mobile-column-gap * 2 }) !important
+
+        &--is-twelve-tablet
+          flex-basis: calc( 100% - #{ $desktop-column-gap * 2 }) !important
+          max-width: calc( 100% - #{ $desktop-column-gap * 2 }) !important
+
+        &--is-first-tablet
+          order: -1 !important
+
+        &--is-last-tablet
+          order: 1 !important
+
     +for-size(mobile)
       &__row,
       &__columns
-        padding: $mobile-column-gap ($mobile-column-gap * 2)
+        padding: $mobile-column-gap $zero
+
+      &__columns
+        #{ $column }
+          margin: $mobile-column-gap
 
       &__column
         margin: $zero $mobile-column-gap

@@ -1,21 +1,4 @@
-import {
-  Email,
-  Mixed,
-  LegalPerson,
-  MinMax,
-  Min,
-  Max,
-  Numeric,
-  Username,
-  User,
-  Mobile,
-  Phone,
-  Zipcode,
-  State,
-  Password,
-  Common,
-  Monetary
-} from './handlers/index'
+import { Email, Mixed, LegalPerson, MinMax, Min, Max, Numeric, Username, User, Mobile, Phone, Zipcode, State, Password, Common, Monetary } from './handlers/index'
 import { FieldComponent } from './field-component'
 import { THandlers, THandler } from './types'
 

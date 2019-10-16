@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="venom">
+
+<head>
+  <title>VENOM</title>
+  <meta charSet="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <link rel="stylesheet" type="text/css" href="../../dist/venom.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css" />
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="grid__columns">
+      <div class="grid__column">
+        <div class="buttons">
+          <button class="button">Button</button>
+          <input type="submit" class="button" value="Input" />
+          <a href="#" class="button">Anchor</a>
+        </div>
+      </div>
+      <div class="grid__column">
+        <div class="code helper--is-full-width">
+          <pre><code class="language-html">&lt;button class="button"&gt;Button&lt;/button&gt;
+&lt;input type="submit" class="button" value="Input" /&gt;
+&lt;a href="#" class="button"&gt;Anchor&lt;/a&gt;</code></pre>
+        </div>
+      </div>
+      <div class="grid__column">
+        <div class="buttons">
+          <button class="button button--is-primary">Primary</button>
+          <button class="button button--is-secondary">Secondary</button>
+          <button class="button button--is-success">Success</button>
+          <button class="button button--is-danger">Danger</button>
+        </div>
+      </div>
+      <div class="grid__column">
+        <pre class="code helper--is-full-width"><code class="language-html">&lt;button class="button button--is-secondary"&gt;Primary&lt;/button&gt;
+&lt;button class="button button--is-secondary"&gt;Secondary&lt;/button&gt;
+&lt;button class="button button--is-success"&gt;Success&lt;/button&gt;
+&lt;button class="button button--is-danger"&gt;Danger&lt;/button&gt;</code></pre>
+      </div>
+      <div class="grid__column">
+        <div class="buttons">
+          <button class="button button--is-outline">Default</button>
+          <button class="button button--is-primary button--is-outline">Primary</button>
+          <button class="button button--is-secondary button--is-outline">Secondary</button>
+          <button class="button button--is-success button--is-outline">Success</button>
+          <button class="button button--is-danger button--is-outline">Danger</button>
+        </div>
+      </div>
+      <div class="grid__column">
+        <div class="code helper--is-full-width">
+          <pre><code class="language-html">&lt;button class="button button--is-outline"&gt;Primary&lt;/button&gt;
+&lt;button class="button button--is-primary button--is-outline"&gt;Primary&lt;/button&gt;
+&lt;button class="button button--is-secondary button--is-outline"&gt;Secondary&lt;/button&gt;
+&lt;button class="button button--is-success button--is-outline"&gt;Success&lt;/button&gt;
+&lt;button class="button button--is-danger button--is-outline"&gt;Danger&lt;/button&gt;</code></pre>
+        </div>
+      </div>
+      <div class="grid__column">
+        <div class="buttons">
+          <button class="button button--is-dark">Dark</button>
+          <button class="button button--is-link">Link</button>
+          <button class="button button--is-disabled">Disabled</button>
+          <button class="button button--is-outline">Outline</button>
+        </div>
+      </div>
+      <div class="grid__column">
+        <div class="code helper--is-full-width">
+          <pre><code class="language-html">&lt;button class="button button--is-dark"&gt;Dark&lt;/button&gt;
+&lt;button class="button button--is-link"&gt;Link&lt;/button&gt;
+&lt;button class="button button--is-disabled"&gt;Disabled&lt;/button&gt;
+&lt;button class="button button--is-outline"&gt;Outline&lt;/button&gt;</code></pre>
+        </div>
+      </div>
+      <div class="grid__column">
+        <div class="buttons">
+          <button class="button button--is-extra-small">Extra small</button>
+          <button class="button button--is-small">Small</button>
+          <button class="button">Default</button>
+          <button class="button button--is-large">Large</button>
+          <button class="button button--is-extra-large">Extra large</button>
+        </div>
+      </div>
+      <div class="grid__column">
+        <div class="code helper--is-full-width">
+          <pre><code class="language-html">&lt;button class="button button--is-extra-small"&gt;Extra small&lt;/button&gt;
+&lt;button class="button button--is-small"&gt;Small&lt;/button&gt;
+&lt;button class="button"&gt;Default&lt;/button&gt;
+&lt;button class="button button--is-large"&gt;Large&lt;/button&gt;
+&lt;button class="button button--is-extra-large"&gt;Extra large&lt;/button&gt;</code></pre>
+        </div>
+      </div>
+
+
+      <div class="grid__column">
+        <div class="buttons">
+          <button class="button button--is-primary">
+            <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24">
+                <path fill="none" d="M0 0h24v24H0V0z" />
+                <path
+                  d="M22 10V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM9.07 16L12 14.12 14.93 16l-.89-3.36 2.69-2.2-3.47-.21L12 7l-1.27 3.22-3.47.21 2.69 2.2z" />
+              </svg></span>
+            <span class="button__text">Button with left icon</span>
+          </button>
+          <button class="button button--is-secondary">
+            <span class="button__text">Button with right icon</span>
+            <span class="button__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                viewBox="0 0 24 24">
+                <path fill="none" d="M0 0h24v24H0V0z" />
+                <path
+                  d="M22 10V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2s.9-2 2-2zm-2-1.46c-1.19.69-2 1.99-2 3.46s.81 2.77 2 3.46V18H4v-2.54c1.19-.69 2-1.99 2-3.46 0-1.48-.8-2.77-1.99-3.46L4 6h16v2.54zM9.07 16L12 14.12 14.93 16l-.89-3.36 2.69-2.2-3.47-.21L12 7l-1.27 3.22-3.47.21 2.69 2.2z" />
+              </svg></span>
+          </button>
+        </div>
+      </div>
+      <div class="grid__column">
+        <div class="code helper--is-full-width">
+          <pre><code class="language-html">&lt;button class="button button--is-primary"&gt;
+  &lt;span class="button__icon"&gt;&lt;svg&gt;&lt;/span&gt;
+  &lt;span class="button__text"&gt;Button with left icon&lt;/span&gt;
+&lt;/button&gt;
+&lt;button class="button button--is-secondary"&gt;
+  &lt;span class="button__text"&gt;Button with right icon&lt;/span&gt;
+  &lt;span class="button__icon"&gt;&lt;svg&gt;&lt;/span&gt;
+&lt;/button&gt;</code></pre>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
+</html>

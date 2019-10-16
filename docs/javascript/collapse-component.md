@@ -40,16 +40,17 @@ For create a instance in `venom` and print a `HTMLElement` in your document.
     <button class="collapse__open"></button>
   </div>
   <p class="collapse__content helper--is-hidden">
-    Litora congue ut erat sociosqu venenatis placerat risus lacus habitant, elit aliquam nunc amet est etiam phasellus orci ad, venenatis
-    vel dui scelerisque mattis aliquet phasellus hendrerit.
+    Litora congue ut erat sociosqu venenatis placerat risus lacus habitant, elit aliquam nunc amet est etiam phasellus orci ad, venenatis vel dui scelerisque mattis aliquet
+    phasellus hendrerit.
   </p>
 </div>
 ```
 
-**Javascript**
+**Typescript**
 
-```javascript
-import { Venom } from 'venom'
+```typescript
+import { Venom } from '@madeiramadeira/venom'
+import { CollapseComponent } from '@madeiramadeira/venom/components/collapse-component/index'
 
-const customCollapse = Venom.getComponent('custom-collapse')
+const customCollapse = Venom.getComponent('custom-collapse') as CollapseComponent
 ```

@@ -1,1 +1,1 @@
-export { CollapsComponent } from "./collapse-component"
+export { CollapsComponent } from './collapse-component'

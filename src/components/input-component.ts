@@ -59,10 +59,6 @@ export class InputComponent extends Component implements IInputComponent {
   }
 
   isFormInput(): boolean {
-    return this.getElement() instanceof HTMLInputElement ||
-      this.getElement() instanceof HTMLSelectElement ||
-      this.getElement() instanceof HTMLTextAreaElement
-      ? true
-      : false
+    return this.getElement() instanceof HTMLInputElement || this.getElement() instanceof HTMLSelectElement || this.getElement() instanceof HTMLTextAreaElement ? true : false
   }
 }

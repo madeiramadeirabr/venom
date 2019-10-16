@@ -38,12 +38,13 @@ For create a instance in `venom` and print a `HTMLElement` in your document.
 </label>
 ```
 
-**Javascript**
+**Typescript**
 
-```javascript
+```typescript
 import { Venom } from 'venom'
+import { ToggleComponent } from '@madeiramadeira/venom/components/toggle-component/index'
 
-const ToggleComponent = Venom.getComponent(`my-toggle-component`)
+const ToggleComponent = Venom.getComponent(`my-toggle-component`) as ToggleComponent
 ToggleComponent.turnOn()
 
 const isActive = ToggleComponent.isOn()
