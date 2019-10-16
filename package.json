@@ -54,6 +54,7 @@
     "node": ">=6.0.0"
   },
   "files": [
+    "package.json",
     "dist/index.js",
     "dist/index.d.ts",
     "dist/venom.js",
