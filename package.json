@@ -67,7 +67,8 @@
     "dist/icons",
     "dist/venom.css",
     "dist/venom.min.css",
-    "sass/**/*.sass"
+    "sass/**/*.sass",
+    "resources/css"
   ],
   "browserslist": [
     "> 1%",

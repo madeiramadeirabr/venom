@@ -31,7 +31,7 @@ For create a instance in `venom` and print a `HTMLButtonElement` in your documen
 **HTML**
 
 ```html
-<button class="button button--default" data-alias="my-custom-button" data-component="button" data-venom></button>
+<button class="button button--is-primary" data-alias="my-custom-button" data-component="button" data-venom></button>
 ```
 
 **Typescript**
