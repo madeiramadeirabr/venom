@@ -10,8 +10,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css" />
   <style type="text/css">
     .box {
-      background-color: #333;
+      background-color: hsl(28, 91%, 71%);
       color: white;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .grid__column .grid__row {
+      background-color: #eee !important;
     }
   </style>
 </head>
@@ -19,6 +27,19 @@
 <body>
   <div class="container">
 
+    <div class="grid__row">
+      <div class="grid__column buttons">
+        <a class="button button--is-primary button--is-disabled" href="grid.html">Grid</a>
+        <a class="button" href="button.html">Button</a>
+        <a class="button" href="typograph.html">Typograph</a>
+      </div>
+    </div>
+
+    <div class="grid__row">
+      <div class="grid__column">
+        <h3>Column with auto size</h3>
+      </div>
+    </div>
 
     <div class="grid__row">
       <div class="grid__column box">
@@ -30,6 +51,18 @@
     </div>
 
     <div class="grid__row">
+      <div class="grid__column">
+        <div class="code helper--is-full-width">
+          <pre><code class="language-html">&lt;div class="grid__row"&gt;
+  &lt;div class="grid__column"&gt;1/2&lt;/div&gt;
+  &lt;div class="grid__column"&gt;1/2&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid__row">
       <div class="grid__column box">
         1/3
       </div>
@@ -38,6 +71,18 @@
       </div>
       <div class="grid__column box">
         1/3
+      </div>
+    </div>
+
+    <div class="grid__row">
+      <div class="grid__column">
+        <div class="code helper--is-full-width">
+          <pre><code class="language-html">&lt;div class="grid__row"&gt;
+  &lt;div class="grid__column"&gt;1/3&lt;/div&gt;
+  &lt;div class="grid__column"&gt;1/3&lt;/div&gt;
+  &lt;div class="grid__column"&gt;1/3&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
       </div>
     </div>
 
@@ -57,41 +102,21 @@
     </div>
 
     <div class="grid__row">
-      <div class="grid__column box">
-        1/5
-      </div>
-      <div class="grid__column box">
-        1/5
-      </div>
-      <div class="grid__column box">
-        1/5
-      </div>
-      <div class="grid__column box">
-        1/5
-      </div>
-      <div class="grid__column box">
-        1/5
+      <div class="grid__column">
+        <div class="code helper--is-full-width">
+          <pre><code class="language-html">&lt;div class="grid__row"&gt;
+  &lt;div class="grid__column"&gt;1/4&lt;/div&gt;
+  &lt;div class="grid__column"&gt;1/4&lt;/div&gt;
+  &lt;div class="grid__column"&gt;1/4&lt;/div&gt;
+  &lt;div class="grid__column"&gt;1/4&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
       </div>
     </div>
 
     <div class="grid__row">
-      <div class="grid__column box">
-        1/6
-      </div>
-      <div class="grid__column box">
-        1/6
-      </div>
-      <div class="grid__column box">
-        1/6
-      </div>
-      <div class="grid__column box">
-        1/6
-      </div>
-      <div class="grid__column box">
-        1/6
-      </div>
-      <div class="grid__column box">
-        1/6
+      <div class="grid__column">
+        <h3>Column with fixed width (as tiles style)</h3>
       </div>
     </div>
 
@@ -108,6 +133,27 @@
       <div class="grid__column box"></div>
       <div class="grid__column box"></div>
       <div class="grid__column box"></div>
+    </div>
+
+    <div class="grid__row">
+      <div class="grid__column">
+        <div class="code helper--is-full-width">
+          <pre><code class="language-html">&lt;div class="grid__row"&gt;
+  &lt;div class="grid__column grid__column--is-one"&gt;is-one&lt;/div&gt;
+  &lt;div class="grid__column"&gt;&lt;/div&gt;
+  &lt;div class="grid__column"&gt;&lt;/div&gt;
+  &lt;div class="grid__column"&gt;&lt;/div&gt;
+  &lt;div class="grid__column"&gt;&lt;/div&gt;
+  &lt;div class="grid__column"&gt;&lt;/div&gt;
+  &lt;div class="grid__column"&gt;&lt;/div&gt;
+  &lt;div class="grid__column"&gt;&lt;/div&gt;
+  &lt;div class="grid__column"&gt;&lt;/div&gt;
+  &lt;div class="grid__column"&gt;&lt;/div&gt;
+  &lt;div class="grid__column"&gt;&lt;/div&gt;
+  &lt;div class="grid__column"&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
     </div>
 
     <div class="grid__row">
@@ -211,189 +257,109 @@
 
     <div class="grid__row">
       <div class="grid__column">
-        <div class="code helper--is-full-width">
-          <pre><code class="language-html">&lt;div class="grid__row"&gt;
-  &lt;div class="grid__column box"&gt;1/2&lt;/div&gt;
-  &lt;div class="grid__column box"&gt;1/2&lt;/div&gt;
-&lt;/div&gt;
-</code></pre>
-          <pre><code class="language-html">&lt;div class="grid__row"&gt;
-  &lt;div class="grid__column box"&gt;1/3&lt;/div&gt;
-  &lt;div class="grid__column box"&gt;1/3&lt;/div&gt;
-  &lt;div class="grid__column box"&gt;1/3&lt;/div&gt;
-&lt;/div&gt;</code></pre>
+        <h3>Nested</h3>
+      </div>
+    </div>
 
-          &lt;div class="grid__row"&gt;
-          &lt;div class="grid__column box"&gt;
-          1/4
-          &lt;/div&gt;
-          &lt;div class="grid__column box"&gt;
-          1/4
-          &lt;/div&gt;
-          &lt;div class="grid__column box"&gt;
-          1/4
-          &lt;/div&gt;
-          &lt;div class="grid__column box"&gt;
-          1/4
-          &lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class="grid__row"&gt;
-          &lt;div class="grid__column box"&gt;
-          1/5
-          &lt;/div&gt;
-          &lt;div class="grid__column box"&gt;
-          1/5
-          &lt;/div&gt;
-          &lt;div class="grid__column box"&gt;
-          1/5
-          &lt;/div&gt;
-          &lt;div class="grid__column box"&gt;
-          1/5
-          &lt;/div&gt;
-          &lt;div class="grid__column box"&gt;
-          1/5
-          &lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class="grid__row"&gt;
-          &lt;div class="grid__column box"&gt;
-          1/6
-          &lt;/div&gt;
-          &lt;div class="grid__column box"&gt;
-          1/6
-          &lt;/div&gt;
-          &lt;div class="grid__column box"&gt;
-          1/6
-          &lt;/div&gt;
-          &lt;div class="grid__column box"&gt;
-          1/6
-          &lt;/div&gt;
-          &lt;div class="grid__column box"&gt;
-          1/6
-          &lt;/div&gt;
-          &lt;div class="grid__column box"&gt;
-          1/6
-          &lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class="grid__row"&gt;
-          &lt;div class="grid__column grid__column--is-one box"&gt;is-one&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class="grid__row"&gt;
-          &lt;div class="grid__column grid__column--is-two box"&gt;is-two&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class="grid__row"&gt;
-          &lt;div class="grid__column grid__column--is-three box"&gt;is-three&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class="grid__row"&gt;
-          &lt;div class="grid__column grid__column--is-four box"&gt;is-four&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class="grid__row"&gt;
-          &lt;div class="grid__column grid__column--is-five box"&gt;is-five&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class="grid__row"&gt;
-          &lt;div class="grid__column grid__column--is-six box"&gt;is-six&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class="grid__row"&gt;
-          &lt;div class="grid__column grid__column--is-seven box"&gt;is-seven&lt;/div&gt;a
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class="grid__row"&gt;
-          &lt;div class="grid__column grid__column--is-eight box"&gt;is-eight&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class="grid__row"&gt;
-          &lt;div class="grid__column grid__column--is-nine box"&gt;is-nine&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class="grid__row"&gt;
-          &lt;div class="grid__column grid__column--is-ten box"&gt;is-ten&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class="grid__row"&gt;
-          &lt;div class="grid__column grid__column--is-eleven box"&gt;is-eleven&lt;/div&gt;
-          &lt;div class="grid__column box"&gt;&lt;/div&gt;
-          &lt;/div&gt;
-
-          &lt;div class="grid__row"&gt;
-          &lt;div class="grid__column grid__column--is-twelve box"&gt;is-twelve&lt;/div&gt;
-          &lt;/div&gt;</code></pre>
+    <div class="grid__row">
+      <div class="grid__column">
+        <div class="grid__row">
+          <div class="grid__column box">1/2</div>
+          <div class="grid__column box">1/2</div>
+        </div>
+      </div>
+      <div class="grid__column">
+        <div class="grid__row">
+          <div class="grid__column box">1/3</div>
+          <div class="grid__column box">1/3</div>
+          <div class="grid__column box">1/3</div>
         </div>
       </div>
     </div>
 
+    <div class="grid__row">
+      <div class="grid__column">
+        <div class="code helper--is-full-width">
+          <pre><code class="language-html">&lt;div class="grid__row"&gt;
+  &lt;div class="grid__column"&gt;
+    &lt;div class="grid__row"&gt;
+      &lt;div class="grid__column"&gt;1/2&lt;/div&gt;
+      &lt;div class="grid__column"&gt;1/2&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="grid__column"&gt;
+    &lt;div class="grid__row"&gt;
+      &lt;div class="grid__column"&gt;1/3&lt;/div&gt;
+      &lt;div class="grid__column"&gt;1/3&lt;/div&gt;
+      &lt;div class="grid__column"&gt;1/3&lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid__row">
+      <div class="grid__column">
+        <h3>Responsive</h3>
+      </div>
+    </div>
+
+    <div class="grid__row">
+      <div class="grid__column grid__column--is-eight-mobile box">is-eight-mobile</div>
+      <div class="grid__column box">auto</div>
+    </div>
+
+    <div class="grid__row">
+      <div class="grid__column">
+        <div class="code helper--is-full-width">
+          <pre><code class="language-html">&lt;div class="grid__row"&gt;
+  &lt;div class="grid__column grid__column--is-eight-mobile"&gt;is-eight-mobile&lt;/div&gt;
+  &lt;div class="grid__column"&gt;auto&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid__row">
+      <div class="grid__column grid__column--is-four-mobile box">is-four-mobile</div>
+      <div class="grid__column grid__column--is-eight-mobile box">is-eight-mobile</div>
+      <div class="grid__column helper--is-hidden-mobile box">is-hidden-mobile</div>
+    </div>
+
+    <div class="grid__row">
+      <div class="grid__column">
+        <div class="code helper--is-full-width">
+          <pre><code class="language-html">&lt;div class="grid__row"&gt;
+  &lt;div class="grid__column grid__column--is-four-mobile"&gt;is-four-mobile&lt;/div&gt;
+  &lt;div class="grid__column grid__column--is-eight-mobile"&gt;is-eight-mobile&lt;/div&gt;
+  &lt;div class="grid__column helper--is-hidden-mobile"&gt;is-hidden-mobile&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid__row">
+      <div class="grid__column grid__column--is-eight-mobile grid__column--is-four-tablet box">
+        is-eight-mobile/is-four-tablet</div>
+      <div class="grid__column box">auto</div>
+    </div>
+
+    <div class="grid__row">
+      <div class="grid__column">
+        <div class="code helper--is-full-width">
+          <pre><code class="language-html">&lt;div class="grid__row"&gt;
+  &lt;div class="grid__column grid__column--is-eight-mobile grid__column--is-four-tablet"&gt;is-eight-mobile/is-four-tablet&lt;/div&gt;
+  &lt;div class="grid__column"&gt;auto&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
 
