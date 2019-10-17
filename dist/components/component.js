@@ -81,12 +81,7 @@ var Component = (function () {
     };
     Component.prototype.clearModifiers = function () {
         var _this = this;
-        var modifiers = [
-            constants_1.DANGER_MODIFIER,
-            constants_1.WARNING_MODIFIER,
-            constants_1.INFO_MODIFIER,
-            constants_1.SUCCESS_MODIFIER
-        ];
+        var modifiers = [constants_1.DANGER_MODIFIER, constants_1.WARNING_MODIFIER, constants_1.INFO_MODIFIER, constants_1.SUCCESS_MODIFIER];
         modifiers.map(function (modifier) {
             if (_this.getClassnames().contains(_this.getComponentName() + modifier)) {
                 _this.getClassnames().remove(_this.getComponentName() + modifier);
@@ -108,7 +103,6 @@ var Component = (function () {
     };
     Component.prototype.show = function () {
         var Classnames = this.getClassnames();
-        console.log("Classnames", Classnames);
         if (Classnames.contains(constants_1.HIDDEN_MODIFIER))
             Classnames.remove(constants_1.HIDDEN_MODIFIER);
         return this;

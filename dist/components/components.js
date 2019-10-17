@@ -15,8 +15,8 @@ var index_7 = require("./toggle-component/index");
 var index_8 = require("./loading-component/index");
 exports.Components = {
     initialize: function (alias) {
-        if (alias === void 0) { alias = ''; }
-        var reload = alias !== null ? true : false, elements = reload ? document.querySelector("[data-alias=" + alias + "]").querySelectorAll('[data-venom]') : document.querySelectorAll('[data-venom]'), elementsCount = elements.length;
+        if (alias === void 0) { alias = null; }
+        var reload = (alias !== null && alias !== '') ? true : false, elements = reload ? document.querySelector("[data-alias=" + alias + "]").querySelectorAll('[data-venom]') : document.querySelectorAll('[data-venom]'), elementsCount = elements.length;
         if (elementsCount <= 0)
             return false;
         for (var i = 0; i < elementsCount; i++) {

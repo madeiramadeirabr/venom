@@ -1,4 +1,4 @@
-import { TClassList, IComponent } from "./types";
+import { TClassList, IComponent } from './types';
 export declare class Component implements IComponent {
     protected _element: any;
     protected _event: Event;

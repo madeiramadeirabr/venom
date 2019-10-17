@@ -60,11 +60,7 @@ var InputComponent = (function (_super) {
         return this.getElement().disabled;
     };
     InputComponent.prototype.isFormInput = function () {
-        return this.getElement() instanceof HTMLInputElement ||
-            this.getElement() instanceof HTMLSelectElement ||
-            this.getElement() instanceof HTMLTextAreaElement
-            ? true
-            : false;
+        return this.getElement() instanceof HTMLInputElement || this.getElement() instanceof HTMLSelectElement || this.getElement() instanceof HTMLTextAreaElement ? true : false;
     };
     return InputComponent;
 }(component_1.Component));

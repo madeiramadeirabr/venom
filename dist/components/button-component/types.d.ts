@@ -1,4 +1,4 @@
-import { IInputComponent } from "../../components/types";
+import { IInputComponent } from '../../components/types';
 export declare type TListening = {
     component?: IInputComponent;
 };

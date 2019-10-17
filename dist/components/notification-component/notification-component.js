@@ -38,8 +38,7 @@ var NotificationComponent = (function (_super) {
             var close_1 = document.createElement('button');
             close_1.classList.add('venom');
             close_1.classList.add(ELEMENT_CLOSE.replace('.', ''));
-            close_1.innerHTML +=
-                "\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path fill=\"none\" d=\"M0 0h24v24H0V0z\"/><path d=\"M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z\"/></svg>\n        ";
+            close_1.innerHTML += "\n        <svg xmlns=\"http://www.w3.org/2000/svg\" width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"><path fill=\"none\" d=\"M0 0h24v24H0V0z\"/><path d=\"M18.3 5.71c-.39-.39-1.02-.39-1.41 0L12 10.59 7.11 5.7c-.39-.39-1.02-.39-1.41 0-.39.39-.39 1.02 0 1.41L10.59 12 5.7 16.89c-.39.39-.39 1.02 0 1.41.39.39 1.02.39 1.41 0L12 13.41l4.89 4.89c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L13.41 12l4.89-4.89c.38-.38.38-1.02 0-1.4z\"/></svg>\n        ";
             this._button = close_1;
             this.getElement().appendChild(content);
             this.getElement().appendChild(close_1);
@@ -52,7 +51,6 @@ var NotificationComponent = (function (_super) {
             if (close_2)
                 this._button = close_2;
         }
-        console.log('william', this._button);
         this._attachEvents();
     };
     NotificationComponent.prototype._attachEvents = function () {

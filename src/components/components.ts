@@ -24,8 +24,8 @@ import { ToggleComponent } from './toggle-component/index'
 import { LoadingComponent } from './loading-component/index'
 
 export const Components = {
-  initialize: function(alias: string = '') {
-    const reload = alias !== null ? true : false,
+  initialize: function (alias: string | null = null) {
+    const reload = (alias !== null && alias !== '') ? true : false,
       // @ts-ignore
       elements: NodeListOf<Element> = reload ? document.querySelector(`[data-alias=${alias}]`).querySelectorAll('[data-venom]') : document.querySelectorAll('[data-venom]'),
       elementsCount: number = elements.length
@@ -102,7 +102,7 @@ export const Components = {
       }
     }
   },
-  reload: function(alias: string = '') {
+  reload: function (alias: string | null = '') {
     this.initialize(alias)
   }
 }

@@ -109,9 +109,7 @@ var FieldComponent = (function (_super) {
     FieldComponent.prototype.setIsValid = function (name, trigger, isValid) {
         if (isValid !== this.isValid) {
             var indexOf_1 = -1;
-            this.validators.map(function (validator, index) {
-                return validator.name === name && validator.trigger === trigger ? (indexOf_1 = index) : false;
-            });
+            this.validators.map(function (validator, index) { return (validator.name === name && validator.trigger === trigger ? (indexOf_1 = index) : false); });
             if (indexOf_1 >= 0 && this.validators[indexOf_1].value !== isValid)
                 this.validators[indexOf_1].value = isValid;
             var result_1 = true;
