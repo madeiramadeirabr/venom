@@ -24,12 +24,12 @@
     &--has-border-dashed
       +clearfix
       width: 100%
-      border-bottom: dashed 1px $color-monotone
+      border-bottom: dashed 1px $color-grey-300
 
     &--has-top-dashed
       +clearfix
       width: 100%
-      border-bottom: dashed 1px $color-monotone
+      border-bottom: dashed 1px $color-grey-300
 
     &--is-link
       color: $color-secondary
@@ -280,18 +280,22 @@
 
       &-extra-small
         font-size: $size-extra-small !important // sass-lint:disable-line no-important
+        line-height: 16px
 
       &-small
         font-size: $size-small !important // sass-lint:disable-line no-important
+        line-height: 16px
 
       &-large
         font-size: $size-large !important // sass-lint:disable-line no-important
+        line-height: 22px
 
       &-extra-large
         font-size: $size-extra-large !important // sass-lint:disable-line no-important
+        line-height: 27px
 
       &-base-line
-        line-height: 1
+        line-height: 1 !important // sass-lint:disable-line no-important
 
       &-left
         text-align: left
@@ -323,12 +327,12 @@
               fill: $color-white
 
       &-monotone
-        color: $color-monotone
+        color: $color-grey-300
 
         svg
           path
             &:not([fill])
-              fill: $color-monotone
+              fill: $color-grey-300
 
       &-black
         color: $color-black

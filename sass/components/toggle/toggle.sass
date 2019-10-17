@@ -2,12 +2,11 @@ $toggle: '.toggle'
 
 .venom
   .toggle
-    width: $gap-regular * 4
-    height: $gap-regular * 2
-    border-radius: $gap-regular * 2
+    width: 32px
+    height: 16px
+    border-radius: 8px
     background-color: #ddd
     overflow: hidden
-    box-shadow: inset $zero $zero 2px 1px rgba(0,0,0,.05)
     position: relative
     display: inline-block
     cursor: pointer
@@ -30,12 +29,16 @@ $toggle: '.toggle'
       input:checked ~ #{ $toggle }__track
         box-shadow: inset $zero $zero $zero ($gap-regular * 2) $color-success
 
+    &#{ $toggle }--is-danger
+      input:checked ~ #{ $toggle }__track
+        box-shadow: inset $zero $zero $zero ($gap-regular * 2) $color-danger
+
     input:checked ~ #{ $toggle }__track
       box-shadow: inset $zero $zero $zero ($gap-regular * 2) $color-secondary
 
     input:checked ~ #{ $toggle }__switch
       right: 2px
-      left: $gap-regular * 2
+      left: 18px
       transition: $transition-medium cubic-bezier(0.785, 0.135, 0.150, 0.860)
       transition-property: left, right
       transition-delay: $transition-medium, 0s
@@ -45,14 +48,13 @@ $toggle: '.toggle'
       left: 2px
       top: 2px
       bottom: 2px
-      right: ($gap-regular * 2)
+      right: 18px
       background-color: #fff
       border-radius: $gap-regular
       z-index: 1
       transition: $transition-medium cubic-bezier(0.785, 0.135, 0.150, 0.860)
       transition-property: left, right
       transition-delay: 0s, $transition-medium
-      box-shadow: 0 1px 2px rgba(0,0,0,.2)
 
     &__track
       position: absolute
@@ -61,5 +63,4 @@ $toggle: '.toggle'
       right: $zero
       bottom: $zero
       transition: $transition-medium cubic-bezier(0.785, 0.135, 0.150, 0.860)
-      box-shadow: inset $zero $zero $zero 2px rgba(0,0,0,.05)
       border-radius: $gap-regular

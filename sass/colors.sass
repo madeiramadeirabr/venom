@@ -1,31 +1,20 @@
-$color-black:                       hsl(0, 0%, 5%) !default
-$color-white:                       hsl(0, 0%, 100%) !default
-$background-color:                  hsl(0, 0%, 98%) !default
-$transparent:                       rgba(0, 0, 0, 0) !default
-$color-hover:                       rgba(0, 0, 0, 0.1) !default
-$color-blur:                        rgba(255, 255, 255, 0.8) !default
-$color-text:                        #333
+$color-black:                       #333 !default
+$color-white:                       #fff !default
+$background-color:                  #f9f9f9 !default
+$color-blur:                        rgba(250, 250, 250, 0.8) !default
+$color-text:                        $color-black !default
 
 $color-dark-darkness:               $color-black !default
 $color-dark-dark:                   hsl(0, 0%, 10%) !default
 $color-dark:                        hsl(0, 0%, 15%) !default
 $color-dark-light:                  hsl(0, 0%, 20%) !default
 $color-dark-lightness:              hsl(0, 0%, 25%) !default
-$color-dark-contrast:               $color-white !default
-
-$color-monotone-darkness:           hsl(0, 0%, 20%) !default
-$color-monotone-dark:               hsl(0, 0%, 30%) !default
-$color-monotone:                    hsl(0, 0%, 50%) !default
-$color-monotone-light:              hsl(0, 0%, 70%) !default
-$color-monotone-lightness:          hsl(0, 0%, 80%) !default
-$color-monotone-contrast:           $color-black !default
 
 $color-danger-darkness:             hsl(5, 69%, 39%) !default
 $color-danger-dark:                 hsl(5, 69%, 44%) !default
 $color-danger:                      hsl(5, 69%, 54%) !default
 $color-danger-light:                hsl(5, 69%, 59%) !default
 $color-danger-lightness:            hsl(5, 69%, 64%) !default
-$color-danger-contrast:             $color-white !default
 
 
 $color-primary-100:                 hsl(27, 91%, 96%) !default
@@ -56,35 +45,39 @@ $color-grey-600:                    hsl(0, 0%, 36%) !default
 $color-grey-700:                    hsl(0, 0%, 20%) !default
 $color-grey-800:                    hsl(0, 0%, 12%) !default
 
-$color-green-100:                   hsl(108, 45%, 94%) !default
-$color-green-200:                   hsl(108, 44%, 81%) !default
-$color-green-300:                   hsl(108, 45%, 56%) !default
-$color-green-400:                   hsl(107, 59%, 44%) !default
-$color-green-500:                   hsl(108, 100%, 31%) !default
-$color-green-600:                   hsl(108, 100%, 26%) !default
-$color-green-700:                   hsl(108, 100%, 20%) !default
-$color-green-800:                   hsl(108, 100%, 26%) !default
+$color-success-100:                   #418F50 !default // no-defined-on-design-system
+$color-success-200:                   #418F50 !default // no-defined-on-design-system
+$color-success-300:                   #418F50 !default // no-defined-on-design-system
+$color-success-400:                   #418F50 !default
+$color-success-500:                   #2E843F !default
+$color-success-600:                   #266D34 !default
+$color-success-700:                   #1E5429 !default
+$color-success-800:                   #1E5429 !default // no-defined-on-design-system
 
+$color-danger-100:                   #E16767 !default // no-defined-on-design-system
+$color-danger-200:                   #E16767 !default // no-defined-on-design-system
+$color-danger-300:                   #E16767 !default // no-defined-on-design-system
+$color-danger-400:                   #E16767 !default
+$color-danger-500:                   #D62E2E !default
+$color-danger-600:                   #CE000c !default
+$color-danger-700:                   #A90000 !default
+$color-danger-700:                   #A90000 !default // no-defined-on-design-system
 
 $color-primary:                     $color-primary-500 !default
-$color-primary-contrast:            $color-white !default
 
 $color-secondary:                   $color-secondary-500 !default
-$color-secondary-contrast:          $color-white !default
 
 $color-warning-darkness:            hsl(42, 96%, 33%) !default
 $color-warning-dark:                hsl(42, 96%, 43%) !default
 $color-warning:                     hsl(42, 96%, 53%) !default
 $color-warning-light:               hsl(42, 96%, 63%) !default
 $color-warning-lightness:           hsl(42, 96%, 73%) !default
-$color-warning-contrast:            $color-black !default
 
 $color-success-darkness:            hsl(133, 100%, 21%) !default
 $color-success-dark:                hsl(133, 100%, 26%) !default
 $color-success:                     hsl(133, 100%, 31%) !default
 $color-success-light:               hsl(133, 100%, 36%) !default
 $color-success-lightness:           hsl(133, 100%, 41%) !default
-$color-success-contrast:            $color-white !default
 
 
 $color-social-facebook-darkness:    hsl(221, 46%, 38%) !default
@@ -92,39 +85,35 @@ $color-social-facebook-dark:        hsl(221, 46%, 43%) !default
 $color-social-facebook:             hsl(220, 46%, 48%) !default
 $color-social-facebook-light:       hsl(221, 46%, 53%) !default
 $color-social-facebook-lightness:   hsl(221, 46%, 58%) !default
-$color-social-facebook-contrast:    $color-white !default
 
 $color-social-google-darkness:      hsl(7, 71%, 45%) !default
 $color-social-google-dark:          hsl(7, 71%, 50%) !default
 $color-social-google:               hsl(7, 71%, 55%) !default
 $color-social-google-light:         hsl(7, 71%, 60%) !default
 $color-social-google-lightness:     hsl(7, 71%, 65%) !default
-$color-social-google-contrast:      $color-white !default
 
 $color-social-instagram-darkness:   hsl(349, 75%, 47%) !default
 $color-social-instagram-dark:       hsl(349, 75%, 52%) !default
 $color-social-instagram:            hsl(349, 75%, 57%) !default
 $color-social-instagram-light:      hsl(349, 75%, 62%) !default
 $color-social-instagram-lightness:  hsl(349, 75%, 67%) !default
-$color-social-instagram-contrast:   $color-white !default
 
 $color-social-whatsapp-darkness:    hsl(142, 70%, 39%) !default
 $color-social-whatsapp-dark:        hsl(142, 70%, 44%) !default
 $color-social-whatsapp:             hsl(142, 70%, 49%) !default
 $color-social-whatsapp-light:       hsl(142, 70%, 54%) !default
 $color-social-whatsapp-lightness:   hsl(142, 70%, 59%) !default
-$color-social-whatsapp-contrast:    $color-white !default
 
-$color-darkness-map:                ('primary': $color-primary-800,  'secondary': $color-secondary-800,   'danger': $color-danger-darkness,     'success': $color-success-darkness,     'warning': $color-warning-darkness,   'monotone': $color-monotone-darkness,   'dark': $color-dark-darkness)
-$color-dark-map:                    ('primary': $color-primary-600,      'secondary': $color-secondary-600,       'danger': $color-danger-dark,         'success': $color-success-dark,         'warning': $color-warning-dark,       'monotone': $color-monotone-dark,       'dark': $color-dark-dark)
-$color-regular-map:                 ('primary': $color-primary,           'secondary': $color-secondary,            'danger': $color-danger,              'success': $color-success,              'warning': $color-warning,            'monotone': $color-monotone,            'dark': $color-dark)
-$color-light-map:                   ('primary': $color-primary-200,     'secondary': $color-secondary-200,      'danger': $color-danger-light,        'success': $color-success-light,        'warning': $color-warning-light,      'monotone': $color-monotone-light,      'dark': $color-dark-light)
-$color-lightness-map:               ('primary': $color-primary-100, 'secondary': $color-secondary-100,  'danger': $color-danger-lightness,    'success': $color-success-lightness,    'warning': $color-warning-lightness,  'monotone': $color-monotone-lightness,  'dark': $color-dark-lightness)
-$color-contrast-map:                ('primary': $color-primary-contrast,  'secondary': $color-secondary-contrast,   'danger': $color-danger-contrast,     'success': $color-success-contrast,     'warning': $color-warning-contrast,   'monotone': $color-monotone-contrast,   'dark': $color-dark-contrast)
+$color-darkness-map:                ('primary': $color-primary-800,  'secondary': $color-secondary-800,   'danger': $color-danger-darkness,     'success': $color-success-darkness,     'warning': $color-warning-darkness,   'dark': $color-dark-darkness)
+$color-dark-map:                    ('primary': $color-primary-600,      'secondary': $color-secondary-600,       'danger': $color-danger-dark,         'success': $color-success-dark,         'warning': $color-warning-dark,       'dark': $color-dark-dark)
+$color-regular-map:                 ('primary': $color-primary,           'secondary': $color-secondary,            'danger': $color-danger,              'success': $color-success,              'warning': $color-warning,           'dark': $color-dark)
+$color-light-map:                   ('primary': $color-primary-200,     'secondary': $color-secondary-200,      'danger': $color-danger-light,        'success': $color-success-light,        'warning': $color-warning-light,   'dark': $color-dark-light)
+$color-lightness-map:               ('primary': $color-primary-100, 'secondary': $color-secondary-100,  'danger': $color-danger-lightness,    'success': $color-success-lightness,    'warning': $color-warning-lightness, 'dark': $color-dark-lightness)
+$color-contrast-map:                ('primary': $color-white,  'secondary': $color-white,   'danger': $color-white,     'success': $color-white,     'warning': $color-white,   'monotone': $color-white,   'dark': $color-white)
 
 $color-social-darkness-map:         ('facebook': $color-social-facebook-darkness,    'google': $color-social-google-darkness,    'instagram': $color-social-instagram-darkness,  'whatsapp': $color-social-whatsapp-darkness)
 $color-social-dark-map:             ('facebook': $color-social-facebook-dark,        'google': $color-social-google-dark,        'instagram': $color-social-instagram-dark,      'whatsapp': $color-social-whatsapp-dark)
 $color-social-regular-map:          ('facebook': $color-social-facebook,             'google': $color-social-google,             'instagram': $color-social-instagram,           'whatsapp': $color-social-whatsapp)
 $color-social-light-map:            ('facebook': $color-social-facebook-light,       'google': $color-social-google-light,       'instagram': $color-social-instagram-light,     'whatsapp': $color-social-whatsapp-light)
 $color-social-lightness-map:        ('facebook': $color-social-facebook-lightness,   'google': $color-social-google-lightness,   'instagram': $color-social-instagram-lightness, 'whatsapp': $color-social-whatsapp-lightness)
-$color-social-contrast-map:         ('facebook': $color-social-facebook-contrast,    'google': $color-social-google-contrast,    'instagram': $color-social-instagram-contrast,  'whatsapp': $color-social-whatsapp-contrast)
+$color-social-contrast-map:         ('facebook': $color-white,    'google': $color-white,    'instagram': $color-white,  'whatsapp': $color-white)

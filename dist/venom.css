@@ -423,12 +423,13 @@ html {
 }
 
 .venom body {
-  background-color: #fafafa;
+  background-color: #f9f9f9;
   color: #333;
   font-family: BlinkMacSystemFont, -apple-system, "Open Sans", sans-serif;
   font-weight: 400;
   letter-spacing: 0.25px;
   font-size: 14px;
+  line-heifht: 20px;
 }
 
 .venom a {
@@ -487,6 +488,7 @@ html {
 
 .venom small {
   font-size: 12px;
+  line-height: 16px;
   font-weight: inherit;
 }
 
@@ -512,7 +514,6 @@ html {
 .venom p {
   box-sizing: border-box !important;
   color: currentColor;
-  line-height: 1.25;
   margin: 0;
   padding: 0;
   max-width: 100%;
@@ -536,47 +537,42 @@ html {
 
 .venom h1 {
   font-size: 32px;
+  line-height: 48px;
   font-weight: 300;
   letter-spacing: 0.25px;
 }
 
 .venom h2 {
   font-size: 28px;
+  line-height: 40px;
   font-weight: 300;
   letter-spacing: 0.18px;
 }
 
 .venom h3 {
   font-size: 24px;
+  line-height: 36px;
   font-weight: 300;
 }
 
 .venom h4 {
   font-size: 20px;
+  line-height: 30px;
   font-weight: 600;
   letter-spacing: 0.25px;
 }
 
 .venom h5 {
   font-size: 18px;
+  line-height: 24px;
   font-weight: 600;
   letter-spacing: 0.5px;
 }
 
 .venom h6 {
   font-size: 18px;
+  line-height: 24px;
   font-weight: 600;
-  letter-spacing: 0.25px;
-}
-
-.venom h1 + h2,
-.venom h2 + h3,
-.venom h2 + p,
-.venom h3 + p {
-  margin-top: 12px;
-}
-
-.venom p {
   letter-spacing: 0.25px;
 }
 
@@ -1018,7 +1014,7 @@ html {
 
 @media screen and (min-width: 768px) and (max-width: 1223px) {
   .venom .grid__row, .venom .grid__columns {
-    padding: 8px 0;
+    padding: 12px 0;
   }
   .venom .grid__columns .grid__column {
     margin: 8px;
@@ -1127,10 +1123,10 @@ html {
     margin-left: calc(91.66667% - 16px) !important;
   }
   .venom .grid__column--is-twelve-tablet {
-    -webkit-flex-basis: calc( 100% - 24px) !important;
-        -ms-flex-preferred-size: calc( 100% - 24px) !important;
-            flex-basis: calc( 100% - 24px) !important;
-    max-width: calc( 100% - 24px) !important;
+    -webkit-flex-basis: calc( 100% - 16px) !important;
+        -ms-flex-preferred-size: calc( 100% - 16px) !important;
+            flex-basis: calc( 100% - 16px) !important;
+    max-width: calc( 100% - 16px) !important;
   }
   .venom .grid__column--is-first-tablet {
     -webkit-box-ordinal-group: 0 !important;
@@ -1257,10 +1253,10 @@ html {
     margin-left: calc(91.66667% - 16px) !important;
   }
   .venom .grid__column--is-twelve-mobile {
-    -webkit-flex-basis: calc( 100% - 24px) !important;
-        -ms-flex-preferred-size: calc( 100% - 24px) !important;
-            flex-basis: calc( 100% - 24px) !important;
-    max-width: calc( 100% - 24px) !important;
+    -webkit-flex-basis: calc( 100% - 16px) !important;
+        -ms-flex-preferred-size: calc( 100% - 16px) !important;
+            flex-basis: calc( 100% - 16px) !important;
+    max-width: calc( 100% - 16px) !important;
   }
   .venom .grid__column--is-first-mobile {
     -webkit-box-ordinal-group: 0 !important;
@@ -1381,7 +1377,7 @@ html {
 }
 
 .venom .button {
-  box-shadow: 0 2px 4px 0 #b3b3b3;
+  box-shadow: 0 2px 4px 0 #999999;
   -webkit-align-content: center;
       -ms-flex-line-pack: center;
           align-content: center;
@@ -1405,12 +1401,12 @@ html {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: white;
-  border-color: white;
+  background-color: #fff;
+  border-color: #fff;
   border-radius: 4px;
   border-style: solid;
   border-width: 1px;
-  color: #0d0d0d;
+  color: #333;
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
@@ -1461,14 +1457,14 @@ html {
 
 .venom .button.button:disabled, .venom .button.button--is-disabled {
   background-color: #cccccc;
-  color: #b3b3b3;
+  color: #999999;
   cursor: default;
   pointer-events: none;
 }
 
 .venom .button.button--is-outline {
-  background-color: white;
-  border-color: gray;
+  background-color: #fff;
+  border-color: #cccccc;
   color: currentColor;
   box-shadow: none;
 }
@@ -1503,7 +1499,7 @@ html {
 .venom .button.button--is-primary {
   background-color: #f4831f;
   border-color: #f4831f;
-  color: white;
+  color: #fff;
 }
 
 .venom .button.button--is-primary:hover {
@@ -1534,7 +1530,7 @@ html {
 
 .venom .button.button--is-primary.button--is-outline {
   border-color: #f4831f;
-  background-color: white;
+  background-color: #fff;
   color: #f4831f;
 }
 
@@ -1543,8 +1539,8 @@ html {
 }
 
 .venom .button.button--is-primary.button--is-outline:focus {
-  background: #fcdcc0 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
-  background: #fcdcc0 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+  background: #fcdcc0 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #fcdcc0 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button.button--is-primary.button--is-outline:active {
@@ -1556,7 +1552,7 @@ html {
 }
 
 .venom .button.button--is-primary.button--is-outline:disabled, .venom .button.button--is-primary.button--is-outline.button--is-disabled {
-  background-color: white;
+  background-color: #fff;
   border-color: #cccccc;
   border-style: solid;
   border-width: 1px;
@@ -1574,8 +1570,8 @@ html {
 }
 
 .venom .button.button--is-primary.button--is-link:focus {
-  background: #fcdcc0 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
-  background: #fcdcc0 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+  background: #fcdcc0 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #fcdcc0 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button.button--is-primary.button--is-link:active {
@@ -1589,7 +1585,7 @@ html {
 .venom .button.button--is-secondary {
   background-color: #00549e;
   border-color: #00549e;
-  color: white;
+  color: #fff;
 }
 
 .venom .button.button--is-secondary:hover {
@@ -1620,7 +1616,7 @@ html {
 
 .venom .button.button--is-secondary.button--is-outline {
   border-color: #00549e;
-  background-color: white;
+  background-color: #fff;
   color: #00549e;
 }
 
@@ -1629,8 +1625,8 @@ html {
 }
 
 .venom .button.button--is-secondary.button--is-outline:focus {
-  background: #b9d0e4 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
-  background: #b9d0e4 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+  background: #b9d0e4 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #b9d0e4 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button.button--is-secondary.button--is-outline:active {
@@ -1642,7 +1638,7 @@ html {
 }
 
 .venom .button.button--is-secondary.button--is-outline:disabled, .venom .button.button--is-secondary.button--is-outline.button--is-disabled {
-  background-color: white;
+  background-color: #fff;
   border-color: #cccccc;
   border-style: solid;
   border-width: 1px;
@@ -1660,8 +1656,8 @@ html {
 }
 
 .venom .button.button--is-secondary.button--is-link:focus {
-  background: #b9d0e4 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
-  background: #b9d0e4 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+  background: #b9d0e4 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #b9d0e4 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button.button--is-secondary.button--is-link:active {
@@ -1675,7 +1671,7 @@ html {
 .venom .button.button--is-danger {
   background-color: #db4639;
   border-color: #db4639;
-  color: white;
+  color: #fff;
 }
 
 .venom .button.button--is-danger:hover {
@@ -1706,7 +1702,7 @@ html {
 
 .venom .button.button--is-danger.button--is-outline {
   border-color: #db4639;
-  background-color: white;
+  background-color: #fff;
   color: #db4639;
 }
 
@@ -1715,8 +1711,8 @@ html {
 }
 
 .venom .button.button--is-danger.button--is-outline:focus {
-  background: #df5a4e -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
-  background: #df5a4e radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+  background: #df5a4e -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #df5a4e radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button.button--is-danger.button--is-outline:active {
@@ -1728,7 +1724,7 @@ html {
 }
 
 .venom .button.button--is-danger.button--is-outline:disabled, .venom .button.button--is-danger.button--is-outline.button--is-disabled {
-  background-color: white;
+  background-color: #fff;
   border-color: #cccccc;
   border-style: solid;
   border-width: 1px;
@@ -1746,8 +1742,8 @@ html {
 }
 
 .venom .button.button--is-danger.button--is-link:focus {
-  background: #df5a4e -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
-  background: #df5a4e radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+  background: #df5a4e -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #df5a4e radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button.button--is-danger.button--is-link:active {
@@ -1761,7 +1757,7 @@ html {
 .venom .button.button--is-success {
   background-color: #009e22;
   border-color: #009e22;
-  color: white;
+  color: #fff;
 }
 
 .venom .button.button--is-success:hover {
@@ -1792,7 +1788,7 @@ html {
 
 .venom .button.button--is-success.button--is-outline {
   border-color: #009e22;
-  background-color: white;
+  background-color: #fff;
   color: #009e22;
 }
 
@@ -1801,8 +1797,8 @@ html {
 }
 
 .venom .button.button--is-success.button--is-outline:focus {
-  background: #00b828 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
-  background: #00b828 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+  background: #00b828 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #00b828 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button.button--is-success.button--is-outline:active {
@@ -1814,7 +1810,7 @@ html {
 }
 
 .venom .button.button--is-success.button--is-outline:disabled, .venom .button.button--is-success.button--is-outline.button--is-disabled {
-  background-color: white;
+  background-color: #fff;
   border-color: #cccccc;
   border-style: solid;
   border-width: 1px;
@@ -1832,8 +1828,8 @@ html {
 }
 
 .venom .button.button--is-success.button--is-link:focus {
-  background: #00b828 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
-  background: #00b828 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+  background: #00b828 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #00b828 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button.button--is-success.button--is-link:active {
@@ -1847,7 +1843,7 @@ html {
 .venom .button.button--is-warning {
   background-color: #fab514;
   border-color: #fab514;
-  color: #0d0d0d;
+  color: #fff;
 }
 
 .venom .button.button--is-warning:hover {
@@ -1878,7 +1874,7 @@ html {
 
 .venom .button.button--is-warning.button--is-outline {
   border-color: #fab514;
-  background-color: white;
+  background-color: #fff;
   color: #fab514;
 }
 
@@ -1887,8 +1883,8 @@ html {
 }
 
 .venom .button.button--is-warning.button--is-outline:focus {
-  background: #fbc546 -webkit-radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
-  background: #fbc546 radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
+  background: #fbc546 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #fbc546 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button.button--is-warning.button--is-outline:active {
@@ -1900,7 +1896,7 @@ html {
 }
 
 .venom .button.button--is-warning.button--is-outline:disabled, .venom .button.button--is-warning.button--is-outline.button--is-disabled {
-  background-color: white;
+  background-color: #fff;
   border-color: #cccccc;
   border-style: solid;
   border-width: 1px;
@@ -1918,8 +1914,8 @@ html {
 }
 
 .venom .button.button--is-warning.button--is-link:focus {
-  background: #fbc546 -webkit-radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
-  background: #fbc546 radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
+  background: #fbc546 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #fbc546 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button.button--is-warning.button--is-link:active {
@@ -1930,96 +1926,10 @@ html {
   transition: background 0s;
 }
 
-.venom .button.button--is-monotone {
-  background-color: gray;
-  border-color: gray;
-  color: #0d0d0d;
-}
-
-.venom .button.button--is-monotone:hover {
-  background: #4d4d4d;
-}
-
-.venom .button.button--is-monotone:focus {
-  background: #4d4d4d -webkit-radial-gradient(circle, transparent 1%, gray 1%) center/15000%;
-  background: #4d4d4d radial-gradient(circle, transparent 1%, gray 1%) center/15000%;
-}
-
-.venom .button.button--is-monotone:active {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
-  background-size: 100%;
-  -webkit-transition: background 0s;
-  transition: background 0s;
-}
-
-.venom .button.button--is-monotone:active.button--is-dragged {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
-  border: none;
-}
-
-.venom .button.button--is-monotone:disabled, .venom .button.button--is-monotone.button--is-disabled {
-  background-color: #cccccc;
-  border: none;
-}
-
-.venom .button.button--is-monotone.button--is-outline {
-  border-color: gray;
-  background-color: white;
-  color: gray;
-}
-
-.venom .button.button--is-monotone.button--is-outline:hover {
-  background: #cccccc;
-}
-
-.venom .button.button--is-monotone.button--is-outline:focus {
-  background: #b3b3b3 -webkit-radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
-  background: #b3b3b3 radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
-}
-
-.venom .button.button--is-monotone.button--is-outline:active {
-  border-color: #4d4d4d;
-  color: #4d4d4d;
-  background-size: 100%;
-  -webkit-transition: background 0s;
-  transition: background 0s;
-}
-
-.venom .button.button--is-monotone.button--is-outline:disabled, .venom .button.button--is-monotone.button--is-outline.button--is-disabled {
-  background-color: white;
-  border-color: #cccccc;
-  border-style: solid;
-  border-width: 1px;
-  color: #999999;
-}
-
-.venom .button.button--is-monotone.button--is-link {
-  background-color: transparent;
-  border: none;
-  color: gray;
-}
-
-.venom .button.button--is-monotone.button--is-link:hover {
-  background-color: #cccccc;
-}
-
-.venom .button.button--is-monotone.button--is-link:focus {
-  background: #b3b3b3 -webkit-radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
-  background: #b3b3b3 radial-gradient(circle, transparent 1%, #0d0d0d 1%) center/15000%;
-}
-
-.venom .button.button--is-monotone.button--is-link:active {
-  border-color: #4d4d4d;
-  color: #4d4d4d;
-  background-size: 100%;
-  -webkit-transition: background 0s;
-  transition: background 0s;
-}
-
 .venom .button.button--is-dark {
   background-color: #262626;
   border-color: #262626;
-  color: white;
+  color: #fff;
 }
 
 .venom .button.button--is-dark:hover {
@@ -2050,7 +1960,7 @@ html {
 
 .venom .button.button--is-dark.button--is-outline {
   border-color: #262626;
-  background-color: white;
+  background-color: #fff;
   color: #262626;
 }
 
@@ -2059,8 +1969,8 @@ html {
 }
 
 .venom .button.button--is-dark.button--is-outline:focus {
-  background: #333333 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
-  background: #333333 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+  background: #333333 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #333333 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button.button--is-dark.button--is-outline:active {
@@ -2072,7 +1982,7 @@ html {
 }
 
 .venom .button.button--is-dark.button--is-outline:disabled, .venom .button.button--is-dark.button--is-outline.button--is-disabled {
-  background-color: white;
+  background-color: #fff;
   border-color: #cccccc;
   border-style: solid;
   border-width: 1px;
@@ -2090,8 +2000,8 @@ html {
 }
 
 .venom .button.button--is-dark.button--is-link:focus {
-  background: #333333 -webkit-radial-gradient(circle, transparent 1%, white 1%) center/15000%;
-  background: #333333 radial-gradient(circle, transparent 1%, white 1%) center/15000%;
+  background: #333333 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #333333 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button.button--is-dark.button--is-link:active {
@@ -2105,7 +2015,7 @@ html {
 .venom .button--is-facebook {
   background-color: #4268b3;
   border-color: #4268b3;
-  color: white;
+  color: #fff;
 }
 
 .venom .button--is-facebook:hover, .venom .button--is-facebook:focus, .venom .button--is-facebook:active {
@@ -2125,7 +2035,7 @@ html {
 .venom .button--is-google {
   background-color: #de4e3b;
   border-color: #de4e3b;
-  color: white;
+  color: #fff;
 }
 
 .venom .button--is-google:hover, .venom .button--is-google:focus, .venom .button--is-google:active {
@@ -2145,7 +2055,7 @@ html {
 .venom .button--is-instagram {
   background-color: #e43f5d;
   border-color: #e43f5d;
-  color: white;
+  color: #fff;
 }
 
 .venom .button--is-instagram:hover, .venom .button--is-instagram:focus, .venom .button--is-instagram:active {
@@ -2165,7 +2075,7 @@ html {
 .venom .button--is-whatsapp {
   background-color: #25d466;
   border-color: #25d466;
-  color: white;
+  color: #fff;
 }
 
 .venom .button--is-whatsapp:hover, .venom .button--is-whatsapp:focus, .venom .button--is-whatsapp:active {
@@ -2211,7 +2121,7 @@ html {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #b3b3b3;
+  background-color: #999999;
   border-radius: 4px;
   box-sizing: border-box;
   display: -webkit-box;
@@ -2230,7 +2140,7 @@ html {
 }
 
 .venom .notification__container:hover {
-  background-color: #b3b3b3;
+  background-color: #999999;
 }
 
 .venom .notification--is-primary {
@@ -2238,7 +2148,7 @@ html {
 }
 
 .venom .notification--is-primary .notification__content {
-  color: white;
+  color: #fff;
 }
 
 .venom .notification--is-primary:hover {
@@ -2250,7 +2160,7 @@ html {
 }
 
 .venom .notification--is-secondary .notification__content {
-  color: white;
+  color: #fff;
 }
 
 .venom .notification--is-secondary:hover {
@@ -2262,7 +2172,7 @@ html {
 }
 
 .venom .notification--is-danger .notification__content {
-  color: white;
+  color: #fff;
 }
 
 .venom .notification--is-danger:hover {
@@ -2274,7 +2184,7 @@ html {
 }
 
 .venom .notification--is-success .notification__content {
-  color: white;
+  color: #fff;
 }
 
 .venom .notification--is-success:hover {
@@ -2286,23 +2196,11 @@ html {
 }
 
 .venom .notification--is-warning .notification__content {
-  color: #0d0d0d;
+  color: #fff;
 }
 
 .venom .notification--is-warning:hover {
   background-color: #fcd578;
-}
-
-.venom .notification--is-monotone {
-  background-color: gray;
-}
-
-.venom .notification--is-monotone .notification__content {
-  color: #0d0d0d;
-}
-
-.venom .notification--is-monotone:hover {
-  background-color: #cccccc;
 }
 
 .venom .notification--is-dark {
@@ -2310,7 +2208,7 @@ html {
 }
 
 .venom .notification--is-dark .notification__content {
-  color: white;
+  color: #fff;
 }
 
 .venom .notification--is-dark:hover {
@@ -2347,10 +2245,6 @@ html {
   border: solid 1px #fab514 !important;
 }
 
-.venom .card--is-monotone {
-  border: solid 1px gray !important;
-}
-
 .venom .card--is-dark {
   border: solid 1px #262626 !important;
 }
@@ -2378,6 +2272,10 @@ html {
   display: table;
 }
 
+.venom .input:hover .input__marker {
+  background: #fafafa;
+}
+
 .venom .input .input__marker {
   position: absolute;
   top: 0;
@@ -2385,7 +2283,7 @@ html {
   height: 24px;
   width: 24px;
   border-radius: 50%;
-  background-color: white;
+  background-color: #fff;
   border: solid 2px #00549e;
 }
 
@@ -2411,7 +2309,7 @@ html {
 .venom .input.input__radio:hover input[type='radio'] ~ .input__marker:after, .venom .input.input__checkbox:hover input[type='radio'] ~ .input__marker:after {
   content: '';
   border-radius: 50%;
-  box-shadow: 0 0 0 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 0 6px #ededed;
 }
 
 .venom .input.input__radio input[type='checkbox'],
@@ -2425,7 +2323,7 @@ html {
 .venom .input.input__radio input[type='checkbox']:checked ~ .input__marker,
 .venom .input.input__radio input[type='radio']:checked ~ .input__marker, .venom .input.input__checkbox input[type='checkbox']:checked ~ .input__marker,
 .venom .input.input__checkbox input[type='radio']:checked ~ .input__marker {
-  background-color: white;
+  background-color: #fff;
   border-color: #00549e;
 }
 
@@ -2460,7 +2358,7 @@ html {
   width: 5px;
   height: 10px;
   border: solid #00549e;
-  background: white;
+  background: #fff;
   border-width: 0 2px 2px 0;
   border-radius: 0;
   -webkit-transform: rotate(45deg);
@@ -2491,10 +2389,10 @@ html {
 
 .venom .text-field .text-field__container {
   border-radius: 4px;
-  border: solid 1px #b3b3b3;
+  border: solid 1px #999999;
   padding: 0;
   max-width: 100%;
-  background-color: white;
+  background-color: #fff;
 }
 
 .venom .text-field .text-field__container::after {
@@ -2507,25 +2405,28 @@ html {
   font-size: 12px;
   font-weight: 400;
   margin: 4px 12px;
-  color: gray;
+  color: #cccccc;
   max-width: 100%;
   display: block;
-  line-height: 14px;
+  line-height: 16px;
 }
 
 .venom .text-field .text-field__label {
   position: absolute;
   top: 0;
   left: 0;
-  padding: 12px;
+  padding: 8px 12px;
   max-width: 100%;
   -webkit-transition: all 172ms ease;
   transition: all 172ms ease;
   cursor: text;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .venom .text-field svg path:not([fill]) {
-  fill: gray;
+  fill: #cccccc;
 }
 
 .venom .text-field input,
@@ -2533,10 +2434,11 @@ html {
   box-sizing: border-box !important;
   border: none;
   border-radius: 4px;
-  padding: 12px;
+  padding: 8px 12px;
   margin: 0;
   width: 100%;
-  font-size: 14px;
+  font-size: 16px;
+  line-height: 22px;
 }
 
 .venom .text-field input:not([type='checkbox']):focus,
@@ -2551,9 +2453,17 @@ html {
   left: 10px !important;
   padding: 2px;
   width: auto;
-  background: white;
+  background: #fff;
   font-size: 12px;
   line-height: 1;
+}
+
+.venom .text-field input:focus input,
+.venom .text-field input:focus textarea,
+.venom .text-field textarea:focus input,
+.venom .text-field textarea:focus textarea, .venom .text-field.text-field--is-active input,
+.venom .text-field.text-field--is-active textarea {
+  line-height: 20px !important;
 }
 
 .venom .text-field.text-field--has-left-icon .text-field__label {
@@ -2598,10 +2508,6 @@ html {
   border-color: #00549e;
 }
 
-.venom .text-field.text-field--is-active .text-field__container input {
-  padding: 11px;
-}
-
 .venom .text-field.text-field--is-danger .text-field__label,
 .venom .text-field.text-field--is-danger .text-field__helper {
   color: #db4639 !important;
@@ -2642,7 +2548,7 @@ html {
 }
 
 .venom .tab {
-  background: white;
+  background: #fff;
   height: 100%;
   padding: 0 12px;
   display: -webkit-box;
@@ -2667,7 +2573,7 @@ html {
   min-width: 150px;
   padding: 12px;
   margin: 0 4px -1px;
-  color: #0d0d0d;
+  color: #333;
   overflow: hidden;
   text-align: center;
   -webkit-box-flex: 1;
@@ -2694,9 +2600,9 @@ html {
 }
 
 .venom .tab .tab__item:hover, .venom .tab .tab__item:focus {
-  background-color: #b3b3b3;
-  background: #cccccc -webkit-radial-gradient(circle, transparent 1%, #b3b3b3 1%) center/15000%;
-  background: #cccccc radial-gradient(circle, transparent 1%, #b3b3b3 1%) center/15000%;
+  background-color: #999999;
+  background: #cccccc -webkit-radial-gradient(circle, transparent 1%, #999999 1%) center/15000%;
+  background: #cccccc radial-gradient(circle, transparent 1%, #999999 1%) center/15000%;
 }
 
 .venom .tab .tab__item:active {
@@ -2711,18 +2617,18 @@ html {
 }
 
 .venom .tab--is-oldstyle {
-  border-bottom: #b3b3b3 1px solid;
+  border-bottom: #999999 1px solid;
 }
 
 .venom .tab--is-oldstyle .tab__item {
   background: #cccccc;
-  border: #b3b3b3 1px solid;
+  border: #999999 1px solid;
 }
 
 .venom .tab--is-oldstyle .tab__item:hover, .venom .tab--is-oldstyle .tab__item:focus {
-  background-color: white;
-  background: white -webkit-radial-gradient(circle, transparent 1%, rgba(0, 0, 0, 0.05) 1%) center/15000%;
-  background: white radial-gradient(circle, transparent 1%, rgba(0, 0, 0, 0.05) 1%) center/15000%;
+  background-color: #fff;
+  background: #fff -webkit-radial-gradient(circle, transparent 1%, rgba(0, 0, 0, 0.05) 1%) center/15000%;
+  background: #fff radial-gradient(circle, transparent 1%, rgba(0, 0, 0, 0.05) 1%) center/15000%;
 }
 
 .venom .tab--is-oldstyle .tab__item:active {
@@ -2732,8 +2638,8 @@ html {
 }
 
 .venom .tab--is-oldstyle .tab__item--has-indicator {
-  border-bottom-color: white;
-  background-color: white;
+  border-bottom-color: #fff;
+  background-color: #fff;
   color: #00549e;
 }
 
@@ -2757,7 +2663,7 @@ html {
 }
 
 .venom .collapse__container {
-  box-shadow: 0 2px 4px 0 #b3b3b3;
+  box-shadow: 0 2px 4px 0 #999999;
   border-radius: 4px;
   margin: 0 12px;
   padding: 12px;
@@ -2786,7 +2692,7 @@ html {
   padding: 12px;
   box-sizing: border-box;
   font-size: 14px;
-  border: 1px solid #b3b3b3;
+  border: 1px solid #999999;
   border-radius: 3px;
   margin-bottom: 10px;
 }
@@ -2855,7 +2761,7 @@ html {
 }
 
 .venom .modal__container {
-  background-color: white;
+  background-color: #fff;
   overflow-y: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2921,7 +2827,7 @@ html {
 }
 
 .venom .modal__body {
-  background-color: white;
+  background-color: #fff;
   padding: 20px;
   overflow-y: auto;
   overflow-x: hidden;
@@ -2959,7 +2865,8 @@ html {
 }
 
 .venom .panel {
-  background-color: white;
+  background-color: #fff;
+  padding: 12px 20px;
 }
 
 .venom .panel__body {
@@ -2971,6 +2878,7 @@ html {
 
 .venom .panel__arrow {
   cursor: pointer;
+  margin-right: -6px;
 }
 
 .venom .panel__arrow svg {
@@ -3000,12 +2908,11 @@ html {
 }
 
 .venom .toggle {
-  width: 48px;
-  height: 24px;
-  border-radius: 24px;
+  width: 32px;
+  height: 16px;
+  border-radius: 8px;
   background-color: #ddd;
   overflow: hidden;
-  box-shadow: inset 0 0 2px 1px rgba(0, 0, 0, 0.05);
   position: relative;
   display: inline-block;
   cursor: pointer;
@@ -3031,13 +2938,17 @@ html {
   box-shadow: inset 0 0 0 24px #009e22;
 }
 
+.venom .toggle.toggle--is-danger input:checked ~ .toggle__track {
+  box-shadow: inset 0 0 0 24px #db4639;
+}
+
 .venom .toggle input:checked ~ .toggle__track {
   box-shadow: inset 0 0 0 24px #00549e;
 }
 
 .venom .toggle input:checked ~ .toggle__switch {
   right: 2px;
-  left: 24px;
+  left: 18px;
   -webkit-transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   -webkit-transition-property: left, right;
@@ -3051,7 +2962,7 @@ html {
   left: 2px;
   top: 2px;
   bottom: 2px;
-  right: 24px;
+  right: 18px;
   background-color: #fff;
   border-radius: 12px;
   z-index: 1;
@@ -3061,7 +2972,6 @@ html {
   transition-property: left, right;
   -webkit-transition-delay: 0s, 172ms;
           transition-delay: 0s, 172ms;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 
 .venom .toggle__track {
@@ -3072,7 +2982,6 @@ html {
   bottom: 0;
   -webkit-transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
   transition: 172ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
-  box-shadow: inset 0 0 0 2px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
 }
 
@@ -3089,14 +2998,14 @@ html {
 }
 
 .venom .tooltip {
-  box-shadow: 0 2px 4px 0 #b3b3b3;
+  box-shadow: 0 2px 4px 0 #999999;
   display: block;
   position: absolute;
   padding: 12px;
   border-radius: 4px;
-  background: #4d4d4d;
+  background: #707070;
   text-align: center;
-  color: white;
+  color: #fff;
   opacity: 0;
   pointer-events: none;
   z-index: 5;
@@ -3104,7 +3013,7 @@ html {
 }
 
 .venom .tooltip:after {
-  border-top: 4px solid #4d4d4d;
+  border-top: 4px solid #707070;
 }
 
 .venom .tooltip:hover {
@@ -3119,7 +3028,7 @@ html {
   width: 0;
   height: 0;
   border: 8px solid transparent;
-  border-top: 8px solid #4d4d4d;
+  border-top: 8px solid #707070;
   position: absolute;
   bottom: -16px;
   left: calc(50% - 8px);
@@ -3132,7 +3041,7 @@ html {
   width: 0;
   height: 0;
   border: 8px solid transparent;
-  border-bottom: 8px solid #4d4d4d;
+  border-bottom: 8px solid #707070;
   position: absolute;
   top: -16px;
   left: calc(50% - 4px);
@@ -3144,7 +3053,7 @@ html {
   width: 0;
   height: 0;
   border: 8px solid transparent;
-  border-left: 8px solid #4d4d4d;
+  border-left: 8px solid #707070;
   position: absolute;
   right: -16px;
   top: calc(50% - 8px);
@@ -3156,7 +3065,7 @@ html {
   width: 0;
   height: 0;
   border: 8px solid transparent;
-  border-right: 8px solid #4d4d4d;
+  border-right: 8px solid #707070;
   position: absolute;
   left: -16px;
   top: calc(50% - 8px);
@@ -3166,7 +3075,7 @@ html {
   position: absolute;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(250, 250, 250, 0.8);
   top: 0;
   z-index: 101;
 }
@@ -3409,11 +3318,11 @@ html {
   display: inline-block;
   height: 24px;
   padding: 0 12px;
-  background: gray;
-  border: 0 solid gray;
+  background: #cccccc;
+  border: 0 solid #cccccc;
   border-top-width: 1px;
   border-bottom-width: 1px;
-  color: white;
+  color: #fff;
   line-height: 24px;
 }
 
@@ -3463,7 +3372,7 @@ html {
   top: 0;
   width: 0;
   height: 0;
-  border-right: 12px solid gray;
+  border-right: 12px solid #cccccc;
   border-top: 12px solid transparent;
   border-bottom: 12px solid transparent;
 }
@@ -3494,7 +3403,7 @@ html {
 
 .venom .helper--has-border-dashed {
   width: 100%;
-  border-bottom: dashed 1px gray;
+  border-bottom: dashed 1px #cccccc;
 }
 
 .venom .helper--has-border-dashed::after {
@@ -3505,7 +3414,7 @@ html {
 
 .venom .helper--has-top-dashed {
   width: 100%;
-  border-bottom: dashed 1px gray;
+  border-bottom: dashed 1px #cccccc;
 }
 
 .venom .helper--has-top-dashed::after {
@@ -3524,7 +3433,7 @@ html {
 }
 
 .venom .helper--has-shadow {
-  box-shadow: 0 2px 4px 0 #b3b3b3;
+  box-shadow: 0 2px 4px 0 #999999;
 }
 
 .venom .helper--has-border-radius {
@@ -3566,10 +3475,6 @@ html {
 
 .venom .helper--has-border-warning {
   border-color: #fab514;
-}
-
-.venom .helper--has-border-monotone {
-  border-color: gray;
 }
 
 .venom .helper--has-border-dark {
@@ -3667,7 +3572,7 @@ html {
 }
 
 .venom .helper--has-border {
-  border: solid 1px #b3b3b3;
+  border: solid 1px #999999;
 }
 
 .venom .helper--has-border-large {
@@ -3857,22 +3762,26 @@ html {
 
 .venom .helper--has-text-extra-small {
   font-size: 12px !important;
+  line-height: 16px;
 }
 
 .venom .helper--has-text-small {
   font-size: 12px !important;
+  line-height: 16px;
 }
 
 .venom .helper--has-text-large {
   font-size: 16px !important;
+  line-height: 22px;
 }
 
 .venom .helper--has-text-extra-large {
   font-size: 20px !important;
+  line-height: 27px;
 }
 
 .venom .helper--has-text-base-line {
-  line-height: 1;
+  line-height: 1 !important;
 }
 
 .venom .helper--has-text-left {
@@ -3903,27 +3812,27 @@ html {
 }
 
 .venom .helper--has-text-white {
-  color: white;
+  color: #fff;
 }
 
 .venom .helper--has-text-white svg path:not([fill]) {
-  fill: white;
+  fill: #fff;
 }
 
 .venom .helper--has-text-monotone {
-  color: gray;
+  color: #cccccc;
 }
 
 .venom .helper--has-text-monotone svg path:not([fill]) {
-  fill: gray;
+  fill: #cccccc;
 }
 
 .venom .helper--has-text-black {
-  color: #0d0d0d;
+  color: #333;
 }
 
 .venom .helper--has-text-black svg path:not([fill]) {
-  fill: #0d0d0d;
+  fill: #333;
 }
 
 .venom .helper--has-text-primary {
@@ -3966,14 +3875,6 @@ html {
   fill: #fab514;
 }
 
-.venom .helper--has-text-monotone {
-  color: gray;
-}
-
-.venom .helper--has-text-monotone svg path:not([fill]) {
-  fill: gray;
-}
-
 .venom .helper--has-text-dark {
   color: #262626;
 }
@@ -4002,16 +3903,12 @@ html {
   background-color: #fab514;
 }
 
-.venom .helper--has-background-monotone {
-  background-color: gray;
-}
-
 .venom .helper--has-background-dark {
   background-color: #262626;
 }
 
 .venom .helper--has-background-white {
-  background-color: white;
+  background-color: #fff;
 }
 
 @media screen and (max-width: 414px) {

@@ -81,7 +81,7 @@ $row: '.grid__row'
     +for-size(tablet)
       &__row,
       &__columns
-        padding: $mobile-column-gap $zero
+        padding: $desktop-column-gap $zero
 
       &__columns
         #{ $column }
@@ -100,8 +100,8 @@ $row: '.grid__row'
               margin-left: calc(#{ $count } - #{ $mobile-column-gap * 2 }) !important
 
         &--is-twelve-tablet
-          flex-basis: calc( 100% - #{ $desktop-column-gap * 2 }) !important
-          max-width: calc( 100% - #{ $desktop-column-gap * 2 }) !important
+          flex-basis: calc( 100% - #{ $mobile-column-gap * 2 }) !important
+          max-width: calc( 100% - #{ $mobile-column-gap * 2 }) !important
 
         &--is-first-tablet
           order: -1 !important
@@ -131,8 +131,8 @@ $row: '.grid__row'
               margin-left: calc(#{ $count } - #{ $mobile-column-gap * 2 }) !important
 
         &--is-twelve-mobile
-          flex-basis: calc( 100% - #{ $desktop-column-gap * 2 }) !important
-          max-width: calc( 100% - #{ $desktop-column-gap * 2 }) !important
+          flex-basis: calc( 100% - #{ $mobile-column-gap * 2 }) !important
+          max-width: calc( 100% - #{ $mobile-column-gap * 2 }) !important
 
         &--is-first-mobile
           order: -1 !important

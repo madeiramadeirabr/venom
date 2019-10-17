@@ -12,6 +12,10 @@ $input-el: '.input'
     font-size: $size-large
     font-weight: $weight-regular
 
+    &:hover
+      #{$input-el}__marker
+        background: $color-grey-100
+
     #{$input-el}__marker
       position: absolute
       top: 0
@@ -41,7 +45,7 @@ $input-el: '.input'
           ~ #{$input-el}__marker:after
               content: ''
               border-radius: 50%
-              box-shadow: $zero $zero $zero $gap-small $color-hover
+              box-shadow: $zero $zero $zero #{ $gap-small - 2 } $color-grey-200
 
       input[type='checkbox'],
       input[type='radio']
