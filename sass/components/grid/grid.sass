@@ -104,6 +104,12 @@
         flex-basis: calc( 100% - #{ $mobile-column-gap * 2 }) !important
         max-width: calc( 100% - #{ $mobile-column-gap * 2 }) !important
 
+      .helper--has-no-gap-tablet,
+      .helper--has-no-margin-tablet
+        .grid_columnn--is-twelve-tablet
+          flex-basis: 100% !important
+          max-width: 100% !important
+
       &--is-first-tablet
         order: -1 !important
 
@@ -131,6 +137,12 @@
       &--is-twelve-mobile
         flex-basis: calc( 100% - #{ $mobile-column-gap * 2 }) !important
         max-width: calc( 100% - #{ $mobile-column-gap * 2 }) !important
+
+      .helper--has-no-gap-mobile,
+      .helper--has-no-margin-mobile
+        .grid_columnn--is-twelve-mobile
+          flex-basis: 100% !important
+          max-width: 100% !important
 
       &--is-first-mobile
         order: -1 !important
