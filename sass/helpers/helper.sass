@@ -22,14 +22,14 @@
       padding: $zero
 
     &--has-border-dashed
-      +clearfix
       width: 100%
-      border-bottom: dashed 1px $color-grey-300
+      border-bottom: dashed 1px $color-black-300
+      +clearfix
 
     &--has-top-dashed
-      +clearfix
       width: 100%
-      border-bottom: dashed 1px $color-grey-300
+      border-bottom: dashed 1px $color-black-300
+      +clearfix
 
     &--is-link
       color: $color-secondary
@@ -101,12 +101,12 @@
       position: relative
 
     &--is-full-width
-      +border-box
       width: 100% !important // sass-lint:disable-line no-important
+      +border-box
 
     &--is-max-full-width
-      +border-box
       max-width: 100% !important // sass-lint:disable-line no-important
+      +border-box
 
     &--is-full-height
       height: 100% !important
@@ -321,35 +321,15 @@
       &-white
         color: $color-white
 
-        svg
-          path
-            &:not([fill])
-              fill: $color-white
-
-      &-monotone
-        color: $color-grey-300
-
-        svg
-          path
-            &:not([fill])
-              fill: $color-grey-300
+      &-grey
+        color: $color-black-400
 
       &-black
-        color: $color-black
-
-        svg
-          path
-            &:not([fill])
-              fill: $color-black
+        color: $color-black-800
 
       @each $color, $value in $color-regular-map
         &-#{$color}
           color: $value
-
-          svg
-            path
-              &:not([fill])
-                fill: $value
 
     &--has-background
       @each $color, $value in $color-regular-map

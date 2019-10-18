@@ -15,33 +15,31 @@
 
   .button
     $self: '.button'
-    +box-shadow
-    +flex-center(row)
-    background-color: $color-white
-    border-color: $color-white
+    background-color: transparent
+    border-color: transparent
     border-radius: $radius
     border-style: solid
     border-width: $border-width
-    color: $color-black
+    color: $color-secondary
     cursor: pointer
     font-size: $size-large
     font-weight: $weight-semibold
-    line-height: 1
+    line-height: 22px
     outline: none
-    padding: $gap-regular
+    padding: $gap-small $gap-regular
     transition: background-color $transition $easing, border-color $transition $easing, color $transition $easing, background $transition-click
     background-position: center
-    letter-spacing: .25px
+    +flex-center(row)
 
     #{$self}__icon
       display: flex
-      width: 36px
+      width: 28px
       justify-content: center
 
       svg
         path
-          &:not([fill])
-            fill: currentColor
+        &:not([fill])
+          fill: currentColor
 
     &__text
       flex: 1
@@ -52,104 +50,104 @@
         flex: $zero
         flex-basis: 100%
 
-    &#{ $self }
+    &:hover
+      background: $color-secondary-100
+
+    &:focus
+      background: $color-secondary-200 radial-gradient(circle, transparent 1%, $color-secondary-100 1%) center/15000%
+
+    &:active
+      background-size: 100%
+      transition: background 0s, border 0s
+
+    &:disabled,
+    &--is-disabled
+      color: $color-black-400
+      border-color: transparent
+      cursor: default
+      pointer-events: none
+
+    &--is-outline
+      background-color: $color-white
+      border-color: $color-secondary-800
+      color: $color-secondary-800
+      box-shadow: none
+
+      &:hover,
+      &:focus,
+      &:active
+        border-color: $color-secondary-800
+        color: $color-secondary-800
+
       &:disabled,
-      &--is-disabled
-        background-color: $color-grey-300
-        color: $color-grey-400
-        cursor: default
-        pointer-events: none
+      &#{ $self }--is-disabled
+        color: $color-black-400
+        border-color: $color-black-300
 
-      &--is-outline
-        background-color: $color-white
-        border-color: $color-grey-300
-        color: currentColor
-        box-shadow: none
+    &--is-link
+      text-decoration: underline
 
-        &:hover,
-        &:focus,
-        &:active
-          border-color: $color-dark-dark
-          color: $color-dark-dark
+    @each $color, $value in $color-regular-map
+      &--is-#{ $color }
+        background-color: map-get($color-regular-map, $color)
+        border-color: map-get($color-regular-map, $color)
+        color: map-get($color-contrast-map, $color)
+        +box-shadow
 
-      &--is-link
-        background-color: transparent
-        color: $color-secondary
-        box-shadow: none
+        &:hover
+          background: map-get($color-dark-map, $color)
 
-        &:hover,
-          background-color: $color-secondary-100
-        &:focus,
-          background: $color-secondary-200 radial-gradient(circle, transparent 1%, $color-secondary-100 1%) center/15000%
+        &:focus
+          background: map-get($color-dark-map, $color) radial-gradient(circle, transparent 1%, map-get($color-regular-map, $color) 1%) center/15000%
 
         &:active
-          background-color: $color-secondary-200
-          background-size: 100%;
-          transition: background 0s;
+          box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24)
+          background-size: 100%
+          transition: background 0s
+          &#{ $self }--is-dragged
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48)
 
-      @each $color, $value in $color-regular-map
-        &--is-#{ $color }
-          background-color: map-get($color-regular-map, $color)
+        &:disabled,
+        &#{ $self }--is-disabled
+          background-color: $color-black-300
+          border-color: $color-black-300
+
+        &#{ $self }--is-outline
+          box-shadow: none
           border-color: map-get($color-regular-map, $color)
-          color: map-get($color-contrast-map, $color)
+          background-color: $color-white
+          color: map-get($color-regular-map, $color)
 
           &:hover
-            background: map-get($color-dark-map, $color)
+            background: map-get($color-lightness-map, $color)
 
           &:focus
-            background: map-get($color-dark-map, $color) radial-gradient(circle, transparent 1%, map-get($color-regular-map, $color) 1%) center/15000%
+            background: map-get($color-light-map, $color) radial-gradient(circle, transparent 1%, map-get($color-contrast-map, $color) 1%) center/15000%
 
           &:active
-            box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
-            background-size: 100%;
-            transition: background 0s;
-            &#{ $self }--is-dragged
-              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48)
-              border: none
+            border-color: map-get($color-dark-map, $color)
+            color: map-get($color-dark-map, $color)
+            background-size: 100%
+            transition: background 0s
 
           &:disabled,
           &#{ $self }--is-disabled
-            background-color: #cccccc
-            border: none
-
-          &#{ $self }--is-outline
-            border-color: map-get($color-regular-map, $color)
             background-color: $color-white
-            color: map-get($color-regular-map, $color)
+            border-color: $color-black-300
+            color: $color-black-400
 
-            &:hover
-              background: map-get($color-lightness-map, $color)
+        &#{ $self }--is-link
+          background-color: transparent
+          color: map-get($color-regular-map, $color)
 
-            &:focus
-              background: map-get($color-light-map, $color) radial-gradient(circle, transparent 1%, map-get($color-contrast-map, $color) 1%) center/15000%
+          &:hover
+            background-color: map-get($color-lightness-map, $color)
 
-            &:active
-              border-color: map-get($color-dark-map, $color)
-              color: map-get($color-dark-map, $color)
-              background-size: 100%;
-              transition: background 0s;
+          &:focus
+            background: map-get($color-light-map, $color) radial-gradient(circle, transparent 1%, map-get($color-contrast-map, $color) 1%) center/15000%
 
-            &:disabled,
-            &#{ $self }--is-disabled
-              background-color: $color-white
-              border-color: #cccccc
-              border-style: solid
-              border-width: $border-width
-              color: #999999
-
-          &#{ $self }--is-link
-            background-color: transparent
-            border: none
-            color: map-get($color-regular-map, $color)
-
-            &:hover
-              background-color: map-get($color-lightness-map, $color)
-
-            &:focus
-              background: map-get($color-light-map, $color) radial-gradient(circle, transparent 1%, map-get($color-contrast-map, $color) 1%) center/15000%
-
-            &:active
-              border-color: map-get($color-dark-map, $color)
-              color: map-get($color-dark-map, $color)
-              background-size: 100%;
-              transition: background 0s;
+          &:active
+            border-color: map-get($color-dark-map, $color)
+            color: map-get($color-dark-map, $color)
+            background-size: 100%
+            transition: background 0s

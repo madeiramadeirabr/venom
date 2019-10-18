@@ -423,8 +423,8 @@ html {
 }
 
 .venom body {
-  background-color: #f9f9f9;
-  color: #333;
+  background-color: #fff;
+  color: #1f1f1f;
   font-family: BlinkMacSystemFont, -apple-system, "Open Sans", sans-serif;
   font-weight: 400;
   letter-spacing: 0.25px;
@@ -613,16 +613,20 @@ html {
   text-align: left;
 }
 
+.venom svg path:not([fill]) {
+  fill: currentColor;
+}
+
 .venom [class*="-success"] svg path:not([fill]) {
-  fill: #009e22 !important;
+  fill: #2E843f !important;
 }
 
 .venom [class*="-danger"] svg path:not([fill]) {
-  fill: #db4639 !important;
+  fill: #d62e2e !important;
 }
 
 .venom [class*="-warning"] svg path:not([fill]) {
-  fill: #fab514 !important;
+  fill: #d79804 !important;
 }
 
 .venom .grid--is-flex {
@@ -1340,7 +1344,7 @@ html {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border: solid 1px rgba(0, 0, 0, 0.75);
+  border: solid 1px #999;
   border-radius: 4px;
   overflow: hidden;
   padding: 0;
@@ -1377,7 +1381,21 @@ html {
 }
 
 .venom .button {
-  box-shadow: 0 2px 4px 0 #999999;
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 4px;
+  border-style: solid;
+  border-width: 1px;
+  color: #00549e;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  outline: none;
+  padding: 8px 12px;
+  -webkit-transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
+  transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
+  background-position: center;
   -webkit-align-content: center;
       -ms-flex-line-pack: center;
           align-content: center;
@@ -1401,22 +1419,6 @@ html {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #fff;
-  border-color: #fff;
-  border-radius: 4px;
-  border-style: solid;
-  border-width: 1px;
-  color: #333;
-  cursor: pointer;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 1;
-  outline: none;
-  padding: 12px;
-  -webkit-transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
-  transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
-  background-position: center;
-  letter-spacing: .25px;
 }
 
 .venom .button .button__icon {
@@ -1424,14 +1426,14 @@ html {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  width: 36px;
+  width: 28px;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.venom .button .button__icon svg path:not([fill]) {
+.venom .button .button__icon svg:not([fill]) {
   fill: currentColor;
 }
 
@@ -1455,95 +1457,98 @@ html {
           flex-basis: 100%;
 }
 
-.venom .button.button:disabled, .venom .button.button--is-disabled {
-  background-color: #cccccc;
-  color: #999999;
-  cursor: default;
-  pointer-events: none;
+.venom .button:hover {
+  background: #e9f0f7;
 }
 
-.venom .button.button--is-outline {
-  background-color: #fff;
-  border-color: #cccccc;
-  color: currentColor;
-  box-shadow: none;
-}
-
-.venom .button.button--is-outline:hover, .venom .button.button--is-outline:focus, .venom .button.button--is-outline:active {
-  border-color: #1a1a1a;
-  color: #1a1a1a;
-}
-
-.venom .button.button--is-link {
-  background-color: transparent;
-  color: #00549e;
-  box-shadow: none;
-}
-
-.venom .button.button--is-link:hover {
-  background-color: #e9f0f7;
-}
-
-.venom .button.button--is-link:focus {
+.venom .button:focus {
   background: #b9d0e4 -webkit-radial-gradient(circle, transparent 1%, #e9f0f7 1%) center/15000%;
   background: #b9d0e4 radial-gradient(circle, transparent 1%, #e9f0f7 1%) center/15000%;
 }
 
-.venom .button.button--is-link:active {
-  background-color: #b9d0e4;
+.venom .button:active {
   background-size: 100%;
-  -webkit-transition: background 0s;
-  transition: background 0s;
+  -webkit-transition: background 0s, border 0s;
+  transition: background 0s, border 0s;
 }
 
-.venom .button.button--is-primary {
+.venom .button:disabled, .venom .button--is-disabled {
+  color: #999;
+  border-color: transparent;
+  cursor: default;
+  pointer-events: none;
+}
+
+.venom .button--is-outline {
+  background-color: #fff;
+  border-color: #004785;
+  color: #004785;
+  box-shadow: none;
+}
+
+.venom .button--is-outline:hover, .venom .button--is-outline:focus, .venom .button--is-outline:active {
+  border-color: #004785;
+  color: #004785;
+}
+
+.venom .button--is-outline:disabled, .venom .button--is-outline.button--is-disabled {
+  color: #999;
+  border-color: #ccc;
+}
+
+.venom .button--is-link {
+  text-decoration: underline;
+}
+
+.venom .button--is-primary {
   background-color: #f4831f;
   border-color: #f4831f;
   color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
 }
 
-.venom .button.button--is-primary:hover {
+.venom .button--is-primary:hover {
   background: #e56e06;
 }
 
-.venom .button.button--is-primary:focus {
+.venom .button--is-primary:focus {
   background: #e56e06 -webkit-radial-gradient(circle, transparent 1%, #f4831f 1%) center/15000%;
   background: #e56e06 radial-gradient(circle, transparent 1%, #f4831f 1%) center/15000%;
 }
 
-.venom .button.button--is-primary:active {
+.venom .button--is-primary:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
   -webkit-transition: background 0s;
   transition: background 0s;
 }
 
-.venom .button.button--is-primary:active.button--is-dragged {
+.venom .button--is-primary:active.button--is-dragged {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
-  border: none;
 }
 
-.venom .button.button--is-primary:disabled, .venom .button.button--is-primary.button--is-disabled {
-  background-color: #cccccc;
-  border: none;
+.venom .button--is-primary:disabled, .venom .button--is-primary.button--is-disabled {
+  background-color: #ccc;
+  border-color: #ccc;
 }
 
-.venom .button.button--is-primary.button--is-outline {
+.venom .button--is-primary.button--is-outline {
+  box-shadow: none;
   border-color: #f4831f;
   background-color: #fff;
   color: #f4831f;
 }
 
-.venom .button.button--is-primary.button--is-outline:hover {
+.venom .button--is-primary.button--is-outline:hover {
   background: #fef4ec;
 }
 
-.venom .button.button--is-primary.button--is-outline:focus {
+.venom .button--is-primary.button--is-outline:focus {
   background: #fcdcc0 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
   background: #fcdcc0 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
-.venom .button.button--is-primary.button--is-outline:active {
+.venom .button--is-primary.button--is-outline:active {
   border-color: #e56e06;
   color: #e56e06;
   background-size: 100%;
@@ -1551,30 +1556,27 @@ html {
   transition: background 0s;
 }
 
-.venom .button.button--is-primary.button--is-outline:disabled, .venom .button.button--is-primary.button--is-outline.button--is-disabled {
+.venom .button--is-primary.button--is-outline:disabled, .venom .button--is-primary.button--is-outline.button--is-disabled {
   background-color: #fff;
-  border-color: #cccccc;
-  border-style: solid;
-  border-width: 1px;
-  color: #999999;
+  border-color: #ccc;
+  color: #999;
 }
 
-.venom .button.button--is-primary.button--is-link {
+.venom .button--is-primary.button--is-link {
   background-color: transparent;
-  border: none;
   color: #f4831f;
 }
 
-.venom .button.button--is-primary.button--is-link:hover {
+.venom .button--is-primary.button--is-link:hover {
   background-color: #fef4ec;
 }
 
-.venom .button.button--is-primary.button--is-link:focus {
+.venom .button--is-primary.button--is-link:focus {
   background: #fcdcc0 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
   background: #fcdcc0 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
-.venom .button.button--is-primary.button--is-link:active {
+.venom .button--is-primary.button--is-link:active {
   border-color: #e56e06;
   color: #e56e06;
   background-size: 100%;
@@ -1582,54 +1584,55 @@ html {
   transition: background 0s;
 }
 
-.venom .button.button--is-secondary {
+.venom .button--is-secondary {
   background-color: #00549e;
   border-color: #00549e;
   color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
 }
 
-.venom .button.button--is-secondary:hover {
+.venom .button--is-secondary:hover {
   background: #004785;
 }
 
-.venom .button.button--is-secondary:focus {
+.venom .button--is-secondary:focus {
   background: #004785 -webkit-radial-gradient(circle, transparent 1%, #00549e 1%) center/15000%;
   background: #004785 radial-gradient(circle, transparent 1%, #00549e 1%) center/15000%;
 }
 
-.venom .button.button--is-secondary:active {
+.venom .button--is-secondary:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
   -webkit-transition: background 0s;
   transition: background 0s;
 }
 
-.venom .button.button--is-secondary:active.button--is-dragged {
+.venom .button--is-secondary:active.button--is-dragged {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
-  border: none;
 }
 
-.venom .button.button--is-secondary:disabled, .venom .button.button--is-secondary.button--is-disabled {
-  background-color: #cccccc;
-  border: none;
+.venom .button--is-secondary:disabled, .venom .button--is-secondary.button--is-disabled {
+  background-color: #ccc;
+  border-color: #ccc;
 }
 
-.venom .button.button--is-secondary.button--is-outline {
+.venom .button--is-secondary.button--is-outline {
+  box-shadow: none;
   border-color: #00549e;
   background-color: #fff;
   color: #00549e;
 }
 
-.venom .button.button--is-secondary.button--is-outline:hover {
+.venom .button--is-secondary.button--is-outline:hover {
   background: #e9f0f7;
 }
 
-.venom .button.button--is-secondary.button--is-outline:focus {
+.venom .button--is-secondary.button--is-outline:focus {
   background: #b9d0e4 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
   background: #b9d0e4 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
-.venom .button.button--is-secondary.button--is-outline:active {
+.venom .button--is-secondary.button--is-outline:active {
   border-color: #004785;
   color: #004785;
   background-size: 100%;
@@ -1637,30 +1640,27 @@ html {
   transition: background 0s;
 }
 
-.venom .button.button--is-secondary.button--is-outline:disabled, .venom .button.button--is-secondary.button--is-outline.button--is-disabled {
+.venom .button--is-secondary.button--is-outline:disabled, .venom .button--is-secondary.button--is-outline.button--is-disabled {
   background-color: #fff;
-  border-color: #cccccc;
-  border-style: solid;
-  border-width: 1px;
-  color: #999999;
+  border-color: #ccc;
+  color: #999;
 }
 
-.venom .button.button--is-secondary.button--is-link {
+.venom .button--is-secondary.button--is-link {
   background-color: transparent;
-  border: none;
   color: #00549e;
 }
 
-.venom .button.button--is-secondary.button--is-link:hover {
+.venom .button--is-secondary.button--is-link:hover {
   background-color: #e9f0f7;
 }
 
-.venom .button.button--is-secondary.button--is-link:focus {
+.venom .button--is-secondary.button--is-link:focus {
   background: #b9d0e4 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
   background: #b9d0e4 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
-.venom .button.button--is-secondary.button--is-link:active {
+.venom .button--is-secondary.button--is-link:active {
   border-color: #004785;
   color: #004785;
   background-size: 100%;
@@ -1668,345 +1668,253 @@ html {
   transition: background 0s;
 }
 
-.venom .button.button--is-danger {
-  background-color: #db4639;
-  border-color: #db4639;
+.venom .button--is-danger {
+  background-color: #d62e2e;
+  border-color: #d62e2e;
   color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
 }
 
-.venom .button.button--is-danger:hover {
-  background: #be3023;
+.venom .button--is-danger:hover {
+  background: #ce000c;
 }
 
-.venom .button.button--is-danger:focus {
-  background: #be3023 -webkit-radial-gradient(circle, transparent 1%, #db4639 1%) center/15000%;
-  background: #be3023 radial-gradient(circle, transparent 1%, #db4639 1%) center/15000%;
+.venom .button--is-danger:focus {
+  background: #ce000c -webkit-radial-gradient(circle, transparent 1%, #d62e2e 1%) center/15000%;
+  background: #ce000c radial-gradient(circle, transparent 1%, #d62e2e 1%) center/15000%;
 }
 
-.venom .button.button--is-danger:active {
+.venom .button--is-danger:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
   -webkit-transition: background 0s;
   transition: background 0s;
 }
 
-.venom .button.button--is-danger:active.button--is-dragged {
+.venom .button--is-danger:active.button--is-dragged {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
-  border: none;
 }
 
-.venom .button.button--is-danger:disabled, .venom .button.button--is-danger.button--is-disabled {
-  background-color: #cccccc;
-  border: none;
+.venom .button--is-danger:disabled, .venom .button--is-danger.button--is-disabled {
+  background-color: #ccc;
+  border-color: #ccc;
 }
 
-.venom .button.button--is-danger.button--is-outline {
-  border-color: #db4639;
+.venom .button--is-danger.button--is-outline {
+  box-shadow: none;
+  border-color: #d62e2e;
   background-color: #fff;
-  color: #db4639;
+  color: #d62e2e;
 }
 
-.venom .button.button--is-danger.button--is-outline:hover {
-  background: #e36e64;
+.venom .button--is-danger.button--is-outline:hover {
+  background: #e16767;
 }
 
-.venom .button.button--is-danger.button--is-outline:focus {
-  background: #df5a4e -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-  background: #df5a4e radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+.venom .button--is-danger.button--is-outline:focus {
+  background: #e16767 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #e16767 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
-.venom .button.button--is-danger.button--is-outline:active {
-  border-color: #be3023;
-  color: #be3023;
+.venom .button--is-danger.button--is-outline:active {
+  border-color: #ce000c;
+  color: #ce000c;
   background-size: 100%;
   -webkit-transition: background 0s;
   transition: background 0s;
 }
 
-.venom .button.button--is-danger.button--is-outline:disabled, .venom .button.button--is-danger.button--is-outline.button--is-disabled {
+.venom .button--is-danger.button--is-outline:disabled, .venom .button--is-danger.button--is-outline.button--is-disabled {
   background-color: #fff;
-  border-color: #cccccc;
-  border-style: solid;
-  border-width: 1px;
-  color: #999999;
+  border-color: #ccc;
+  color: #999;
 }
 
-.venom .button.button--is-danger.button--is-link {
+.venom .button--is-danger.button--is-link {
   background-color: transparent;
-  border: none;
-  color: #db4639;
+  color: #d62e2e;
 }
 
-.venom .button.button--is-danger.button--is-link:hover {
-  background-color: #e36e64;
+.venom .button--is-danger.button--is-link:hover {
+  background-color: #e16767;
 }
 
-.venom .button.button--is-danger.button--is-link:focus {
-  background: #df5a4e -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-  background: #df5a4e radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+.venom .button--is-danger.button--is-link:focus {
+  background: #e16767 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #e16767 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
-.venom .button.button--is-danger.button--is-link:active {
-  border-color: #be3023;
-  color: #be3023;
+.venom .button--is-danger.button--is-link:active {
+  border-color: #ce000c;
+  color: #ce000c;
   background-size: 100%;
   -webkit-transition: background 0s;
   transition: background 0s;
 }
 
-.venom .button.button--is-success {
-  background-color: #009e22;
-  border-color: #009e22;
+.venom .button--is-success {
+  background-color: #2E843f;
+  border-color: #2E843f;
   color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
 }
 
-.venom .button.button--is-success:hover {
-  background: #00851d;
+.venom .button--is-success:hover {
+  background: #266d34;
 }
 
-.venom .button.button--is-success:focus {
-  background: #00851d -webkit-radial-gradient(circle, transparent 1%, #009e22 1%) center/15000%;
-  background: #00851d radial-gradient(circle, transparent 1%, #009e22 1%) center/15000%;
+.venom .button--is-success:focus {
+  background: #266d34 -webkit-radial-gradient(circle, transparent 1%, #2E843f 1%) center/15000%;
+  background: #266d34 radial-gradient(circle, transparent 1%, #2E843f 1%) center/15000%;
 }
 
-.venom .button.button--is-success:active {
+.venom .button--is-success:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
   -webkit-transition: background 0s;
   transition: background 0s;
 }
 
-.venom .button.button--is-success:active.button--is-dragged {
+.venom .button--is-success:active.button--is-dragged {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
-  border: none;
 }
 
-.venom .button.button--is-success:disabled, .venom .button.button--is-success.button--is-disabled {
-  background-color: #cccccc;
-  border: none;
+.venom .button--is-success:disabled, .venom .button--is-success.button--is-disabled {
+  background-color: #ccc;
+  border-color: #ccc;
 }
 
-.venom .button.button--is-success.button--is-outline {
-  border-color: #009e22;
+.venom .button--is-success.button--is-outline {
+  box-shadow: none;
+  border-color: #2E843f;
   background-color: #fff;
-  color: #009e22;
+  color: #2E843f;
 }
 
-.venom .button.button--is-success.button--is-outline:hover {
-  background: #00d12d;
+.venom .button--is-success.button--is-outline:hover {
+  background: #a5e8b1;
 }
 
-.venom .button.button--is-success.button--is-outline:focus {
-  background: #00b828 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-  background: #00b828 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+.venom .button--is-success.button--is-outline:focus {
+  background: #7cc289 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #7cc289 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
-.venom .button.button--is-success.button--is-outline:active {
-  border-color: #00851d;
-  color: #00851d;
+.venom .button--is-success.button--is-outline:active {
+  border-color: #266d34;
+  color: #266d34;
   background-size: 100%;
   -webkit-transition: background 0s;
   transition: background 0s;
 }
 
-.venom .button.button--is-success.button--is-outline:disabled, .venom .button.button--is-success.button--is-outline.button--is-disabled {
+.venom .button--is-success.button--is-outline:disabled, .venom .button--is-success.button--is-outline.button--is-disabled {
   background-color: #fff;
-  border-color: #cccccc;
-  border-style: solid;
-  border-width: 1px;
-  color: #999999;
+  border-color: #ccc;
+  color: #999;
 }
 
-.venom .button.button--is-success.button--is-link {
+.venom .button--is-success.button--is-link {
   background-color: transparent;
-  border: none;
-  color: #009e22;
+  color: #2E843f;
 }
 
-.venom .button.button--is-success.button--is-link:hover {
-  background-color: #00d12d;
+.venom .button--is-success.button--is-link:hover {
+  background-color: #a5e8b1;
 }
 
-.venom .button.button--is-success.button--is-link:focus {
-  background: #00b828 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-  background: #00b828 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+.venom .button--is-success.button--is-link:focus {
+  background: #7cc289 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #7cc289 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
-.venom .button.button--is-success.button--is-link:active {
-  border-color: #00851d;
-  color: #00851d;
+.venom .button--is-success.button--is-link:active {
+  border-color: #266d34;
+  color: #266d34;
   background-size: 100%;
   -webkit-transition: background 0s;
   transition: background 0s;
 }
 
-.venom .button.button--is-warning {
-  background-color: #fab514;
-  border-color: #fab514;
-  color: #fff;
-}
-
-.venom .button.button--is-warning:hover {
-  background: #d79804;
-}
-
-.venom .button.button--is-warning:focus {
-  background: #d79804 -webkit-radial-gradient(circle, transparent 1%, #fab514 1%) center/15000%;
-  background: #d79804 radial-gradient(circle, transparent 1%, #fab514 1%) center/15000%;
-}
-
-.venom .button.button--is-warning:active {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
-  background-size: 100%;
-  -webkit-transition: background 0s;
-  transition: background 0s;
-}
-
-.venom .button.button--is-warning:active.button--is-dragged {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
-  border: none;
-}
-
-.venom .button.button--is-warning:disabled, .venom .button.button--is-warning.button--is-disabled {
-  background-color: #cccccc;
-  border: none;
-}
-
-.venom .button.button--is-warning.button--is-outline {
-  border-color: #fab514;
-  background-color: #fff;
-  color: #fab514;
-}
-
-.venom .button.button--is-warning.button--is-outline:hover {
-  background: #fcd578;
-}
-
-.venom .button.button--is-warning.button--is-outline:focus {
-  background: #fbc546 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-  background: #fbc546 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-}
-
-.venom .button.button--is-warning.button--is-outline:active {
+.venom .button--is-warning {
+  background-color: #d79804;
   border-color: #d79804;
-  color: #d79804;
-  background-size: 100%;
-  -webkit-transition: background 0s;
-  transition: background 0s;
-}
-
-.venom .button.button--is-warning.button--is-outline:disabled, .venom .button.button--is-warning.button--is-outline.button--is-disabled {
-  background-color: #fff;
-  border-color: #cccccc;
-  border-style: solid;
-  border-width: 1px;
-  color: #999999;
-}
-
-.venom .button.button--is-warning.button--is-link {
-  background-color: transparent;
-  border: none;
-  color: #fab514;
-}
-
-.venom .button.button--is-warning.button--is-link:hover {
-  background-color: #fcd578;
-}
-
-.venom .button.button--is-warning.button--is-link:focus {
-  background: #fbc546 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-  background: #fbc546 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-}
-
-.venom .button.button--is-warning.button--is-link:active {
-  border-color: #d79804;
-  color: #d79804;
-  background-size: 100%;
-  -webkit-transition: background 0s;
-  transition: background 0s;
-}
-
-.venom .button.button--is-dark {
-  background-color: #262626;
-  border-color: #262626;
   color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
 }
 
-.venom .button.button--is-dark:hover {
-  background: #1a1a1a;
+.venom .button--is-warning:hover {
+  background: #a57403;
 }
 
-.venom .button.button--is-dark:focus {
-  background: #1a1a1a -webkit-radial-gradient(circle, transparent 1%, #262626 1%) center/15000%;
-  background: #1a1a1a radial-gradient(circle, transparent 1%, #262626 1%) center/15000%;
+.venom .button--is-warning:focus {
+  background: #a57403 -webkit-radial-gradient(circle, transparent 1%, #d79804 1%) center/15000%;
+  background: #a57403 radial-gradient(circle, transparent 1%, #d79804 1%) center/15000%;
 }
 
-.venom .button.button--is-dark:active {
+.venom .button--is-warning:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
   background-size: 100%;
   -webkit-transition: background 0s;
   transition: background 0s;
 }
 
-.venom .button.button--is-dark:active.button--is-dragged {
+.venom .button--is-warning:active.button--is-dragged {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
-  border: none;
 }
 
-.venom .button.button--is-dark:disabled, .venom .button.button--is-dark.button--is-disabled {
-  background-color: #cccccc;
-  border: none;
+.venom .button--is-warning:disabled, .venom .button--is-warning.button--is-disabled {
+  background-color: #ccc;
+  border-color: #ccc;
 }
 
-.venom .button.button--is-dark.button--is-outline {
-  border-color: #262626;
+.venom .button--is-warning.button--is-outline {
+  box-shadow: none;
+  border-color: #d79804;
   background-color: #fff;
-  color: #262626;
+  color: #d79804;
 }
 
-.venom .button.button--is-dark.button--is-outline:hover {
-  background: #404040;
+.venom .button--is-warning.button--is-outline:hover {
+  background: #fde4aa;
 }
 
-.venom .button.button--is-dark.button--is-outline:focus {
-  background: #333333 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-  background: #333333 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+.venom .button--is-warning.button--is-outline:focus {
+  background: #fcd578 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #fcd578 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
-.venom .button.button--is-dark.button--is-outline:active {
-  border-color: #1a1a1a;
-  color: #1a1a1a;
+.venom .button--is-warning.button--is-outline:active {
+  border-color: #a57403;
+  color: #a57403;
   background-size: 100%;
   -webkit-transition: background 0s;
   transition: background 0s;
 }
 
-.venom .button.button--is-dark.button--is-outline:disabled, .venom .button.button--is-dark.button--is-outline.button--is-disabled {
+.venom .button--is-warning.button--is-outline:disabled, .venom .button--is-warning.button--is-outline.button--is-disabled {
   background-color: #fff;
-  border-color: #cccccc;
-  border-style: solid;
-  border-width: 1px;
-  color: #999999;
+  border-color: #ccc;
+  color: #999;
 }
 
-.venom .button.button--is-dark.button--is-link {
+.venom .button--is-warning.button--is-link {
   background-color: transparent;
-  border: none;
-  color: #262626;
+  color: #d79804;
 }
 
-.venom .button.button--is-dark.button--is-link:hover {
-  background-color: #404040;
+.venom .button--is-warning.button--is-link:hover {
+  background-color: #fde4aa;
 }
 
-.venom .button.button--is-dark.button--is-link:focus {
-  background: #333333 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-  background: #333333 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+.venom .button--is-warning.button--is-link:focus {
+  background: #fcd578 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #fcd578 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
-.venom .button.button--is-dark.button--is-link:active {
-  border-color: #1a1a1a;
-  color: #1a1a1a;
+.venom .button--is-warning.button--is-link:active {
+  border-color: #a57403;
+  color: #a57403;
   background-size: 100%;
   -webkit-transition: background 0s;
   transition: background 0s;
@@ -2093,7 +2001,7 @@ html {
 }
 
 .venom .notification__content {
-  color: #333;
+  color: #1f1f1f;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
@@ -2112,7 +2020,7 @@ html {
   padding: 0;
 }
 
-.venom .notification__close svg path:not([fill]) {
+.venom .notification__close svg:not([fill]) {
   fill: currentColor;
 }
 
@@ -2121,7 +2029,7 @@ html {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #999999;
+  background-color: #999;
   border-radius: 4px;
   box-sizing: border-box;
   display: -webkit-box;
@@ -2140,7 +2048,7 @@ html {
 }
 
 .venom .notification__container:hover {
-  background-color: #999999;
+  background-color: #999;
 }
 
 .venom .notification--is-primary {
@@ -2168,7 +2076,7 @@ html {
 }
 
 .venom .notification--is-danger {
-  background-color: #db4639;
+  background-color: #d62e2e;
 }
 
 .venom .notification--is-danger .notification__content {
@@ -2176,11 +2084,11 @@ html {
 }
 
 .venom .notification--is-danger:hover {
-  background-color: #e36e64;
+  background-color: #e16767;
 }
 
 .venom .notification--is-success {
-  background-color: #009e22;
+  background-color: #2E843f;
 }
 
 .venom .notification--is-success .notification__content {
@@ -2188,11 +2096,11 @@ html {
 }
 
 .venom .notification--is-success:hover {
-  background-color: #00d12d;
+  background-color: #a5e8b1;
 }
 
 .venom .notification--is-warning {
-  background-color: #fab514;
+  background-color: #d79804;
 }
 
 .venom .notification--is-warning .notification__content {
@@ -2200,19 +2108,7 @@ html {
 }
 
 .venom .notification--is-warning:hover {
-  background-color: #fcd578;
-}
-
-.venom .notification--is-dark {
-  background-color: #262626;
-}
-
-.venom .notification--is-dark .notification__content {
-  color: #fff;
-}
-
-.venom .notification--is-dark:hover {
-  background-color: #404040;
+  background-color: #fde4aa;
 }
 
 .venom .card {
@@ -2234,19 +2130,15 @@ html {
 }
 
 .venom .card--is-danger {
-  border: solid 1px #db4639 !important;
+  border: solid 1px #d62e2e !important;
 }
 
 .venom .card--is-success {
-  border: solid 1px #009e22 !important;
+  border: solid 1px #2E843f !important;
 }
 
 .venom .card--is-warning {
-  border: solid 1px #fab514 !important;
-}
-
-.venom .card--is-dark {
-  border: solid 1px #262626 !important;
+  border: solid 1px #d79804 !important;
 }
 
 .venom .input {
@@ -2273,7 +2165,7 @@ html {
 }
 
 .venom .input:hover .input__marker {
-  background: #fafafa;
+  background: #f9f9f9;
 }
 
 .venom .input .input__marker {
@@ -2294,22 +2186,16 @@ html {
 }
 
 .venom .input.input__radio, .venom .input.input__checkbox {
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -webkit-touch-callout: none;
-  -webkit-user-select: none;
-  user-select: none;
   display: block;
   position: relative;
   padding-left: 36px;
   margin-bottom: 12px;
   cursor: pointer;
-}
-
-.venom .input.input__radio:hover input[type='radio'] ~ .input__marker:after, .venom .input.input__checkbox:hover input[type='radio'] ~ .input__marker:after {
-  content: '';
-  border-radius: 50%;
-  box-shadow: 0 0 0 6px #ededed;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 .venom .input.input__radio input[type='checkbox'],
@@ -2346,6 +2232,12 @@ html {
   height: 8px;
   border-radius: 50%;
   background: #00549e;
+}
+
+.venom .input.input__radio:hover ~ .input__marker:after, .venom .input.input__checkbox:hover ~ .input__marker:after {
+  content: '';
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px #eee;
 }
 
 .venom .input.input__checkbox .input__marker {
@@ -2387,31 +2279,31 @@ html {
   display: table;
 }
 
-.venom .text-field .text-field__container {
+.venom .text-field__container {
   border-radius: 4px;
-  border: solid 1px #999999;
+  border: solid 1px #999;
   padding: 0;
   max-width: 100%;
   background-color: #fff;
 }
 
-.venom .text-field .text-field__container::after {
+.venom .text-field__container::after {
   clear: both;
   content: " ";
   display: table;
 }
 
-.venom .text-field .text-field__helper {
+.venom .text-field__helper {
   font-size: 12px;
   font-weight: 400;
   margin: 4px 12px;
-  color: #cccccc;
+  color: #ccc;
   max-width: 100%;
   display: block;
   line-height: 16px;
 }
 
-.venom .text-field .text-field__label {
+.venom .text-field__label {
   position: absolute;
   top: 0;
   left: 0;
@@ -2425,13 +2317,12 @@ html {
   line-height: 22px;
 }
 
-.venom .text-field svg path:not([fill]) {
-  fill: #cccccc;
+.venom .text-field svg:not([fill]) {
+  fill: #ccc;
 }
 
 .venom .text-field input,
 .venom .text-field textarea {
-  box-sizing: border-box !important;
   border: none;
   border-radius: 4px;
   padding: 8px 12px;
@@ -2439,6 +2330,7 @@ html {
   width: 100%;
   font-size: 16px;
   line-height: 22px;
+  box-sizing: border-box !important;
 }
 
 .venom .text-field input:not([type='checkbox']):focus,
@@ -2510,29 +2402,29 @@ html {
 
 .venom .text-field.text-field--is-danger .text-field__label,
 .venom .text-field.text-field--is-danger .text-field__helper {
-  color: #db4639 !important;
+  color: #d62e2e !important;
 }
 
 .venom .text-field.text-field--is-danger .text-field__container {
-  border-color: #db4639 !important;
+  border-color: #d62e2e !important;
 }
 
 .venom .text-field.text-field--is-success .text-field__label,
 .venom .text-field.text-field--is-success .text-field__helper {
-  color: #009e22 !important;
+  color: #2E843f !important;
 }
 
 .venom .text-field.text-field--is-success .text-field__container {
-  border-color: #009e22 !important;
+  border-color: #2E843f !important;
 }
 
 .venom .text-field.text-field--is-warning .text-field__label,
 .venom .text-field.text-field--is-warning .text-field__helper {
-  color: #fab514 !important;
+  color: #d79804 !important;
 }
 
 .venom .text-field.text-field--is-warning .text-field__container {
-  border-color: #fab514 !important;
+  border-color: #d79804 !important;
 }
 
 .venom .text-field.text-field--is-disabled .text-field__container {
@@ -2561,8 +2453,9 @@ html {
           justify-content: left;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -webkit-box-direction--ms-flex-direction: column;
-  -webkit-box-direction--ms-flex-direction-flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-flex-direction: column;
+          flex-direction: column;
 }
 
 .venom .tab--has-scroll {
@@ -2573,12 +2466,13 @@ html {
   min-width: 150px;
   padding: 12px;
   margin: 0 4px -1px;
-  color: #333;
+  color: #1f1f1f;
   overflow: hidden;
   text-align: center;
   -webkit-box-flex: 1;
-  -webkit-box-flex--ms-flex-positive: 1;
-  -webkit-box-flex--ms-flex-positive-flex-grow: 1;
+  -ms-flex-positive: 1;
+  -webkit-flex-grow: 1;
+          flex-grow: 1;
   cursor: pointer;
   position: relative;
   -webkit-flex-shrink: 0;
@@ -2600,9 +2494,9 @@ html {
 }
 
 .venom .tab .tab__item:hover, .venom .tab .tab__item:focus {
-  background-color: #999999;
-  background: #cccccc -webkit-radial-gradient(circle, transparent 1%, #999999 1%) center/15000%;
-  background: #cccccc radial-gradient(circle, transparent 1%, #999999 1%) center/15000%;
+  background-color: #999;
+  background: #ccc -webkit-radial-gradient(circle, transparent 1%, #999 1%) center/15000%;
+  background: #ccc radial-gradient(circle, transparent 1%, #999 1%) center/15000%;
 }
 
 .venom .tab .tab__item:active {
@@ -2612,17 +2506,17 @@ html {
 }
 
 .venom .tab .tab__item--has-indicator {
-  background: #cccccc;
+  background: #ccc;
   border-bottom: #00549e solid 2px;
 }
 
 .venom .tab--is-oldstyle {
-  border-bottom: #999999 1px solid;
+  border-bottom: #999 1px solid;
 }
 
 .venom .tab--is-oldstyle .tab__item {
-  background: #cccccc;
-  border: #999999 1px solid;
+  background: #ccc;
+  border: #999 1px solid;
 }
 
 .venom .tab--is-oldstyle .tab__item:hover, .venom .tab--is-oldstyle .tab__item:focus {
@@ -2650,7 +2544,7 @@ html {
 }
 
 .venom .collapse__title {
-  color: #333;
+  color: #1f1f1f;
   -webkit-box-flex: 1;
   -webkit-flex: 1;
       -ms-flex: 1;
@@ -2663,11 +2557,8 @@ html {
 }
 
 .venom .collapse__container {
-  box-shadow: 0 2px 4px 0 #999999;
   border-radius: 4px;
-  margin: 0 12px;
-  padding: 12px;
-  box-sizing: border-box;
+  cursor: pointer;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2677,12 +2568,12 @@ html {
   -webkit-flex-direction: row;
       -ms-flex-direction: row;
           flex-direction: row;
-  padding: 12px;
-  width: 100%;
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  cursor: pointer;
+  width: 100%;
+  box-sizing: border-box !important;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
 }
 
 .venom .collapse__content {
@@ -2692,16 +2583,16 @@ html {
   padding: 12px;
   box-sizing: border-box;
   font-size: 14px;
-  border: 1px solid #999999;
-  border-radius: 3px;
-  margin-bottom: 10px;
+  border: 1px solid #999;
+  border-radius: 4px;
+  margin-bottom: 12px;
 }
 
 .venom .collapse__open {
   margin-right: 12px;
   cursor: pointer;
   width: 14px;
-  background: rgba(0, 0, 0, 0);
+  background: #1f1f1f;
   border: none;
   padding: 0;
 }
@@ -2714,7 +2605,7 @@ html {
   margin-right: 12px;
   cursor: pointer;
   width: 14px;
-  background: rgba(0, 0, 0, 0);
+  background: #1f1f1f;
   border: none;
   padding: 0;
 }
@@ -2935,11 +2826,11 @@ html {
 }
 
 .venom .toggle.toggle--is-success input:checked ~ .toggle__track {
-  box-shadow: inset 0 0 0 24px #009e22;
+  box-shadow: inset 0 0 0 24px #2E843f;
 }
 
 .venom .toggle.toggle--is-danger input:checked ~ .toggle__track {
-  box-shadow: inset 0 0 0 24px #db4639;
+  box-shadow: inset 0 0 0 24px #d62e2e;
 }
 
 .venom .toggle input:checked ~ .toggle__track {
@@ -2993,12 +2884,11 @@ html {
 .helper--has-tooltip:focus + .tooltip {
   opacity: 1;
   pointer-events: inherit;
-  pointer-events-top: 0;
-  pointer-events-left: 50%;
+  top: 0;
+  left: 50%;
 }
 
 .venom .tooltip {
-  box-shadow: 0 2px 4px 0 #999999;
   display: block;
   position: absolute;
   padding: 12px;
@@ -3010,6 +2900,7 @@ html {
   pointer-events: none;
   z-index: 5;
   font-size: 12px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
 }
 
 .venom .tooltip:after {
@@ -3107,7 +2998,7 @@ html {
   -webkit-flex: 0;
       -ms-flex: 0;
           flex: 0;
-  color: #333;
+  color: #1f1f1f;
   text-align: center;
   margin-top: 12px;
 }
@@ -3318,8 +3209,8 @@ html {
   display: inline-block;
   height: 24px;
   padding: 0 12px;
-  background: #cccccc;
-  border: 0 solid #cccccc;
+  background: #ccc;
+  border: 0 solid #ccc;
   border-top-width: 1px;
   border-bottom-width: 1px;
   color: #fff;
@@ -3327,21 +3218,21 @@ html {
 }
 
 .venom .pricetag--is-success {
-  background: #009e22;
-  border: 0 solid #009e22;
+  background: #2E843f;
+  border: 0 solid #2E843f;
 }
 
 .venom .pricetag--is-success:before {
-  border-right: 12px solid #009e22 !important;
+  border-right: 12px solid #2E843f !important;
 }
 
 .venom .pricetag--is-danger {
-  background: #db4639;
-  border: 0 solid #db4639;
+  background: #d62e2e;
+  border: 0 solid #d62e2e;
 }
 
 .venom .pricetag--is-danger:before {
-  border-right: 12px solid #db4639 !important;
+  border-right: 12px solid #d62e2e !important;
 }
 
 .venom .pricetag--is-primary {
@@ -3372,7 +3263,7 @@ html {
   top: 0;
   width: 0;
   height: 0;
-  border-right: 12px solid #cccccc;
+  border-right: 12px solid #ccc;
   border-top: 12px solid transparent;
   border-bottom: 12px solid transparent;
 }
@@ -3403,7 +3294,7 @@ html {
 
 .venom .helper--has-border-dashed {
   width: 100%;
-  border-bottom: dashed 1px #cccccc;
+  border-bottom: dashed 1px #ccc;
 }
 
 .venom .helper--has-border-dashed::after {
@@ -3414,7 +3305,7 @@ html {
 
 .venom .helper--has-top-dashed {
   width: 100%;
-  border-bottom: dashed 1px #cccccc;
+  border-bottom: dashed 1px #ccc;
 }
 
 .venom .helper--has-top-dashed::after {
@@ -3433,7 +3324,7 @@ html {
 }
 
 .venom .helper--has-shadow {
-  box-shadow: 0 2px 4px 0 #999999;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
 }
 
 .venom .helper--has-border-radius {
@@ -3466,19 +3357,15 @@ html {
 }
 
 .venom .helper--has-border-danger {
-  border-color: #db4639;
+  border-color: #d62e2e;
 }
 
 .venom .helper--has-border-success {
-  border-color: #009e22;
+  border-color: #2E843f;
 }
 
 .venom .helper--has-border-warning {
-  border-color: #fab514;
-}
-
-.venom .helper--has-border-dark {
-  border-color: #262626;
+  border-color: #d79804;
 }
 
 .venom .helper--has-no-margin {
@@ -3534,13 +3421,13 @@ html {
 }
 
 .venom .helper--is-full-width {
-  box-sizing: border-box !important;
   width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .venom .helper--is-max-full-width {
-  box-sizing: border-box !important;
   max-width: 100% !important;
+  box-sizing: border-box !important;
 }
 
 .venom .helper--is-full-height {
@@ -3572,7 +3459,7 @@ html {
 }
 
 .venom .helper--has-border {
-  border: solid 1px #999999;
+  border: solid 1px #ccc;
 }
 
 .venom .helper--has-border-large {
@@ -3815,72 +3702,32 @@ html {
   color: #fff;
 }
 
-.venom .helper--has-text-white svg path:not([fill]) {
-  fill: #fff;
-}
-
-.venom .helper--has-text-monotone {
-  color: #cccccc;
-}
-
-.venom .helper--has-text-monotone svg path:not([fill]) {
-  fill: #cccccc;
+.venom .helper--has-text-grey {
+  color: #999;
 }
 
 .venom .helper--has-text-black {
-  color: #333;
-}
-
-.venom .helper--has-text-black svg path:not([fill]) {
-  fill: #333;
+  color: #1f1f1f;
 }
 
 .venom .helper--has-text-primary {
   color: #f4831f;
 }
 
-.venom .helper--has-text-primary svg path:not([fill]) {
-  fill: #f4831f;
-}
-
 .venom .helper--has-text-secondary {
   color: #00549e;
 }
 
-.venom .helper--has-text-secondary svg path:not([fill]) {
-  fill: #00549e;
-}
-
 .venom .helper--has-text-danger {
-  color: #db4639;
-}
-
-.venom .helper--has-text-danger svg path:not([fill]) {
-  fill: #db4639;
+  color: #d62e2e;
 }
 
 .venom .helper--has-text-success {
-  color: #009e22;
-}
-
-.venom .helper--has-text-success svg path:not([fill]) {
-  fill: #009e22;
+  color: #2E843f;
 }
 
 .venom .helper--has-text-warning {
-  color: #fab514;
-}
-
-.venom .helper--has-text-warning svg path:not([fill]) {
-  fill: #fab514;
-}
-
-.venom .helper--has-text-dark {
-  color: #262626;
-}
-
-.venom .helper--has-text-dark svg path:not([fill]) {
-  fill: #262626;
+  color: #d79804;
 }
 
 .venom .helper--has-background-primary {
@@ -3892,19 +3739,15 @@ html {
 }
 
 .venom .helper--has-background-danger {
-  background-color: #db4639;
+  background-color: #d62e2e;
 }
 
 .venom .helper--has-background-success {
-  background-color: #009e22;
+  background-color: #2E843f;
 }
 
 .venom .helper--has-background-warning {
-  background-color: #fab514;
-}
-
-.venom .helper--has-background-dark {
-  background-color: #262626;
+  background-color: #d79804;
 }
 
 .venom .helper--has-background-white {

@@ -3,7 +3,7 @@ $input-el: '.input'
 .venom
 
   .input
-    +clearfix
+
     display: flex
     flex-direction: row
     position: relative
@@ -11,10 +11,11 @@ $input-el: '.input'
     line-height: $gap-regular * 2
     font-size: $size-large
     font-weight: $weight-regular
+    +clearfix
 
     &:hover
       #{$input-el}__marker
-        background: $color-grey-100
+        background: $color-black-100
 
     #{$input-el}__marker
       position: absolute
@@ -33,19 +34,12 @@ $input-el: '.input'
 
     &#{$input-el}__radio,
     &#{$input-el}__checkbox
-      +unselectable
       display: block
       position: relative
       padding-left: $gap-regular * 3
       margin-bottom: $gap-regular
       cursor: pointer
-
-      &:hover
-        input[type='radio']
-          ~ #{$input-el}__marker:after
-              content: ''
-              border-radius: 50%
-              box-shadow: $zero $zero $zero #{ $gap-small - 2 } $color-grey-200
+      +unselectable
 
       input[type='checkbox'],
       input[type='radio']
@@ -72,6 +66,13 @@ $input-el: '.input'
           height: 8px
           border-radius: 50%
           background: $color-secondary
+
+      &:hover
+        input[type='radio']
+        ~ #{$input-el}__marker:after
+          content: ''
+          border-radius: 50%
+          box-shadow: $zero $zero $zero #{ $gap-small - 2 } $color-black-200
 
     &#{$input-el}__checkbox
       #{$input-el}__marker

@@ -18,12 +18,12 @@
 
       svg
         path
-          &:not([fill])
-            fill: currentColor
+        &:not([fill])
+          fill: currentColor
 
     &__container
       align-items: center
-      background-color: $color-grey-400
+      background-color: $color-black-400
       border-radius: $radius
       box-sizing: border-box
       display: flex
@@ -33,7 +33,7 @@
       max-width: 100%
 
       &:hover // sass-lint:disable-line nesting-depth
-        background-color: $color-grey-400
+        background-color: $color-black-400
 
     @each $color, $value in $color-regular-map
       &--is-#{$color}

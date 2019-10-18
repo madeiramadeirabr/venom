@@ -1,33 +1,32 @@
 $input-el: '.text-field'
 
 .venom
-
-  #{$input-el}
-    +clearfix
+  .text-field
     display: flex
     flex-direction: column
     position: relative
     width: 100%
     margin-bottom: $gap-regular
+    +clearfix
 
-    #{$input-el}__container
-      +clearfix
+    &__container
       border-radius: $radius
-      border: solid $border-width $color-grey-400
+      border: solid $border-width $color-black-400
       padding: $zero
       max-width: 100%
       background-color: $color-white
+      +clearfix
 
-    #{$input-el}__helper
+    &__helper
       font-size: $size-extra-small
       font-weight: $weight-regular
       margin: $base $gap-regular
-      color: $color-grey-300
+      color: $color-black-300
       max-width: 100%
       display: block
       line-height: 16px
 
-    #{$input-el}__label
+    &__label
       position: absolute
       top: $zero
       left: $zero
@@ -41,12 +40,11 @@ $input-el: '.text-field'
 
     svg
       path
-        &:not([fill])
-          fill: $color-grey-300
+      &:not([fill])
+        fill: $color-black-300
 
     input,
     textarea
-      +border-box
       border: none
       border-radius: $radius
       padding: $gap-small $gap-regular
@@ -54,6 +52,7 @@ $input-el: '.text-field'
       width: 100%
       font-size: $size-large
       line-height: 22px
+      +border-box
 
     input:not([type='checkbox']):focus,
     input:not([type='radio']):focus
@@ -128,9 +127,9 @@ $input-el: '.text-field'
 
     &#{$input-el}--is-disabled
       #{$input-el}__container
-        border-color: $color-grey-500
+        border-color: $color-black-500
         input
-          color: $color-grey-500
+          color: $color-black-500
 
       #{$input-el}__label
-        color: $color-grey-600
+        color: $color-black-600

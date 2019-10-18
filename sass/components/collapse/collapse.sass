@@ -1,6 +1,5 @@
 .venom
   .collapse
-
     &__title
       color: $text
       flex: 1
@@ -10,17 +9,14 @@
       transition: color $transition $easing
 
     &__container
-      +box-shadow
       border-radius: $radius
-      margin: 0 $gap-regular
-      padding: $gap-regular
-      box-sizing: border-box
+      cursor: pointer
       display: flex
       flex-direction: row
-      padding: $gap-regular
-      width: 100%
       flex-wrap: wrap
-      cursor: pointer
+      width: 100%
+      +border-box
+      +box-shadow
 
     &__content
       background-color: #eee
@@ -29,15 +25,15 @@
       padding: $gap-regular
       box-sizing: border-box
       font-size: $size-regular
-      border: 1px solid $color-grey-400
-      border-radius: 3px
-      margin-bottom: 10px
+      border: 1px solid $color-black-400
+      border-radius: $radius
+      margin-bottom: $gap-regular
 
     &__open
       margin-right: $gap-regular
       cursor: pointer
       width: $size-regular
-      background: rgba(0,0,0,0)
+      background: $color-black-800
       border: none
       padding: $zero
 
@@ -48,7 +44,7 @@
       margin-right: $gap-regular
       cursor: pointer
       width: $size-regular
-      background: rgba(0, 0, 0, 0)
+      background: $color-black-800
       border: none
       padding: $zero
 
