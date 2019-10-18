@@ -15,11 +15,12 @@
 
   .button
     $self: '.button'
+    float: left
     background-color: transparent
     border-color: transparent
-    border-radius: $radius
-    border-style: solid
     border-width: $border-width
+    border-style: solid
+    border-radius: $radius
     color: $color-secondary
     cursor: pointer
     font-size: $size-large
@@ -29,6 +30,8 @@
     padding: $gap-small $gap-regular
     transition: background-color $transition $easing, border-color $transition $easing, color $transition $easing, background $transition-click
     background-position: center
+    width: auto
+    max-width: auto
     +flex-center(row)
 
     #{$self}__icon
