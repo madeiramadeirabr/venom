@@ -15,7 +15,6 @@
   flex-direction: $direction
   justify-content: center
 
-
 =unselectable
   -moz-user-select: none // sass-lint:disable-line no-vendor-prefixes
   -ms-user-select: none // sass-lint:disable-line no-vendor-prefixes
@@ -25,6 +24,9 @@
 
 =box-shadow
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12)
+
+=box-shadow-large
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08)
 
 %unselectable
   +unselectable
@@ -39,7 +41,6 @@
   @else
     @media screen and (min-width: $desktop-width)
       @content
-
 
 =for-retina
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) // sass-lint:disable-line no-vendor-prefixes space-around-operator
