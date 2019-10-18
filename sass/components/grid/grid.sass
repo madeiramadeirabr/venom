@@ -14,6 +14,7 @@ $row: '.grid__row'
       flex-wrap: wrap
       margin: $zero
       padding: $desktop-column-gap $zero
+      width: 100%
       +border-box
 
       &--is-reverse
@@ -27,6 +28,7 @@ $row: '.grid__row'
       flex-direction: column
       margin: $zero
       padding: $desktop-column-gap $zero
+      width: 100%
       +border-box
 
       &--is-reverse
@@ -38,6 +40,29 @@ $row: '.grid__row'
       .grid__column
         min-height: auto
         margin: $desktop-column-gap
+
+    &__row,
+    &__columns
+      &--is-table
+        padding: $zero
+        margin: $zero
+
+        .grid__column
+          padding: $zero
+          margin: $zero
+
+          @each $name, $count in $numbers
+            &--is-#{$name},
+            &--is-#{$name}-table,
+            &--is-#{$name}-mobile
+              flex-basis: $count
+              max-width: $count
+
+            &--is-twelve,
+            &--is-twelve-tablet,
+            &--is-twelve-mobile
+              flex-basis: 100%
+              max-width: 100%
 
     &__column
       flex: $zero $zero auto
