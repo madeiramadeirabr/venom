@@ -17,8 +17,8 @@ html
   small,
   strong,
   i
-    +border-box
     color: currentColor
+    +border-box
 
   article,
   aside,
@@ -27,8 +27,8 @@ html
   header,
   hgroup,
   section
-    +border-box
     display: block
+    +border-box
 
   div
     +border-box
@@ -40,7 +40,7 @@ html
     font-family: $family-monospace
 
   body
-    background-color: $background-color
+    background-color: $color-black-100
     color: $text
     font-family: $family-sans-serif
     font-weight: $weight-regular
@@ -49,10 +49,10 @@ html
     line-heifht: 20px
 
   a
-    +border-box
     color: $color-secondary
     cursor: pointer
     text-decoration: none
+    +border-box
 
     strong
       color: currentColor
@@ -67,11 +67,11 @@ html
         color: $color-secondary-800
 
   hr
-    +clearfix
     border-width: 0
     display: block
     height: 1px
     width: 100%
+    +clearfix
 
   img
     height: auto
@@ -85,8 +85,8 @@ html
   textarea,
   select,
   input
-    +border-box
     outline: none
+    +border-box
 
   small
     font-size: $size-small
@@ -110,12 +110,12 @@ html
   h5,
   h6,
   p
-    +border-box
-    +clearfix
     color: currentColor
     margin: $zero
     padding: $zero
     max-width: 100%
+    +border-box
+    +clearfix
 
   p + p
     margin-bottom: $gap-default
@@ -156,12 +156,12 @@ html
     letter-spacing: 0.25px
 
   pre
-    +clearfix
     overflow-x: auto
     white-space: pre
     word-wrap: normal
     padding: $gap-regular !important
     margin: 0 !important
+    +clearfix
 
     &:after
       content: ""

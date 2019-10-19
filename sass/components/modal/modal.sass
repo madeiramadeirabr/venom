@@ -73,6 +73,12 @@
         height: 50%
         width: 2px
 
+    &__header
+      position: relative
+      padding: $gap-large $gap-large $zero $gap-large
+      color: $color-secondary
+      font-weight: $weight-bold
+
     &__body
       background-color: $color-white
       padding: $gap-large
@@ -80,15 +86,9 @@
       overflow-x: hidden
       max-height: 100%
 
-    &__header
-      position: relative
-      padding: $gap-regular
-      color: $color-secondary
-      font-weight: $weight-bold
-
     &__footer
       position: relative
-      padding: $gap-regular
+      padding: $zero $gap-large $gap-large $gap-large
 
   @media screen and (max-width: $tablet-width)
     .modal

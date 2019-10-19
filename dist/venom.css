@@ -396,8 +396,8 @@ html {
 .venom small,
 .venom strong,
 .venom i {
-  box-sizing: border-box !important;
   color: currentColor;
+  box-sizing: border-box !important;
 }
 
 .venom article,
@@ -407,8 +407,8 @@ html {
 .venom header,
 .venom hgroup,
 .venom section {
-  box-sizing: border-box !important;
   display: block;
+  box-sizing: border-box !important;
 }
 
 .venom div {
@@ -423,7 +423,7 @@ html {
 }
 
 .venom body {
-  background-color: #fff;
+  background-color: #f9f9f9;
   color: #1f1f1f;
   font-family: BlinkMacSystemFont, -apple-system, "Open Sans", sans-serif;
   font-weight: 400;
@@ -433,10 +433,10 @@ html {
 }
 
 .venom a {
-  box-sizing: border-box !important;
   color: #00549e;
   cursor: pointer;
   text-decoration: none;
+  box-sizing: border-box !important;
 }
 
 .venom a strong {
@@ -482,8 +482,8 @@ html {
 .venom textarea,
 .venom select,
 .venom input {
-  box-sizing: border-box !important;
   outline: none;
+  box-sizing: border-box !important;
 }
 
 .venom small {
@@ -512,11 +512,11 @@ html {
 .venom h5,
 .venom h6,
 .venom p {
-  box-sizing: border-box !important;
   color: currentColor;
   margin: 0;
   padding: 0;
   max-width: 100%;
+  box-sizing: border-box !important;
 }
 
 .venom h1::after,
@@ -865,7 +865,6 @@ html {
   -webkit-flex: 0 0 auto;
       -ms-flex: 0 0 auto;
           flex: 0 0 auto;
-  min-height: 1px;
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
       -ms-flex-positive: 1;
@@ -876,6 +875,7 @@ html {
   padding: 0;
   margin: 0 12px;
   max-width: 100%;
+  min-height: auto;
   box-sizing: border-box !important;
 }
 
@@ -2509,7 +2509,12 @@ html {
   line-height: 22px;
 }
 
-.venom .text-field svg:not([fill]) {
+.venom .text-field svg {
+  width: 18px;
+  height: 18px;
+}
+
+.venom .text-field svg path:not([fill]) {
   fill: #ccc;
 }
 
@@ -2909,6 +2914,13 @@ html {
   width: 2px;
 }
 
+.venom .modal__header {
+  position: relative;
+  padding: 20px 20px 0 20px;
+  color: #00549e;
+  font-weight: 700;
+}
+
 .venom .modal__body {
   background-color: #fff;
   padding: 20px;
@@ -2917,16 +2929,9 @@ html {
   max-height: 100%;
 }
 
-.venom .modal__header {
-  position: relative;
-  padding: 12px;
-  color: #00549e;
-  font-weight: 700;
-}
-
 .venom .modal__footer {
   position: relative;
-  padding: 12px;
+  padding: 0 20px 20px 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -3889,8 +3894,36 @@ html {
   color: #fff !important;
 }
 
-.venom .helper--has-text-grey {
+.venom .helper--has-text-grey-one {
+  color: #f9f9f9 !important;
+}
+
+.venom .helper--has-text-grey-two {
+  color: #eee !important;
+}
+
+.venom .helper--has-text-grey-three {
+  color: #ccc !important;
+}
+
+.venom .helper--has-text-grey-four {
   color: #999 !important;
+}
+
+.venom .helper--has-text-grey-five {
+  color: #707070 !important;
+}
+
+.venom .helper--has-text-grey-six {
+  color: #5c5c5c !important;
+}
+
+.venom .helper--has-text-grey-seven {
+  color: #333 !important;
+}
+
+.venom .helper--has-text-grey-eight {
+  color: #1f1f1f !important;
 }
 
 .venom .helper--has-text-black {
