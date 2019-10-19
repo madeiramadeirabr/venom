@@ -36,13 +36,16 @@
       text-decoration: underline $color-secondary !important
       font-weight: $weight-bold !important
       font-size: $size-regular !important
-      letter-spacing: .5px !important
+      line-height: 20px
 
     &--has-shadow
       +box-shadow
 
     &--has-shadow-large
       +box-shadow-large
+
+    &--box-shadow-large-top
+      +box-shadow-large-top
 
     &--has-border-radius
       border-radius: $radius !important
@@ -355,6 +358,10 @@
 
       &-white
         background-color: $color-white !important
+
+    +for-size(desktop)
+      &--is-hidden-desktop
+        display: none !important
 
     +for-size(mobile)
       &--is-hidden-mobile

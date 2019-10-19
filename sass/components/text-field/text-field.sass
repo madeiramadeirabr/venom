@@ -31,7 +31,7 @@ $input-el: '.text-field'
       top: $zero
       left: $zero
       padding: $gap-small $gap-regular
-      max-width: 100%
+      width: 100%
       transition: all $transition-medium ease
       cursor: text
       font-weight: $weight-regular
@@ -81,7 +81,11 @@ $input-el: '.text-field'
 
     &#{$input-el}--has-left-icon
       #{$input-el}__label
-        left: $gap-regular * 4
+        left: $gap-regular * 3
+
+      input,
+      textarea
+        padding-left: $zero
 
     &#{$input-el}--has-left-icon,
     &#{$input-el}--has-right-icon
