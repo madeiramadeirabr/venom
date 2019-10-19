@@ -29,12 +29,6 @@
     &--has-no-gap
       padding: $zero
 
-  .grid__columns,
-  .grid__row
-    > .grid__column
-      min-height: auto
-      margin: $desktop-column-gap
-
   .grid--is-table
     padding: $zero
     margin: $zero
@@ -42,6 +36,7 @@
     > .grid__column
       padding: $zero
       margin: $zero
+      max-width: 100%
 
       @each $name, $count in $numbers
         &--is-#{$name},
@@ -50,20 +45,14 @@
           flex-basis: $count
           max-width: $count
 
-        &--is-twelve,
-        &--is-twelve-tablet,
-        &--is-twelve-mobile
-          flex-basis: 100%
-          max-width: 100%
-
   .grid__column
     flex: $zero $zero auto
     min-height: 1px
-    margin: $zero $desktop-column-gap
     flex-grow: 1
     flex-basis: $zero
-    width: calc(100% - #{ $desktop-column-gap * 2 })
     padding: $zero
+    margin: $zero $desktop-column-gap
+    max-width: 100%
     +border-box
 
     &--is-first
@@ -75,77 +64,56 @@
     @each $name, $count in $numbers
       &--is-#{$name}
         flex-basis: calc(#{ $count } - #{ $desktop-column-gap * 2 })
-        max-width: calc(#{ $count } - #{ $desktop-column-gap * 2 })
+        width: calc(#{ $count } - #{ $desktop-column-gap * 2 })
+        max-width: calc(#{ $count } - #{ $mobile-column-gap * 2 })
 
-        &.helper--has-no-margin-mobile
+        &.helper--has-no-margin
           flex-basis: $count
+          width: $count
           max-width: $count
 
     &--is-auto
       flex: $zero $zero auto
       width: auto
-      max-width: 100%
 
-  +for-size(mobile)
-    .grid__row
-      padding: $mobile-column-gap $zero
-
-      &--is-reverse
-        flex-direction: row-reverse
-
-      &--has-no-gap
-        padding: $zero
-
-    .grid__columns
-      padding: $mobile-column-gap $zero
-
-      &--is-reverse
-        flex-direction: column-reverse
-
-      &--has-no-gap
-        padding: $zero
-
-    .grid__columns,
-    .grid__row
-      > .grid__column
-        margin: $mobile-column-gap
-
-    .grid--is-table
-      padding: $zero
-      margin: $zero
-
-      > .grid__column
-        padding: $zero
-        margin: $zero
-
-        @each $name, $count in $numbers
-          &--is-#{$name},
-          &--is-#{$name}-tablet,
-          &--is-#{$name}-mobile
-            flex-basis: $count
-            max-width: $count
-
-          &--is-twelve,
-          &--is-twelve-tablet,
-          &--is-twelve-mobile
-            flex-basis: 100%
-            max-width: 100%
-
+  +for-size(tablet)
     .grid__column
       margin: $zero $mobile-column-gap
-      width: calc(100% - #{ $mobile-column-gap * 2 })
 
-      &--is-first-mobile
-        order: -1 !important
+      @each $name, $count in $numbers
+        &--is-#{$name}-tablet
+          flex-basis: calc(#{ $count } - #{ $mobile-column-gap * 2 })
+          width: calc(#{ $count } - #{ $mobile-column-gap * 2 })
+          max-width: calc(#{ $count } - #{ $mobile-column-gap * 2 })
 
-      &--is-last-mobile
-        order: 1 !important
+          &.helper--has-no-margin-tablet
+            flex-basis: $count !important
+            width: $count !important
+            max-width: $count !important
+
+      &--is-first-tablet
+        order: -1
+
+      &--is-last-tablet
+        order: 1
+
+  +for-size(mobile)
+    .grid__column
+      margin: $zero $mobile-column-gap
 
       @each $name, $count in $numbers
         &--is-#{$name}-mobile
           flex-basis: calc(#{ $count } - #{ $mobile-column-gap * 2 })
+          width: calc(#{ $count } - #{ $mobile-column-gap * 2 })
           max-width: calc(#{ $count } - #{ $mobile-column-gap * 2 })
 
           &.helper--has-no-margin-mobile
-            flex-basis: $count
-            max-width: $count
+            flex-basis: $count !important
+            width: $count !important
+            max-width: $count !important
+
+      &--is-first-mobile
+        order: -1
+
+      &--is-last-mobile
+        order: 1
