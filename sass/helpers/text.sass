@@ -1,0 +1,112 @@
+.venom
+  .helper
+    &--has-text
+
+      &-subititle
+        font-size: $size-large
+        letter-spacing: .15px
+        font-weight: $size-regular
+
+      &-caption
+        font-size: $size-small
+        letter-spacing: .4px
+        font-weight: $size-regular
+
+      &-overline
+        font-size: $size-small
+        letter-spacing: 2px
+        text-transform: uppercase
+        font-weight: $size-regular
+
+      &-link
+        color: $color-secondary !important
+        text-decoration: underline $color-secondary !important
+        font-weight: $weight-bold !important
+        font-size: $size-regular !important
+        line-height: 20px
+
+      &-light
+        font-weight: $weight-light !important
+
+      &-regular
+        font-weight: $weight-regular !important
+
+      &-semibold
+        font-weight: $weight-semibold !important
+
+      &-bold
+        font-weight: $weight-bold !important
+
+      &-extra-small
+        font-size: $size-extra-small !important
+        line-height: 16px !important
+
+      &-small
+        font-size: $size-small !important
+        line-height: 16px !important
+
+      &-large
+        font-size: $size-large !important
+        line-height: 22px !important
+
+      &-extra-large
+        font-size: $size-extra-large !important
+        line-height: 27px !important
+
+      &-base-line
+        line-height: 1 !important
+
+      &-left
+        text-align: left
+
+      &-center
+        text-align: center
+
+      &-right
+        text-align: right
+
+      &-justify
+        text-align: justify
+
+      &-upper
+        text-transform: uppercase
+
+      &-truncated
+        display: block
+        overflow: hidden
+        text-overflow: ellipsis
+        white-space: nowrap
+
+      &-white
+        color: $color-white !important
+
+      &-grey-one
+        color: $color-black-100 !important
+
+      &-grey-two
+        color: $color-black-200 !important
+
+      &-grey-three
+        color: $color-black-300 !important
+
+      &-grey-four
+        color: $color-black-400 !important
+
+      &-grey-five
+        color: $color-black-500 !important
+
+      &-grey-six
+        color: $color-black-600 !important
+
+      &-grey-seven
+        color: $color-black-700 !important
+
+      &-grey-eight
+        color: $color-black-800 !important
+
+      &-black
+        color: $color-black-800 !important
+
+      @each $color, $value in $color-regular-map
+        &-#{$color}
+          color: $value !important

@@ -1,0 +1,10 @@
+.venom
+  .helper
+
+    &--has-background
+      @each $color, $value in $color-regular-map
+        &-#{$color}
+          background-color: $value !important
+
+        &-white
+          background-color: $color-white !important

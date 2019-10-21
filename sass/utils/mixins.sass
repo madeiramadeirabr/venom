@@ -39,10 +39,10 @@
     @media screen and (max-width: $mobile-width)
       @content
   @else if $range == tablet
-    @media screen and (min-width: $tablet-width) and (max-width: $desktop-width - 1px)
+    @media screen and (min-width: $mobile-width + 1px) and (max-width: $tablet-width)
       @content
   @else
-    @media screen and (min-width: $desktop-width)
+    @media screen and (min-width: $tablet-width + 1px)
       @content
 
 =for-retina

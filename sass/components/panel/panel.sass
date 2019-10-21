@@ -3,7 +3,8 @@ $description: '.panel__description'
   .panel
     $self: '.panel'
     background-color: $color-white
-    padding: $gap-regular $gap-large
+    padding-top: $gap-regular
+    padding-bottom: $gap-regular
 
     &__body
       display: none
@@ -12,9 +13,9 @@ $description: '.panel__description'
 
     &__arrow
       cursor: pointer
-      margin-right: -6px
 
       svg
+        margin-right: -4px
         transition: transform $transition-medium $easing
 
     &--is-open

@@ -1,0 +1,43 @@
+.venom
+  .helper
+
+    &--has-border
+      border: solid $border-width $border-color-flat
+
+      &--has-border-large
+        border-width: $border-width-large
+
+      &-left
+        border-left-width: 1px
+        border-left-style: solid
+
+        &-large
+          border-left-width: 2px
+
+      &-right
+        border-right-width: 1px
+
+        &-large
+          border-right-width: 2px
+
+      &-dashed
+        height: 0 !important
+        width: 100%
+        border-bottom: dashed 1px $color-black-300 !important
+
+      @each $color, $value in $color-regular-map
+        &-#{$color}
+          border-color: map-get($color-regular-map, $color)
+
+    &--has-no-border
+      border-width: $zero !important
+
+    &--has-border-radius
+      border-radius: $radius !important
+
+    +for-size(mobile)
+      &--has-no-border-radius-mobile
+        border-radius: $zero !important
+
+    &--has-no-radius
+      border-radius: $zero !important

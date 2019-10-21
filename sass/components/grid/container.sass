@@ -2,7 +2,6 @@
   .container
     $self: '.container'
     margin: 0 auto
-    max-width: 100%
     width: 100%
 
     &--is-full-width
@@ -15,6 +14,8 @@
 
   +for-size(mobile)
     .container
+      // margin: 0 -24px !important
+      // width: calc(100% + 48px) !important
 
   +for-size(tablet)
     .container

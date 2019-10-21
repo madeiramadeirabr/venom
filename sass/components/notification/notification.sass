@@ -44,3 +44,8 @@
 
         &:hover // sass-lint:disable-line nesting-depth
           background-color: map-get($color-lightness-map, $color)
+
+        svg
+          path
+            &:not([fill])
+              fill: map-get($color-contrast-map, $color) !important

@@ -75,22 +75,32 @@
 
     &__header
       position: relative
-      padding: $gap-large $gap-large $zero $gap-large
-      color: $color-secondary
-      font-weight: $weight-bold
 
     &__body
       background-color: $color-white
-      padding: $gap-large
       overflow-y: auto
       overflow-x: hidden
       max-height: 100%
 
     &__footer
       position: relative
-      padding: $zero $gap-large $gap-large $gap-large
 
-  @media screen and (max-width: $tablet-width)
+  +for-size(tablet)
+    .modal
+      display: block
+      transition: left $transition-low $easing
+      width: 100%
+      height: 100%
+
+      &--is-hidden
+        right: auto
+        left: -300vh
+
+      &__container
+        width: 100%
+        height: 100%
+
+  +for-size(mobile)
     .modal
       display: block
       transition: left $transition-low $easing

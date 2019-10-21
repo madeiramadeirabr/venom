@@ -1,14 +1,10 @@
 .venom
   .helper
-    $self: '.helper'
 
     &--has-scroll-horizontal
       overflow-x: scroll
       padding-top: $gap-small
       padding-bottom: $gap-small
-
-    &--is-inline
-      display: inline
 
     &--is-on-left
       float: left
@@ -21,388 +17,39 @@
       margin: $zero
       padding: $zero
 
-    &--has-border-dashed
-      width: 100%
-      border-bottom: dashed 1px $color-black-300 !important
-      +clearfix
-
-    &--has-top-dashed
-      width: 100%
-      border-bottom: dashed 1px $color-black-300
-      +clearfix
-
-    &--is-link
-      color: $color-secondary !important
-      text-decoration: underline $color-secondary !important
-      font-weight: $weight-bold !important
-      font-size: $size-regular !important
-      line-height: 20px
-
-    &--has-shadow
-      +box-shadow
-
-    &--has-shadow-large
-      +box-shadow-large
-
-    &--box-shadow-large-top
-      +box-shadow-large-top
-
-    &--has-border-radius
-      border-radius: $radius !important
-
-    &--has-border
-      &-left
-        border-left-width: 1px
-        border-left-style: solid
-
-        &-large
-          border-left-width: 2px
-
-      &-right
-        border-right-width: 1px
-
-        &-large
-          border-right-width: 2px
-
-      @each $color, $value in $color-regular-map
-        &-#{$color}
-          border-color: map-get($color-regular-map, $color)
-
-    &--has-no-margin
-      margin: $zero !important
-
-    &--has-no-gap
-      padding: $zero !important
-
-    &--has-no-gap-horizontal
-      padding-left: $zero !important
-      padding-right: $zero !important
-
-    &--has-no-gap-vertical
-      padding-bottom: $zero !important
-      padding-top: $zero !important
-
-    &--has-no-radius
-      border-radius: $zero !important
-
-    &--has-no-border
-      border-width: $zero !important
-
-    &--has-no-shadow
-      box-shadow: none !important
-
     &--is-clearfix
       +clearfix
-
-    &--is-hidden
-      display: none
 
     &--is-block
       display: block
 
-    &--has-pointer
-      cursor: pointer
+    &--is-inline
+      display: inline
 
     &--is-relative
       position: relative
 
+    &--has-pointer
+      cursor: pointer
+
     &--is-full-width
-      width: 100%
+      width: 100% !important
       +border-box
 
     &--is-full-height
-      height: 100%
+      height: 100% !important
 
-    &--has-gap-extra-small
-      padding: $gap-extra-small
-
-    &--has-gap-small
-      padding: $gap-small
-
-    &--has-gap
-      padding: $gap-regular
-
-    &--has-gap-large
-      padding: $gap-large
-
-    &--has-gap-extra-large
-      padding: $gap-extra-large
-
-    &--has-border
-      border: solid $border-width $border-color-flat
-
-    &--has-border-large
-      border-width: $border-width-large
-
-    &--is-full-height-viewport
-      height: calc(100vh - #{ $gap-regular * 2 })
-
-    &--has-radius
-      border-radius: $radius  !important
-
-    &--has-margin
-      margin: $gap-regular  !important
-
-      &-left
-        margin-left: $gap-regular  !important
-
-        &-extra-small
-          margin-left: $gap-extra-small  !important
-
-        &-small
-          margin-left: $gap-small  !important
-
-        &-large
-          margin-left: $gap-large  !important
-
-        &-extra-large
-          margin-left: $gap-extra-large  !important
-
-      &-right
-        margin-right: $gap-regular  !important
-
-        &-extra-small
-          margin-right: $gap-extra-small  !important
-
-        &-small
-          margin-right: $gap-small  !important
-
-        &-large
-          margin-right: $gap-large  !important
-
-        &-extra-large
-          margin-right: $gap-extra-large  !important
-
-      &-top
-        margin-top: $gap-regular  !important
-
-        &-extra-small
-          margin-top: $gap-extra-small  !important
-
-        &-small
-          margin-top: $gap-small  !important
-
-        &-large
-          margin-top: $gap-large  !important
-
-        &-extra-large
-          margin-top: $gap-extra-large  !important
-
-      &-bottom
-        margin-bottom: $gap-regular  !important
-
-        &-extra-small
-          margin-bottom: $gap-extra-small  !important
-
-        &-small
-          margin-bottom: $gap-small !important
-
-        &-large
-          margin-bottom: $gap-large !important
-
-        &-extra-large
-          margin-bottom: $gap-extra-large !important
-
-      &-large
-        margin: $gap-large !important
-
-      &-vertical
-        margin-bottom: $gap-regular !important
-        margin-top: $gap-regular !important
-
-        &-extra-small
-          margin-bottom: $gap-extra-small !important
-          margin-top: $gap-extra-small !important
-
-        &-small
-          margin-bottom: $gap-small !important
-          margin-top: $gap-small !important
-
-        &-large
-          margin-bottom: $gap-large !important
-          margin-top: $gap-large !important
-
-        &-extra-large
-          margin-bottom: $gap-extra-large !important
-          margin-top: $gap-extra-large !important
-
-      &-horizontal
-        margin-left: $gap-regular !important
-        margin-right: $gap-regular !important
-
-        &-extra-small
-          margin-left: $gap-extra-small !important
-          margin-right: $gap-extra-small !important
-
-        &-small
-          margin-left: $gap-small !important
-          margin-right: $gap-small !important
-
-        &-large
-          margin-left: $gap-large !important
-          margin-right: $gap-large !important
-
-        &-extra-large
-          margin-left: $gap-extra-large !important
-          margin-right: $gap-extra-large !important
-
-    &--is-text
-      &-subititle
-        font-size: $size-large
-        letter-spacing: .15px
-        font-weight: $size-regular
-
-      &-caption
-        font-size: $size-small
-        letter-spacing: .4px
-        font-weight: $size-regular
-
-      &-overline
-        font-size: $size-small
-        letter-spacing: 2px
-        text-transform: uppercase
-        font-weight: $size-regular
-
-    &--has-text
-
-      &-light
-        font-weight: $weight-light !important
-
-      &-regular
-        font-weight: $weight-regular !important
-
-      &-semibold
-        font-weight: $weight-semibold !important
-
-      &-bold
-        font-weight: $weight-bold !important
-
-      &-extra-small
-        font-size: $size-extra-small !important
-        line-height: 16px !important
-
-      &-small
-        font-size: $size-small !important
-        line-height: 16px !important
-
-      &-large
-        font-size: $size-large !important
-        line-height: 22px !important
-
-      &-extra-large
-        font-size: $size-extra-large !important
-        line-height: 27px !important
-
-      &-base-line
-        line-height: 1 !important
-
-      &-left
-        text-align: left
-
-      &-center
-        text-align: center
-
-      &-right
-        text-align: right
-
-      &-justify
-        text-align: justify
-
-      &-upper
-        text-transform: uppercase
-
-      &-truncated
-        display: block
-        overflow: hidden
-        text-overflow: ellipsis
-        white-space: nowrap
-
-      &-white
-        color: $color-white !important
-
-      &-grey-one
-        color: $color-black-100 !important
-
-      &-grey-two
-        color: $color-black-200 !important
-
-      &-grey-three
-        color: $color-black-300 !important
-
-      &-grey-four
-        color: $color-black-400 !important
-
-      &-grey-five
-        color: $color-black-500 !important
-
-      &-grey-six
-        color: $color-black-600 !important
-
-      &-grey-seven
-        color: $color-black-700 !important
-
-      &-grey-eight
-        color: $color-black-800 !important
-
-      &-black
-        color: $color-black-800 !important
-
-      @each $color, $value in $color-regular-map
-        &-#{$color}
-          color: $value !important
-
-    &--has-background
-      @each $color, $value in $color-regular-map
-        &-#{$color}
-          background-color: $value !important
-
-      &-white
-        background-color: $color-white !important
+    &--is-hidden
+      display: none !important
 
     +for-size(desktop)
       &--is-hidden-desktop
         display: none !important
 
-    +for-size(mobile)
-      &--is-hidden-mobile
-        display: none !important
-
-      &--has-no-margin-mobile
-        margin: $zero !important
-
-      &--has-no-gap-mobile
-        padding: $zero !important
-
-      &--has-no-gap-horizontal-mobile
-        padding-left: $zero !important
-        padding-right: $zero !important
-
-      &--has-no-gap-vertical-mobile
-        padding-bottom: $zero !important
-        padding-top: $zero !important
-
-      &--has-no-radius-mobile
-        border-radius: $zero !important
-
-      &--has-margin
-        margin: $gap-regular !important
-
-        &-left-mobile
-          margin-left: $gap-regular !important
-
-        &-right-mobile
-          margin-right: $gap-regular !important
-
-        &-top-mobile
-          margin-top: $gap-regular !important
-
-        &-bottom-mobile
-          margin-bottom: $gap-regular !important
-
     +for-size(tablet)
       &--is-hidden-tablet
         display: none !important
 
-    +for-retina
-      &--has-border
-        border-width: $border-width-retina !important
+    +for-size(mobile)
+      &--is-hidden-mobile
+        display: none !important
