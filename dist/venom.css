@@ -1967,7 +1967,6 @@ html {
   display: block;
   position: relative;
   padding-left: 36px;
-  margin-bottom: 12px;
   cursor: pointer;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -2143,6 +2142,7 @@ html {
 
 .venom .text-field.text-field--has-left-icon .text-field__label {
   left: 36px;
+  padding: 8px 12px 8px 0;
 }
 
 .venom .text-field.text-field--has-left-icon input,
