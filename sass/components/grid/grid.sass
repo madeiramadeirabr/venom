@@ -3,7 +3,8 @@
     display: flex
     flex-flow: row wrap
     flex-wrap: wrap
-    padding: $zero $gap-regular
+    width: calc(100% + #{$desktop-column-gap * 2})
+    margin: $zero -#{$desktop-column-gap}
     +border-box
 
     &--is-reverse
@@ -12,8 +13,11 @@
   .grid__columns
     display: flex
     flex-direction: column
+    flex-flow: column wrap
     flex-wrap: wrap
     height: auto
+    width: calc(100% + #{$desktop-column-gap * 2})
+    margin: $zero -#{$desktop-column-gap}
     +border-box
 
     &--is-reverse
@@ -23,12 +27,6 @@
     flex: 1
     margin: $zero $desktop-column-gap
     +border-box
-
-    > .grid__row
-      padding: $zero
-
-      .grid__column
-        margin: $zero !important
 
     &--is-first
       order: -1
@@ -41,17 +39,32 @@
         flex: 0 0 calc(#{ $count/12 * 100% } - #{$desktop-column-gap * 2})
 
   +for-size(mobile)
-    .grid__column
-      @each $name, $count in $numbers
-        &--is-#{$name}
-          flex: 0 0 calc(#{ $count/12 * 100% } - #{$desktop-column-gap * 2})
+    .grid__row
+      width: calc(100% + #{$mobile-column-gap * 2})
+      margin: $zero -#{$mobile-column-gap}
 
-      @each $name, $count in $numbers
-        &--is-#{$name}-mobile
-          flex: 0 0 calc(#{ $count/12 * 100% } - #{$desktop-column-gap * 2}) !important
+      &--is-reverse
+        flex-direction: row-reverse
+
+    .grid__columns
+      width: calc(100% + #{$mobile-column-gap * 2})
+      margin: $zero -#{$mobile-column-gap}
+
+      &--is-reverse
+        flex-direction: column-reverse
+
+    .grid__column
+      margin: $zero $mobile-column-gap
 
       &--is-first-mobile
-        order: -1
+        order: -1 !important
 
       &--is-last-mobile
-        order: 1
+        order: 1 !important
+
+      @each $name, $count in $numbers
+        &--is-#{$name}
+          flex: 0 0 calc(#{ $count/12 * 100% } - #{$mobile-column-gap * 2})
+
+        &--is-#{$name}-mobile
+          flex: 0 0 calc(#{ $count/12 * 100% } - #{$mobile-column-gap * 2}) !important

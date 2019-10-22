@@ -1,12 +1,15 @@
 .venom
   .container
     $self: '.container'
-    margin: 0 auto
+    margin: $zero auto
     width: 100%
+    padding-left: ($desktop-column-gap * 2)
+    padding-right: ($desktop-column-gap * 2)
 
     &--is-full-width
       max-width: 100% !important
       width: 100% !important
+      padding: $zero !important
 
   +for-size(desktop)
     .container
@@ -14,10 +17,11 @@
 
   +for-size(mobile)
     .container
-      // margin: 0 -24px !important
-      // width: calc(100% + 48px) !important
+      margin: $zero
+      padding-left: ($mobile-column-gap * 2)
+      padding-right: ($mobile-column-gap * 2)
 
-  +for-size(tablet)
-    .container
-      max-width: $tablet-width
-      width: $tablet-width
+      &--is-full-width
+        max-width: 100vw !important
+        width: 100vw !important
+        padding: $zero !important

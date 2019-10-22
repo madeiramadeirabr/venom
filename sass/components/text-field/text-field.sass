@@ -30,7 +30,7 @@ $input-el: '.text-field'
       position: absolute
       top: $zero
       left: $zero
-      padding: $gap-small $gap-regular
+      padding: $gap-small $gap-regular $gap-small $gap-regular
       width: 100%
       transition: all $transition-medium ease
       cursor: text
@@ -43,8 +43,8 @@ $input-el: '.text-field'
       height: 18px
 
       path
-        &:not([fill])
-          fill: $color-black-300
+      &:not([fill])
+        fill: $color-black-300
 
     input,
     textarea
@@ -82,7 +82,6 @@ $input-el: '.text-field'
     &#{$input-el}--has-left-icon
       #{$input-el}__label
         left: $gap-regular * 3
-        padding: $gap-small $gap-regular $gap-small $zero
 
       input,
       textarea
@@ -99,6 +98,9 @@ $input-el: '.text-field'
         display: flex
         justify-content: center
         width: $gap-regular * 3
+
+      #{$input-el}__label
+        padding-left: $zero
 
     &#{$input-el}--is-active
       #{$input-el}__label,
