@@ -18,6 +18,7 @@
   +for-size(mobile)
     .container
       margin: $zero
+      width: calc(100% - #{($mobile-column-gap * 4)}) !important
       padding-left: ($mobile-column-gap * 2)
       padding-right: ($mobile-column-gap * 2)
 
@@ -25,3 +26,8 @@
         max-width: 100vw !important
         width: 100vw !important
         padding: $zero !important
+
+      &--is-full-width-mobile
+        width: 100vw !important
+        padding: $zero !important
+        margin: $zero !important
