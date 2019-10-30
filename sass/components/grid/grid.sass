@@ -43,6 +43,9 @@
     &--is-last
       order: 1
 
+    &--is-auto
+      flex: initial
+
     @each $name, $count in $numbers
       &--is-#{$name}
         flex: 0 0 calc(#{ $count/12 * 100% } - #{$desktop-column-gap * 2})
@@ -70,6 +73,9 @@
 
       &--is-last-mobile
         order: 1 !important
+
+      &--is-auto-mobile
+        flex: initial !important
 
       @each $name, $count in $numbers
         &--is-#{$name}

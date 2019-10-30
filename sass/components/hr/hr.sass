@@ -1,0 +1,17 @@
+.venom
+  .hr
+    background-color: $color-black-400
+    border: none
+    height: 1px
+    width: 100%
+    +clearfix
+
+    &.hr--is-large
+      height: 2px
+
+    &.hr--is-dashed
+      height: $zero !important
+      border-top: dashed 1px $color-black-400
+
+      &.hr--is-large
+        border-top: dashed 2px $color-black-400 !important

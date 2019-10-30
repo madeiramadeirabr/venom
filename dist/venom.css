@@ -798,6 +798,13 @@ html {
           order: 1;
 }
 
+.venom .grid__column--is-auto {
+  -webkit-box-flex: initial;
+  -webkit-flex: initial;
+      -ms-flex: initial;
+          flex: initial;
+}
+
 .venom .grid__column--is-one {
   -webkit-box-flex: 0;
   -webkit-flex: 0 0 calc(8.33333% - 24px);
@@ -919,6 +926,12 @@ html {
     -webkit-order: 1 !important;
         -ms-flex-order: 1 !important;
             order: 1 !important;
+  }
+  .venom .grid__column--is-auto-mobile {
+    -webkit-box-flex: initial !important;
+    -webkit-flex: initial !important;
+        -ms-flex: initial !important;
+            flex: initial !important;
   }
   .venom .grid__column--is-one {
     -webkit-box-flex: 0;
@@ -1939,7 +1952,6 @@ html {
 }
 
 .venom .card {
-  padding: 24px 0;
   width: 100%;
   box-sizing: border-box !important;
 }
@@ -2610,8 +2622,6 @@ html {
 
 .venom .panel {
   background-color: #fff;
-  padding-top: 12px;
-  padding-bottom: 12px;
 }
 
 .venom .panel__body {
@@ -3120,6 +3130,32 @@ html {
   border-right: 12px solid #ccc;
   border-top: 12px solid transparent;
   border-bottom: 12px solid transparent;
+}
+
+.venom .hr {
+  background-color: #999;
+  border: none;
+  height: 1px;
+  width: 100%;
+}
+
+.venom .hr::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+.venom .hr.hr--is-large {
+  height: 2px;
+}
+
+.venom .hr.hr--is-dashed {
+  height: 0 !important;
+  border-top: dashed 1px #999;
+}
+
+.venom .hr.hr--is-dashed.hr--is-large {
+  border-top: dashed 2px #999 !important;
 }
 
 .venom .helper--has-scroll-horizontal {
@@ -3695,32 +3731,16 @@ html {
   background-color: #f4831f !important;
 }
 
-.venom .helper--has-background-white {
-  background-color: #fff !important;
-}
-
 .venom .helper--has-background-secondary {
   background-color: #00549e !important;
-}
-
-.venom .helper--has-background-white {
-  background-color: #fff !important;
 }
 
 .venom .helper--has-background-danger {
   background-color: #d62e2e !important;
 }
 
-.venom .helper--has-background-white {
-  background-color: #fff !important;
-}
-
 .venom .helper--has-background-success {
   background-color: #2E843f !important;
-}
-
-.venom .helper--has-background-white {
-  background-color: #fff !important;
 }
 
 .venom .helper--has-background-warning {
@@ -3729,5 +3749,69 @@ html {
 
 .venom .helper--has-background-white {
   background-color: #fff !important;
+}
+
+.venom .helper--has-background-grey-one {
+  background-color: #f9f9f9 !important;
+}
+
+.venom .helper--has-background-grey-two {
+  background-color: #eee !important;
+}
+
+.venom .helper--has-background-grey-three {
+  background-color: #ccc !important;
+}
+
+.venom .helper--has-background-grey-four {
+  background-color: #999 !important;
+}
+
+.venom .helper--has-background-grey-five {
+  background-color: #707070 !important;
+}
+
+.venom .helper--has-background-grey-six {
+  background-color: #5c5c5c !important;
+}
+
+.venom .helper--has-background-grey-seven {
+  background-color: #333 !important;
+}
+
+.venom .helper--has-background-grey-eight {
+  background-color: #1f1f1f !important;
+}
+
+.venom .helper--has-background-success-one {
+  background-color: #a5e8b1 !important;
+}
+
+.venom .helper--has-background-success-two {
+  background-color: #7cc289 !important;
+}
+
+.venom .helper--has-background-success-three {
+  background-color: #5ead6d !important;
+}
+
+.venom .helper--has-background-success-four {
+  background-color: #418f50 !important;
+}
+
+.venom .helper--has-background-success-five {
+  background-color: #2E843f !important;
+}
+
+.venom .helper--has-background-success-six {
+  background-color: #266d34 !important;
+}
+
+.venom .helper--has-background-success-seven {
+  background-color: #1e5429 !important;
+}
+
+.venom .helper--has-background-success-eight {
+  background-color: #1e5429 !important;
 }
 /*# sourceMappingURL=venom.css.map */
