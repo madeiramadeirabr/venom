@@ -13,7 +13,8 @@
     "deploy": "npm run sass-build-clean && npm run sass-build-sass && npm run sass-build-autoprefix && npm run sass-build-cleancss && gulp",
     "start": "npm run sass-build-sass -- --watch",
     "linter": "sass-lint -c .sass-lint.yml 'sass/**/*.sass' -v -q",
-    "prepublish": "tsc --strictNullChecks"
+    "prepublish": "tsc --strictNullChecks",
+    "icons": "gulp"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^2.4.0",
