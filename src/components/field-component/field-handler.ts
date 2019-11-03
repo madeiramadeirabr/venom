@@ -1,4 +1,4 @@
-import { Email, Mixed, LegalPerson, MinMax, Min, Max, Numeric, Username, User, Mobile, Phone, Zipcode, State, Password, Common, Monetary } from './handlers/index'
+import { Email, Mixed, LegalPerson, MinMax, Min, Max, Numeric, Username, User, Mobile, Phone, Zipcode, State, Password, Common, Monetary, ExpireDate, CreditCard, SecureCode } from './handlers/index'
 import { FieldComponent } from './field-component'
 import { THandlers, THandler } from './types'
 
@@ -15,8 +15,8 @@ export class FieldHandler {
 
   initialize(el: HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement) {
     const {
-        dataset: { validator, trigger }
-      } = el,
+      dataset: { validator, trigger }
+    } = el,
       handlers: THandlers = []
 
     if (validator) {
@@ -102,6 +102,24 @@ export class FieldHandler {
         const vMonetary: THandler = { trigger: 'keyup', name: 'monetary', handler: Monetary }
         handlers.push(vMonetary)
         if (trigger && trigger !== 'keyup') handlers.push({ ...vMonetary, trigger })
+      }
+
+      if (validator.includes('expire-date')) {
+        const vExpireDate: THandler = { trigger: 'keyup', name: 'expire-date', handler: ExpireDate }
+        handlers.push(vExpireDate)
+        if (trigger && trigger !== 'keyup') handlers.push({ ...vExpireDate, trigger })
+      }
+
+      if (validator.includes('credit-card')) {
+        const vCreditCard: THandler = { trigger: 'keyup', name: 'credit-card', handler: CreditCard }
+        handlers.push(vCreditCard)
+        if (trigger && trigger !== 'keyup') handlers.push({ ...vCreditCard, trigger })
+      }
+
+      if (validator.includes('secure-code')) {
+        const vSecureCode: THandler = { trigger: 'keyup', name: 'secure-code', handler: SecureCode }
+        handlers.push(vSecureCode)
+        if (trigger && trigger !== 'keyup') handlers.push({ ...vSecureCode, trigger })
       }
     } else {
       const vCommon: THandler = { trigger: 'keyup', name: 'common', handler: Common }

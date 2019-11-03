@@ -14,6 +14,7 @@ export declare class LoadingComponent extends Component {
     setPlaceholder(query: string): this;
     unsetPlaceholder(): this;
     _getPlaceholder(): HTMLElement;
+    _fixBody(add?: boolean): void;
     loadingStart(loadingText?: string): this;
     _setPosition(): void;
     elementPosition(): void;

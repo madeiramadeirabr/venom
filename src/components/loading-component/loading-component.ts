@@ -26,7 +26,7 @@ export class LoadingComponent extends Component {
     return this
   }
 
-  protected _initialize(): void {}
+  protected _initialize(): void { }
 
   setPlaceholder(query: string): this {
     const Placeholder = document.querySelector(query) as HTMLElement
@@ -44,6 +44,18 @@ export class LoadingComponent extends Component {
     return this._placeholder || document.querySelector('body')
   }
 
+  _fixBody(add: boolean = true) {
+    const Body = document.querySelector('body'),
+      helper = 'helper--has-no-scroll'
+    if (Body) {
+      if (add) {
+        Body.classList.add(helper)
+      } else {
+        Body.classList.remove(helper)
+      }
+    }
+  }
+
   loadingStart(loadingText: string = 'Loading ...'): this {
     this.elementPosition()
     this.getElement().style = `top:${this._top}; left: ${this._left}; width: ${this._width}; height: ${this._height};`
@@ -51,6 +63,7 @@ export class LoadingComponent extends Component {
     this._setPosition()
 
     this.getComponent().show()
+    this._fixBody(true)
     this.setLoadingText(loadingText)
     return this
   }
@@ -76,6 +89,7 @@ export class LoadingComponent extends Component {
   }
 
   loadingStop(): this {
+    this._fixBody(false)
     this.getComponent().hide()
     return this
   }

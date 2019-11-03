@@ -14,3 +14,6 @@ export { State } from './state';
 export { Password } from './password';
 export { Common } from './common';
 export { Monetary } from './monetary';
+export { ExpireDate } from './expire-date';
+export { CreditCard } from "./credit-card";
+export { SecureCode } from "./secure-code";

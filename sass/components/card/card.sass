@@ -4,8 +4,10 @@
     +border-box
 
     &--is-double-border
-      border-width: 2px
+      border-width: 2px !important
 
     @each $color, $value in $color-regular-map
       &--is-#{$color}
-        border: solid 1px map-get($color-regular-map, $color) !important
+        border-width: 1px
+        border-style: solid
+        border-color: map-get($color-regular-map, $color) !important

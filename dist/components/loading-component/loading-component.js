@@ -46,12 +46,25 @@ var LoadingComponent = (function (_super) {
     LoadingComponent.prototype._getPlaceholder = function () {
         return this._placeholder || document.querySelector('body');
     };
+    LoadingComponent.prototype._fixBody = function (add) {
+        if (add === void 0) { add = true; }
+        var Body = document.querySelector('body'), helper = 'helper--has-no-scroll';
+        if (Body) {
+            if (add) {
+                Body.classList.add(helper);
+            }
+            else {
+                Body.classList.remove(helper);
+            }
+        }
+    };
     LoadingComponent.prototype.loadingStart = function (loadingText) {
         if (loadingText === void 0) { loadingText = 'Loading ...'; }
         this.elementPosition();
         this.getElement().style = "top:" + this._top + "; left: " + this._left + "; width: " + this._width + "; height: " + this._height + ";";
         this._setPosition();
         this.getComponent().show();
+        this._fixBody(true);
         this.setLoadingText(loadingText);
         return this;
     };
@@ -75,6 +88,7 @@ var LoadingComponent = (function (_super) {
         this._height = el.offsetHeight + 'px';
     };
     LoadingComponent.prototype.loadingStop = function () {
+        this._fixBody(false);
         this.getComponent().hide();
         return this;
     };

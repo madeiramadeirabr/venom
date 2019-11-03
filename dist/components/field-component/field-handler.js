@@ -107,6 +107,24 @@ var FieldHandler = (function () {
                 if (trigger && trigger !== 'keyup')
                     handlers.push(__assign(__assign({}, vMonetary), { trigger: trigger }));
             }
+            if (validator.includes('expire-date')) {
+                var vExpireDate = { trigger: 'keyup', name: 'expire-date', handler: index_1.ExpireDate };
+                handlers.push(vExpireDate);
+                if (trigger && trigger !== 'keyup')
+                    handlers.push(__assign(__assign({}, vExpireDate), { trigger: trigger }));
+            }
+            if (validator.includes('credit-card')) {
+                var vCreditCard = { trigger: 'keyup', name: 'credit-card', handler: index_1.CreditCard };
+                handlers.push(vCreditCard);
+                if (trigger && trigger !== 'keyup')
+                    handlers.push(__assign(__assign({}, vCreditCard), { trigger: trigger }));
+            }
+            if (validator.includes('secure-code')) {
+                var vSecureCode = { trigger: 'keyup', name: 'secure-code', handler: index_1.SecureCode };
+                handlers.push(vSecureCode);
+                if (trigger && trigger !== 'keyup')
+                    handlers.push(__assign(__assign({}, vSecureCode), { trigger: trigger }));
+            }
         }
         else {
             var vCommon = { trigger: 'keyup', name: 'common', handler: index_1.Common };
