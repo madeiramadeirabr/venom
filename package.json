@@ -1,6 +1,6 @@
 {
   "name": "@madeiramadeira/venom",
-  "version": "1.0.62",
+  "version": "1.0.63",
   "description": "Venom is an UI KIT and javascript lib of components with MadeiraMadeira brand",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

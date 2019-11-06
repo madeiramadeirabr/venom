@@ -43,8 +43,8 @@ $input-el: '.text-field'
       height: 18px
 
       path
-      &:not([fill])
-        fill: $color-black-300
+        &:not([fill])
+          fill: $color-black-300
 
     input,
     textarea
@@ -61,6 +61,7 @@ $input-el: '.text-field'
     input:not([type='radio']):focus
       outline: none
 
+    input:valid + #{$input-el}__label,
     input:focus + #{$input-el}__label,
     textarea:focus + #{$input-el}__label,
     &#{$input-el}--is-active #{$input-el}__label
@@ -72,6 +73,7 @@ $input-el: '.text-field'
       font-size: $size-small
       line-height: 1
 
+    input:valid,
     input:focus,
     textarea:focus,
     &#{$input-el}--is-active

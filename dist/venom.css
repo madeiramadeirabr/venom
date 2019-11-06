@@ -2173,7 +2173,7 @@ html {
   height: 18px;
 }
 
-.venom .text-field svg:not([fill]) {
+.venom .text-field svg path:not([fill]) {
   fill: #ccc;
 }
 
@@ -2194,6 +2194,7 @@ html {
   outline: none;
 }
 
+.venom .text-field input:valid + .text-field__label,
 .venom .text-field input:focus + .text-field__label,
 .venom .text-field textarea:focus + .text-field__label,
 .venom .text-field.text-field--is-active .text-field__label {
@@ -2206,6 +2207,8 @@ html {
   line-height: 1;
 }
 
+.venom .text-field input:valid input,
+.venom .text-field input:valid textarea,
 .venom .text-field input:focus input,
 .venom .text-field input:focus textarea,
 .venom .text-field textarea:focus input,
