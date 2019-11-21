@@ -2300,7 +2300,7 @@ html {
 }
 
 .venom .text-field.text-field--is-disabled .text-field__container input {
-  color: #707070;
+  color: #333;
 }
 
 .venom .text-field.text-field--is-disabled .text-field__label {
