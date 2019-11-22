@@ -3,7 +3,7 @@
     $self: '.notification'
 
     &__content
-      color: $text
+      color: $color-text
       flex: 1
       font-size: $size-regular
       font-weight: $weight-regular
@@ -47,5 +47,5 @@
 
         svg
           path
-            &:not([fill])
-              fill: map-get($color-contrast-map, $color) !important
+          &:not([fill])
+            fill: map-get($color-contrast-map, $color) !important

@@ -41,8 +41,8 @@
 
       svg
         path
-        &:not([fill])
-          fill: currentColor
+          &:not([fill])
+            fill: currentColor
 
     &__text
       flex: 1
@@ -54,10 +54,10 @@
         flex-basis: 100%
 
     &:hover
-      background: $color-secondary-100
+      background: $color-secondary-400
 
     &:focus
-      background: $color-secondary-200 radial-gradient(circle, transparent 1%, $color-secondary-100 1%) center/15000%
+      background: $color-secondary-500 radial-gradient(circle, transparent 1%, $color-secondary-400 1%) center/15000%
 
     &:active
       background-size: 100%
@@ -71,7 +71,6 @@
       pointer-events: none
 
     &--is-outline
-      background-color: $color-white
       border-color: $color-secondary-800
       color: $color-secondary-800
       box-shadow: none
@@ -112,13 +111,14 @@
 
         &:disabled,
         &#{ $self }--is-disabled
-          background-color: $color-black-300
-          border-color: $color-black-300
+          background-color: $color-black-600
+          border-color: $color-black-600
+          color: $color-black-400
 
         &#{ $self }--is-outline
+          background-color: transparent
           box-shadow: none
           border-color: map-get($color-regular-map, $color)
-          background-color: $color-white
           color: map-get($color-regular-map, $color)
 
           &:hover
@@ -135,7 +135,6 @@
 
           &:disabled,
           &#{ $self }--is-disabled
-            background-color: $color-white
             border-color: $color-black-300
             color: $color-black-400
 

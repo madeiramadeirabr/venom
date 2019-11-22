@@ -40,13 +40,13 @@ html
     font-family: $family-monospace
 
   body
-    background-color: $color-black-100
-    color: $text
+    background-color: $color-background
+    color: $color-text
     font-family: $family-sans-serif
     font-weight: $weight-regular
     letter-spacing: 0.25px
     font-size: $size-regular
-    line-heifht: 20px
+    line-height: 20px
 
   a
     color: $color-secondary
@@ -120,7 +120,7 @@ html
   p
     font-size: $size-regular
     line-height: 20px
-    color: $color-black-700
+    color: $color-text
 
   article
     p + p
@@ -190,23 +190,23 @@ html
 
   svg
     path
-      &:not([fill])
-        fill: currentColor
+    &:not([fill])
+      fill: currentColor
 
   [class*="-success"]
     svg
       path
-        &:not([fill])
-          fill: $color-success
+      &:not([fill])
+        fill: $color-success
 
   [class*="-danger"]
     svg
       path
-        &:not([fill])
-          fill: $color-danger
+      &:not([fill])
+        fill: $color-danger
 
   [class*="-warning"]
     svg
       path
-        &:not([fill])
-          fill: $color-warning
+      &:not([fill])
+        fill: $color-warning
