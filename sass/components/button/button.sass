@@ -54,7 +54,7 @@
         flex-basis: 100%
 
     &:hover
-      background: $color-secondary-400
+      background: $color-black-700
 
     &:focus
       background: $color-secondary-500 radial-gradient(circle, transparent 1%, $color-secondary-400 1%) center/15000%
@@ -78,6 +78,7 @@
       &:hover,
       &:focus,
       &:active
+        background-color: transparent
         border-color: $color-secondary-800
         color: $color-secondary-800
 
@@ -87,6 +88,7 @@
         border-color: $color-black-300
 
     &--is-link
+      background-color: transparent
       text-decoration: underline
 
     @each $color, $value in $color-regular-map
@@ -122,10 +124,10 @@
           color: map-get($color-regular-map, $color)
 
           &:hover
-            background: map-get($color-lightness-map, $color)
+            background: $color-black-700
 
           &:focus
-            background: map-get($color-light-map, $color) radial-gradient(circle, transparent 1%, map-get($color-contrast-map, $color) 1%) center/15000%
+            background: map-get($color-dark-map, $color) radial-gradient(circle, transparent 1%, map-get($color-contrast-map, $color) 1%) center/15000%
 
           &:active
             border-color: map-get($color-dark-map, $color)

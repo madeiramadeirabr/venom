@@ -51,12 +51,20 @@ $input-el: '.text-field'
       border: none
       border-radius: $radius
       padding: $gap-small $gap-regular
-      background-color: $color-background
+      background-color: $color-background !important
       margin: $zero
       width: 100%
       font-size: $size-large
       line-height: 22px
       +border-box
+
+      &:-webkit-autofill,
+      &:-webkit-autofill:hover,
+      &:-webkit-autofill:focus
+        -webkit-text-fill-color: white;
+        -webkit-box-shadow: 0 0 0px 1000px $color-background inset
+        transition: background-color 5000s ease-in-out 0s
+
 
     input:not([type='checkbox']):focus,
     input:not([type='radio']):focus

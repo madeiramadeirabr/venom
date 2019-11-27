@@ -433,7 +433,7 @@ html {
 }
 
 .venom a {
-  color: #F4831F;
+  color: #F7A45C;
   cursor: pointer;
   text-decoration: none;
   box-sizing: border-box !important;
@@ -444,15 +444,15 @@ html {
 }
 
 .venom a strong:hover {
-  color: #e56e06;
+  color: #F7A45C;
 }
 
 .venom a strong:active {
-  color: #f69846;
+  color: #F7A45C;
 }
 
 .venom a strong:visited {
-  color: #853700;
+  color: #F7A45C;
 }
 
 .venom hr {
@@ -1207,7 +1207,7 @@ html {
   border-width: 1px;
   border-style: solid;
   border-radius: 4px;
-  color: #F4831F;
+  color: #F7A45C;
   cursor: pointer;
   font-size: 16px;
   font-weight: 600;
@@ -1281,12 +1281,12 @@ html {
 }
 
 .venom .button:hover {
-  background: #f69846;
+  background: #272727;
 }
 
 .venom .button:focus {
-  background: #F4831F -webkit-radial-gradient(circle, transparent 1%, #f69846 1%) center/15000%;
-  background: #F4831F radial-gradient(circle, transparent 1%, #f69846 1%) center/15000%;
+  background: #F7A45C -webkit-radial-gradient(circle, transparent 1%, #F7A45C 1%) center/15000%;
+  background: #F7A45C radial-gradient(circle, transparent 1%, #F7A45C 1%) center/15000%;
 }
 
 .venom .button:active {
@@ -1303,14 +1303,15 @@ html {
 }
 
 .venom .button--is-outline {
-  border-color: #853700;
-  color: #853700;
+  border-color: #F7A45C;
+  color: #F7A45C;
   box-shadow: none;
 }
 
 .venom .button--is-outline:hover, .venom .button--is-outline:focus, .venom .button--is-outline:active {
-  border-color: #853700;
-  color: #853700;
+  background-color: transparent;
+  border-color: #F7A45C;
+  color: #F7A45C;
 }
 
 .venom .button--is-outline:disabled, .venom .button--is-outline.button--is-disabled {
@@ -1319,6 +1320,7 @@ html {
 }
 
 .venom .button--is-link {
+  background-color: transparent;
   text-decoration: underline;
 }
 
@@ -1350,8 +1352,8 @@ html {
 }
 
 .venom .button--is-primary:disabled, .venom .button--is-primary.button--is-disabled {
-  background-color: #3D3D3D;
-  border-color: #3D3D3D;
+  background-color: #3d3d3d;
+  border-color: #3d3d3d;
   color: #B9B9B9;
 }
 
@@ -1363,12 +1365,12 @@ html {
 }
 
 .venom .button--is-primary.button--is-outline:hover {
-  background: #fef4ec;
+  background: #272727;
 }
 
 .venom .button--is-primary.button--is-outline:focus {
-  background: #fcdcc0 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-  background: #fcdcc0 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #e56e06 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #e56e06 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button--is-primary.button--is-outline:active {
@@ -1434,8 +1436,8 @@ html {
 }
 
 .venom .button--is-secondary:disabled, .venom .button--is-secondary.button--is-disabled {
-  background-color: #3D3D3D;
-  border-color: #3D3D3D;
+  background-color: #3d3d3d;
+  border-color: #3d3d3d;
   color: #B9B9B9;
 }
 
@@ -1447,12 +1449,12 @@ html {
 }
 
 .venom .button--is-secondary.button--is-outline:hover {
-  background: #fef4ec;
+  background: #272727;
 }
 
 .venom .button--is-secondary.button--is-outline:focus {
-  background: #fcdcc0 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-  background: #fcdcc0 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #e56e06 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #e56e06 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button--is-secondary.button--is-outline:active {
@@ -1518,8 +1520,8 @@ html {
 }
 
 .venom .button--is-danger:disabled, .venom .button--is-danger.button--is-disabled {
-  background-color: #3D3D3D;
-  border-color: #3D3D3D;
+  background-color: #3d3d3d;
+  border-color: #3d3d3d;
   color: #B9B9B9;
 }
 
@@ -1531,12 +1533,12 @@ html {
 }
 
 .venom .button--is-danger.button--is-outline:hover {
-  background: #e16767;
+  background: #272727;
 }
 
 .venom .button--is-danger.button--is-outline:focus {
-  background: #e16767 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-  background: #e16767 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #ce000c -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #ce000c radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button--is-danger.button--is-outline:active {
@@ -1602,8 +1604,8 @@ html {
 }
 
 .venom .button--is-success:disabled, .venom .button--is-success.button--is-disabled {
-  background-color: #3D3D3D;
-  border-color: #3D3D3D;
+  background-color: #3d3d3d;
+  border-color: #3d3d3d;
   color: #B9B9B9;
 }
 
@@ -1615,12 +1617,12 @@ html {
 }
 
 .venom .button--is-success.button--is-outline:hover {
-  background: #a5e8b1;
+  background: #272727;
 }
 
 .venom .button--is-success.button--is-outline:focus {
-  background: #7cc289 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-  background: #7cc289 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #266d34 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #266d34 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button--is-success.button--is-outline:active {
@@ -1686,8 +1688,8 @@ html {
 }
 
 .venom .button--is-warning:disabled, .venom .button--is-warning.button--is-disabled {
-  background-color: #3D3D3D;
-  border-color: #3D3D3D;
+  background-color: #3d3d3d;
+  border-color: #3d3d3d;
   color: #B9B9B9;
 }
 
@@ -1699,12 +1701,12 @@ html {
 }
 
 .venom .button--is-warning.button--is-outline:hover {
-  background: #fde4aa;
+  background: #272727;
 }
 
 .venom .button--is-warning.button--is-outline:focus {
-  background: #fcd578 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
-  background: #fcd578 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #a57403 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #a57403 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
 }
 
 .venom .button--is-warning.button--is-outline:active {
@@ -2027,7 +2029,7 @@ html {
   width: 24px;
   border-radius: 50%;
   background-color: #121212;
-  border: solid 2px #F4831F;
+  border: solid 2px #F7A45C;
 }
 
 .venom .input .input__marker:after {
@@ -2060,7 +2062,7 @@ html {
 .venom .input.input__radio input[type='radio']:checked ~ .input__marker, .venom .input.input__checkbox input[type='checkbox']:checked ~ .input__marker,
 .venom .input.input__checkbox input[type='radio']:checked ~ .input__marker {
   background-color: #121212;
-  border-color: #F4831F;
+  border-color: #F7A45C;
 }
 
 .venom .input.input__radio input[type='checkbox']:checked ~ .input__marker:after,
@@ -2081,7 +2083,7 @@ html {
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #F4831F;
+  background: #F7A45C;
 }
 
 .venom .input.input__radio:hover ~ .input__marker:after, .venom .input.input__checkbox:hover ~ .input__marker:after {
@@ -2099,7 +2101,7 @@ html {
   top: 3px;
   width: 5px;
   height: 10px;
-  border: solid #F4831F;
+  border: solid #F7A45C;
   background: #121212;
   border-width: 0 2px 2px 0;
   border-radius: 0;
@@ -2181,12 +2183,22 @@ html {
   border: none;
   border-radius: 4px;
   padding: 8px 12px;
-  background-color: #121212;
+  background-color: #121212 !important;
   margin: 0;
   width: 100%;
   font-size: 16px;
   line-height: 22px;
   box-sizing: border-box !important;
+}
+
+.venom .text-field input:-webkit-autofill, .venom .text-field input:-webkit-autofill:hover, .venom .text-field input:-webkit-autofill:focus,
+.venom .text-field textarea:-webkit-autofill,
+.venom .text-field textarea:-webkit-autofill:hover,
+.venom .text-field textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #121212 inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .venom .text-field input:not([type='checkbox']):focus,
@@ -2260,12 +2272,12 @@ html {
 
 .venom .text-field.text-field--is-active .text-field__label,
 .venom .text-field.text-field--is-active .text-field__helper {
-  color: #F4831F;
+  color: #F7A45C;
 }
 
 .venom .text-field.text-field--is-active .text-field__container {
   border-width: 2px;
-  border-color: #F4831F;
+  border-color: #F7A45C;
 }
 
 .venom .text-field.text-field--is-danger .text-field__label,
@@ -2304,7 +2316,7 @@ html {
 }
 
 .venom .text-field.text-field--is-disabled .text-field__label {
-  color: #3D3D3D;
+  color: #3d3d3d;
 }
 
 .venom .tab {
@@ -2375,7 +2387,7 @@ html {
 
 .venom .tab .tab__item--has-indicator {
   background: #E7E7E7;
-  border-bottom: #F4831F solid 2px;
+  border-bottom: #F7A45C solid 2px;
 }
 
 .venom .tab--is-oldstyle {
@@ -2402,7 +2414,7 @@ html {
 .venom .tab--is-oldstyle .tab__item--has-indicator {
   border-bottom-color: #fff;
   background-color: #fff;
-  color: #F4831F;
+  color: #F7A45C;
 }
 
 @media screen and (max-width: 768px) {
@@ -2520,7 +2532,7 @@ html {
 }
 
 .venom .modal__container {
-  background-color: #121212;
+  background-color: #fff;
   overflow-y: hidden;
   display: -webkit-box;
   display: -webkit-flex;
@@ -2538,10 +2550,778 @@ html {
 }
 
 .venom .modal__body {
-  background-color: #121212;
+  background-color: #fff;
   overflow-y: auto;
   overflow-x: hidden;
   max-height: 100%;
+}
+
+.venom .modal__body h1,
+.venom .modal__body h2,
+.venom .modal__body h3,
+.venom .modal__body h4,
+.venom .modal__body h5,
+.venom .modal__body h6,
+.venom .modal__body p,
+.venom .modal__body span:not(.button__text),
+.venom .modal__body span:not(.button__icon) {
+  color: #272727;
+}
+
+.venom .modal__body .input__marker {
+  background-color: #fff !important;
+  color: #272727 !important;
+}
+
+.venom .modal__body .input__marker:-webkit-autofill, .venom .modal__body .input__marker:-webkit-autofill:hover, .venom .modal__body .input__marker:-webkit-autofill:focus {
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.venom .modal__body .button {
+  float: left;
+  background-color: transparent;
+  border-color: transparent;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 4px;
+  color: #F7A45C !important;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  outline: none;
+  padding: 8px 12px;
+  -webkit-transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
+  transition: background-color 86ms ease-in, border-color 86ms ease-in, color 86ms ease-in, background 400ms;
+  background-position: center;
+  width: auto;
+  max-width: auto;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.venom .modal__body .button .button__icon {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 28px;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.venom .modal__body .button .button__icon svg:not([fill]) {
+  fill: currentColor;
+}
+
+.venom .modal__body .button__text {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+}
+
+.venom .modal__body .button--has-content-center .button__text {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0;
+      -ms-flex: 0;
+          flex: 0;
+  -webkit-flex-basis: 100%;
+      -ms-flex-preferred-size: 100%;
+          flex-basis: 100%;
+}
+
+.venom .modal__body .button:hover {
+  background: #F7A45C;
+}
+
+.venom .modal__body .button:focus {
+  background: #F7A45C -webkit-radial-gradient(circle, transparent 1%, #F7A45C 1%) center/15000%;
+  background: #F7A45C radial-gradient(circle, transparent 1%, #F7A45C 1%) center/15000%;
+}
+
+.venom .modal__body .button:active {
+  background-size: 100%;
+  -webkit-transition: background 0s, border 0s;
+  transition: background 0s, border 0s;
+}
+
+.venom .modal__body .button:disabled, .venom .modal__body .button--is-disabled {
+  color: #B9B9B9;
+  border-color: transparent;
+  cursor: default;
+  pointer-events: none;
+}
+
+.venom .modal__body .button--is-outline {
+  background-color: #fff;
+  border-color: #F7A45C;
+  color: #F7A45C;
+  box-shadow: none;
+}
+
+.venom .modal__body .button--is-outline:hover, .venom .modal__body .button--is-outline:focus, .venom .modal__body .button--is-outline:active {
+  border-color: #F7A45C;
+  color: #F7A45C;
+}
+
+.venom .modal__body .button--is-outline:disabled, .venom .modal__body .button--is-outline.button--is-disabled {
+  color: #B9B9B9;
+  border-color: #E7E7E7;
+}
+
+.venom .modal__body .button--is-link {
+  text-decoration: underline;
+}
+
+.venom .modal__body .button--is-primary {
+  background-color: #F4831F;
+  border-color: #F4831F;
+  color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+}
+
+.venom .modal__body .button--is-primary:hover {
+  background: #e56e06;
+}
+
+.venom .modal__body .button--is-primary:focus {
+  background: #e56e06 -webkit-radial-gradient(circle, transparent 1%, #F4831F 1%) center/15000%;
+  background: #e56e06 radial-gradient(circle, transparent 1%, #F4831F 1%) center/15000%;
+}
+
+.venom .modal__body .button--is-primary:active {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
+  background-size: 100%;
+  -webkit-transition: background 0s;
+  transition: background 0s;
+}
+
+.venom .modal__body .button--is-primary:active.button--is-dragged {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
+}
+
+.venom .modal__body .button--is-primary:disabled, .venom .modal__body .button--is-primary.button--is-disabled {
+  background-color: #E7E7E7;
+  border-color: #E7E7E7;
+}
+
+.venom .modal__body .button--is-primary.button--is-outline {
+  box-shadow: none;
+  border-color: #F4831F;
+  background-color: #fff;
+  color: #F4831F;
+}
+
+.venom .modal__body .button--is-primary.button--is-outline:hover {
+  background: #fef4ec;
+}
+
+.venom .modal__body .button--is-primary.button--is-outline:focus {
+  background: #fcdcc0 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #fcdcc0 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+}
+
+.venom .modal__body .button--is-primary.button--is-outline:active {
+  border-color: #e56e06;
+  color: #e56e06;
+  background-size: 100%;
+  -webkit-transition: background 0s;
+  transition: background 0s;
+}
+
+.venom .modal__body .button--is-primary.button--is-outline:disabled, .venom .modal__body .button--is-primary.button--is-outline.button--is-disabled {
+  background-color: #fff;
+  border-color: #E7E7E7;
+  color: #B9B9B9;
+}
+
+.venom .modal__body .button--is-primary.button--is-link {
+  background-color: transparent;
+  color: #F4831F;
+}
+
+.venom .modal__body .button--is-primary.button--is-link:hover {
+  background-color: #fef4ec;
+}
+
+.venom .modal__body .button--is-primary.button--is-link:focus {
+  background: #fcdcc0 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #fcdcc0 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+}
+
+.venom .modal__body .button--is-primary.button--is-link:active {
+  border-color: #e56e06;
+  color: #e56e06;
+  background-size: 100%;
+}
+
+.venom .modal__body .button--is-secondary {
+  background-color: #F4831F;
+  border-color: #F4831F;
+  color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+}
+
+.venom .modal__body .button--is-secondary:hover {
+  background: #e56e06;
+}
+
+.venom .modal__body .button--is-secondary:focus {
+  background: #e56e06 -webkit-radial-gradient(circle, transparent 1%, #F4831F 1%) center/15000%;
+  background: #e56e06 radial-gradient(circle, transparent 1%, #F4831F 1%) center/15000%;
+}
+
+.venom .modal__body .button--is-secondary:active {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
+  background-size: 100%;
+  -webkit-transition: background 0s;
+  transition: background 0s;
+}
+
+.venom .modal__body .button--is-secondary:active.button--is-dragged {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
+}
+
+.venom .modal__body .button--is-secondary:disabled, .venom .modal__body .button--is-secondary.button--is-disabled {
+  background-color: #E7E7E7;
+  border-color: #E7E7E7;
+}
+
+.venom .modal__body .button--is-secondary.button--is-outline {
+  box-shadow: none;
+  border-color: #F4831F;
+  background-color: #fff;
+  color: #F4831F;
+}
+
+.venom .modal__body .button--is-secondary.button--is-outline:hover {
+  background: #fef4ec;
+}
+
+.venom .modal__body .button--is-secondary.button--is-outline:focus {
+  background: #fcdcc0 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #fcdcc0 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+}
+
+.venom .modal__body .button--is-secondary.button--is-outline:active {
+  border-color: #e56e06;
+  color: #e56e06;
+  background-size: 100%;
+  -webkit-transition: background 0s;
+  transition: background 0s;
+}
+
+.venom .modal__body .button--is-secondary.button--is-outline:disabled, .venom .modal__body .button--is-secondary.button--is-outline.button--is-disabled {
+  background-color: #fff;
+  border-color: #E7E7E7;
+  color: #B9B9B9;
+}
+
+.venom .modal__body .button--is-secondary.button--is-link {
+  background-color: transparent;
+  color: #F4831F;
+}
+
+.venom .modal__body .button--is-secondary.button--is-link:hover {
+  background-color: #fef4ec;
+}
+
+.venom .modal__body .button--is-secondary.button--is-link:focus {
+  background: #fcdcc0 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #fcdcc0 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+}
+
+.venom .modal__body .button--is-secondary.button--is-link:active {
+  border-color: #e56e06;
+  color: #e56e06;
+  background-size: 100%;
+}
+
+.venom .modal__body .button--is-danger {
+  background-color: #d62e2e;
+  border-color: #d62e2e;
+  color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+}
+
+.venom .modal__body .button--is-danger:hover {
+  background: #ce000c;
+}
+
+.venom .modal__body .button--is-danger:focus {
+  background: #ce000c -webkit-radial-gradient(circle, transparent 1%, #d62e2e 1%) center/15000%;
+  background: #ce000c radial-gradient(circle, transparent 1%, #d62e2e 1%) center/15000%;
+}
+
+.venom .modal__body .button--is-danger:active {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
+  background-size: 100%;
+  -webkit-transition: background 0s;
+  transition: background 0s;
+}
+
+.venom .modal__body .button--is-danger:active.button--is-dragged {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
+}
+
+.venom .modal__body .button--is-danger:disabled, .venom .modal__body .button--is-danger.button--is-disabled {
+  background-color: #E7E7E7;
+  border-color: #E7E7E7;
+}
+
+.venom .modal__body .button--is-danger.button--is-outline {
+  box-shadow: none;
+  border-color: #d62e2e;
+  background-color: #fff;
+  color: #d62e2e;
+}
+
+.venom .modal__body .button--is-danger.button--is-outline:hover {
+  background: #e16767;
+}
+
+.venom .modal__body .button--is-danger.button--is-outline:focus {
+  background: #e16767 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #e16767 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+}
+
+.venom .modal__body .button--is-danger.button--is-outline:active {
+  border-color: #ce000c;
+  color: #ce000c;
+  background-size: 100%;
+  -webkit-transition: background 0s;
+  transition: background 0s;
+}
+
+.venom .modal__body .button--is-danger.button--is-outline:disabled, .venom .modal__body .button--is-danger.button--is-outline.button--is-disabled {
+  background-color: #fff;
+  border-color: #E7E7E7;
+  color: #B9B9B9;
+}
+
+.venom .modal__body .button--is-danger.button--is-link {
+  background-color: transparent;
+  color: #d62e2e;
+}
+
+.venom .modal__body .button--is-danger.button--is-link:hover {
+  background-color: #e16767;
+}
+
+.venom .modal__body .button--is-danger.button--is-link:focus {
+  background: #e16767 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #e16767 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+}
+
+.venom .modal__body .button--is-danger.button--is-link:active {
+  border-color: #ce000c;
+  color: #ce000c;
+  background-size: 100%;
+}
+
+.venom .modal__body .button--is-success {
+  background-color: #2E843f;
+  border-color: #2E843f;
+  color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+}
+
+.venom .modal__body .button--is-success:hover {
+  background: #266d34;
+}
+
+.venom .modal__body .button--is-success:focus {
+  background: #266d34 -webkit-radial-gradient(circle, transparent 1%, #2E843f 1%) center/15000%;
+  background: #266d34 radial-gradient(circle, transparent 1%, #2E843f 1%) center/15000%;
+}
+
+.venom .modal__body .button--is-success:active {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
+  background-size: 100%;
+  -webkit-transition: background 0s;
+  transition: background 0s;
+}
+
+.venom .modal__body .button--is-success:active.button--is-dragged {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
+}
+
+.venom .modal__body .button--is-success:disabled, .venom .modal__body .button--is-success.button--is-disabled {
+  background-color: #E7E7E7;
+  border-color: #E7E7E7;
+}
+
+.venom .modal__body .button--is-success.button--is-outline {
+  box-shadow: none;
+  border-color: #2E843f;
+  background-color: #fff;
+  color: #2E843f;
+}
+
+.venom .modal__body .button--is-success.button--is-outline:hover {
+  background: #a5e8b1;
+}
+
+.venom .modal__body .button--is-success.button--is-outline:focus {
+  background: #7cc289 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #7cc289 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+}
+
+.venom .modal__body .button--is-success.button--is-outline:active {
+  border-color: #266d34;
+  color: #266d34;
+  background-size: 100%;
+  -webkit-transition: background 0s;
+  transition: background 0s;
+}
+
+.venom .modal__body .button--is-success.button--is-outline:disabled, .venom .modal__body .button--is-success.button--is-outline.button--is-disabled {
+  background-color: #fff;
+  border-color: #E7E7E7;
+  color: #B9B9B9;
+}
+
+.venom .modal__body .button--is-success.button--is-link {
+  background-color: transparent;
+  color: #2E843f;
+}
+
+.venom .modal__body .button--is-success.button--is-link:hover {
+  background-color: #a5e8b1;
+}
+
+.venom .modal__body .button--is-success.button--is-link:focus {
+  background: #7cc289 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #7cc289 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+}
+
+.venom .modal__body .button--is-success.button--is-link:active {
+  border-color: #266d34;
+  color: #266d34;
+  background-size: 100%;
+}
+
+.venom .modal__body .button--is-warning {
+  background-color: #d79804;
+  border-color: #d79804;
+  color: #fff;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24), 0px 0px 2px rgba(0, 0, 0, 0.12);
+}
+
+.venom .modal__body .button--is-warning:hover {
+  background: #a57403;
+}
+
+.venom .modal__body .button--is-warning:focus {
+  background: #a57403 -webkit-radial-gradient(circle, transparent 1%, #d79804 1%) center/15000%;
+  background: #a57403 radial-gradient(circle, transparent 1%, #d79804 1%) center/15000%;
+}
+
+.venom .modal__body .button--is-warning:active {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4), 0px 1px 1px rgba(0, 0, 0, 0.24);
+  background-size: 100%;
+  -webkit-transition: background 0s;
+  transition: background 0s;
+}
+
+.venom .modal__body .button--is-warning:active.button--is-dragged {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.48);
+}
+
+.venom .modal__body .button--is-warning:disabled, .venom .modal__body .button--is-warning.button--is-disabled {
+  background-color: #E7E7E7;
+  border-color: #E7E7E7;
+}
+
+.venom .modal__body .button--is-warning.button--is-outline {
+  box-shadow: none;
+  border-color: #d79804;
+  background-color: #fff;
+  color: #d79804;
+}
+
+.venom .modal__body .button--is-warning.button--is-outline:hover {
+  background: #fde4aa;
+}
+
+.venom .modal__body .button--is-warning.button--is-outline:focus {
+  background: #fcd578 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #fcd578 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+}
+
+.venom .modal__body .button--is-warning.button--is-outline:active {
+  border-color: #a57403;
+  color: #a57403;
+  background-size: 100%;
+  -webkit-transition: background 0s;
+  transition: background 0s;
+}
+
+.venom .modal__body .button--is-warning.button--is-outline:disabled, .venom .modal__body .button--is-warning.button--is-outline.button--is-disabled {
+  background-color: #fff;
+  border-color: #E7E7E7;
+  color: #B9B9B9;
+}
+
+.venom .modal__body .button--is-warning.button--is-link {
+  background-color: transparent;
+  color: #d79804;
+}
+
+.venom .modal__body .button--is-warning.button--is-link:hover {
+  background-color: #fde4aa;
+}
+
+.venom .modal__body .button--is-warning.button--is-link:focus {
+  background: #fcd578 -webkit-radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+  background: #fcd578 radial-gradient(circle, transparent 1%, #fff 1%) center/15000%;
+}
+
+.venom .modal__body .button--is-warning.button--is-link:active {
+  border-color: #a57403;
+  color: #a57403;
+  background-size: 100%;
+}
+
+.venom .modal__body .text-field {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 100%;
+  margin-bottom: 12px;
+}
+
+.venom .modal__body .text-field::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+.venom .modal__body .text-field__container {
+  border-radius: 4px;
+  border: solid 1px #B9B9B9;
+  padding: 0;
+  max-width: 100%;
+  background-color: #fff;
+}
+
+.venom .modal__body .text-field__container::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+.venom .modal__body .text-field__helper {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 4px 12px;
+  color: #272727;
+  max-width: 100%;
+  display: block;
+  line-height: 16px;
+}
+
+.venom .modal__body .text-field__label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 8px 12px 8px 12px;
+  width: 100%;
+  -webkit-transition: all 172ms ease;
+  transition: all 172ms ease;
+  cursor: text;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.venom .modal__body .text-field svg {
+  width: 18px;
+  height: 18px;
+}
+
+.venom .modal__body .text-field svg path:not([fill]) {
+  fill: #E7E7E7;
+}
+
+.venom .modal__body .text-field input,
+.venom .modal__body .text-field textarea {
+  border: none;
+  border-radius: 4px;
+  padding: 8px 12px;
+  background-color: #fff !important;
+  margin: 0;
+  width: 100%;
+  color: #272727;
+  font-size: 16px;
+  line-height: 22px;
+  box-sizing: border-box !important;
+}
+
+.venom .modal__body .text-field input:-webkit-autofill, .venom .modal__body .text-field input:-webkit-autofill:hover, .venom .modal__body .text-field input:-webkit-autofill:focus,
+.venom .modal__body .text-field textarea:-webkit-autofill,
+.venom .modal__body .text-field textarea:-webkit-autofill:hover,
+.venom .modal__body .text-field textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  -webkit-transition: background-color 5000s ease-in-out 0s;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.venom .modal__body .text-field input:not([type='checkbox']):focus,
+.venom .modal__body .text-field input:not([type='radio']):focus {
+  outline: none;
+}
+
+.venom .modal__body .text-field input:valid + .text-field__label,
+.venom .modal__body .text-field input:focus + .text-field__label,
+.venom .modal__body .text-field textarea:focus + .text-field__label,
+.venom .modal__body .text-field.text-field--is-active .text-field__label {
+  top: -6px;
+  left: 10px !important;
+  padding: 2px;
+  width: auto;
+  color: #272727;
+  background-color: #fff;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.venom .modal__body .text-field input:valid input,
+.venom .modal__body .text-field input:valid textarea,
+.venom .modal__body .text-field input:focus input,
+.venom .modal__body .text-field input:focus textarea,
+.venom .modal__body .text-field textarea:focus input,
+.venom .modal__body .text-field textarea:focus textarea, .venom .modal__body .text-field.text-field--is-active input,
+.venom .modal__body .text-field.text-field--is-active textarea {
+  line-height: 20px !important;
+}
+
+.venom .modal__body .text-field.text-field--has-left-icon .text-field__label {
+  left: 36px;
+}
+
+.venom .modal__body .text-field.text-field--has-left-icon input,
+.venom .modal__body .text-field.text-field--has-left-icon textarea {
+  padding-left: 0;
+}
+
+.venom .modal__body .text-field.text-field--has-left-icon .text-field__container, .venom .modal__body .text-field.text-field--has-right-icon .text-field__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.venom .modal__body .text-field.text-field--has-left-icon .text-field__icon, .venom .modal__body .text-field.text-field--has-right-icon .text-field__icon {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 36px;
+}
+
+.venom .modal__body .text-field.text-field--has-left-icon .text-field__label {
+  padding-left: 0;
+}
+
+.venom .modal__body .text-field.text-field--is-active .text-field__label,
+.venom .modal__body .text-field.text-field--is-active .text-field__helper {
+  color: #F7A45C;
+}
+
+.venom .modal__body .text-field.text-field--is-active .text-field__container {
+  border-width: 2px;
+  border-color: #F7A45C;
+}
+
+.venom .modal__body .text-field.text-field--is-danger .text-field__label,
+.venom .modal__body .text-field.text-field--is-danger .text-field__helper {
+  color: #d62e2e !important;
+}
+
+.venom .modal__body .text-field.text-field--is-danger .text-field__container {
+  border-color: #d62e2e !important;
+}
+
+.venom .modal__body .text-field.text-field--is-success .text-field__label,
+.venom .modal__body .text-field.text-field--is-success .text-field__helper {
+  color: #2E843f !important;
+}
+
+.venom .modal__body .text-field.text-field--is-success .text-field__container {
+  border-color: #2E843f !important;
+}
+
+.venom .modal__body .text-field.text-field--is-warning .text-field__label,
+.venom .modal__body .text-field.text-field--is-warning .text-field__helper {
+  color: #d79804 !important;
+}
+
+.venom .modal__body .text-field.text-field--is-warning .text-field__container {
+  border-color: #d79804 !important;
+}
+
+.venom .modal__body .text-field.text-field--is-disabled .text-field__container {
+  border-color: #999;
+}
+
+.venom .modal__body .text-field.text-field--is-disabled .text-field__container input {
+  color: #272727;
+}
+
+.venom .modal__body .text-field.text-field--is-disabled .text-field__label {
+  color: #3d3d3d;
 }
 
 .venom .modal__footer {
@@ -2662,7 +3442,7 @@ html {
 }
 
 .venom .toggle input:checked ~ .toggle__track {
-  box-shadow: inset 0 0 0 24px #F4831F;
+  box-shadow: inset 0 0 0 24px #F7A45C;
 }
 
 .venom .toggle input:checked ~ .toggle__switch {
@@ -3070,16 +3850,16 @@ html {
 }
 
 .venom .pricetag--is-primary:before {
-  border-right: 12px solid #F4831F !important;
+  border-right: 12px solid #F7A45C !important;
 }
 
 .venom .pricetag--is-secondary {
-  background: #F4831F;
-  border: 0 solid #F4831F;
+  background: #F7A45C;
+  border: 0 solid #F7A45C;
 }
 
 .venom .pricetag--is-secondary:before {
-  border-right: 12px solid #F4831F !important;
+  border-right: 12px solid #F7A45C !important;
 }
 
 .venom .pricetag:before {
@@ -3557,9 +4337,9 @@ html {
 }
 
 .venom .helper--has-text-link {
-  color: #F4831F !important;
-  -webkit-text-decoration: underline #F4831F !important;
-          text-decoration: underline #F4831F !important;
+  color: #F7A45C !important;
+  -webkit-text-decoration: underline #F7A45C !important;
+          text-decoration: underline #F7A45C !important;
   font-weight: 700 !important;
   font-size: 14px !important;
   line-height: 20px;
@@ -3657,7 +4437,7 @@ html {
 }
 
 .venom .helper--has-text-grey-six {
-  color: #3D3D3D !important;
+  color: #3d3d3d !important;
 }
 
 .venom .helper--has-text-grey-seven {
@@ -3753,7 +4533,7 @@ html {
 }
 
 .venom .helper--has-background-grey-six {
-  background-color: #3D3D3D !important;
+  background-color: #3d3d3d !important;
 }
 
 .venom .helper--has-background-grey-seven {
