@@ -1,3 +1,7 @@
++placeholder
+  opacity: $zero
+  transition: $transition-low ease opacity
+
 html
   -moz-osx-font-smoothing: grayscale // sass-lint:disable-line no-vendor-prefixes
   -webkit-font-smoothing: antialiased // sass-lint:disable-line no-vendor-prefixes
@@ -41,12 +45,12 @@ html
 
   body
     background-color: $color-black-100
-    color: $text
-    font-family: $family-sans-serif
-    font-weight: $weight-regular
+    color: $text !important
+    font-family: $family-sans-serif !important
+    font-weight: $weight-regular !important
     letter-spacing: 0.25px
-    font-size: $size-regular
-    line-heifht: 20px
+    font-size: $size-regular !important
+    line-height: 20px !important
 
   a
     color: $color-secondary
@@ -190,23 +194,23 @@ html
 
   svg
     path
-      &:not([fill])
-        fill: currentColor
+    &:not([fill])
+      fill: currentColor
 
   [class*="-success"]
     svg
       path
-        &:not([fill])
-          fill: $color-success
+      &:not([fill])
+        fill: $color-success
 
   [class*="-danger"]
     svg
       path
-        &:not([fill])
-          fill: $color-danger
+      &:not([fill])
+        fill: $color-danger
 
   [class*="-warning"]
     svg
       path
-        &:not([fill])
-          fill: $color-warning
+      &:not([fill])
+        fill: $color-warning

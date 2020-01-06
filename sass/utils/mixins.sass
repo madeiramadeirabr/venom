@@ -48,3 +48,20 @@
 =for-retina
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and ( min--moz-device-pixel-ratio: 2), only screen and ( -o-min-device-pixel-ratio: 2/1), only screen and ( min-device-pixel-ratio: 2), only screen and ( min-resolution: 192dpi), only screen and ( min-resolution: 2dppx) // sass-lint:disable-line no-vendor-prefixes space-around-operator
     @content
+
+=optional-at-root($sel)
+  @at-root #{if(not &, $sel, selector-append(&, $sel))}
+    @content
+
+=placeholder
+  +optional-at-root('::-webkit-input-placeholder')
+    @content
+
+  +optional-at-root(':-moz-placeholder')
+    @content
+
+  +optional-at-root('::-moz-placeholder')
+    @content
+
+  +optional-at-root(':-ms-input-placeholder')
+    @content

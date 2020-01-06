@@ -375,6 +375,30 @@ template {
   display: none;
 }
 
+::-webkit-input-placeholder {
+  opacity: 0;
+  -webkit-transition: 344ms ease opacity;
+  transition: 344ms ease opacity;
+}
+
+:-moz-placeholder {
+  opacity: 0;
+  -webkit-transition: 344ms ease opacity;
+  transition: 344ms ease opacity;
+}
+
+::-moz-placeholder {
+  opacity: 0;
+  -webkit-transition: 344ms ease opacity;
+  transition: 344ms ease opacity;
+}
+
+:-ms-input-placeholder {
+  opacity: 0;
+  -webkit-transition: 344ms ease opacity;
+  transition: 344ms ease opacity;
+}
+
 html {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
@@ -424,12 +448,12 @@ html {
 
 .venom body {
   background-color: #f9f9f9;
-  color: #1f1f1f;
-  font-family: BlinkMacSystemFont, -apple-system, "Open Sans", sans-serif;
-  font-weight: 400;
+  color: #1f1f1f !important;
+  font-family: BlinkMacSystemFont, -apple-system, "Open Sans", sans-serif !important;
+  font-weight: 400 !important;
   letter-spacing: 0.25px;
-  font-size: 14px;
-  line-heifht: 20px;
+  font-size: 14px !important;
+  line-height: 20px !important;
 }
 
 .venom a {
@@ -619,19 +643,19 @@ html {
   text-align: left;
 }
 
-.venom svg path:not([fill]) {
+.venom svg:not([fill]) {
   fill: currentColor;
 }
 
-.venom [class*="-success"] svg path:not([fill]) {
+.venom [class*="-success"] svg:not([fill]) {
   fill: #2E843f;
 }
 
-.venom [class*="-danger"] svg path:not([fill]) {
+.venom [class*="-danger"] svg:not([fill]) {
   fill: #d62e2e;
 }
 
-.venom [class*="-warning"] svg path:not([fill]) {
+.venom [class*="-warning"] svg:not([fill]) {
   fill: #d79804;
 }
 
@@ -1331,12 +1355,12 @@ html {
 }
 
 .venom .button--is-primary:hover {
-  background: #e56e06;
+  background: #D66A0A;
 }
 
 .venom .button--is-primary:focus {
-  background: #e56e06 -webkit-radial-gradient(circle, transparent 1%, #f4831f 1%) center/15000%;
-  background: #e56e06 radial-gradient(circle, transparent 1%, #f4831f 1%) center/15000%;
+  background: #D66A0A -webkit-radial-gradient(circle, transparent 1%, #f4831f 1%) center/15000%;
+  background: #D66A0A radial-gradient(circle, transparent 1%, #f4831f 1%) center/15000%;
 }
 
 .venom .button--is-primary:active {
@@ -1372,8 +1396,8 @@ html {
 }
 
 .venom .button--is-primary.button--is-outline:active {
-  border-color: #e56e06;
-  color: #e56e06;
+  border-color: #D66A0A;
+  color: #D66A0A;
   background-size: 100%;
   -webkit-transition: background 0s;
   transition: background 0s;
@@ -1400,8 +1424,8 @@ html {
 }
 
 .venom .button--is-primary.button--is-link:active {
-  border-color: #e56e06;
-  color: #e56e06;
+  border-color: #D66A0A;
+  color: #D66A0A;
   background-size: 100%;
   -webkit-transition: background 0s;
   transition: background 0s;
@@ -2173,7 +2197,7 @@ html {
   height: 18px;
 }
 
-.venom .text-field svg path:not([fill]) {
+.venom .text-field svg:not([fill]) {
   fill: #ccc;
 }
 
@@ -2308,22 +2332,19 @@ html {
 }
 
 .venom .tab {
-  background: #fff;
+  background: inherit;
   height: 100%;
-  padding: 0 12px;
+  width: 100%;
+  padding: 0;
   display: -webkit-box;
-  display: -ms-flexbox;
   display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: left;
-  -webkit-justify-content: left;
-      -ms-flex-pack: left;
-          justify-content: left;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  -webkit-flex-direction: column;
-          flex-direction: column;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .venom .tab--has-scroll {
@@ -3121,6 +3142,188 @@ html {
 
 .venom .hr.hr--is-dashed.hr--is-large {
   border-top: dashed 2px #ccc !important;
+}
+
+.venom .field {
+  margin: 12px 0;
+  position: relative;
+}
+
+.venom .field::after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+.venom .field__helper {
+  font-size: 12px;
+  font-weight: 400;
+  margin: 4px 12px;
+  color: #ccc;
+  max-width: 100%;
+  display: block;
+  line-height: 16px;
+}
+
+.venom .field svg {
+  width: 22px;
+  height: 22px;
+}
+
+.venom .field svg path:not([fill]) {
+  fill: #ccc;
+}
+
+.venom .field textarea {
+  resize: none;
+}
+
+.venom .field input,
+.venom .field textarea {
+  background-color: #fff;
+  border-radius: 4px;
+  border: solid 1px #999;
+  color: #1f1f1f;
+  display: block;
+  font-size: 16px;
+  padding: 8px 12px 8px 12px;
+  line-height: 22px;
+  outline: none;
+  -webkit-transition: 172ms ease all;
+  transition: 172ms ease all;
+  width: 100%;
+}
+
+.venom .field input:focus,
+.venom .field textarea:focus {
+  border-color: #00549e;
+  border-width: 2px;
+  padding: 7px 11px;
+}
+
+.venom .field input:focus::-webkit-input-placeholder, .venom .field textarea:focus::-webkit-input-placeholder {
+  opacity: 1;
+}
+
+.venom .field input:focus:-moz-placeholder, .venom .field textarea:focus:-moz-placeholder {
+  opacity: 1;
+}
+
+.venom .field input:focus::-moz-placeholder, .venom .field textarea:focus::-moz-placeholder {
+  opacity: 1;
+}
+
+.venom .field input:focus:-ms-input-placeholder, .venom .field textarea:focus:-ms-input-placeholder {
+  opacity: 1;
+}
+
+.venom .field input:focus ~ label,
+.venom .field input:valid ~ label,
+.venom .field textarea:focus ~ label,
+.venom .field textarea:valid ~ label {
+  top: -6px;
+  font-size: 12px;
+  color: #00549e;
+  left: 10px;
+  padding: 2px;
+  background: #fff;
+  font-size: 12px;
+  line-height: 1;
+}
+
+.venom .field input[type="password"] {
+  letter-spacing: 0.25em;
+}
+
+.venom .field label {
+  font-weight: 400;
+  font-size: 16px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 12px;
+  top: 10px;
+  -webkit-transition: 172ms ease all;
+  transition: 172ms ease all;
+}
+
+.venom .field--is-disabled input,
+.venom .field--is-disabled textarea {
+  border-color: #707070;
+  color: #333;
+  pointer-events: none;
+}
+
+.venom .field--is-disabled ~ label {
+  color: #333;
+}
+
+.venom .field--is-active input,
+.venom .field--is-active textarea {
+  border-color: #00549e;
+}
+
+.venom .field--is-active ~ label {
+  color: #00549e;
+}
+
+.venom .field--is-danger input,
+.venom .field--is-danger textarea {
+  border-color: #d62e2e !important;
+}
+
+.venom .field--is-danger input:focus ~ label,
+.venom .field--is-danger input:valid ~ label,
+.venom .field--is-danger textarea:focus ~ label,
+.venom .field--is-danger textarea:valid ~ label {
+  color: #d62e2e !important;
+}
+
+.venom .field--is-danger self__helper {
+  color: #d62e2e !important;
+}
+
+.venom .field--is-success input,
+.venom .field--is-success textarea {
+  border-color: #2E843f !important;
+}
+
+.venom .field--is-success input:focus ~ label,
+.venom .field--is-success input:valid ~ label,
+.venom .field--is-success textarea:focus ~ label,
+.venom .field--is-success textarea:valid ~ label {
+  color: #2E843f !important;
+}
+
+.venom .field--is-success self__helper {
+  color: #2E843f !important;
+}
+
+.venom .field--has-left-icon input,
+.venom .field--has-left-icon textarea {
+  padding-left: 40px !important;
+}
+
+.venom .field--has-left-icon label {
+  left: 40px;
+}
+
+.venom .field--has-left-icon .venom .field__icon--is-left {
+  left: 12px;
+}
+
+.venom .field--has-right-icon input,
+.venom .field--has-right-icon textarea {
+  padding-right: 40px !important;
+}
+
+.venom .field--has-right-icon .venom .field__icon--is-right {
+  right: 12px;
+}
+
+.venom .field .venom .field__icon {
+  position: absolute;
+  top: 10px;
 }
 
 .venom .helper--has-scroll-horizontal {
