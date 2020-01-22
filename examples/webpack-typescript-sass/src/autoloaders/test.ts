@@ -1,4 +1,4 @@
-import { Venom } from '@madeiramadeira/venom'
-;(() => {
+; (() => {
+  // @ts-ignore
   console.log('test-autoloader')
 })()

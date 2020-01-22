@@ -1,9 +1,8 @@
 import { TObserver } from './types';
 export declare const Venom: {
     observers: TObserver[];
-    subscribe: (instance: any) => void;
-    unsubscribe: (f: any) => void;
-    get: (alias?: string) => any;
-    getComponent: (alias?: string) => any;
-    update: (instance: TObserver, position: number) => any;
+    create: (instance: any) => number;
+    update: (uid: number, instance: TObserver) => void;
+    get: (aliasOrUid: string | number) => any;
+    delete: (f: any) => void;
 };

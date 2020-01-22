@@ -1,0 +1,1 @@
+{"version":3,"file":"username.js","sourceRoot":"","sources":["../../../src/utils/parsers/username.ts"],"names":[],"mappings":";;AAAA,SAAgB,aAAa,CAAC,KAAa;IACzC,IAAI,KAAK,KAAK,IAAI,IAAI,OAAO,KAAK,KAAK,WAAW;QAAE,OAAO,EAAE,CAAA;IAC7D,OAAO,KAAK;SACT,WAAW,EAAE;SACb,OAAO,CAAC,mEAAmE,EAAE,UAAC,MAAM,IAAK,OAAA,MAAM,CAAC,WAAW,EAAE,EAApB,CAAoB,CAAC,CAAA;AACnH,CAAC;AALD,sCAKC"}

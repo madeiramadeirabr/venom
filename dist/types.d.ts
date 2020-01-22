@@ -1,6 +1,9 @@
-import { Component } from './components/component';
+export declare type TAttachEvent = {
+    trigger: string;
+    callback: EventListener;
+};
 export declare type TObserver = {
     alias: string;
-    component: Component;
+    component: Object;
     subscribe(instance: any): Function;
 };
