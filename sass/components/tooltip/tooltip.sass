@@ -1,81 +1,81 @@
 .helper--has-tooltip
   position: ralative
 
-.helper--has-tooltip:hover + .tooltip,
-.helper--has-tooltip:focus + .tooltip
-  opacity: 1
-  pointer-events: inherit
-  top: $zero
-  left: 50%
+  &:hover + .tooltip,
+  &:focus + .tooltip
+    left: 50%
+    opacity: 1
+    pointer-events: inherit
+    top: $zero
 
-.venom
-  .tooltip
-    display: block
-    position: absolute
-    padding: $gap-regular
-    border-radius: $radius
-    background: $color-black-500
-    text-align: center
-    color: $color-white
-    opacity: $zero
-    pointer-events: none
-    z-index: 5
-    font-size: $size-small
-    +box-shadow
+.tooltip
+  $self: &
+  +box-shadow
+  background: $color-black-500
+  border-radius: $radius
+  color: $color-white
+  display: block
+  font-size: $size-small
+  opacity: $zero
+  padding: $gap-regular
+  pointer-events: none
+  position: absolute
+  text-align: center
+  z-index: 5
 
-    &:after
-      border-top: $radius solid $color-black-500
+  &:after // sass-lint:disable-line pseudo-element
+    border-top: $radius solid $color-black-500
 
-    &:hover
-      opacity: 1
-      pointer-events: inherit
+  &:hover
+    opacity: 1
+    pointer-events: inherit
 
-    &--is-bottom
-      &:after
-        content: ''
-        display: block
-        margin: $zero auto
-        width: $zero
-        height: $zero
-        border: $gap-small solid transparent
-        border-top: $gap-small solid $color-black-500
-        position: absolute
-        bottom: -($gap-small * 2)
-        left: calc(50% - #{$gap-small})
+  &#{$self}--is-bottom
+    &:after // sass-lint:disable-line pseudo-element
+      border: $gap-small solid transparent
+      border-top: $gap-small solid $color-black-500
+      bottom: -($gap-small * 2)
+      content: $content
+      display: block
+      height: $zero
+      left: calc(50% - #{$gap-small})
+      margin: $zero auto
+      position: absolute
+      width: $zero
 
-    &--is-top
-      &:after
-        content: ''
-        display: block
-        margin: $zero auto
-        width: $zero
-        height: $zero
-        border: $gap-small solid transparent
-        border-bottom: $gap-small solid $color-black-500
-        position: absolute
-        top: -($gap-small * 2)
-        left: calc(50% - #{$radius})
+  &#{$self}--is-top
+    &:after // sass-lint:disable-line pseudo-element
+      border: $gap-small solid transparent
+      border-bottom: $gap-small solid $color-black-500
+      content: ''
+      display: block
+      height: $zero
+      left: calc(50% - #{$radius})
+      margin: $zero auto
+      position: absolute
+      top: -($gap-small * 2)
+      width: $zero
 
-    &--is-right
-      &:after
-        content: ' '
-        display: block
-        width: $zero
-        height: $zero
-        border: $gap-small solid transparent
-        border-left: $gap-small solid $color-black-500
-        position: absolute
-        right: -($gap-small * 2)
-        top: calc(50% - #{$gap-small})
+  &#{$self}--is-right
+    &:after // sass-lint:disable-line pseudo-element
+      border: $gap-small solid transparent
+      border-left: $gap-small solid $color-black-500
+      content: ' '
+      display: block
+      height: $zero
+      position: absolute
+      right: -($gap-small * 2)
+      top: calc(50% - #{$gap-small})
+      width: $zero
 
-    &--is-left
-      &:after
-        content: ' '
-        display: block
-        width: $zero
-        height: $zero
-        border: $gap-small solid transparent
-        border-right: $gap-small solid $color-black-500
-        position: absolute
-        left: -($gap-small * 2)
-        top: calc(50% - #{$gap-small})
+  &#{$self}--is-left
+    &:after // sass-lint:disable-line pseudo-element
+      border: $gap-small solid transparent
+      border-right: $gap-small solid $color-black-500
+      content: ' '
+      display: block
+      height: $zero
+      left: -($gap-small * 2)
+      position: absolute
+      top: calc(50% - #{$gap-small})
+      width: $zero

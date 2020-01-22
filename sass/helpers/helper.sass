@@ -1,58 +1,57 @@
-.venom
-  .helper
+.helper
 
-    &--has-scroll-horizontal
-      overflow-x: scroll
-      padding-top: $gap-small
-      padding-bottom: $gap-small
+  &--has-scroll-horizontal
+    overflow-x: scroll
+    padding-bottom: $gap-small
+    padding-top: $gap-small
 
-    &--has-no-scroll
-      overflow: hidden !important
+  &--has-no-scroll
+    overflow: hidden !important // sass-lint:disable-line no-important
 
-    &--is-on-left
-      float: left
+  &--is-on-left
+    float: left
 
-    &--is-on-right
-      float: right
+  &--is-on-right
+    float: right
 
-    &--is-no-list-style
-      list-style: none
-      margin: $zero
-      padding: $zero
+  &--is-no-list-style
+    list-style: none
+    margin: $zero
+    padding: $zero
 
-    &--is-clearfix
-      +clearfix
+  &--is-clearfix
+    +clearfix
 
-    &--is-block
-      display: block
+  &--is-block
+    display: block
 
-    &--is-inline
-      display: inline
+  &--is-inline
+    display: inline
 
-    &--is-relative
-      position: relative
+  &--is-relative
+    position: relative
 
-    &--has-pointer
-      cursor: pointer
+  &--has-pointer
+    cursor: pointer
 
-    &--is-full-width
-      width: 100% !important
-      +border-box
+  &--is-full-width
+    +border-box
+    width: 100% !important // sass-lint:disable-line no-important
 
-    &--is-full-height
-      height: 100% !important
+  &--is-full-height
+    height: 100% !important // sass-lint:disable-line no-important
 
-    &--is-hidden
-      display: none !important
+  &--is-hidden
+    display: none !important // sass-lint:disable-line no-important
 
-    +for-size(desktop)
-      &--is-hidden-desktop
-        display: none !important
+  +for-size(desktop)
+    &--is-hidden-desktop
+      display: none !important // sass-lint:disable-line no-important
 
-    +for-size(tablet)
-      &--is-hidden-tablet
-        display: none !important
+  +for-size(tablet)
+    &--is-hidden-tablet
+      display: none !important // sass-lint:disable-line no-important
 
-    +for-size(mobile)
-      &--is-hidden-mobile
-        display: none !important
+  +for-size(mobile)
+    &--is-hidden-mobile
+      display: none !important // sass-lint:disable-line no-important

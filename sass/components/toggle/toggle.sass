@@ -1,66 +1,66 @@
 $toggle: '.toggle'
+$toggle-transition-color: cubic-bezier(.785, .135, .150, .860) // sass-lint:disable-line no-trailing-zero
 
-.venom
-  .toggle
-    width: 32px
-    height: 16px
-    border-radius: 8px
-    background-color: #ddd
-    overflow: hidden
-    position: relative
-    display: inline-block
+.toggle
+  background-color: $color-black-300
+  border-radius: 8px
+  cursor: pointer
+  display: inline-block
+  height: 16px
+  overflow: hidden
+  position: relative
+  width: 32px
+
+  &__check
     cursor: pointer
+    display: block
+    height: 100%
+    left: $zero
+    opacity: $zero
+    position: absolute
+    top: $zero
+    width: 100%
+    z-index: 6
 
-    &__check
-      position: absolute
-      display: block
-      cursor: pointer
-      top: $zero
-      left: $zero
-      width: 100%
-      height: 100%
-      opacity: $zero
-      z-index: 6
+  input
+    display: none
 
-    input
-      display: none
+  &#{ $toggle }--is-success
+    input:checked ~ #{ $toggle }__track // sass-lint:disable-line force-pseudo-nesting
+      box-shadow: inset $zero $zero $zero ($gap-regular * 2) $color-success
 
-    &#{ $toggle }--is-success
-      input:checked ~ #{ $toggle }__track
-        box-shadow: inset $zero $zero $zero ($gap-regular * 2) $color-success
+  &#{ $toggle }--is-danger
+    input:checked ~ #{ $toggle }__track // sass-lint:disable-line force-pseudo-nesting
+      box-shadow: inset $zero $zero $zero ($gap-regular * 2) $color-danger
 
-    &#{ $toggle }--is-danger
-      input:checked ~ #{ $toggle }__track
-        box-shadow: inset $zero $zero $zero ($gap-regular * 2) $color-danger
+  input:checked ~ #{ $toggle }__track // sass-lint:disable-line force-pseudo-nesting
+    box-shadow: inset $zero $zero $zero ($gap-regular * 2) $color-secondary
 
-    input:checked ~ #{ $toggle }__track
-      box-shadow: inset $zero $zero $zero ($gap-regular * 2) $color-secondary
+  input:checked ~ #{ $toggle }__switch // sass-lint:disable-line force-pseudo-nesting
+    left: 18px
+    right: 2px
+    transition: $transition-medium $toggle-transition-color
+    transition-delay: $transition-medium, 0s
+    transition-property: left, right
 
-    input:checked ~ #{ $toggle }__switch
-      right: 2px
-      left: 18px
-      transition: $transition-medium cubic-bezier(0.785, 0.135, 0.150, 0.860)
-      transition-property: left, right
-      transition-delay: $transition-medium, 0s
+  &__switch
+    background-color: $color-white
+    border-radius: $gap-regular
+    bottom: 2px
+    left: 2px
+    position: absolute
+    right: 18px
+    top: 2px
+    transition: $transition-medium $toggle-transition-color
+    transition-delay: 0s, $transition-medium
+    transition-property: left, right
+    z-index: 1
 
-    &__switch
-      position: absolute
-      left: 2px
-      top: 2px
-      bottom: 2px
-      right: 18px
-      background-color: #fff
-      border-radius: $gap-regular
-      z-index: 1
-      transition: $transition-medium cubic-bezier(0.785, 0.135, 0.150, 0.860)
-      transition-property: left, right
-      transition-delay: 0s, $transition-medium
-
-    &__track
-      position: absolute
-      left: $zero
-      top: $zero
-      right: $zero
-      bottom: $zero
-      transition: $transition-medium cubic-bezier(0.785, 0.135, 0.150, 0.860)
-      border-radius: $gap-regular
+  &__track
+    border-radius: $gap-regular
+    bottom: $zero
+    left: $zero
+    position: absolute
+    right: $zero
+    top: $zero
+    transition: $transition-medium $toggle-transition-color

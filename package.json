@@ -36,7 +36,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/madeiramadeirabe/venom.git"
+    "url": "git+https://github.com/madeiramadeirabr/venom.git"
   },
   "keywords": [
     "sass",
@@ -48,9 +48,9 @@
   "author": "William Novak",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/madeiramadeirabe/venom/issues"
+    "url": "https://github.com/madeiramadeirabr/venom/issues"
   },
-  "homepage": "https://github.com/madeiramadeirabe/venom#readme",
+  "homepage": "https://github.com/madeiramadeirabr/venom#readme",
   "dependencies": {},
   "engines": {
     "node": ">=6.0.0"

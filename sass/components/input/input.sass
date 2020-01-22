@@ -1,89 +1,86 @@
 $input-el: '.input'
 
-.venom
+.input
+  +clearfix
+  display: flex
+  flex-direction: row
+  font-size: $size-large
+  font-weight: $weight-regular
+  line-height: $gap-regular * 2
+  position: relative
+  width: 100%
 
-  .input
+  &:hover
+    #{$input-el}__marker
+      background: $color-black-100
 
-    display: flex
-    flex-direction: row
+  &__marker
+    background-color: $color-white
+    border: solid 2px $color-secondary
+    border-radius: 50%
+    height: $gap-regular * 2
+    left: $zero
+    position: absolute
+    top: $zero
+    width: $gap-regular * 2
+
+    &:after // sass-lint:disable-line pseudo-element
+      content: $content
+      display: none
+      position: absolute
+
+  &#{$input-el}__radio,
+  &#{$input-el}__checkbox
+    +unselectable
+    cursor: pointer
+    display: block
+    padding-left: $gap-regular * 3
     position: relative
-    width: 100%
-    line-height: $gap-regular * 2
-    font-size: $size-large
-    font-weight: $weight-regular
-    +clearfix
 
-    &:hover
-      #{$input-el}__marker
-        background: $color-black-100
+    input[type='checkbox'], // sass-lint:disable-line force-attribute-nesting no-qualifying-elements
+    input[type='radio'] // sass-lint:disable-line force-attribute-nesting no-qualifying-elements
+      cursor: pointer
+      opacity: $zero
+      position: absolute
+
+    &:checked
+      ~ #{$input-el}__marker
+        background-color: $color-white
+        border-color: $color-secondary
+
+        &:after // sass-lint:disable-line pseudo-element
+          display: block
+
+        ~ #{$input-el}__text
+          font-weight: $weight-bold
 
     #{$input-el}__marker
-      position: absolute
-      top: 0
-      left: 0
-      height: $gap-regular * 2
-      width: $gap-regular * 2
-      border-radius: 50%
-      background-color: $color-white
-      border: solid 2px $color-secondary
+      &:after // sass-lint:disable-line pseudo-element
+        background: $color-secondary
+        border-radius: 50%
+        height: 8px
+        left: 6px
+        top: 6px
+        width: 8px
 
-      &:after
-        content: ""
-        position: absolute
-        display: none
-
-    &#{$input-el}__radio,
-    &#{$input-el}__checkbox
-      display: block
-      position: relative
-      padding-left: $gap-regular * 3
-      cursor: pointer
-      +unselectable
-
-      input[type='checkbox'],
-      input[type='radio']
-        position: absolute
-        opacity: 0
-        cursor: pointer
-
-        &:checked
-          ~ #{$input-el}__marker
-            background-color: $color-white
-            border-color: $color-secondary
-
-            &:after
-              display: block
-
-          ~ #{$input-el}__text
-            font-weight: $weight-bold
-
-      #{$input-el}__marker
-        &:after
-          top: 6px
-          left: 6px
-          width: 8px
-          height: 8px
-          border-radius: 50%
-          background: $color-secondary
-
-      &:hover
-        input[type='radio']
-        ~ #{$input-el}__marker:after
-          content: ''
+    &:hover
+      input[type='radio'] // sass-lint:disable-line no-qualifying-elements force-attribute-nesting
+        ~ #{$input-el}__marker:after // sass-lint:disable-line pseudo-element force-pseudo-nesting
           border-radius: 50%
           box-shadow: $zero $zero $zero #{ $gap-small - 2 } $color-black-200
+          content: $content
 
-    &#{$input-el}__checkbox
-      #{$input-el}__marker
+  &#{$input-el}__checkbox
+    #{$input-el}__marker
+      border-radius: $zero
+
+      &:after // sass-lint:disable-line pseudo-element
+        background: $color-white
+        border: solid $color-secondary
         border-radius: $zero
-
-        &:after
-          left: 7px
-          top: 3px
-          width: 5px
-          height: 10px
-          border: solid $color-secondary
-          background: $color-white
-          border-width: $zero 2px 2px $zero
-          border-radius: $zero
-          transform: rotate(45deg)
+        border-width: $zero 2px 2px $zero
+        height: 10px
+        left: 7px
+        top: 3px
+        transform: rotate(45deg)
+        width: 5px

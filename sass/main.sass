@@ -11,206 +11,205 @@ html
   text-rendering: $body-rendering
   text-size-adjust: 100%
 
-.venom
-  body,
-  button,
-  input,
-  select,
-  textarea,
-  span,
-  small,
-  strong,
-  i
-    color: currentColor
-    +border-box
+body,
+button,
+input,
+select,
+textarea,
+span,
+small,
+strong,
+i
+  +border-box
+  color: currentColor
 
-  article,
-  aside,
-  figure,
-  footer,
-  header,
-  hgroup,
-  section
-    display: block
-    +border-box
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section
+  +border-box
+  display: block
 
-  div
-    +border-box
+div
+  +border-box
 
-  code,
-  pre
-    -moz-osx-font-smoothing: auto // sass-lint:disable-line no-vendor-prefixes
-    -webkit-font-smoothing: auto // sass-lint:disable-line no-vendor-prefixes
-    font-family: $family-monospace
+code,
+pre
+  -moz-osx-font-smoothing: auto // sass-lint:disable-line no-vendor-prefixes
+  -webkit-font-smoothing: auto // sass-lint:disable-line no-vendor-prefixes
+  font-family: $family-monospace
 
-  body
-    background-color: $color-black-100
-    color: $text !important
-    font-family: $family-sans-serif !important
-    font-weight: $weight-regular !important
-    letter-spacing: 0.25px
-    font-size: $size-regular !important
-    line-height: 20px !important
+body
+  background-color: $color-black-100
+  color: $text !important // sass-lint:disable-line no-important
+  font-family: $family-sans-serif !important // sass-lint:disable-line no-important
+  font-size: $size-regular !important // sass-lint:disable-line no-important
+  font-weight: $weight-regular !important // sass-lint:disable-line no-important
+  letter-spacing: .25px
+  line-height: 20px !important // sass-lint:disable-line no-important
 
-  a
-    color: $color-secondary
-    cursor: pointer
-    text-decoration: none
-    +border-box
-
-    strong
-      color: currentColor
-
-      &:hover
-        color: $color-secondary-600
-
-      &:active
-        color: $color-secondary-400
-
-      &:visited
-        color: $color-secondary-800
-
-  hr
-    border-width: 0
-    display: block
-    height: 1px
-    width: 100%
-    +clearfix
-
-  img
-    height: auto
-    width: 100%
-
-  input[type='checkbox'], // sass-lint:disable-line no-qualifying-elements force-attribute-nesting
-  input[type='radio'] // sass-lint:disable-line no-qualifying-elements force-attribute-nesting
-    vertical-align: baseline
-
-  button,
-  textarea,
-  select,
-  input
-    outline: none
-    +border-box
-
-  small
-    font-size: $size-small
-    line-height: 16px
-    font-weight: inherit
-
-  span
-    font-style: inherit
-    font-weight: inherit
+a
+  +border-box
+  color: $color-secondary
+  cursor: pointer
+  text-decoration: none
 
   strong
-    font-weight: $weight-bold
-
-  fieldset
-    border-width: 0
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  p
     color: currentColor
-    margin: $zero
+
+    &:hover
+      color: $color-secondary-600
+
+    &:active
+      color: $color-secondary-400
+
+    &:visited
+      color: $color-secondary-800
+
+hr
+  +clearfix
+  border-width: $zero
+  display: block
+  height: 1px
+  width: 100%
+
+img
+  height: auto
+  width: 100%
+
+input[type='checkbox'], // sass-lint:disable-line no-qualifying-elements force-attribute-nesting
+input[type='radio'] // sass-lint:disable-line no-qualifying-elements force-attribute-nesting
+  vertical-align: baseline
+
+button,
+textarea,
+select,
+input
+  +border-box
+  outline: none
+
+small
+  font-size: $size-small
+  font-weight: inherit
+  line-height: 16px
+
+span
+  font-style: inherit
+  font-weight: inherit
+
+strong
+  font-weight: $weight-bold
+
+fieldset
+  border-width: $zero
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p
+  +border-box
+  +clearfix
+  color: currentColor
+  margin: $zero
+  max-width: 100%
+  padding: $zero
+
+p
+  color: $color-black-700
+  font-size: $size-regular
+  line-height: 20px
+
+article
+  p + p
+    margin-bottom: $gap-default
+
+h1
+  font-size: 32px
+  font-weight: $weight-light
+  letter-spacing: .25px
+  line-height: 48px
+
+h2
+  font-size: 28px
+  font-weight: $weight-light
+  letter-spacing: .18px
+  line-height: 40px
+
+h3
+  font-size: 24px
+  font-weight: $weight-light
+  line-height: 36px
+
+h4
+  font-size: 20px
+  font-weight: $weight-semibold
+  letter-spacing: .25px
+  line-height: 30px
+
+h5
+  font-size: 18px
+  font-weight: $weight-semibold
+  letter-spacing: .5px
+  line-height: 24px
+
+h6
+  font-size: 18px
+  font-weight: $weight-semibold
+  letter-spacing: .25px
+  line-height: 24px
+
+pre
+  +clearfix
+  margin: $zero !important // sass-lint:disable-line no-important
+  overflow-x: auto
+  padding: $gap-regular !important // sass-lint:disable-line no-important
+  white-space: pre
+  word-wrap: normal
+
+  &:after // sass-lint:disable-line pseudo-element
+    content: $content
+    display: none
+
+  code
+    background-color: transparent
+    color: currentColor
     padding: $zero
-    max-width: 100%
-    +border-box
-    +clearfix
-
-  p
-    font-size: $size-regular
-    line-height: 20px
-    color: $color-black-700
-
-  article
-    p + p
-      margin-bottom: $gap-default
-
-  h1
-    font-size: 32px
-    line-height: 48px
-    font-weight: $weight-light
-    letter-spacing: 0.25px
-
-  h2
-    font-size: 28px
-    line-height: 40px
-    font-weight: $weight-light
-    letter-spacing: 0.18px
-
-  h3
-    font-size: 24px
-    line-height: 36px
-    font-weight: $weight-light
-
-  h4
-    font-size: 20px
-    line-height: 30px
-    font-weight: $weight-semibold
-    letter-spacing: 0.25px
-
-  h5
-    font-size: 18px
-    line-height: 24px
-    font-weight: $weight-semibold
-    letter-spacing: 0.5px
-
-  h6
-    font-size: 18px
-    line-height: 24px
-    font-weight: $weight-semibold
-    letter-spacing: 0.25px
-
-  pre
-    overflow-x: auto
     white-space: pre
     word-wrap: normal
-    padding: $gap-regular !important
-    margin: 0 !important
-    +clearfix
 
-    &:after
-      content: ""
-      display: none
+table
+  td,
+  th
+    vertical-align: top
 
-    code
-      background-color: transparent
-      color: currentColor
-      padding: $zero
-      white-space: pre
-      word-wrap: normal
+    &:not([align])
+      text-align: left
 
-  table
-    td,
-    th
-      vertical-align: top
-
-      &:not([align])
-        text-align: left
-
-  svg
-    path
+svg
+  path
     &:not([fill])
       fill: currentColor
 
-  [class*="-success"]
-    svg
-      path
-      &:not([fill])
+[class*='-success']
+  svg
+    path
+      &:not([fill]) // sass-lint:disable-line nesting-depth
         fill: $color-success
 
-  [class*="-danger"]
-    svg
-      path
-      &:not([fill])
+[class*='-danger']
+  svg
+    path
+      &:not([fill]) // sass-lint:disable-line nesting-depth
         fill: $color-danger
 
-  [class*="-warning"]
-    svg
-      path
-      &:not([fill])
+[class*='-warning']
+  svg
+    path
+      &:not([fill]) // sass-lint:disable-line nesting-depth
         fill: $color-warning

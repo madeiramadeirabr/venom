@@ -1,52 +1,50 @@
-.venom
-  .collapse
-    &__title
-      color: $text
-      flex: 1
-      font-size: $size-regular
-      font-weight: $weight-regular
-      line-height: 1.1
-      transition: color $transition $easing
+.collapse
+  &__title
+    color: $text
+    flex: 1
+    font-size: $size-regular
+    font-weight: $weight-regular
+    line-height: 1.1
+    transition: color $transition $easing
 
-    &__container
-      border-radius: $radius
-      cursor: pointer
-      display: flex
-      flex-direction: row
-      flex-wrap: wrap
-      width: 100%
-      +border-box
-      +box-shadow
+  &__container
+    +border-box
+    +box-shadow
+    border-radius: $radius
+    cursor: pointer
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    width: 100%
 
-    &__content
-      background-color: #eee
-      margin: 0 $gap-regular
-      width: 100%
-      padding: $gap-regular
-      box-sizing: border-box
-      font-size: $size-regular
-      border: 1px solid $color-black-400
-      border-radius: $radius
-      margin-bottom: $gap-regular
+  &__content
+    background-color: $color-black-200
+    border: 1px solid $color-black-400
+    border-radius: $radius
+    box-sizing: border-box
+    font-size: $size-regular
+    margin: $zero $zero $gap-regular
+    padding: $gap-regular
+    width: 100%
 
-    &__open
-      margin-right: $gap-regular
-      cursor: pointer
-      width: $size-regular
-      background: $color-black-800
-      border: none
-      padding: $zero
+  &__open
+    background: $color-black-800
+    border: $zero
+    cursor: pointer
+    margin-right: $gap-regular
+    padding: $zero
+    width: $size-regular
 
-      &::after
-        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>')
+    &::after
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.12 9.29L12 13.17l3.88-3.88c.39-.39 1.02-.39 1.41 0 .39.39.39 1.02 0 1.41l-4.59 4.59c-.39.39-1.02.39-1.41 0L6.7 10.7c-.39-.39-.39-1.02 0-1.41.39-.38 1.03-.39 1.42 0z"/></svg>')
 
-    &__close
-      margin-right: $gap-regular
-      cursor: pointer
-      width: $size-regular
-      background: $color-black-800
-      border: none
-      padding: $zero
+  &__close
+    background: $color-black-800
+    border: $zero
+    cursor: pointer
+    margin-right: $gap-regular
+    padding: $zero
+    width: $size-regular
 
-      &::after
-        content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.12 14.71L12 10.83l3.88 3.88c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 8.71c-.39-.39-1.02-.39-1.41 0L6.7 13.3c-.39.39-.39 1.02 0 1.41.39.38 1.03.39 1.42 0z"/></svg>')
+    &::after
+      content: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.12 14.71L12 10.83l3.88 3.88c.39.39 1.02.39 1.41 0 .39-.39.39-1.02 0-1.41L12.7 8.71c-.39-.39-1.02-.39-1.41 0L6.7 13.3c-.39.39-.39 1.02 0 1.41.39.38 1.03.39 1.42 0z"/></svg>')

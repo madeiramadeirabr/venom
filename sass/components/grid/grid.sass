@@ -1,85 +1,84 @@
-.venom
-  .grid__row
-    display: flex
-    flex-flow: row wrap
-    flex-wrap: wrap
-    width: calc(100% + #{$desktop-column-gap * 2})
-    margin: $zero -#{$desktop-column-gap}
-    +border-box
+.grid__row
+  +border-box
+  display: flex
+  flex-flow: row wrap
+  flex-wrap: wrap
+  margin: $zero -#{$desktop-column-gap}
+  width: calc(100% + #{$desktop-column-gap * 2})
+
+  &--is-reverse
+    flex-direction: row-reverse
+
+.grid__columns
+  +border-box
+  display: flex
+  flex-direction: column
+  flex-flow: column wrap
+  flex-wrap: wrap
+  height: auto
+  margin: $zero -#{$desktop-column-gap}
+  width: calc(100% + #{$desktop-column-gap * 2})
+
+  &--is-reverse
+    flex-direction: column-reverse
+
+.grid__row,
+.grid__columns
+  &--has-no-gutters
+    margin: $zero !important // sass-lint:disable-line no-important
+    width: 100% !important // sass-lint:disable-line no-important
+
+    > .grid__column
+      margin: $zero !important // sass-lint:disable-line no-important
+
+.grid__column
+  +border-box
+  flex: 1
+  margin: $zero $desktop-column-gap
+
+  &--is-first
+    order: -1
+
+  &--is-last
+    order: 1
+
+  &--is-auto
+    flex: initial
+
+  @each $name, $count in $numbers
+    &--is-#{$name}
+      flex: 0 0 calc(#{ $count/12 * 100% } - #{$desktop-column-gap * 2})
+
+  +for-size(mobile)
+    .grid__row
+      margin: $zero -#{$mobile-column-gap}
+      width: calc(100% + #{$mobile-column-gap * 2})
 
     &--is-reverse
       flex-direction: row-reverse
 
   .grid__columns
-    display: flex
-    flex-direction: column
-    flex-flow: column wrap
-    flex-wrap: wrap
-    height: auto
-    width: calc(100% + #{$desktop-column-gap * 2})
-    margin: $zero -#{$desktop-column-gap}
-    +border-box
+    margin: $zero -#{$mobile-column-gap}
+    width: calc(100% + #{$mobile-column-gap * 2})
 
     &--is-reverse
       flex-direction: column-reverse
 
-  .grid__row,
-  .grid__columns
-    &--has-no-gutters
-      margin: $zero !important
-      width: 100% !important
-
-      > .grid__column
-        margin: $zero !important
-
   .grid__column
-    flex: 1
-    margin: $zero $desktop-column-gap
-    +border-box
+    margin: $zero $mobile-column-gap
 
-    &--is-first
-      order: -1
+    &--is-first-mobile
+      order: -1 !important // sass-lint:disable-line no-important
 
-    &--is-last
-      order: 1
+    &--is-last-mobile
+      order: 1 !important // sass-lint:disable-line no-important
 
-    &--is-auto
-      flex: initial
+    &--is-auto-mobile
+      flex: initial !important // sass-lint:disable-line no-important
 
     @each $name, $count in $numbers
       &--is-#{$name}
-        flex: 0 0 calc(#{ $count/12 * 100% } - #{$desktop-column-gap * 2})
+        flex: 0 0 calc(#{ $count/12 * 100% } - #{$mobile-column-gap * 2})
 
-  +for-size(mobile)
-    .grid__row
-      width: calc(100% + #{$mobile-column-gap * 2})
-      margin: $zero -#{$mobile-column-gap}
-
-      &--is-reverse
-        flex-direction: row-reverse
-
-    .grid__columns
-      width: calc(100% + #{$mobile-column-gap * 2})
-      margin: $zero -#{$mobile-column-gap}
-
-      &--is-reverse
-        flex-direction: column-reverse
-
-    .grid__column
-      margin: $zero $mobile-column-gap
-
-      &--is-first-mobile
-        order: -1 !important
-
-      &--is-last-mobile
-        order: 1 !important
-
-      &--is-auto-mobile
-        flex: initial !important
-
-      @each $name, $count in $numbers
-        &--is-#{$name}
-          flex: 0 0 calc(#{ $count/12 * 100% } - #{$mobile-column-gap * 2})
-
-        &--is-#{$name}-mobile
-          flex: 0 0 calc(#{ $count/12 * 100% } - #{$mobile-column-gap * 2}) !important
+      &--is-#{$name}-mobile
+        flex: 0 0 calc(#{ $count/12 * 100% } - #{$mobile-column-gap * 2}) !important // sass-lint:disable-line no-important

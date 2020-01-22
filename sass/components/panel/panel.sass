@@ -1,34 +1,34 @@
 $description: '.panel__description'
-.venom
-  .panel
-    $self: '.panel'
-    background-color: $color-white
 
-    &__body
-      display: none
-      height: $zero
-      transition: height $transition-medium $easing
+.panel
+  $self: '.panel'
+  background-color: $color-white
 
-    &__arrow
-      cursor: pointer
+  &__body
+    display: none
+    height: $zero
+    transition: height $transition-medium $easing
 
+  &__arrow
+    cursor: pointer
+
+    svg
+      margin-right: -4px
+      transition: transform $transition-medium $easing
+
+  &--is-open
+    #{$self}__arrow
       svg
-        margin-right: -4px
-        transition: transform $transition-medium $easing
+        transform: rotate(180deg)
 
-    &--is-open
-      .panel__arrow
-        svg
-          transform: rotate(180deg)
+    #{$self}__body
+      display: block !important // sass-lint:disable-line no-important
+      height: 100%
 
-      .panel__body
-        height: 100%
-        display: block !important
+  &--has-description
+    #{ $description }
+      display: block
 
-    &--has-description
-      #{ $description }
-        display: block
-
-    &--has-no-description
-      #{ $description }
-        display: none !important
+  &--has-no-description
+    #{ $description }
+      display: none !important // sass-lint:disable-line no-important

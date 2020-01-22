@@ -1,137 +1,136 @@
-.venom
-  .field
-    $self: &
-    margin: $gap-regular $zero
-    position: relative
-    +clearfix
+.field
+  $self: '.field'
+  +clearfix
+  margin: $zero
+  position: relative
 
-    &__helper
-      font-size: $size-extra-small
-      font-weight: $weight-regular
-      margin: $base $gap-regular
-      color: $color-black-300
-      max-width: 100%
-      display: block
-      line-height: 16px
+  &__feedback
+    color: $color-black-300
+    display: block
+    font-size: $size-extra-small
+    font-weight: $weight-regular
+    line-height: 16px
+    margin: $base $gap-regular
+    max-width: 100%
 
-    svg
-      width: 22px
-      height: 22px
+  svg
+    height: 22px
+    width: 22px
 
-      path
-        &:not([fill])
-          fill: $color-black-300
+    path
+      &:not([fill])
+        fill: $color-black-300
 
-    textarea
-      resize: none
+  textarea
+    resize: none
 
+  input,
+  textarea
+    background-color: $color-white
+    border: solid $border-width $color-black-400
+    border-radius: $radius
+    color: $color-text
+    display: block
+    font-size: $size-large
+    line-height: 22px
+    outline: none
+    padding: $gap-small $gap-regular
+    transition: $transition-medium ease border, $transition-medium ease opacity, $transition-medium ease padding
+    width: 100%
+
+    &:focus
+      +placeholder
+      border-color: $color-secondary
+      border-width: 2px
+      opacity: 1
+      padding: #{$gap-small - 1px} #{$gap-regular - 1px}
+
+    &:focus ~ label,
+    &:valid ~ label
+      background: $color-white
+      color: $color-secondary
+      font-size: $size-small
+      left: $gap-regular - 2px
+      line-height: 1
+      padding: 2px
+      top: -#{$gap-regular / 2}
+
+  input[type='password'] // sass-lint:disable-line no-qualifying-elements force-attribute-nesting
+    letter-spacing: .25em
+
+  label
+    font-size: $size-large
+    font-weight: $weight-regular
+    left: $gap-regular
+    pointer-events: none
+    position: absolute
+    top: $gap-regular - 2px
+    transition: $transition-medium ease left, $transition-medium ease top
+
+  &#{$self}--is-disabled
     input,
     textarea
-      background-color: $color-white
-      border-radius: $radius
-      border: solid $border-width $color-black-400
-      color: $color-text
-      display: block
-      font-size: $size-large
-      padding: $gap-small $gap-regular $gap-small $gap-regular
-      line-height: 22px
-      outline: none
-      transition: $transition-medium ease all
-      width: 100%
+      border-color: $color-black-500
+      color: $color-black-700
+      pointer-events: none
 
-      &:focus
-        border-color: $color-secondary
-        border-width: 2px
-        padding: #{$gap-small - 1px} #{$gap-regular - 1px}
+    &~ label
+      color: $color-black-700
 
-        +placeholder
-          opacity: 1
+  &#{$self}--is-active
+    input,
+    textarea
+      border-color: $color-secondary
+
+    &~ label
+      color: $color-secondary
+
+    #{$self}__helper
+      color: $color-secondary // sass-lint:disable-line no-important
+
+  &#{$self}--is-danger
+    input,
+    textarea
+      border-color: $color-danger // sass-lint:disable-line no-important
 
       &:focus ~ label,
       &:valid ~ label
-        top: -#{$gap-regular / 2}
-        font-size: $size-small
-        color: $color-secondary
-        left: $gap-regular - 2px
-        padding: 2px
-        background: $color-white
-        font-size: $size-small
-        line-height: 1
+        color: $color-danger // sass-lint:disable-line no-important
 
-    input[type="password"]
-      letter-spacing: 0.25em
+    #{$self}__helper
+      color: $color-danger // sass-lint:disable-line no-important
+
+  &#{$self}--is-success
+    input,
+    textarea
+      border-color: $color-success // sass-lint:disable-line no-important
+
+      &:focus ~ label,
+      &:valid ~ label
+        color: $color-success // sass-lint:disable-line no-important
+
+    #{$self}__helper
+      color: $color-success // sass-lint:disable-line no-important
+
+  &#{$self}--has-left-icon
+    input,
+    textarea
+      padding-left: 40px // sass-lint:disable-line no-important
 
     label
-      font-weight: $weight-regular
-      font-size: $size-large
-      font-weight: normal
-      position: absolute
-      pointer-events: none
+      left: 40px
+
+    #{$self}__icon--is-left
       left: $gap-regular
-      top: $gap-regular - 2px
-      transition: $transition-medium ease all
 
-    &--is-disabled
-      input,
-      textarea
-        border-color: $color-black-500
-        color: $color-black-700
-        pointer-events: none
+  &#{$self}--has-right-icon
+    input,
+    textarea
+      padding-right: 40px // sass-lint:disable-line no-important
 
-      &~ label
-        color: $color-black-700
+    #{$self}__icon--is-right
+      right: $gap-regular
 
-    &--is-active
-      input,
-      textarea
-        border-color: $color-secondary
-
-      &~ label
-        color: $color-secondary
-
-    &--is-danger
-      input,
-      textarea
-        border-color: $color-danger !important
-
-        &:focus ~ label,
-        &:valid ~ label
-          color: $color-danger !important
-
-      #{self}__helper
-        color: $color-danger !important
-
-    &--is-success
-      input,
-      textarea
-        border-color: $color-success !important
-
-        &:focus ~ label,
-        &:valid ~ label
-          color: $color-success !important
-
-      #{self}__helper
-        color: $color-success !important
-
-    &--has-left-icon
-      input,
-      textarea
-        padding-left: 40px !important
-
-      label
-        left: 40px
-
-      #{$self}__icon--is-left
-        left: $gap-regular
-
-    &--has-right-icon
-      input,
-      textarea
-        padding-right: 40px !important
-
-      #{$self}__icon--is-right
-        right: $gap-regular
-
-    #{$self}__icon
-      position: absolute
-      top: $gap-regular - 2px
+  &__icon
+    position: absolute
+    top: $gap-regular - 2px

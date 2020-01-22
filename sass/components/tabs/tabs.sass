@@ -1,71 +1,44 @@
-.venom
-  .tab
-    background: inherit
-    height: 100%
-    width: 100%
-    padding: $zero
-    display: flex
-    flex-direction: row
+.tab
+  $self: &
+  background: inherit
+  display: flex
+  flex-direction: row
+  height: 100%
+  padding: $zero
+  width: 100%
 
-    &--has-scroll
-      overflow-x: auto
+  &--has-scroll
+    overflow-x: auto
 
-    .tab__item
-      min-width: 150px
-      padding: $gap-regular
-      margin: 0 $gap-extra-small -1px
-      color: $color-black-800
-      overflow: hidden
-      text-align: center
-      -webkit-box-flex: 1
-      -ms-flex-positive: 1
-      flex-grow: 1
-      cursor: pointer
-      position: relative
-      flex-shrink: $zero
-      -webkit-user-select: none
-      -moz-user-select: none
-      -ms-user-select: none
-      -o-user-select: none
-      user-select: none
-      transition: background $transition-click
-      background-position: center
-      justify-content: center
-      border-bottom: transparent solid 2px
+  &__item
+    background-position: center
+    border-bottom: transparent solid 2px
+    color: $color-black-800
+    cursor: pointer
+    flex-grow: 1
+    flex-shrink: $zero
+    justify-content: center
+    margin: 0 $gap-extra-small -1px
+    min-width: 150px
+    overflow: hidden
+    padding: $gap-regular
+    position: relative
+    text-align: center
+    transition: background $transition-click
+    user-select: none
 
-      &:hover,
-      &:focus,
-        background-color: $color-black-400
-        background: $color-black-300 radial-gradient(circle, transparent 1%, $color-black-400 1%) center/15000%
+    &:hover,
+    &:focus
+      background: $color-black-300 radial-gradient(circle, transparent 1%, $color-black-400 1%) center / 15000%
+      background-color: $color-black-400
 
-      &:active
-        background-size: 100%
-        transition: background 0s
+    &:active
+      background-size: 100%
+      transition: background 0s
 
-      &--has-indicator
-        background: $color-black-300
-        border-bottom: $color-secondary solid 2px
+    &#{$self}--has-indicator
+      background: $color-black-300
+      border-bottom: $color-secondary solid 2px
 
-    &--is-oldstyle
-      border-bottom: $color-black-400 1px solid
-      .tab__item
-        background: $color-black-300
-        border: $color-black-400 1px solid
-
-        &:hover,
-        &:focus,
-          background-color: $color-white
-          background: $color-white radial-gradient(circle, transparent 1%, rgba(0,0,0,0.05) 1%) center/15000%
-
-        &:active
-          background-size: 100%
-          transition: background 0s
-
-        &--has-indicator
-          border-bottom-color: $color-white
-          background-color: $color-white
-          color: $color-secondary
-
-  @media screen and (max-width: $tablet-width)
-    .tab
-      overflow-x: auto
++for-size(mobile)
+  overflow-x: auto

@@ -1,112 +1,111 @@
-.venom
-  .helper
-    &--has-text
+.helper
+  &--has-text
 
-      &-subititle
-        font-size: $size-large
-        letter-spacing: .15px
-        font-weight: $size-regular
+    &-subititle
+      font-size: $size-large
+      font-weight: $size-regular
+      letter-spacing: .15px
 
-      &-caption
-        font-size: $size-small
-        letter-spacing: .4px
-        font-weight: $size-regular
+    &-caption
+      font-size: $size-small
+      font-weight: $size-regular
+      letter-spacing: .4px
 
-      &-overline
-        font-size: $size-small
-        letter-spacing: 2px
-        text-transform: uppercase
-        font-weight: $size-regular
+    &-overline
+      font-size: $size-small
+      font-weight: $size-regular
+      letter-spacing: 2px
+      text-transform: uppercase
 
-      &-link
-        color: $color-secondary !important
-        text-decoration: underline $color-secondary !important
-        font-weight: $weight-bold !important
-        font-size: $size-regular !important
-        line-height: 20px
+    &-link
+      color: $color-secondary !important // sass-lint:disable-line no-important
+      font-size: $size-regular !important // sass-lint:disable-line no-important
+      font-weight: $weight-bold !important // sass-lint:disable-line no-important
+      line-height: 20px
+      text-decoration: underline $color-secondary !important // sass-lint:disable-line no-important
 
-      &-light
-        font-weight: $weight-light !important
+    &-light
+      font-weight: $weight-light !important // sass-lint:disable-line no-important
 
-      &-regular
-        font-weight: $weight-regular !important
+    &-regular
+      font-weight: $weight-regular !important // sass-lint:disable-line no-important
 
-      &-semibold
-        font-weight: $weight-semibold !important
+    &-semibold
+      font-weight: $weight-semibold !important // sass-lint:disable-line no-important
 
-      &-bold
-        font-weight: $weight-bold !important
+    &-bold
+      font-weight: $weight-bold !important // sass-lint:disable-line no-important
 
-      &-extra-small
-        font-size: $size-extra-small !important
-        line-height: 16px !important
+    &-extra-small
+      font-size: $size-extra-small !important // sass-lint:disable-line no-important
+      line-height: 16px !important // sass-lint:disable-line no-important
 
-      &-small
-        font-size: $size-small !important
-        line-height: 16px !important
+    &-small
+      font-size: $size-small !important // sass-lint:disable-line no-important
+      line-height: 16px !important // sass-lint:disable-line no-important
 
-      &-large
-        font-size: $size-large !important
-        line-height: 22px !important
+    &-large
+      font-size: $size-large !important // sass-lint:disable-line no-important
+      line-height: 22px !important // sass-lint:disable-line no-important
 
-      &-extra-large
-        font-size: $size-extra-large !important
-        line-height: 27px !important
+    &-extra-large
+      font-size: $size-extra-large !important // sass-lint:disable-line no-important
+      line-height: 27px !important // sass-lint:disable-line no-important
 
-      &-base-line
-        line-height: 1 !important
+    &-base-line
+      line-height: 1 !important // sass-lint:disable-line no-important
 
-      &-left
-        text-align: left
+    &-left
+      text-align: left
 
-      &-center
-        text-align: center
+    &-center
+      text-align: center
 
-      &-right
-        text-align: right
+    &-right
+      text-align: right
 
-      &-justify
-        text-align: justify
+    &-justify
+      text-align: justify
 
-      &-upper
-        text-transform: uppercase
+    &-upper
+      text-transform: uppercase
 
-      &-truncated
-        display: block
-        overflow: hidden
-        text-overflow: ellipsis
-        white-space: nowrap
+    &-truncated
+      display: block
+      overflow: hidden
+      text-overflow: ellipsis
+      white-space: nowrap
 
-      &-white
-        color: $color-white !important
+    &-white
+      color: $color-white !important // sass-lint:disable-line no-important
 
-      &-grey-one
-        color: $color-black-100 !important
+    &-grey-one
+      color: $color-black-100 !important // sass-lint:disable-line no-important
 
-      &-grey-two
-        color: $color-black-200 !important
+    &-grey-two
+      color: $color-black-200 !important // sass-lint:disable-line no-important
 
-      &-grey-three
-        color: $color-black-300 !important
+    &-grey-three
+      color: $color-black-300 !important // sass-lint:disable-line no-important
 
-      &-grey-four
-        color: $color-black-400 !important
+    &-grey-four
+      color: $color-black-400 !important // sass-lint:disable-line no-important
 
-      &-grey-five
-        color: $color-black-500 !important
+    &-grey-five
+      color: $color-black-500 !important // sass-lint:disable-line no-important
 
-      &-grey-six
-        color: $color-black-600 !important
+    &-grey-six
+      color: $color-black-600 !important // sass-lint:disable-line no-important
 
-      &-grey-seven
-        color: $color-black-700 !important
+    &-grey-seven
+      color: $color-black-700 !important // sass-lint:disable-line no-important
 
-      &-grey-eight
-        color: $color-black-800 !important
+    &-grey-eight
+      color: $color-black-800 !important // sass-lint:disable-line no-important
 
-      &-black
-        color: $color-black-800 !important
+    &-black
+      color: $color-black-800 !important // sass-lint:disable-line no-important
 
-      @each $color, $value in $color-regular-map
-        &-#{$color}
-          color: $value !important
+    @each $color, $value in $color-regular-map
+      &-#{$color}
+        color: $value !important // sass-lint:disable-line no-important

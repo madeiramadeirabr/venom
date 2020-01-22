@@ -1,33 +1,27 @@
-.venom
-  .container
-    $self: '.container'
-    margin: $zero auto
-    width: 100%
-    padding-left: ($desktop-column-gap * 2)
-    padding-right: ($desktop-column-gap * 2)
-
-    &--is-full-width
-      max-width: 100% !important
-      width: 100% !important
-      padding: $zero !important
-
+.container
   +for-size(desktop)
-    .container
-      width: $desktop-width
+    width: $desktop-width
+
 
   +for-size(mobile)
-    .container
-      margin: $zero
-      width: calc(100% - #{($mobile-column-gap * 4)}) !important
-      padding-left: ($mobile-column-gap * 2)
-      padding-right: ($mobile-column-gap * 2)
+    margin: $zero
+    padding-left: ($mobile-column-gap * 2)
+    padding-right: ($mobile-column-gap * 2)
+    width: calc(100% - #{($mobile-column-gap * 4)}) !important // sass-lint:disable-line no-important
 
-      &--is-full-width
-        max-width: 100vw !important
-        width: 100vw !important
-        padding: $zero !important
+    &--is-full-width-mobile
+      margin: $zero !important // sass-lint:disable-line no-important
+      padding: $zero !important // sass-lint:disable-line no-important
+      width: 100vw !important // sass-lint:disable-line no-important
 
-      &--is-full-width-mobile
-        width: 100vw !important
-        padding: $zero !important
-        margin: $zero !important
+
+  $self: '.container'
+  margin: $zero auto
+  padding-left: ($desktop-column-gap * 2)
+  padding-right: ($desktop-column-gap * 2)
+  width: 100%
+
+  &--is-full-width
+    max-width: 100vw !important // sass-lint:disable-line no-important
+    padding: $zero !important // sass-lint:disable-line no-important
+    width: 100vw !important // sass-lint:disable-line no-important

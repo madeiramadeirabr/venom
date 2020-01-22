@@ -1,18 +1,17 @@
-.venom
-  .hr
-    background-color: $color-black-300
-    border: none
-    height: 1px
-    width: 100%
-    +clearfix
+.hr
+  +clearfix
+  background-color: $color-black-300
+  border: $zero
+  height: 1px
+  width: 100%
+
+  &.hr--is-large
+    height: 2px
+
+  &.hr--is-dashed
+    background-color: inherit !important // sass-lint:disable-line no-important
+    border-top: dashed 1px $color-black-300  !important // sass-lint:disable-line no-important
+    height: $zero !important // sass-lint:disable-line no-important
 
     &.hr--is-large
-      height: 2px
-
-    &.hr--is-dashed
-      height: $zero !important
-      border-top: dashed 1px $color-black-300  !important
-      background-color: inherit !important
-
-      &.hr--is-large
-        border-top: dashed 2px $color-black-300 !important
+      border-top: dashed 2px $color-black-300 !important // sass-lint:disable-line no-important

@@ -1,56 +1,56 @@
-.venom
-  .pricetag
-    white-space: nowrap
-    position: relative
-    margin: $zero
-    display: inline-block
-    height: $gap-regular * 2
-    padding: $zero $gap-regular
-    background: $color-black-300
-    border: 0 solid $color-black-300
-    border-top-width: 1px
-    border-bottom-width: 1px
-    color: $color-white
-    line-height: $gap-regular * 2
+.pricetag
+  $self: &
+  background: $color-black-300
+  border: $zero solid $color-black-300
+  border-bottom-width: 1px
+  border-top-width: 1px
+  color: $color-white
+  display: inline-block
+  height: $gap-regular * 2
+  line-height: $gap-regular * 2
+  margin: $zero
+  padding: $zero $gap-regular
+  position: relative
+  white-space: nowrap
 
-    &--is-success
-      background: $color-success
-      border: 0 solid $color-success
+  &#{$self}--is-success
+    background: $color-success
+    border: $zero solid $color-success
 
-      &:before
-        border-right: $gap-regular solid $color-success !important
+    &:before // sass-lint:disable-line pseudo-element
+      border-right: $gap-regular solid $color-success !important // sass-lint:disable-line no-important
 
-    &--is-danger
-      background: $color-danger
-      border: 0 solid $color-danger
+  &#{$self}--is-danger
+    background: $color-danger
+    border: 0 solid $color-danger
 
-      &:before
-        border-right: $gap-regular solid $color-danger !important
+    &:before // sass-lint:disable-line pseudo-element
+      border-right: $gap-regular solid $color-danger !important // sass-lint:disable-line no-important
 
-    &--is-primary
-      background: $color-primary
-      border: 0 solid $color-primary
+  &#{$self}--is-primary
+    background: $color-primary
+    border: 0 solid $color-primary
 
-      &:before
-        border-right: $gap-regular solid $color-secondary !important
+    &:before // sass-lint:disable-line pseudo-element
+      border-right: $gap-regular solid $color-secondary !important // sass-lint:disable-line no-important
 
-    &--is-secondary
-      background: $color-secondary
-      border: 0 solid $color-secondary
+  &#{$self}--is-secondary
+    background: $color-secondary
+    border: 0 solid $color-secondary
 
-      &:before
-        border-right: $gap-regular solid $color-secondary !important
+    &:before // sass-lint:disable-line pseudo-element
+      border-right: $gap-regular solid $color-secondary !important // sass-lint:disable-line no-important
 
-    &:before
-      position: absolute
-      content: " "
-      font-size: $size-regular
-      line-height: $zero
-      text-indent: $size-regular
-      left: -$gap-regular
-      top: $zero
-      width: $zero
-      height: $zero
-      border-right: $gap-regular solid $color-black-300
-      border-top: $gap-regular solid transparent
-      border-bottom: $gap-regular solid transparent
+  &:before // sass-lint:disable-line pseudo-element
+    border-bottom: $gap-regular solid transparent
+    border-right: $gap-regular solid $color-black-300
+    border-top: $gap-regular solid transparent
+    content: $content
+    font-size: $size-regular
+    height: $zero
+    left: -$gap-regular
+    line-height: $zero
+    position: absolute
+    text-indent: $size-regular
+    top: $zero
+    width: $zero
