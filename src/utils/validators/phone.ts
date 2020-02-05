@@ -70,30 +70,43 @@ const DDD = [
 
 export function phoneIsValid(value: string, isMobile: boolean = false) {
 
+  // @ts-ignore
   this.value = value.replace(/\D/g, '')
+  // @ts-ignore
   this.isMobile = isMobile
+  // @ts-ignore
   this.isValid = false
+  // @ts-ignore
   this.message = `O ${isMobile ? 'celular' : 'telfone'} informado é válido`
 
+  // @ts-ignore
   this.getMessage = function () {
     return this.message
   }
 
+  // @ts-ignore
   const ddd = `${this.value[0]}${this.value[1]}`,
+    // @ts-ignore
     third = this.value[2].toString()
 
   if (!DDD.includes(ddd)) {
+    // @ts-ignore
     this.message = `O DDD ${ddd} não é válido, tente outro`
+    // @ts-ignore
     this.isValid = false
   }
 
   if (third !== '9' && isMobile) {
-    this.message = `Deve conter 9 após o DDD`
+    // @ts-ignore
+    this.message = 'Deve conter 9 após o DDD'
+    // @ts-ignore
     this.isValid = false
   }
 
+  // @ts-ignore
   this.isValid = this.isMobile ? this.value.length === 11 : this.value.length === 10 || this.value.length === 11
 
+  // @ts-ignore
   return this.isValid
 }
 

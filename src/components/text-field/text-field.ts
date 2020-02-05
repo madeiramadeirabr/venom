@@ -10,8 +10,11 @@ export const TEXTFIELD_DISABLED_MODIFIER: string = 'field--is-disabled',
 
 export class TextField extends Component {
 
+  // @ts-ignore
   private _container: HTMLDivElement
+  // @ts-ignore
   private _feedback: HTMLSpanElement
+  // @ts-ignore
   private _label: HTMLLabelElement
 
   constructor(el: HTMLInputElement | HTMLTextAreaElement) {

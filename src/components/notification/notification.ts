@@ -13,7 +13,9 @@ export const
 
 export class Notification extends Component {
 
+  // @ts-ignore
   private _content: HTMLElement
+  // @ts-ignore
   private _close: HTMLSpanElement
 
   constructor(el: HTMLDivElement) {

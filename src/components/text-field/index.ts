@@ -6,4 +6,3 @@ export {
   TEXTFIELD_MODIFIERS,
   TextField
 } from './text-field'
-export { TTextFieldModifiers } from './types'

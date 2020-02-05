@@ -1,0 +1,5 @@
+export const BUTTON_TYPE_PRIMARY: string = 'button--is-primary'
+export const BUTTON_TYPE_SECONDARY: string = 'button--is-secondary'
+export const BUTTON_TYPE_SUCCESS: string = 'button--is-success'
+export const BUTTON_TYPE_DANGER: string = 'button--is-danger'
+export const BUTTON_TYPE_LINK: string = 'button--is-link'

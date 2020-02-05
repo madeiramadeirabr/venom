@@ -8,7 +8,7 @@ const BUTTON_DISABLED_MODIFIER: string = 'button--is-disabled',
 
 class Button extends Component {
 
-  private _content: string
+  private _content: string = ''
 
   constructor(el: HTMLButtonElement | HTMLInputElement | HTMLAnchorElement | HTMLDivElement) {
     super(el)
@@ -73,4 +73,4 @@ class Button extends Component {
 
 }
 
-export { BUTTON_DISABLED_MODIFIER, BUTTON_MODIFIERS, Button, TButtonModifiers }
+export { BUTTON_DISABLED_MODIFIER, BUTTON_MODIFIERS, Button }

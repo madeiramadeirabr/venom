@@ -9,7 +9,7 @@
     "sass-build-autoprefix": "postcss --use autoprefixer --map false --output dist/venom.css dist/venom.css",
     "sass-build-cleancss": "cleancss -o dist/venom.min.css dist/venom.css",
     "sass-build-clean": "rimraf css",
-    "sass-build-sass": "node-sass --output-style expanded --source-map true sass/venom.sass dist/venom.css",
+    "sass-build-sass": "node-sass --output-style expanded --source-map true src/sass/venom.sass dist/venom.css",
     "deploy": "npm run sass-build-clean && npm run sass-build-sass && npm run sass-build-autoprefix && npm run sass-build-cleancss && gulp",
     "start": "npm run sass-build-sass -- --watch",
     "linter": "sass-lint -c .sass-lint.yml 'sass/**/*.sass' -v -q",
@@ -17,21 +17,40 @@
     "icons": "gulp"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.3",
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.25",
+    "@types/node-sass": "^4.11.0",
     "@typescript-eslint/eslint-plugin": "^2.4.0",
     "@typescript-eslint/parser": "^2.4.0",
     "autoprefixer": "^9.6.1",
+    "babel-loader": "^8.0.6",
     "clean-css-cli": "^4.3.0",
+    "core-js": "^3.6.4",
+    "css-loader": "^3.4.2",
+    "css-modules-typescript-loader": "^4.0.0",
     "cssnano": "^4.1.10",
-    "eslint": "^6.5.1",
+    "eslint": "^6.8.0",
     "gulp": "^4.0.2",
     "gulp-replace": "^1.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.13.1",
+    "path": "^0.12.7",
     "postcss-cli": "^6.1.2",
     "postcss-easy-import": "^3.0.0",
+    "regenerator-runtime": "^0.13.3",
     "rimraf": "^2.6.3",
     "sass-lint": "^1.13.1",
+    "sass-loader": "^8.0.2",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.1.3",
     "tailwindcss": "^1.0.5",
-    "typescript": "^3.6.4",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.5",
     "vanilla-masker": "^1.2.0"
   },
   "repository": {
@@ -71,17 +90,16 @@
     "sass/**/*.sass",
     "resources/css"
   ],
-  "browserslist": [
-    "> 1%",
-    "ie >= 8",
-    "edge >= 15",
-    "ie_mob >= 10",
-    "ff >= 45",
-    "chrome >= 45",
-    "safari >= 7",
-    "opera >= 23",
-    "ios >= 7",
-    "android >= 4",
-    "bb >= 10"
-  ]
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }

@@ -3,7 +3,7 @@ import { uuid } from './utils/uuid'
 
 export class Component {
   protected _el: HTMLElement
-  protected _uid: number
+  protected _uid: number = -1
 
   constructor(el: HTMLElement) {
     this._el = el
