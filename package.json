@@ -1,6 +1,6 @@
 {
   "name": "@madeiramadeira/venom",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Venom is an UI KIT and javascript lib of components with MadeiraMadeira brand",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -76,18 +76,8 @@
   },
   "files": [
     "package.json",
-    "dist/index.js",
-    "dist/index.d.ts",
-    "dist/venom.js",
-    "dist/venom.d.ts",
-    "dist/types.js",
-    "dist/types.d.ts",
-    "dist/components",
-    "dist/utils",
-    "dist/icons",
-    "dist/venom.css",
-    "dist/venom.min.css",
-    "sass/**/*.sass",
+    "dist",
+    "src/sass/**/*.sass",
     "resources/css"
   ],
   "browserslist": {
